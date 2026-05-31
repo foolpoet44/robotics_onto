@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-009",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0009",
+  "preferred_label_ko": "멀티-로봇 교통 관제",
+  "preferred_label_en": "Multi-Robot Traffic Management",
+  "description_ko": "여러 AMR의 움직임을 조율하여 충돌 방지",
+  "description_en": "Coordinate movements of multiple AMRs to prevent collisions",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AMR-002",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇 현장에서 멀티-로봇 교통 관제 역량 구현"
+}

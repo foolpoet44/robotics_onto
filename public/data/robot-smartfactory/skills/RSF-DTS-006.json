@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-006",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0006",
+  "preferred_label_ko": "3D 모델 CAD 임포트",
+  "preferred_label_en": "3D CAD Model Import",
+  "description_ko": "CAD 파일을 시뮬레이션 환경으로 가져오기",
+  "description_en": "Import CAD files into simulation environment",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": "RSF-DTS-001",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 3D 모델 CAD 임포트 역량 구현"
+}

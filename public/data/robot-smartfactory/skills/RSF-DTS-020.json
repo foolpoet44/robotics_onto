@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-020",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0020",
+  "preferred_label_ko": "설계-운영 연동",
+  "preferred_label_en": "Design-Operations Integration",
+  "description_ko": "설계 변경 사항을 빠르게 운영에 반영",
+  "description_en": "Quickly reflect design changes in operations",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-DTS-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 설계-운영 연동 수행 능력 입증"
+}

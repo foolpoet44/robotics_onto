@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-014",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0014",
+  "preferred_label_ko": "결과 분석 및 시각화",
+  "preferred_label_en": "Result Analysis and Visualization",
+  "description_ko": "시뮬레이션 결과를 그래프, 표로 표현",
+  "description_en": "Present simulation results as graphs and tables",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 결과 분석 및 시각화 역량 구현"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-014",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0014",
+  "preferred_label_ko": "힘 제어 파라미터 튜닝",
+  "preferred_label_en": "Force Control Parameter Tuning",
+  "description_ko": "힘 제어의 감도 및 응답성 조정",
+  "description_en": "Adjust force control sensitivity and responsiveness",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용 현장에서 힘 제어 파라미터 튜닝 역량 구현"
+}

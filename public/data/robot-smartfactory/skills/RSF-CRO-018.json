@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-018",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0018",
+  "preferred_label_ko": "안전성 평가 보고서",
+  "preferred_label_en": "Safety Assessment Report",
+  "description_ko": "협동 작업의 안전성 평가 결과 보고",
+  "description_en": "Report safety assessment results for collaborative work",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-CRO-007",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 안전성 평가 보고서 수행 능력 입증"
+}

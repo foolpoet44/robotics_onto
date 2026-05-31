@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-022",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0022",
+  "preferred_label_ko": "생산성 향상 제안",
+  "preferred_label_en": "Productivity Improvement Proposal",
+  "description_ko": "로봇 운용 효율성 개선 방안 제시",
+  "description_en": "Propose improvements to robot operation efficiency",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-IRC-009",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 생산성 향상 제안 수행 능력 입증"
+}

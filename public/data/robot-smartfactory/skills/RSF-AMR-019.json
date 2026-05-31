@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-019",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0019",
+  "preferred_label_ko": "운영 매뉴얼 작성",
+  "preferred_label_en": "Operations Manual Documentation",
+  "description_ko": "AMR 운영자를 위한 상세 매뉴얼 작성",
+  "description_en": "Write detailed manual for AMR operators",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-AMR-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 운영 매뉴얼 작성 수행 능력 입증"
+}

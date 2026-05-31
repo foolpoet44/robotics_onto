@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-015",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0015",
+  "preferred_label_ko": "제조 환경 맵 생성",
+  "preferred_label_en": "Manufacturing Environment Mapping",
+  "description_ko": "실제 제조 현장의 정확한 맵 생성",
+  "description_en": "Generate accurate map of actual manufacturing facility",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AMR-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 제조 환경 맵 생성 수행 능력 입증"
+}

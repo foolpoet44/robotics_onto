@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-007",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0007",
+  "preferred_label_ko": "드래그-앤-드롭 티칭",
+  "preferred_label_en": "Drag-and-Drop Teaching",
+  "description_ko": "GUI를 통한 간편 티칭",
+  "description_en": "Teach using graphical user interface",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-001",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용 현장에서 드래그-앤-드롭 티칭 역량 구현"
+}

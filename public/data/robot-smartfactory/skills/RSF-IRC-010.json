@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-010",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0010",
+  "preferred_label_ko": "경로 최적화",
+  "preferred_label_en": "Path Optimization",
+  "description_ko": "충돌 회피하면서 이동 거리 최소화",
+  "description_en": "Minimize travel distance while avoiding collisions",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-IRC-003",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어 현장에서 경로 최적화 역량 구현"
+}

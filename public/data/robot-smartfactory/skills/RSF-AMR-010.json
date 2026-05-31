@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-010",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0010",
+  "preferred_label_ko": "함대 성능 모니터링",
+  "preferred_label_en": "Fleet Performance Monitoring",
+  "description_ko": "전체 함대의 운영 현황 모니터링",
+  "description_en": "Monitor operational status of entire robot fleet",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AMR-003",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇 현장에서 함대 성능 모니터링 역량 구현"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-002",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0002",
+  "preferred_label_ko": "신뢰성 공학",
+  "preferred_label_en": "Reliability Engineering",
+  "description_ko": "MTBF, MTTF, 가용성, 신뢰도 분석",
+  "description_en": "MTBF, MTTF, availability, and reliability analysis",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-021",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0021",
+  "preferred_label_ko": "협력업체 기술 지원",
+  "preferred_label_en": "Technical Support to Contractors",
+  "description_ko": "외부 인력에게 로봇 운용 방법 교육",
+  "description_en": "Train external staff on robot operation",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-IRC-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 협력업체 기술 지원 수행 능력 입증"
+}

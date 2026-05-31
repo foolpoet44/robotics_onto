@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-003",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0003",
+  "preferred_label_ko": "센서 신호 처리",
+  "preferred_label_en": "Sensor Signal Processing",
+  "description_ko": "아날로그-디지털 변환, 필터링, 노이즈 제거 기초",
+  "description_en": "Analog-to-digital conversion, filtering, and noise reduction fundamentals",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
+}

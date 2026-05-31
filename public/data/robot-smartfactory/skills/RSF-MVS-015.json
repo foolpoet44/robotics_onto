@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-015",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0015",
+  "preferred_label_ko": "제조 환경 비전 시스템 구축",
+  "preferred_label_en": "Manufacturing Vision System Implementation",
+  "description_ko": "실제 제조 라인에 비전 시스템 설치 및 검증",
+  "description_en": "Install and verify vision system on actual production line",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-MVS-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 제조 환경 비전 시스템 구축 수행 능력 입증"
+}

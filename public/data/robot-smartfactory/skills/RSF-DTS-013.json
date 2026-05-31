@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-013",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0013",
+  "preferred_label_ko": "최적화 시뮬레이션",
+  "preferred_label_en": "Optimization Simulation",
+  "description_ko": "최적의 파라미터 찾기 위한 시뮬레이션",
+  "description_en": "Simulate to find optimal parameters",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 최적화 시뮬레이션 역량 구현"
+}

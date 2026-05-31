@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-008",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0008",
+  "preferred_label_ko": "충돌 회피 설정",
+  "preferred_label_en": "Collision Avoidance Configuration",
+  "description_ko": "장애물 감지 및 회피 설정",
+  "description_en": "Configure obstacle detection and avoidance",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AMR-002",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇 현장에서 충돌 회피 설정 역량 구현"
+}

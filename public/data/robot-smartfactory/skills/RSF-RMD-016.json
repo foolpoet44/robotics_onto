@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-016",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0016",
+  "preferred_label_ko": "긴급 고장 대응",
+  "preferred_label_en": "Emergency Fault Response",
+  "description_ko": "생산 중단 상황에서 신속한 복구",
+  "description_en": "Quickly restore service during production stoppage",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-RMD-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 긴급 고장 대응 수행 능력 입증"
+}

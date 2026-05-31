@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-004",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0004",
+  "preferred_label_ko": "협동로봇 산업 응용",
+  "preferred_label_en": "Collaborative Robot Industrial Applications",
+  "description_ko": "조립, 검사, 포장 등 협동 로봇의 주요 응용 사례",
+  "description_en": "Key collaborative robot applications in assembly, inspection, and packaging",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용의 이론적 기초"
+}

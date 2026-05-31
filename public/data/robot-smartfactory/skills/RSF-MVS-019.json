@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-019",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0019",
+  "preferred_label_ko": "센서 데이터 로깅",
+  "preferred_label_en": "Sensor Data Logging",
+  "description_ko": "센서 데이터를 자동으로 기록하고 분석",
+  "description_en": "Automatically log and analyze sensor data",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-MVS-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 센서 데이터 로깅 수행 능력 입증"
+}

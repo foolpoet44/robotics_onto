@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-019",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0019",
+  "preferred_label_ko": "디지털트윈 유지보수",
+  "preferred_label_en": "Digital Twin Maintenance",
+  "description_ko": "시뮬레이션 모델을 최신 상태로 유지",
+  "description_en": "Keep simulation model up to date",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-DTS-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 디지털트윈 유지보수 수행 능력 입증"
+}

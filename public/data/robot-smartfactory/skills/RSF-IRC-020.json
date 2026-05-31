@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-020",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0020",
+  "preferred_label_ko": "라인 밸런싱",
+  "preferred_label_en": "Line Balancing",
+  "description_ko": "여러 로봇의 작업 시간을 균등하게 배분",
+  "description_en": "Balance work time across multiple robots",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-IRC-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 라인 밸런싱 수행 능력 입증"
+}

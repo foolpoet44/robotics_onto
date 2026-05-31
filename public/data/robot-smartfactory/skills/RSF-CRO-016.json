@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-016",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0016",
+  "preferred_label_ko": "사용자 가이드 작성",
+  "preferred_label_en": "User Guide Documentation",
+  "description_ko": "협동로봇 사용자를 위한 상세 매뉴얼 작성",
+  "description_en": "Write detailed manual for collaborative robot users",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 사용자 가이드 작성 수행 능력 입증"
+}

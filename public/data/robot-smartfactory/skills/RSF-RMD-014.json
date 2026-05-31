@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-014",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0014",
+  "preferred_label_ko": "윤활유 교체",
+  "preferred_label_en": "Lubricant Replacement",
+  "description_ko": "로봇 관절 및 기어의 윤활유 교체",
+  "description_en": "Replace lubricant in robot joints and gears",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단 현장에서 윤활유 교체 역량 구현"
+}

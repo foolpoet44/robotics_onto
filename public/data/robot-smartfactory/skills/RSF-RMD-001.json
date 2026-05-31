@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-001",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0001",
+  "preferred_label_ko": "로봇 부품 분류 및 수명 관리",
+  "preferred_label_en": "Robot Component Classification and Life Management",
+  "description_ko": "BOM(자재명세서), MTBF, 부품 수명 예측",
+  "description_en": "BOM, MTBF, and component lifespan prediction",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
+}

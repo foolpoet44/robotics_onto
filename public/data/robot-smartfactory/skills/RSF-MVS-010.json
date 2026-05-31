@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-010",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0010",
+  "preferred_label_ko": "시뮬레이션 비전 파이프라인",
+  "preferred_label_en": "Simulation Vision Pipeline",
+  "description_ko": "시뮬레이션 환경에서 비전 시스템 구성",
+  "description_en": "Configure vision system in simulation",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-MVS-003",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합 현장에서 시뮬레이션 비전 파이프라인 역량 구현"
+}

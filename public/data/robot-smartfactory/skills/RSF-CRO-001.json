@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-001",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0001",
+  "preferred_label_ko": "협동로봇 안전 개념",
+  "preferred_label_en": "Collaborative Robot Safety Concepts",
+  "description_ko": "ISO/TS 15066, 힘 제한, 속도 제한의 안전 원칙",
+  "description_en": "Safety principles including ISO/TS 15066, force limiting, and speed limiting",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용의 이론적 기초"
+}

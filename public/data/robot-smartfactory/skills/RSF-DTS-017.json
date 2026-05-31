@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-017",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0017",
+  "preferred_label_ko": "운영 시나리오 시뮬레이션",
+  "preferred_label_en": "Operational Scenario Simulation",
+  "description_ko": "고장, 지연 등 운영 상황 사전 검토",
+  "description_en": "Pre-evaluate operational situations including failures and delays",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-DTS-007",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 운영 시나리오 시뮬레이션 수행 능력 입증"
+}

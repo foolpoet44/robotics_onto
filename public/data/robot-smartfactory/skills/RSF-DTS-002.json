@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-002",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0002",
+  "preferred_label_ko": "물리 시뮬레이션 엔진",
+  "preferred_label_en": "Physics Simulation Engines",
+  "description_ko": "Gazebo, CoppeliaSim, Isaac Sim 등 시뮬레이션 플랫폼",
+  "description_en": "Simulation platforms including Gazebo, CoppeliaSim, and Isaac Sim",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
+}

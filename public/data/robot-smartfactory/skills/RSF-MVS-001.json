@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-001",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0001",
+  "preferred_label_ko": "디지털 이미지 처리",
+  "preferred_label_en": "Digital Image Processing",
+  "description_ko": "필터링, 엣지 검출, 화소 조작 등 이미지 처리 기초",
+  "description_en": "Fundamentals of image processing including filtering, edge detection, and pixel manipulation",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
+}

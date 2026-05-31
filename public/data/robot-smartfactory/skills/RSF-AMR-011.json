@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-011",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0011",
+  "preferred_label_ko": "GPS 및 GNSS 활용",
+  "preferred_label_en": "GPS and GNSS Utilization",
+  "description_ko": "글로벌 위치 정보를 이용한 네비게이션",
+  "description_en": "Navigation using global positioning information",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇 현장에서 GPS 및 GNSS 활용 역량 구현"
+}

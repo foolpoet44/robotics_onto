@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-011",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0011",
+  "preferred_label_ko": "소프트웨어 업그레이드",
+  "preferred_label_en": "Software Upgrade",
+  "description_ko": "로봇 펌웨어 및 소프트웨어 업데이트",
+  "description_en": "Update robot firmware and software",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단 현장에서 소프트웨어 업그레이드 역량 구현"
+}

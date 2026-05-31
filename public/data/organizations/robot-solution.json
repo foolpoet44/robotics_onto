@@ -1,0 +1,419 @@
+{
+  "organization": {
+    "id": "robot_solution",
+    "name": "로봇솔루션 Task",
+    "name_en": "Robot Solution Task Force",
+    "description": "스마트 팩토리 현장에 즉시 적용 가능한 로봇기술 스택 기반 자동화 솔루션 제공",
+    "mission": "Factory Robotics 기반의 셀/라인 재구성 자동화로 현장 전환 속도 향상",
+    "mission_detail": "로봇솔루션 Task는 스마트 팩토리 현장에 즉시 적용 가능한 로봇기술 스택을 제공하고, 셀/라인 단위의 재구성 가능한 자동화를 구현하는 것을 핵심 미션으로 한다. 이를 통해 공정 전환 시간을 줄이고, 안전·품질·가동률을 동시에 개선하는 Factory Robotics 혁신을 지원한다.",
+    "challenges": [
+      {
+        "title": "공정별 로봇 적용 확장",
+        "items": [
+          "공정/제품/설비 특성에 따라 로봇 적용 방식이 상이",
+          "셀 단위 로봇 엔지니어링을 빠르게 구성·전환해야 함"
+        ]
+      },
+      {
+        "title": "통합/유지보수 비용 최적화",
+        "items": [
+          "로봇 티칭/교정, 안전 규격, 연동 테스트 부담",
+          "PLC/SCADA/비전/로봇의 통합 난이도와 비용을 낮춰야 함"
+        ]
+      }
+    ],
+    "value_propositions": [
+      {
+        "title": "모듈형 로봇기술 확산",
+        "description": "Plug & Play 구조로 즉시 적용\nLow Code로 셋업 및 재구성 부담 최소화"
+      },
+      {
+        "title": "현장 엔지니어 중심 운영",
+        "description": "One-click Calibration\n직관적 UI 및 표준화된 오류 대응"
+      },
+      {
+        "title": "운영 가시성 및 통합 제어",
+        "description": "생산라인 이벤트 모니터링 및 통합 제어\n로그 기반 분석 및 공정 최적화"
+      },
+      {
+        "title": "로봇지능 기반 자동화",
+        "description": "공정 변화 감지 및 경로 최적화\n품질 개선과 불량 감소"
+      }
+    ],
+    "roles": [
+      "로봇 셀/라인 중심의 표준 기술 스택 정의",
+      "공정별 로봇 적용 패턴(Workcell) 템플릿 설계",
+      "비전·제어·로봇 통합 기준과 안전 규격 내재화",
+      "현장 엔지니어 중심 운영 도구/가이드 제공",
+      "빠른 공정 전환이 가능한 로봇 자동화 기반 마련"
+    ],
+    "expectations": [
+      "로봇 셀/라인 전환 소요시간 단축",
+      "공정 생산성 및 유연성 향상",
+      "통합/유지보수 비용 감소",
+      "안전/품질 지표 개선",
+      "데이터 기반 공정 최적화 달성"
+    ],
+    "conclusion": {
+      "slogan": "\"현장에 바로 쓰이는 로봇기술,\n공정 변화에 빠르게 대응하는 Factory Robotics\"",
+      "description": "로봇솔루션 Task가 만들어가는 미래입니다."
+    }
+  },
+  "enablers": [
+    {
+      "id": "enabler_1",
+      "name": "Flex RPS 기반 모듈화 구조",
+      "name_en": "Flex RPS Modular Architecture",
+      "description": "Plug & Play형 Flex RPS, Low Code 기반 로봇 시퀀스 프로그래밍, 표준화된 Interface 제공",
+      "priority": 1,
+      "skills": [
+        {
+          "skill_id": "RS_001",
+          "esco_uri": "http://data.europa.eu/esco/skill/microservices-architecture",
+          "label_ko": "마이크로서비스 아키텍처 설계",
+          "label_en": "design microservices architecture",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 2,
+          "match_type": "exact",
+          "notes": "모듈 간 독립성 확보"
+        },
+        {
+          "skill_id": "RS_002",
+          "esco_uri": "http://data.europa.eu/esco/skill/component-based-design",
+          "label_ko": "컴포넌트 기반 설계",
+          "label_en": "component-based design",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 14,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_003",
+          "esco_uri": "http://data.europa.eu/esco/skill/restful-api",
+          "label_ko": "RESTful API 설계",
+          "label_en": "RESTful API design",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 7,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_004",
+          "esco_uri": "http://data.europa.eu/esco/skill/low-code-development",
+          "label_ko": "Low Code 플랫폼 개발",
+          "label_en": "low-code platform development",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 15,
+          "match_type": "approximate"
+        },
+        {
+          "skill_id": "RS_005",
+          "esco_uri": "http://data.europa.eu/esco/skill/visual-programming",
+          "label_ko": "비주얼 프로그래밍",
+          "label_en": "visual programming",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 20,
+          "match_type": "approximate"
+        },
+        {
+          "skill_id": "RS_006",
+          "esco_uri": "http://data.europa.eu/esco/skill/python-programming",
+          "label_ko": "Python / C++",
+          "label_en": "Python programming",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 18,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_007",
+          "esco_uri": "http://data.europa.eu/esco/skill/javascript",
+          "label_ko": "JavaScript / TypeScript",
+          "label_en": "JavaScript",
+          "type": "skill/competence",
+          "importance": 3,
+          "target_proficiency": "Intermediate",
+          "priority_rank": 25,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_008",
+          "esco_uri": "http://data.europa.eu/esco/skill/e87ec79a-c9ff-46f5-84fa-7a0f394cdf40",
+          "label_ko": "ROS / ROS2",
+          "label_en": "work with ROS",
+          "type": "knowledge",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 1,
+          "match_type": "exact",
+          "notes": "로봇 미들웨어 필수 스킬"
+        },
+        {
+          "skill_id": "RS_009",
+          "esco_uri": "http://data.europa.eu/esco/skill/robot-programming",
+          "label_ko": "로봇 시퀀스 프로그래밍",
+          "label_en": "robot programming",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 10,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_010",
+          "esco_uri": "http://data.europa.eu/esco/skill/robot-parameter-config",
+          "label_ko": "로봇 매개변수 관리",
+          "label_en": "robot parameter configuration",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 22,
+          "match_type": "approximate"
+        },
+        {
+          "skill_id": "RS_011",
+          "esco_uri": "http://data.europa.eu/esco/skill/robot-control-algorithms",
+          "label_ko": "로봇 제어 알고리즘",
+          "label_en": "robot control algorithms",
+          "type": "knowledge",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 23,
+          "match_type": "approximate"
+        },
+        {
+          "skill_id": "RS_012",
+          "esco_uri": null,
+          "custom_uri": "http://robotsolution.escon/skill/plug-and-play",
+          "label_ko": "Plug & Play 구현 기술",
+          "label_en": "plug-and-play implementation",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 9,
+          "match_type": "custom",
+          "notes": "로봇 도메인 특화 스킬, ESCO에 직접 매핑 없음"
+        },
+        {
+          "skill_id": "RS_013",
+          "esco_uri": "http://data.europa.eu/esco/skill/industrial-protocols",
+          "label_ko": "OPC UA / Modbus 통신",
+          "label_en": "industrial communication protocols",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 19,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_014",
+          "esco_uri": "http://data.europa.eu/esco/skill/device-driver-development",
+          "label_ko": "디바이스 드라이버 개발",
+          "label_en": "device driver development",
+          "type": "skill/competence",
+          "importance": 3,
+          "target_proficiency": "Intermediate",
+          "priority_rank": 30,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_015",
+          "esco_uri": null,
+          "custom_uri": "http://robotsolution.escon/skill/hot-swapping",
+          "label_ko": "Hot-swapping 기술",
+          "label_en": "hot-swapping technology",
+          "type": "skill/competence",
+          "importance": 3,
+          "target_proficiency": "Intermediate",
+          "priority_rank": 35,
+          "match_type": "custom"
+        }
+      ]
+    },
+    {
+      "id": "enabler_2",
+      "name": "로봇 솔루션 표준 패키지화",
+      "name_en": "Robot Solution Standardization",
+      "description": "로봇·주변장치·툴링의 표준 셋 제공, One-click Calibration (로봇 보정 자동화), 비전 및 장비 간 쉬운 통합 구조",
+      "priority": 2,
+      "skills": [
+        {
+          "skill_id": "RS_016",
+          "esco_uri": "http://data.europa.eu/esco/skill/robot-calibration",
+          "label_ko": "Hand-Eye Calibration",
+          "label_en": "hand-eye calibration",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 3,
+          "match_type": "approximate",
+          "notes": "ESCO에는 더 일반적인 robot calibration으로 매핑"
+        },
+        {
+          "skill_id": "RS_017",
+          "esco_uri": null,
+          "custom_uri": "http://robotsolution.escon/skill/tcp-calibration",
+          "label_ko": "Tool Center Point 설정",
+          "label_en": "TCP calibration",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 11,
+          "match_type": "custom"
+        },
+        {
+          "skill_id": "RS_018",
+          "esco_uri": "http://data.europa.eu/esco/skill/coordinate-transformation",
+          "label_ko": "좌표계 변환",
+          "label_en": "coordinate transformation",
+          "type": "knowledge",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 21,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_019",
+          "esco_uri": "http://data.europa.eu/esco/skill/robot-kinematics",
+          "label_ko": "로봇 기구학",
+          "label_en": "robot kinematics",
+          "type": "knowledge",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 24,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_020",
+          "esco_uri": "http://data.europa.eu/esco/skill/end-effector-design",
+          "label_ko": "엔드이펙터 설계",
+          "label_en": "end-effector design",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 26,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_021",
+          "esco_uri": null,
+          "custom_uri": "http://robotsolution.escon/skill/tooling-standardization",
+          "label_ko": "툴링 표준화",
+          "label_en": "tooling standardization",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 27,
+          "match_type": "custom"
+        },
+        {
+          "skill_id": "RS_022",
+          "esco_uri": "http://data.europa.eu/esco/skill/7b0d5000-00da-4864-b776-6de49a87a669",
+          "label_ko": "2D/3D 비전 시스템",
+          "label_en": "computer vision",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 8,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_023",
+          "esco_uri": "http://data.europa.eu/esco/skill/camera-calibration",
+          "label_ko": "카메라 캘리브레이션",
+          "label_en": "camera calibration",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 13,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_024",
+          "esco_uri": null,
+          "custom_uri": "http://robotsolution.escon/skill/vision-guided-robotics",
+          "label_ko": "비전 가이드 로봇 (VGR)",
+          "label_en": "vision-guided robotics",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 4,
+          "match_type": "custom"
+        },
+        {
+          "skill_id": "RS_025",
+          "esco_uri": "http://data.europa.eu/esco/skill/opencv",
+          "label_ko": "OpenCV / Halcon",
+          "label_en": "OpenCV",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 17,
+          "match_type": "exact"
+        }
+      ]
+    },
+    {
+      "id": "enabler_3",
+      "name": "IRIS 기반 AI 기술 적용",
+      "name_en": "IRIS-based AI Technology",
+      "description": "라인 이벤트 실시간 모니터링, 원격(리모트) 자동 대응, 생산 시나리오 분석·로그 기반 최적화",
+      "priority": 3,
+      "skills": [
+        {
+          "skill_id": "RS_035",
+          "esco_uri": "http://data.europa.eu/esco/skill/anomaly-detection",
+          "label_ko": "이상 탐지 알고리즘",
+          "label_en": "anomaly detection",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 5,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_036",
+          "esco_uri": "http://data.europa.eu/esco/skill/time-series-analysis",
+          "label_ko": "시계열 데이터 분석",
+          "label_en": "time series analysis",
+          "type": "skill/competence",
+          "importance": 4,
+          "target_proficiency": "Advanced",
+          "priority_rank": 16,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_039",
+          "esco_uri": "http://data.europa.eu/esco/skill/object-detection",
+          "label_ko": "객체 검출 AI",
+          "label_en": "object detection",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 12,
+          "match_type": "exact"
+        },
+        {
+          "skill_id": "RS_042",
+          "esco_uri": "http://data.europa.eu/esco/skill/real-time-data-processing",
+          "label_ko": "실시간 데이터 처리",
+          "label_en": "real-time data processing",
+          "type": "skill/competence",
+          "importance": 5,
+          "target_proficiency": "Expert",
+          "priority_rank": 6,
+          "match_type": "exact"
+        }
+      ]
+    }
+  ]
+}

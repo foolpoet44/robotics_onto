@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-005",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0005",
+  "preferred_label_ko": "윤활유 및 냉각액 관리",
+  "preferred_label_en": "Lubricant and Coolant Management",
+  "description_ko": "윤활유 종류, 냉각 시스템, 품질 관리",
+  "description_en": "Lubricant types, cooling systems, and quality management",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
+}

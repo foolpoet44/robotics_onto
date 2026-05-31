@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-013",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0013",
+  "preferred_label_ko": "다축 동기 제어",
+  "preferred_label_en": "Multi-Axis Synchronized Control",
+  "description_ko": "여러 로봇의 협력 동작 제어",
+  "description_en": "Control coordinated movements of multiple robots",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어 현장에서 다축 동기 제어 역량 구현"
+}

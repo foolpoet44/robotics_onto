@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-002",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0002",
+  "preferred_label_ko": "로봇 제어 이론",
+  "preferred_label_en": "Robot Control Theory",
+  "description_ko": "PID 제어, 궤적 계획, 모션 제어의 이론적 기초",
+  "description_en": "Theoretical foundation of PID control, trajectory planning, and motion control",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-001",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0001",
+  "preferred_label_ko": "로봇 구조 및 운동학",
+  "preferred_label_en": "Robot Kinematics and Dynamics",
+  "description_ko": "로봇의 물리적 구조, 조인트 운동, 역운동학을 이해하는 기초 지식",
+  "description_en": "Fundamental knowledge of robot physical structure, joint motion, and inverse kinematics",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
+}

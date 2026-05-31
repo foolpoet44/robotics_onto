@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-010",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0010",
+  "preferred_label_ko": "기어 및 모터 검사",
+  "preferred_label_en": "Gear and Motor Inspection",
+  "description_ko": "기어 손상, 모터 성능 검사",
+  "description_en": "Inspect gear damage and motor performance",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-RMD-003",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단 현장에서 기어 및 모터 검사 역량 구현"
+}

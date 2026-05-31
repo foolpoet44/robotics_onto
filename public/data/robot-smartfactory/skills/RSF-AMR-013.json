@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-013",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0013",
+  "preferred_label_ko": "스테이션 도킹 설정",
+  "preferred_label_en": "Station Docking Configuration",
+  "description_ko": "충전소 및 화물 거래소 자동 도킹 설정",
+  "description_en": "Configure automatic docking at charging and transfer stations",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇 현장에서 스테이션 도킹 설정 역량 구현"
+}

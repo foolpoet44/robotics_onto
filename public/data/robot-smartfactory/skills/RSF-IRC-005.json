@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-005",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0005",
+  "preferred_label_ko": "모션 플래닝 기초",
+  "preferred_label_en": "Motion Planning Fundamentals",
+  "description_ko": "경로 계획, 충돌 회피, 움직임 최적화의 기초 개념",
+  "description_en": "Fundamental concepts of path planning, collision avoidance, and motion optimization",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
+}

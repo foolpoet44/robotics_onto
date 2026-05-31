@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-014",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0014",
+  "preferred_label_ko": "센서 입출력 처리",
+  "preferred_label_en": "Sensor Input/Output Processing",
+  "description_ko": "센서 신호를 로봇 동작에 반영",
+  "description_en": "Integrate sensor signals into robot motion",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어 현장에서 센서 입출력 처리 역량 구현"
+}

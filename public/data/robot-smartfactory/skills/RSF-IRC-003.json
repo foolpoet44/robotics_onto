@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-003",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0003",
+  "preferred_label_ko": "산업용 로봇 안전 기준",
+  "preferred_label_en": "Industrial Robot Safety Standards (ISO 10218)",
+  "description_ko": "ISO 10218, ANSI/NFPA 79 등 산업용 로봇 안전 표준 및 규제",
+  "description_en": "Safety standards and regulations for industrial robots including ISO 10218 and ANSI/NFPA 79",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
+}

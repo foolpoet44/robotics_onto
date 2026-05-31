@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-008",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0008",
+  "preferred_label_ko": "센서 신호 수집 및 필터링",
+  "preferred_label_en": "Sensor Signal Acquisition and Filtering",
+  "description_ko": "여러 센서에서 신호 수집 및 노이즈 제거",
+  "description_en": "Collect sensor signals and remove noise",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-MVS-002",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합 현장에서 센서 신호 수집 및 필터링 역량 구현"
+}

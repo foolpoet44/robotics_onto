@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-007",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0007",
+  "preferred_label_ko": "로봇 시뮬레이션 환경 구성",
+  "preferred_label_en": "Robot Simulation Environment Setup",
+  "description_ko": "Gazebo, CoppeliaSim 등에서 로봇 환경 설정",
+  "description_en": "Configure robot environment in Gazebo, CoppeliaSim, etc.",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": "RSF-DTS-001",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 로봇 시뮬레이션 환경 구성 역량 구현"
+}

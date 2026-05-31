@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-015",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0015",
+  "preferred_label_ko": "신규 라인 설계 시뮬레이션",
+  "preferred_label_en": "New Production Line Design Simulation",
+  "description_ko": "신규 제조 라인 설계 시 시뮬레이션 검증 완료",
+  "description_en": "Complete simulation validation for new production line design",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-DTS-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 신규 라인 설계 시뮬레이션 수행 능력 입증"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-017",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0017",
+  "preferred_label_ko": "협동 작업 사이클 타임 측정",
+  "preferred_label_en": "Collaborative Work Cycle Time Measurement",
+  "description_ko": "인간-로봇 협력 작업의 소요 시간 측정",
+  "description_en": "Measure time required for human-robot collaborative work",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-007",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 협동 작업 사이클 타임 측정 수행 능력 입증"
+}

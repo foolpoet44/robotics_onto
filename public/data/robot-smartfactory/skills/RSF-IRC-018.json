@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-018",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0018",
+  "preferred_label_ko": "로봇 고장 대응",
+  "preferred_label_en": "Robot Fault Response",
+  "description_ko": "로봇 오류 발생 시 신속한 진단 및 복구",
+  "description_en": "Quickly diagnose and recover from robot failures",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-IRC-007",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 로봇 고장 대응 수행 능력 입증"
+}

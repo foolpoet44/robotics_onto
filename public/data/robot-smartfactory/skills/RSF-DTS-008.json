@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-008",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0008",
+  "preferred_label_ko": "생산 라인 레이아웃 검증",
+  "preferred_label_en": "Production Line Layout Validation",
+  "description_ko": "장비 배치의 충돌 여부 확인",
+  "description_en": "Verify equipment placement for collisions",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": "RSF-DTS-002",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 생산 라인 레이아웃 검증 역량 구현"
+}

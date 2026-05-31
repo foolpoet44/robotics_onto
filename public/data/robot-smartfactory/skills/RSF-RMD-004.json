@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-004",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0004",
+  "preferred_label_ko": "로봇 진단 도구 및 로깅",
+  "preferred_label_en": "Robot Diagnostics Tools and Logging Systems",
+  "description_ko": "고장 코드, 센서 로깅, 성능 지표",
+  "description_en": "Fault codes, sensor logging, and performance metrics",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
+}

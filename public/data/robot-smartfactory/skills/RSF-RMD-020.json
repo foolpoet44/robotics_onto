@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-020",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0020",
+  "preferred_label_ko": "성능 지표 개선",
+  "preferred_label_en": "Performance Metrics Improvement",
+  "description_ko": "가동률, 신뢰도 등 개선",
+  "description_en": "Improve availability, reliability, and other metrics",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-RMD-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 성능 지표 개선 수행 능력 입증"
+}

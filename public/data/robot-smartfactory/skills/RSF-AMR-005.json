@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-005",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0005",
+  "preferred_label_ko": "함대 관리 시스템",
+  "preferred_label_en": "Fleet Management Systems",
+  "description_ko": "멀티-로봇 조율, 중앙 제어, 교통 관제",
+  "description_en": "Multi-robot coordination, centralized control, and traffic management",
+  "skill_type": "knowledge",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇의 이론적 기초"
+}

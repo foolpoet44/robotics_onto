@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-016",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0016",
+  "preferred_label_ko": "검출율 목표 달성",
+  "preferred_label_en": "Defect Detection Rate Achievement",
+  "description_ko": "정해진 검출율(95% 이상) 달성",
+  "description_en": "Achieve specified detection rate (95% or higher)",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-MVS-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 검출율 목표 달성 수행 능력 입증"
+}

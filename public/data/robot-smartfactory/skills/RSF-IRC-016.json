@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-016",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0016",
+  "preferred_label_ko": "생산 라인 로봇 운용",
+  "preferred_label_en": "Production Line Robot Operation",
+  "description_ko": "실제 제조 환경에서 로봇 운용",
+  "description_en": "Operate robots in actual manufacturing environment",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-IRC-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 생산 라인 로봇 운용 수행 능력 입증"
+}

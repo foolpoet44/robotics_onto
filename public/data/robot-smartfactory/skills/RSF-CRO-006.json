@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-006",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0006",
+  "preferred_label_ko": "협동로봇 안전 설정",
+  "preferred_label_en": "Collaborative Robot Safety Configuration",
+  "description_ko": "속도 제한, 힘 제한, 안전 영역 설정",
+  "description_en": "Configure speed limits, force limits, and safety zones",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-001",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용 현장에서 협동로봇 안전 설정 역량 구현"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-018",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0018",
+  "preferred_label_ko": "대체 센서 제안",
+  "preferred_label_en": "Alternative Sensor Proposal",
+  "description_ko": "고장난 센서 대신 다른 센서 제안 및 적용",
+  "description_en": "Propose and implement alternative sensors",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-MVS-007",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 대체 센서 제안 수행 능력 입증"
+}

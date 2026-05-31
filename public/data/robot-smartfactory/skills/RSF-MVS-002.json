@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-002",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0002",
+  "preferred_label_ko": "머신비전 카메라 및 광학",
+  "preferred_label_en": "Machine Vision Cameras and Optics",
+  "description_ko": "카메라 센서 종류, 렌즈 특성, 조광 원리",
+  "description_en": "Camera sensor types, lens characteristics, and lighting principles",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
+}

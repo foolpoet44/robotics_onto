@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-DTS-004",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0004",
+  "preferred_label_ko": "로봇 시뮬레이션 소프트웨어",
+  "preferred_label_en": "Robot Simulation Software",
+  "description_ko": "ROS, MoveIt, URSim 등 로봇 시뮬레이션 플랫폼",
+  "description_en": "Robot simulation platforms including ROS, MoveIt, and URSim",
+  "skill_type": "knowledge",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
+}

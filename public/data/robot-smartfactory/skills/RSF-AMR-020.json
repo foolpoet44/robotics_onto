@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-020",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0020",
+  "preferred_label_ko": "성능 지표 분석",
+  "preferred_label_en": "Performance Metrics Analysis",
+  "description_ko": "주행 거리, 배터리 소모, 업타임 등 분석",
+  "description_en": "Analyze traveled distance, battery consumption, uptime, etc.",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-AMR-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 성능 지표 분석 수행 능력 입증"
+}

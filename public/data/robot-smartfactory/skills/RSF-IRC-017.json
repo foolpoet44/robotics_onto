@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-IRC-017",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0017",
+  "preferred_label_ko": "사이클 타임 달성",
+  "preferred_label_en": "Cycle Time Achievement",
+  "description_ko": "정해진 시간 내에 작업 완료",
+  "description_en": "Complete work within specified cycle time",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-IRC-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 사이클 타임 달성 수행 능력 입증"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-019",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0019",
+  "preferred_label_ko": "작업 개선 제안",
+  "preferred_label_en": "Work Improvement Proposal",
+  "description_ko": "협동 작업 효율 개선 방안 제안",
+  "description_en": "Propose improvements to collaborative work efficiency",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-CRO-008",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 작업 개선 제안 수행 능력 입증"
+}

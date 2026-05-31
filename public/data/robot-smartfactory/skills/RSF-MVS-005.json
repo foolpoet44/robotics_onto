@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-005",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0005",
+  "preferred_label_ko": "센서 캘리브레이션 이론",
+  "preferred_label_en": "Sensor Calibration Theory",
+  "description_ko": "카메라 캘리브레이션, 좌표 변환, 정확도 평가",
+  "description_en": "Camera calibration, coordinate transformation, and accuracy assessment",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
+}

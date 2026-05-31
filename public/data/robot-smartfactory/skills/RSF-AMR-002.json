@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-002",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0002",
+  "preferred_label_ko": "경로 계획 알고리즘",
+  "preferred_label_en": "Path Planning Algorithms",
+  "description_ko": "Dijkstra, A*, RRT 등 주요 경로 계획 알고리즘",
+  "description_en": "Major path planning algorithms including Dijkstra, A*, and RRT",
+  "skill_type": "knowledge",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "자율이동로봇의 이론적 기초"
+}

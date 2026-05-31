@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-015",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0015",
+  "preferred_label_ko": "예방적 유지보수 계획 수립",
+  "preferred_label_en": "Preventive Maintenance Plan Development",
+  "description_ko": "장기 유지보수 일정 개발 및 실행",
+  "description_en": "Develop and execute long-term maintenance schedule",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-RMD-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 예방적 유지보수 계획 수립 수행 능력 입증"
+}

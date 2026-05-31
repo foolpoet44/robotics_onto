@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-021",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0021",
+  "preferred_label_ko": "부품 공급업체 관리",
+  "preferred_label_en": "Supplier Relationship Management",
+  "description_ko": "부품 공급업체와의 협력 및 품질 관리",
+  "description_en": "Collaborate with suppliers and manage quality",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-RMD-009",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 부품 공급업체 관리 수행 능력 입증"
+}

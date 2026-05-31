@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-015",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0015",
+  "preferred_label_ko": "협동 워크셀 안전성 검증",
+  "preferred_label_en": "Collaborative Workcell Safety Verification",
+  "description_ko": "실제 환경에서 협동 작업의 안전성 확인",
+  "description_en": "Verify safety of collaborative operations in actual environment",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 협동 워크셀 안전성 검증 수행 능력 입증"
+}

@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-RMD-007",
+  "domain": "robot-maintenance-diagnostics",
+  "domain_en": "Robot Maintenance & Diagnostics",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0007",
+  "preferred_label_ko": "트렌드 분석",
+  "preferred_label_en": "Trend Analysis",
+  "description_ko": "시간에 따른 성능 변화 추적 및 분석",
+  "description_en": "Track and analyze performance changes over time",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-RMD-001",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "로봇 유지보수 & 진단 현장에서 트렌드 분석 역량 구현"
+}

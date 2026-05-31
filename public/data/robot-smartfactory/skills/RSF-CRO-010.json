@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-CRO-010",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0010",
+  "preferred_label_ko": "협동 작업 태스크 분석",
+  "preferred_label_en": "Collaborative Task Analysis",
+  "description_ko": "인간과 로봇의 작업 분담 계획",
+  "description_en": "Plan task allocation between human and robot",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-CRO-003",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "협동로봇 운용 현장에서 협동 작업 태스크 분석 역량 구현"
+}

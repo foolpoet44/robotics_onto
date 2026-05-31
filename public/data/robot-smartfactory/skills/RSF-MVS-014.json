@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-MVS-014",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0014",
+  "preferred_label_ko": "멀티 센서 융합",
+  "preferred_label_en": "Multi-Sensor Fusion",
+  "description_ko": "여러 센서의 정보를 통합하여 의사결정",
+  "description_en": "Integrate information from multiple sensors for decision-making",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": null,
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "머신비전 & 센서 통합 현장에서 멀티 센서 융합 역량 구현"
+}

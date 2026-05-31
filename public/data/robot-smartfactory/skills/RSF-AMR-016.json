@@ -1,0 +1,17 @@
+{
+  "skill_id": "RSF-AMR-016",
+  "domain": "autonomous-mobile-robot",
+  "domain_en": "AMR/AGV Systems",
+  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0016",
+  "preferred_label_ko": "맵 정확도 검증",
+  "preferred_label_en": "Map Accuracy Verification",
+  "description_ko": "생성된 맵의 정확성 확인 및 개선",
+  "description_en": "Verify and improve accuracy of generated map",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AMR-006",
+  "related_skills": [],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 맵 정확도 검증 수행 능력 입증"
+}
