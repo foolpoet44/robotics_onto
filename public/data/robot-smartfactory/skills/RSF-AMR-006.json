@@ -2,16 +2,39 @@
   "skill_id": "RSF-AMR-006",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0006",
+  "internal_uri": "urn:rsf:skill:amr-0006",
+  "esco_uri": null,
   "preferred_label_ko": "환경 맵 작성",
   "preferred_label_en": "Environment Mapping",
   "description_ko": "LiDAR, 카메라를 이용한 환경 맵 생성",
   "description_en": "Generate environment map using LiDAR and camera",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "자율이동로봇 현장에서 환경 맵 작성 역량 구현"
 }

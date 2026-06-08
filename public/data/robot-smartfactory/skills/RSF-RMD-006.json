@@ -2,16 +2,39 @@
   "skill_id": "RSF-RMD-006",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0006",
+  "internal_uri": "urn:rsf:skill:rmd-0006",
+  "esco_uri": null,
   "preferred_label_ko": "로봇 상태 모니터링",
   "preferred_label_en": "Robot Status Monitoring",
   "description_ko": "센서 데이터를 통한 로봇 상태 실시간 모니터링",
   "description_en": "Real-time robot status monitoring through sensor data",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단 현장에서 로봇 상태 모니터링 역량 구현"
 }

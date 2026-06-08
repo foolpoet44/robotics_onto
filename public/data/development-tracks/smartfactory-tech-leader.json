@@ -1,0 +1,130 @@
+{
+  "id": "smartfactory-tech-leader",
+  "name": "스마트팩토리 기술 전문가 육성 프레임워크",
+  "subtitle": "솔루션 사업을 리드할 핵심 인재의 조기 선발과 단계별 육성",
+  "cohort": "2026 Pilot",
+  "organization_id": "robot-solution",
+  "goal": "잠재력 있는 사내 인재를 조기 선발해 솔루션 사업의 등뼈가 될 Lv3 Tech Leader를 육성합니다.",
+  "expert_area_profiles": [
+    {
+      "id": "physical-ai",
+      "name": "Physical AI & Robotics",
+      "description": "협동로봇, AMR, 자율 로봇을 현장에서 작동 가능한 솔루션으로 구현합니다.",
+      "domain_keys": ["industrial-robot-control", "collaborative-robot", "autonomous-mobile-robot"],
+      "core_skill_ids": ["RSF-IRC-007", "RSF-CRO-006", "RSF-AMR-001"],
+      "target_proficiency_level": 3
+    },
+    {
+      "id": "agentic-ai",
+      "name": "Agentic AI Manufacturing",
+      "description": "AI 에이전트, MES 자율화, 품질관리 의사결정을 제조 운영에 연결합니다.",
+      "domain_keys": ["industrial-robot-control", "machine-vision-sensor"],
+      "core_skill_ids": ["RSF-IRC-009", "RSF-MVS-011", "RSF-CRO-006"],
+      "target_proficiency_level": 3
+    },
+    {
+      "id": "digital-twin",
+      "name": "Digital Twin & Simulation",
+      "description": "공정 시뮬레이션과 AI 융합 트윈으로 설계와 현장 검증 속도를 높입니다.",
+      "domain_keys": ["digital-twin-simulation", "robot-maintenance-diagnostics"],
+      "core_skill_ids": ["RSF-DTS-001", "RSF-DTS-002", "RSF-RMD-019"],
+      "target_proficiency_level": 3
+    },
+    {
+      "id": "data-intelligence",
+      "name": "Data Intelligence",
+      "description": "데이터 파이프라인, 제조 인텔리전스, OT 보안으로 모든 영역을 잇는 공통 허브를 구축합니다.",
+      "domain_keys": ["machine-vision-sensor", "robot-maintenance-diagnostics"],
+      "core_skill_ids": ["RSF-MVS-001", "RSF-MVS-016", "RSF-RMD-002"],
+      "target_proficiency_level": 3
+    }
+  ],
+  "competency_axes": [
+    {
+      "id": "problem-framing",
+      "name": "문제 정의",
+      "description": "현장의 병목과 고객 문제를 구조화하는 역량",
+      "scale_max": 5
+    },
+    {
+      "id": "solution-design",
+      "name": "솔루션 설계",
+      "description": "기술 조합과 적용 구조를 설계하는 역량",
+      "scale_max": 5
+    },
+    {
+      "id": "integration-delivery",
+      "name": "통합 구현",
+      "description": "로봇, 설비, 데이터를 연결해 작동시키는 역량",
+      "scale_max": 5
+    },
+    {
+      "id": "field-validation",
+      "name": "현장 검증",
+      "description": "PoC와 Production 결과를 증빙하는 역량",
+      "scale_max": 5
+    },
+    {
+      "id": "leadership-scale",
+      "name": "리딩·확산",
+      "description": "사례를 표준화하고 조직으로 확산하는 역량",
+      "scale_max": 5
+    }
+  ],
+  "stages": [
+    {
+      "id": "potential_pool",
+      "order": 0,
+      "name": "잠재 후보군",
+      "description": "사내 기술 직무 인재 풀",
+      "target_headcount": 1000,
+      "completion_evidence": ["기술 직무 경력과 관심 영역 등록"],
+      "required_skill_ids": []
+    },
+    {
+      "id": "early_selection",
+      "order": 1,
+      "name": "조기 선발",
+      "description": "잠재력과 적성 평가를 통과한 후보",
+      "target_headcount": 50,
+      "completion_evidence": ["잠재력 평가", "전문 영역 인터뷰"],
+      "required_skill_ids": []
+    },
+    {
+      "id": "integrated_bootcamp",
+      "order": 2,
+      "name": "통합 부트캠프",
+      "description": "통합 PoC 시연을 준비하고 통과하는 단계",
+      "target_headcount": 45,
+      "completion_evidence": ["통합 PoC 시연", "핵심 스킬 진단"],
+      "required_skill_ids": ["RSF-IRC-007", "RSF-MVS-011"]
+    },
+    {
+      "id": "pair_embed",
+      "order": 3,
+      "name": "페어 임베드",
+      "description": "동료와 함께 Production 솔루션 1건을 완수하는 단계",
+      "target_headcount": 38,
+      "completion_evidence": ["Production 솔루션 1건", "현장 리뷰"],
+      "required_skill_ids": ["RSF-CRO-006", "RSF-DTS-001"]
+    },
+    {
+      "id": "solo_embed",
+      "order": 4,
+      "name": "솔로 임베드",
+      "description": "단독으로 현장 과제를 해결하는 단계",
+      "target_headcount": 32,
+      "completion_evidence": ["단독 과제 해결", "1人1案 승인"],
+      "required_skill_ids": ["RSF-RMD-019"]
+    },
+    {
+      "id": "lv3_certification",
+      "order": 5,
+      "name": "Lv3 Tech Leader 인증",
+      "description": "스마트팩토리 솔루션 사업을 이끌 인증 인재",
+      "target_headcount": 30,
+      "completion_evidence": ["육성위원회 인증", "확산 계획 발표"],
+      "required_skill_ids": []
+    }
+  ]
+}

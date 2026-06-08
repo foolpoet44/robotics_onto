@@ -436,10 +436,9 @@ def generate_skill_id(domain_code: str, index: int) -> str:
     return f"RSF-{domain_code}-{index:03d}"
 
 
-def generate_esco_uri(domain_code: str, index: int) -> str:
-    """ESCO URI 생성 또는 커스텀 URI"""
-    # 실제 ESCO URI가 없으면 커스텀 형식 사용
-    return f"http://data.europa.eu/esco/skill/rsf-{domain_code.lower()}-{index:04d}"
+def generate_internal_uri(domain_code: str, index: int) -> str:
+    """내부 식별자임을 명확히 드러내는 URN 생성"""
+    return f"urn:rsf:skill:{domain_code.lower()}-{index:04d}"
 
 
 def create_skill_object(
@@ -453,7 +452,7 @@ def create_skill_object(
     proficiency_level: int,
     role_mappings: List[str],
     parent_skill_id: str = None,
-    related_skills: List[str] = None,
+    related_skills: List[Dict[str, Any]] = None,
     smartfactory_context: str = None,
     index: int = 1,
 ) -> Dict[str, Any]:
@@ -464,7 +463,9 @@ def create_skill_object(
         "skill_id": skill_id,
         "domain": domain,
         "domain_en": DOMAINS[domain]["name_en"],
-        "esco_uri": generate_esco_uri(domain_code, index),
+        "internal_uri": generate_internal_uri(domain_code, index),
+        # 실제 ESCO 매핑을 확인한 경우에만 공식 URI를 채운다.
+        "esco_uri": None,
         "preferred_label_ko": label_ko,
         "preferred_label_en": label_en,
         "description_ko": description_ko,
@@ -477,6 +478,85 @@ def create_skill_object(
         "esco_broader": None,
         "smartfactory_context": smartfactory_context,
     }
+
+
+def add_relation(
+    skills_by_id: Dict[str, Dict[str, Any]],
+    source_id: str,
+    target_id: str,
+    relation_type: str,
+    weight: float,
+) -> None:
+    """중복 없이 유형 관계를 추가한다."""
+    if source_id == target_id:
+        return
+
+    relations = skills_by_id[source_id]["related_skills"]
+    if any(
+        relation["target"] == target_id and relation["type"] == relation_type
+        for relation in relations
+    ):
+        return
+
+    relations.append({
+        "target": target_id,
+        "type": relation_type,
+        "weight": weight,
+        "source": "heuristic",
+    })
+
+
+def add_symmetric_relation(
+    skills_by_id: Dict[str, Dict[str, Any]],
+    left_id: str,
+    right_id: str,
+    relation_type: str,
+    weight: float,
+) -> None:
+    """무향 관계는 양쪽에 함께 기록한다."""
+    add_relation(skills_by_id, left_id, right_id, relation_type, weight)
+    add_relation(skills_by_id, right_id, left_id, relation_type, weight)
+
+
+def connect_skills(skills: List[Dict[str, Any]]) -> None:
+    """최소 연결망을 만들고 부모 관계의 의미를 보존한다."""
+    skills_by_id = {skill["skill_id"]: skill for skill in skills}
+    skills_by_domain: Dict[str, List[Dict[str, Any]]] = {}
+
+    for skill in skills:
+        skills_by_domain.setdefault(skill["domain"], []).append(skill)
+        if skill["parent_skill_id"]:
+            add_relation(
+                skills_by_id,
+                skill["skill_id"],
+                skill["parent_skill_id"],
+                "specialization",
+                1.0,
+            )
+
+    # 각 도메인을 고리로 연결하면 모든 스킬이 최소 2개의 현장 동반 관계를 가진다.
+    for domain_skills in skills_by_domain.values():
+        for index, skill in enumerate(domain_skills):
+            next_skill = domain_skills[(index + 1) % len(domain_skills)]
+            add_symmetric_relation(
+                skills_by_id,
+                skill["skill_id"],
+                next_skill["skill_id"],
+                "co_required",
+                0.7,
+            )
+
+    # 인접 도메인의 대표 스킬을 연결해 도메인 간 탐색 경로를 만든다.
+    domain_groups = list(skills_by_domain.values())
+    for index, domain_skills in enumerate(domain_groups):
+        next_domain_skills = domain_groups[(index + 1) % len(domain_groups)]
+        add_symmetric_relation(
+            skills_by_id,
+            domain_skills[0]["skill_id"],
+            next_domain_skills[0]["skill_id"],
+            "cross_domain",
+            0.6,
+        )
 
 
 def generate_robot_smartfactory_data() -> List[Dict[str, Any]]:
@@ -564,6 +644,7 @@ def generate_robot_smartfactory_data() -> List[Dict[str, Any]]:
             all_skills.append(skill)
             index += 1
 
+    connect_skills(all_skills)
     return all_skills
 
 

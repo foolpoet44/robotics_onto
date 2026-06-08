@@ -1,0 +1,289 @@
+.ratingPanel {
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heading h2,
+.summarySection h3,
+.historySection h3 {
+  margin: 0;
+}
+
+.heading h2 {
+  font-size: 1.05rem;
+}
+
+.heading span,
+.empty {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.heading > strong {
+  flex-shrink: 0;
+  padding: 0.3rem 0.55rem;
+  color: var(--color-primary-dark);
+  font-size: 0.78rem;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+}
+
+.eyebrow {
+  margin-bottom: 0.15rem;
+  color: var(--color-primary-dark);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.ratingForm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.7rem;
+}
+
+.missingSkillForm {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr) auto;
+  align-items: end;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  background: #fff;
+  border: 1px dashed #b7aa97;
+  border-radius: 0.7rem;
+}
+
+.ratingForm label,
+.ratingForm legend,
+.missingSkillForm label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.ratingForm input,
+.ratingForm select,
+.ratingForm textarea,
+.missingSkillForm input,
+.missingSkillForm textarea {
+  width: 100%;
+  padding: 0.65rem;
+  margin-top: 0.3rem;
+  color: var(--text-primary);
+  font: inherit;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.45rem;
+}
+
+.formTitle {
+  grid-column: 1 / -1;
+}
+
+.formTitle p {
+  margin-bottom: 0.15rem;
+  color: #7a6c58;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.formTitle h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.formTitle span {
+  display: block;
+  max-width: 52rem;
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.ratingForm fieldset,
+.notes {
+  grid-column: 1 / -1;
+  border: 0;
+}
+
+.notes span {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.scoreOptions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-top: 0.3rem;
+}
+
+.scoreOptions label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  padding: 0.55rem 0.2rem;
+  cursor: pointer;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.45rem;
+}
+
+.scoreOptions label:has(input:checked) {
+  color: var(--color-primary-dark);
+  background: hsl(262, 83%, 97%);
+  border-color: var(--color-primary);
+}
+
+.scoreOptions input {
+  width: auto;
+  margin: 0;
+}
+
+.scoreOptions span {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.ratingForm button,
+.missingSkillForm button {
+  justify-self: start;
+  padding: 0.65rem 1rem;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  background: var(--color-primary-dark);
+  border: 0;
+  border-radius: 0.45rem;
+}
+
+.missingSkillForm button {
+  align-self: stretch;
+  background: #7a6c58;
+}
+
+.message {
+  margin-top: 0.7rem;
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.summarySection,
+.historySection {
+  margin-top: 1.2rem;
+}
+
+.summarySection h3,
+.historySection h3 {
+  margin-bottom: 0.55rem;
+  font-size: 0.92rem;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.55rem;
+}
+
+.summaryGrid article {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+  background: var(--bg-secondary);
+  border-radius: 0.55rem;
+}
+
+.summaryGrid article:has(strong:not(:empty)) {
+  min-height: 5.5rem;
+}
+
+.summaryGrid span,
+.summaryGrid small,
+.historyList span,
+.historyList p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.summaryGrid strong {
+  color: var(--color-primary-dark);
+  font-size: 1.45rem;
+}
+
+.historyList {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.historyList article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.55rem;
+}
+
+.historyList span {
+  display: block;
+}
+
+.historyList p {
+  margin-top: 0.25rem;
+}
+
+.historyList button {
+  color: hsl(0, 65%, 40%);
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .heading,
+  .ratingForm,
+  .missingSkillForm {
+    display: block;
+  }
+
+  .heading > strong {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+
+  .ratingForm > * + *,
+  .missingSkillForm > * + * {
+    display: block;
+    margin-top: 0.8rem;
+  }
+
+  .scoreOptions {
+    gap: 0.25rem;
+  }
+
+  .scoreOptions span {
+    font-size: 0.62rem;
+  }
+}

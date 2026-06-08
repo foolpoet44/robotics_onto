@@ -2,16 +2,39 @@
   "skill_id": "RSF-IRC-006",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0006",
+  "internal_uri": "urn:rsf:skill:irc-0006",
+  "esco_uri": null,
   "preferred_label_ko": "로봇 매뉴얼 티칭",
   "preferred_label_en": "Robot Manual Teaching",
   "description_ko": "손으로 로봇 팔을 조작하여 작업 경로를 기록",
   "description_en": "Record work paths by manually manipulating robot arm",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "산업용 로봇 제어 현장에서 로봇 매뉴얼 티칭 역량 구현"
 }

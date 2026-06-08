@@ -1,0 +1,198 @@
+{
+  "colleges": [
+    {
+      "id": "physical-ai",
+      "name": "Physical AI & Robotics",
+      "nameKo": "피지컬 AI 칼리지",
+      "role": "현장 작동",
+      "isHub": false,
+      "order": 1
+    },
+    {
+      "id": "data-intelligence",
+      "name": "Data Intelligence",
+      "nameKo": "데이터 인텔리전스 칼리지",
+      "role": "데이터 허브",
+      "isHub": true,
+      "order": 2
+    },
+    {
+      "id": "agentic-ai",
+      "name": "Agentic AI Manufacturing",
+      "nameKo": "제조 Agentic AI 칼리지",
+      "role": "자율 판단",
+      "isHub": false,
+      "order": 3
+    },
+    {
+      "id": "digital-twin",
+      "name": "Digital Twin & Simulation",
+      "nameKo": "디지털 트윈 칼리지",
+      "role": "시뮬레이션",
+      "isHub": false,
+      "order": 4
+    }
+  ],
+  "levels": [
+    {
+      "id": "physical-ai-lv1",
+      "collegeId": "physical-ai",
+      "tier": 1,
+      "name": "AX Starter",
+      "certification": "현장 운전 자격",
+      "prerequisites": []
+    },
+    {
+      "id": "physical-ai-lv2",
+      "collegeId": "physical-ai",
+      "tier": 2,
+      "name": "AX Practitioner",
+      "certification": "로봇 실무 자격",
+      "prerequisites": ["physical-ai-lv1", "data-intelligence-lv1"]
+    },
+    {
+      "id": "physical-ai-lv3",
+      "collegeId": "physical-ai",
+      "tier": 3,
+      "name": "AX Specialist",
+      "certification": "로봇 전문가 자격",
+      "prerequisites": ["physical-ai-lv2", "data-intelligence-lv2"]
+    },
+    {
+      "id": "physical-ai-lv4",
+      "collegeId": "physical-ai",
+      "tier": 4,
+      "name": "AX Expert",
+      "certification": "Cross-College Capstone",
+      "prerequisites": ["physical-ai-lv3", "data-intelligence-lv3"]
+    },
+    {
+      "id": "data-intelligence-lv1",
+      "collegeId": "data-intelligence",
+      "tier": 1,
+      "name": "AX Starter",
+      "certification": "IIoT 운용 자격",
+      "prerequisites": []
+    },
+    {
+      "id": "data-intelligence-lv2",
+      "collegeId": "data-intelligence",
+      "tier": 2,
+      "name": "AX Practitioner",
+      "certification": "데이터 실무 자격",
+      "prerequisites": ["data-intelligence-lv1"]
+    },
+    {
+      "id": "data-intelligence-lv3",
+      "collegeId": "data-intelligence",
+      "tier": 3,
+      "name": "AX Specialist",
+      "certification": "인텔리전스 자격",
+      "prerequisites": ["data-intelligence-lv2"]
+    },
+    {
+      "id": "data-intelligence-lv4",
+      "collegeId": "data-intelligence",
+      "tier": 4,
+      "name": "AX Expert",
+      "certification": "Cross-College Capstone",
+      "prerequisites": ["data-intelligence-lv3"]
+    },
+    {
+      "id": "agentic-ai-lv1",
+      "collegeId": "agentic-ai",
+      "tier": 1,
+      "name": "AX Starter",
+      "certification": "AI 활용 자격",
+      "prerequisites": []
+    },
+    {
+      "id": "agentic-ai-lv2",
+      "collegeId": "agentic-ai",
+      "tier": 2,
+      "name": "AX Practitioner",
+      "certification": "에이전트 자격",
+      "prerequisites": ["agentic-ai-lv1", "data-intelligence-lv1"]
+    },
+    {
+      "id": "agentic-ai-lv3",
+      "collegeId": "agentic-ai",
+      "tier": 3,
+      "name": "AX Specialist",
+      "certification": "Agentic 전문 자격",
+      "prerequisites": ["agentic-ai-lv2", "data-intelligence-lv2"]
+    },
+    {
+      "id": "agentic-ai-lv4",
+      "collegeId": "agentic-ai",
+      "tier": 4,
+      "name": "AX Expert",
+      "certification": "Cross-College Capstone",
+      "prerequisites": ["agentic-ai-lv3", "data-intelligence-lv3"]
+    },
+    {
+      "id": "digital-twin-lv1",
+      "collegeId": "digital-twin",
+      "tier": 1,
+      "name": "AX Starter",
+      "certification": "DT 기초 자격",
+      "prerequisites": []
+    },
+    {
+      "id": "digital-twin-lv2",
+      "collegeId": "digital-twin",
+      "tier": 2,
+      "name": "AX Practitioner",
+      "certification": "시뮬레이션 자격",
+      "prerequisites": ["digital-twin-lv1", "data-intelligence-lv1"]
+    },
+    {
+      "id": "digital-twin-lv3",
+      "collegeId": "digital-twin",
+      "tier": 3,
+      "name": "AX Specialist",
+      "certification": "DT 전문가 자격",
+      "prerequisites": ["digital-twin-lv2", "data-intelligence-lv2"]
+    },
+    {
+      "id": "digital-twin-lv4",
+      "collegeId": "digital-twin",
+      "tier": 4,
+      "name": "AX Expert",
+      "certification": "Cross-College Capstone",
+      "prerequisites": ["digital-twin-lv3", "data-intelligence-lv3"]
+    }
+  ],
+  "domainMapping": {
+    "industrial-robot-control": {
+      "primary": "physical-ai",
+      "secondary": ["agentic-ai"],
+      "defaultLevelTier": 2
+    },
+    "machine-vision-sensor": {
+      "primary": "physical-ai",
+      "secondary": ["data-intelligence"],
+      "defaultLevelTier": 2
+    },
+    "collaborative-robot": {
+      "primary": "physical-ai",
+      "secondary": ["data-intelligence"],
+      "defaultLevelTier": 2
+    },
+    "autonomous-mobile-robot": {
+      "primary": "physical-ai",
+      "secondary": ["agentic-ai", "data-intelligence"],
+      "defaultLevelTier": 3
+    },
+    "robot-maintenance-diagnostics": {
+      "primary": "physical-ai",
+      "secondary": ["data-intelligence"],
+      "defaultLevelTier": 2
+    },
+    "digital-twin-simulation": {
+      "primary": "digital-twin",
+      "secondary": ["data-intelligence"],
+      "defaultLevelTier": 2
+    }
+  }
+}

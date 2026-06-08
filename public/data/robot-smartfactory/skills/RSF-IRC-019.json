@@ -2,16 +2,38 @@
   "skill_id": "RSF-IRC-019",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0019",
+  "internal_uri": "urn:rsf:skill:irc-0019",
+  "esco_uri": null,
   "preferred_label_ko": "작업 문서화",
   "preferred_label_en": "Work Documentation",
   "description_ko": "프로그램 및 설정 내용 상세히 기록",
   "description_en": "Document programs and configurations in detail",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 작업 문서화 수행 능력 입증"
 }

@@ -2,16 +2,38 @@
   "skill_id": "RSF-MVS-021",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0021",
+  "internal_uri": "urn:rsf:skill:mvs-0021",
+  "esco_uri": null,
   "preferred_label_ko": "카메라 교체 작업",
   "preferred_label_en": "Camera Replacement",
   "description_ko": "고장난 카메라를 신제품으로 교체",
   "description_en": "Replace faulty cameras with new ones",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-009",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-009",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 카메라 교체 작업 수행 능력 입증"
 }

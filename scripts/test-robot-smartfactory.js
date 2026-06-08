@@ -154,7 +154,7 @@ class RobotSmartFactoryTester {
       "skill_id",
       "domain",
       "domain_en",
-      "esco_uri",
+      "internal_uri",
       "preferred_label_ko",
       "preferred_label_en",
       "description_ko",
@@ -361,27 +361,27 @@ class RobotSmartFactoryTester {
     let invalidCount = 0;
 
     this.skillData.forEach((skill) => {
-      const uri = skill.esco_uri;
-      // ESCO URI는 http://data.europa.eu/esco/skill/ 형식이거나
-      // rsf로 시작하는 커스텀 형식
-      if (
-        uri.startsWith("http://data.europa.eu/esco/skill/") ||
-        uri.includes("rsf")
-      ) {
+      const internalUri = skill.internal_uri;
+      const escoUri = skill.esco_uri;
+      const validInternalUri = internalUri.startsWith("urn:rsf:skill:");
+      const validEscoUri =
+        escoUri === null ||
+        /^http:\/\/data\.europa\.eu\/esco\/skill\/[0-9a-f-]+$/i.test(escoUri);
+      if (validInternalUri && validEscoUri) {
         validCount++;
       } else {
         invalidCount++;
         if (invalidCount <= 3) {
           assert(
             false,
-            `스킬 ${skill.skill_id}: 유효하지 않은 ESCO URI 형식 (${uri})`,
+            `스킬 ${skill.skill_id}: 유효하지 않은 출처 URI 형식 (${internalUri}, ${escoUri})`,
           );
         }
       }
     });
 
     if (invalidCount === 0) {
-      assert(true, `모든 ESCO URI가 유효한 형식 (총 ${validCount}개)`);
+      assert(true, `모든 출처 URI가 유효한 형식 (총 ${validCount}개)`);
     } else if (invalidCount > 3) {
       assert(false, `추가 ${invalidCount - 3}개의 URI 형식 오류`);
     }

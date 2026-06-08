@@ -1,0 +1,199 @@
+.pageShell {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.backLink,
+.skillList a,
+.requirements a {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero,
+.section {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--color-primary-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.hero span,
+.description,
+.empty,
+.journey p {
+  color: var(--text-secondary);
+}
+
+.currentStage {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.currentStage strong {
+  color: var(--color-primary-dark);
+  font-size: 1.35rem;
+}
+
+.section {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.journey {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.4rem;
+}
+
+.journey article {
+  display: flex;
+  flex-direction: column;
+  padding: 0.65rem;
+  background: var(--bg-secondary);
+  border-top: 3px solid var(--border-color);
+  border-radius: 0.4rem;
+}
+
+.journey small,
+.journey span,
+.skillList span {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.journey .completed {
+  border-color: #16a34a;
+}
+
+.journey .in_progress {
+  border-color: #2563eb;
+}
+
+.journey .held {
+  border-color: #d97706;
+}
+
+.skillList,
+.axisList {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.skillList a {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  padding: 0.65rem;
+  background: var(--bg-secondary);
+  border-radius: 0.45rem;
+}
+
+.skillList div {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillList b {
+  white-space: nowrap;
+}
+
+.axisList > div {
+  display: grid;
+  grid-template-columns: 90px 1fr 35px;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+}
+
+.axisList div div {
+  height: 0.55rem;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border-radius: 999px;
+}
+
+.axisList i {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.proposal {
+  padding: 0.8rem;
+  background: #faf8f4;
+  border-left: 3px solid #aa9980;
+}
+
+.proposal span,
+.requirements a {
+  display: inline-block;
+  padding: 0.18rem 0.38rem;
+  font-size: 0.72rem;
+  background: var(--bg-secondary);
+  border-radius: 0.3rem;
+}
+
+.proposal p {
+  margin: 0.4rem 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 780px) {
+  .journey {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contentGrid {
+    display: block;
+  }
+}

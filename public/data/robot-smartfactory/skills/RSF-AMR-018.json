@@ -2,16 +2,38 @@
   "skill_id": "RSF-AMR-018",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0018",
+  "internal_uri": "urn:rsf:skill:amr-0018",
+  "esco_uri": null,
   "preferred_label_ko": "충돌 발생 시 분석",
   "preferred_label_en": "Collision Incident Analysis",
   "description_ko": "충돌 발생 원인 파악 및 개선",
   "description_en": "Identify causes of collisions and improve",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-017",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 충돌 발생 시 분석 수행 능력 입증"
 }

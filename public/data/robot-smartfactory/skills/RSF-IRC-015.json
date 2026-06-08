@@ -2,16 +2,32 @@
   "skill_id": "RSF-IRC-015",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0015",
+  "internal_uri": "urn:rsf:skill:irc-0015",
+  "esco_uri": null,
   "preferred_label_ko": "에러 로그 분석",
   "preferred_label_en": "Error Log Analysis",
   "description_ko": "로봇 에러 코드 해석 및 해결 방법 찾기",
   "description_en": "Interpret robot error codes and find solutions",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-014",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "산업용 로봇 제어 현장에서 에러 로그 분석 역량 구현"
 }

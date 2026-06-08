@@ -1,8 +1,11 @@
+import type { CollegeId, LevelTier } from "./college-types";
+
 export interface RobotSkill {
   skill_id: string;
   domain: string;
   domain_en: string;
-  esco_uri: string;
+  internal_uri: string;
+  esco_uri: string | null;
   preferred_label_ko: string;
   preferred_label_en: string;
   description_ko: string;
@@ -11,9 +14,24 @@ export interface RobotSkill {
   proficiency_level: 1 | 2 | 3 | 4;
   role_mapping: ("operator" | "engineer" | "developer")[];
   parent_skill_id: string | null;
-  related_skills: string[];
+  related_skills: SkillRelation[];
   esco_broader: string | null;
   smartfactory_context: string;
+  collegeId?: CollegeId;
+  levelTier?: LevelTier;
+}
+
+export type RelationType =
+  | "prerequisite"
+  | "co_required"
+  | "specialization"
+  | "cross_domain";
+
+export interface SkillRelation {
+  target: string;
+  type: RelationType;
+  weight?: number;
+  source?: "heuristic" | "reviewed";
 }
 
 export interface RobotDomain {
@@ -23,6 +41,15 @@ export interface RobotDomain {
   description: string;
   icon: string;
   color: string;
+}
+
+export interface RobotSmartFactoryStatistics {
+  totalSkills: number;
+  domainCount: number;
+  domainDistribution: Array<{ domain: string; count: number }>;
+  roleDistribution: Array<{ role: string; count: number }>;
+  proficiencyDistribution: Array<{ level: number; count: number }>;
+  skillTypeDistribution: Array<{ type: string; count: number }>;
 }
 
 export const ROBOT_DOMAINS: RobotDomain[] = [
@@ -76,18 +103,51 @@ export const ROBOT_DOMAINS: RobotDomain[] = [
   },
 ];
 
-export async function loadRobotSkills(): Promise<RobotSkill[]> {
-  const response = await fetch("/data/robot-smartfactory.json");
-  if (!response.ok) {
-    throw new Error("로보틱스 스킬 데이터를 불러오지 못했습니다.");
-  }
-  return response.json();
-}
-
 export function getDomain(domainKey: string): RobotDomain | undefined {
   return ROBOT_DOMAINS.find((domain) => domain.key === domainKey);
 }
 
 export function getDomainName(domainKey: string): string {
   return getDomain(domainKey)?.name ?? domainKey;
+}
+
+export function computeRobotStatistics(
+  skills: RobotSkill[],
+): RobotSmartFactoryStatistics {
+  const domainMap = new Map<string, number>();
+  const roleMap = new Map<string, number>();
+  const proficiencyMap = new Map<number, number>();
+  const typeMap = new Map<string, number>();
+
+  skills.forEach((skill) => {
+    domainMap.set(skill.domain, (domainMap.get(skill.domain) ?? 0) + 1);
+    skill.role_mapping.forEach((role) => {
+      roleMap.set(role, (roleMap.get(role) ?? 0) + 1);
+    });
+    proficiencyMap.set(
+      skill.proficiency_level,
+      (proficiencyMap.get(skill.proficiency_level) ?? 0) + 1,
+    );
+    typeMap.set(skill.skill_type, (typeMap.get(skill.skill_type) ?? 0) + 1);
+  });
+
+  return {
+    totalSkills: skills.length,
+    domainCount: domainMap.size,
+    domainDistribution: Array.from(domainMap).map(([domain, count]) => ({
+      domain,
+      count,
+    })),
+    roleDistribution: Array.from(roleMap).map(([role, count]) => ({
+      role,
+      count,
+    })),
+    proficiencyDistribution: Array.from(proficiencyMap)
+      .map(([level, count]) => ({ level, count }))
+      .sort((a, b) => a.level - b.level),
+    skillTypeDistribution: Array.from(typeMap).map(([type, count]) => ({
+      type,
+      count,
+    })),
+  };
 }

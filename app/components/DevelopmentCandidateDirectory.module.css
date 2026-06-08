@@ -1,0 +1,128 @@
+.section {
+  margin-top: 2.5rem;
+}
+
+.heading,
+.filters,
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.heading p {
+  color: var(--color-primary-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.heading strong {
+  color: var(--color-primary-dark);
+  font-size: 1.35rem;
+}
+
+.filters {
+  justify-content: flex-start;
+  padding: 0.9rem;
+  margin: 0.8rem 0;
+  background: var(--bg-secondary);
+  border-radius: 0.7rem;
+}
+
+.filters label {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.filters select {
+  display: block;
+  min-width: 180px;
+  padding: 0.45rem;
+  margin-top: 0.2rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.card {
+  padding: 0.85rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.7rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+.card p,
+.card small {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.card div {
+  margin-top: 0.7rem;
+}
+
+.area,
+.card small {
+  display: inline-block;
+  padding: 0.18rem 0.38rem;
+  border-radius: 0.3rem;
+}
+
+.area {
+  color: var(--color-primary-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: var(--bg-secondary);
+}
+
+.held {
+  color: #92400e !important;
+  background: #fffbeb;
+}
+
+.in_progress {
+  color: #1d4ed8 !important;
+  background: #eff6ff;
+}
+
+.completed {
+  color: #166534 !important;
+  background: #f0fdf4;
+}
+
+.pending {
+  background: var(--bg-secondary);
+}
+
+.empty {
+  padding: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filters select {
+    width: 100%;
+  }
+}

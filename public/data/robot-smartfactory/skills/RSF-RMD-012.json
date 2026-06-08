@@ -2,16 +2,32 @@
   "skill_id": "RSF-RMD-012",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0012",
+  "internal_uri": "urn:rsf:skill:rmd-0012",
+  "esco_uri": null,
   "preferred_label_ko": "성능 벤치마크 테스트",
   "preferred_label_en": "Performance Benchmark Testing",
   "description_ko": "정해진 기준으로 로봇 성능 측정",
   "description_en": "Measure robot performance against standards",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단 현장에서 성능 벤치마크 테스트 역량 구현"
 }

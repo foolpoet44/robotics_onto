@@ -2,16 +2,39 @@
   "skill_id": "RSF-MVS-017",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0017",
+  "internal_uri": "urn:rsf:skill:mvs-0017",
+  "esco_uri": null,
   "preferred_label_ko": "센서 고장 진단",
   "preferred_label_en": "Sensor Fault Diagnosis",
   "description_ko": "센서 고장을 정확히 식별하고 원인 파악",
   "description_en": "Identify sensor faults and determine root causes",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 센서 고장 진단 수행 능력 입증"
 }

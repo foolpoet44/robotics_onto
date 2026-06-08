@@ -1,0 +1,197 @@
+.pageShell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.organizationHeading,
+.panel,
+.enablerCard {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.organizationHeading {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.organizationHeading p,
+.panel p,
+.description,
+.panel li,
+.enablerCard header p,
+.skillRow span {
+  color: var(--text-secondary);
+}
+
+.eyebrow,
+.priority {
+  color: var(--color-primary-dark) !important;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.organizationHeading h1 {
+  margin: 0.3rem 0;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.2rem 0.55rem;
+  align-content: center;
+  min-width: 150px;
+}
+
+.summary strong {
+  color: var(--color-primary-dark);
+  font-size: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section > h2 {
+  margin-bottom: 0.8rem;
+}
+
+.panel {
+  padding: 1.2rem;
+}
+
+.challengeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.trackCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: #faf8f4;
+  border: 1px solid #dfd5c5;
+  border-radius: 0.7rem;
+}
+
+.trackCard:hover {
+  border-color: var(--color-primary);
+}
+
+.trackCard span {
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.trackCard p {
+  margin-top: 0.35rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.panel ul {
+  padding-left: 1.2rem;
+  margin-top: 0.7rem;
+}
+
+.enablerList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enablerCard {
+  padding: 1.2rem;
+}
+
+.enablerCard header,
+.skillRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.enablerCard header strong {
+  color: var(--color-primary-dark);
+}
+
+.description {
+  margin: 0.85rem 0;
+}
+
+.skillTable {
+  border-top: 1px solid var(--border-color);
+}
+
+.skillRow {
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skillRow div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.skillRow span {
+  font-size: 0.82rem;
+}
+
+.ontologyLink,
+.unmapped {
+  padding: 0.32rem 0.48rem;
+  border-radius: 0.4rem;
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.ontologyLink {
+  color: var(--color-primary-dark);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+}
+
+.ontologyLink:hover {
+  border-color: var(--color-primary);
+}
+
+.unmapped {
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+}
+
+@media (max-width: 680px) {
+  .organizationHeading,
+  .enablerCard header,
+  .skillRow {
+    flex-direction: column;
+  }
+}

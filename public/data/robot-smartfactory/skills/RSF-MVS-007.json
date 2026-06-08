@@ -2,16 +2,39 @@
   "skill_id": "RSF-MVS-007",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0007",
+  "internal_uri": "urn:rsf:skill:mvs-0007",
+  "esco_uri": null,
   "preferred_label_ko": "이미지 기반 결함 검출",
   "preferred_label_en": "Image-Based Defect Detection",
   "description_ko": "비전 소프트웨어를 이용한 결함 검출 설정",
   "description_en": "Configure defect detection using vision software",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-006",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합 현장에서 이미지 기반 결함 검출 역량 구현"
 }

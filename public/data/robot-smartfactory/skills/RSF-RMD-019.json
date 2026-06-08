@@ -2,16 +2,38 @@
   "skill_id": "RSF-RMD-019",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0019",
+  "internal_uri": "urn:rsf:skill:rmd-0019",
+  "esco_uri": null,
   "preferred_label_ko": "유지보수 보고서 작성",
   "preferred_label_en": "Maintenance Report Documentation",
   "description_ko": "유지보수 활동 상세 기록 및 보고",
   "description_en": "Document and report maintenance activities in detail",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-008",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-008",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 유지보수 보고서 작성 수행 능력 입증"
 }

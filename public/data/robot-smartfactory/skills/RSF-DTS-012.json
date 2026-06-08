@@ -2,16 +2,33 @@
   "skill_id": "RSF-DTS-012",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0012",
+  "internal_uri": "urn:rsf:skill:dts-0012",
+  "esco_uri": null,
   "preferred_label_ko": "시나리오 시뮬레이션",
   "preferred_label_en": "Scenario Simulation",
   "description_ko": "고장, 병목 상황 시뮬레이션",
   "description_en": "Simulate failure and bottleneck scenarios",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 시나리오 시뮬레이션 역량 구현"
 }

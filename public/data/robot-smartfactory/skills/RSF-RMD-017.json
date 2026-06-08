@@ -2,16 +2,39 @@
   "skill_id": "RSF-RMD-017",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0017",
+  "internal_uri": "urn:rsf:skill:rmd-0017",
+  "esco_uri": null,
   "preferred_label_ko": "부품 수명 예측",
   "preferred_label_en": "Component Lifespan Prediction",
   "description_ko": "부품 교체 시기 미리 예측",
   "description_en": "Predict when components need replacement",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 부품 수명 예측 수행 능력 입증"
 }

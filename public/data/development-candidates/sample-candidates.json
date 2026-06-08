@@ -1,0 +1,223 @@
+[
+  {
+    "candidate_id": "CAND-001",
+    "display_name": "후보자 001",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "physical-ai",
+    "current_stage_id": "pair_embed",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed", "assessed_at": "2026-01-15", "reviewer": "육성위원회"},
+      {"stage_id": "early_selection", "status": "completed", "assessed_at": "2026-02-03", "reviewer": "육성위원회"},
+      {"stage_id": "integrated_bootcamp", "status": "completed", "assessed_at": "2026-03-28", "reviewer": "부트캠프 코치"},
+      {"stage_id": "pair_embed", "status": "in_progress", "assessed_at": "2026-04-05", "reviewer": "현장 멘토"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-AMR-001", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-AMR-002", "current_level": 2, "target_level": 3},
+      {"skill_id": "RSF-AMR-020", "current_level": 2, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 4},
+      {"axis_id": "solution-design", "score": 3},
+      {"axis_id": "integration-delivery", "score": 3},
+      {"axis_id": "field-validation", "score": 2},
+      {"axis_id": "leadership-scale", "score": 2}
+    ],
+    "impact_proposal": {
+      "title": "물류 혼잡 구간 AMR 경로 재설계",
+      "problem": "피크 시간대 교차 구간 대기로 운반 리드타임이 증가합니다.",
+      "expected_impact": "평균 운반 리드타임 15% 단축",
+      "status": "approved"
+    }
+  },
+  {
+    "candidate_id": "CAND-002",
+    "display_name": "후보자 002",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "data-intelligence",
+    "current_stage_id": "solo_embed",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "completed"},
+      {"stage_id": "pair_embed", "status": "completed"},
+      {"stage_id": "solo_embed", "status": "in_progress"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-MVS-001", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-MVS-011", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-MVS-016", "current_level": 2, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 4},
+      {"axis_id": "solution-design", "score": 4},
+      {"axis_id": "integration-delivery", "score": 4},
+      {"axis_id": "field-validation", "score": 4},
+      {"axis_id": "leadership-scale", "score": 3}
+    ],
+    "impact_proposal": {
+      "title": "검사 셀 캘리브레이션 표준화",
+      "problem": "제품 전환 시 카메라 교정 시간이 반복적으로 발생합니다.",
+      "expected_impact": "전환 준비시간 25% 단축",
+      "status": "approved"
+    }
+  },
+  {
+    "candidate_id": "CAND-003",
+    "display_name": "후보자 003",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "agentic-ai",
+    "current_stage_id": "integrated_bootcamp",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "in_progress"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-IRC-007", "current_level": 2, "target_level": 3},
+      {"skill_id": "RSF-IRC-009", "current_level": 2, "target_level": 3},
+      {"skill_id": "RSF-CRO-006", "current_level": 1, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 3},
+      {"axis_id": "solution-design", "score": 3},
+      {"axis_id": "integration-delivery", "score": 2},
+      {"axis_id": "field-validation", "score": 2},
+      {"axis_id": "leadership-scale", "score": 2}
+    ]
+  },
+  {
+    "candidate_id": "CAND-004",
+    "display_name": "후보자 004",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "digital-twin",
+    "current_stage_id": "lv3_certification",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "completed"},
+      {"stage_id": "pair_embed", "status": "completed"},
+      {"stage_id": "solo_embed", "status": "completed"},
+      {"stage_id": "lv3_certification", "status": "completed", "assessed_at": "2026-05-20", "reviewer": "육성위원회"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-RMD-002", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-RMD-019", "current_level": 4, "target_level": 3},
+      {"skill_id": "RSF-DTS-001", "current_level": 3, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 5},
+      {"axis_id": "solution-design", "score": 4},
+      {"axis_id": "integration-delivery", "score": 4},
+      {"axis_id": "field-validation", "score": 5},
+      {"axis_id": "leadership-scale", "score": 4}
+    ],
+    "impact_proposal": {
+      "title": "예지 정비 기준 통합",
+      "problem": "라인별 점검 기준이 달라 고장 대응 품질에 편차가 있습니다.",
+      "expected_impact": "비계획 정지시간 12% 감소",
+      "status": "delivered"
+    }
+  },
+  {
+    "candidate_id": "CAND-005",
+    "display_name": "후보자 005",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "agentic-ai",
+    "current_stage_id": "early_selection",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "in_progress"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-IRC-007", "current_level": 1, "target_level": 3},
+      {"skill_id": "RSF-IRC-009", "current_level": 1, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 3},
+      {"axis_id": "solution-design", "score": 2},
+      {"axis_id": "integration-delivery", "score": 2},
+      {"axis_id": "field-validation", "score": 1},
+      {"axis_id": "leadership-scale", "score": 2}
+    ]
+  },
+  {
+    "candidate_id": "CAND-006",
+    "display_name": "후보자 006",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "data-intelligence",
+    "current_stage_id": "pair_embed",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "completed"},
+      {"stage_id": "pair_embed", "status": "held", "notes": "현장 배정 일정 조율 중"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-MVS-001", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-MVS-011", "current_level": 2, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 3},
+      {"axis_id": "solution-design", "score": 3},
+      {"axis_id": "integration-delivery", "score": 3},
+      {"axis_id": "field-validation", "score": 2},
+      {"axis_id": "leadership-scale", "score": 2}
+    ]
+  },
+  {
+    "candidate_id": "CAND-007",
+    "display_name": "후보자 007",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "physical-ai",
+    "current_stage_id": "solo_embed",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "completed"},
+      {"stage_id": "pair_embed", "status": "completed"},
+      {"stage_id": "solo_embed", "status": "in_progress"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-AMR-001", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-AMR-002", "current_level": 3, "target_level": 3},
+      {"skill_id": "RSF-AMR-020", "current_level": 2, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 4},
+      {"axis_id": "solution-design", "score": 4},
+      {"axis_id": "integration-delivery", "score": 3},
+      {"axis_id": "field-validation", "score": 3},
+      {"axis_id": "leadership-scale", "score": 3}
+    ],
+    "impact_proposal": {
+      "title": "AMR 충전 대기 최적화",
+      "problem": "충전 스테이션 집중으로 작업 재개가 지연됩니다.",
+      "expected_impact": "가동 가능시간 8% 증가",
+      "status": "draft"
+    }
+  },
+  {
+    "candidate_id": "CAND-008",
+    "display_name": "후보자 008",
+    "track_id": "smartfactory-tech-leader",
+    "expert_area_profile_id": "digital-twin",
+    "current_stage_id": "integrated_bootcamp",
+    "stage_history": [
+      {"stage_id": "potential_pool", "status": "completed"},
+      {"stage_id": "early_selection", "status": "completed"},
+      {"stage_id": "integrated_bootcamp", "status": "in_progress"}
+    ],
+    "skill_assessments": [
+      {"skill_id": "RSF-RMD-002", "current_level": 2, "target_level": 3},
+      {"skill_id": "RSF-DTS-001", "current_level": 2, "target_level": 3}
+    ],
+    "competency_assessments": [
+      {"axis_id": "problem-framing", "score": 3},
+      {"axis_id": "solution-design", "score": 3},
+      {"axis_id": "integration-delivery", "score": 2},
+      {"axis_id": "field-validation", "score": 2},
+      {"axis_id": "leadership-scale", "score": 2}
+    ]
+  }
+]

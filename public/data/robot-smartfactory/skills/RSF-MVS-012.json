@@ -2,16 +2,32 @@
   "skill_id": "RSF-MVS-012",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0012",
+  "internal_uri": "urn:rsf:skill:mvs-0012",
+  "esco_uri": null,
   "preferred_label_ko": "특징 추출 및 매칭",
   "preferred_label_en": "Feature Extraction and Matching",
   "description_ko": "이미지에서 특징 찾기 및 매칭",
   "description_en": "Extract and match features in images",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합 현장에서 특징 추출 및 매칭 역량 구현"
 }

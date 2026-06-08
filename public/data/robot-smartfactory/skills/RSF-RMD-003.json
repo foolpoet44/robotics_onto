@@ -2,16 +2,33 @@
   "skill_id": "RSF-RMD-003",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0003",
+  "internal_uri": "urn:rsf:skill:rmd-0003",
+  "esco_uri": null,
   "preferred_label_ko": "예방적 유지보수 전략",
   "preferred_label_en": "Preventive Maintenance Strategies",
   "description_ko": "예방적 유지보수(PM), 예측적 유지보수(PdM), 상태 기반 유지보수",
   "description_en": "Preventive maintenance (PM), predictive maintenance (PdM), and condition-based maintenance",
   "skill_type": "knowledge",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
 }

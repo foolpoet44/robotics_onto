@@ -2,16 +2,38 @@
   "skill_id": "RSF-MVS-020",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0020",
+  "internal_uri": "urn:rsf:skill:mvs-0020",
+  "esco_uri": null,
   "preferred_label_ko": "성능 보고서 작성",
   "preferred_label_en": "Performance Report Generation",
   "description_ko": "비전 시스템 성능 지표 정리 및 보고",
   "description_en": "Compile and report vision system performance metrics",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-008",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-008",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 성능 보고서 작성 수행 능력 입증"
 }

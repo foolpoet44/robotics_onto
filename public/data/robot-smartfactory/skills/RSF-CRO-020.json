@@ -2,16 +2,38 @@
   "skill_id": "RSF-CRO-020",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0020",
+  "internal_uri": "urn:rsf:skill:cro-0020",
+  "esco_uri": null,
   "preferred_label_ko": "인간공학 평가",
   "preferred_label_en": "Ergonomic Assessment",
   "description_ko": "작업자의 피로도 및 편의성 평가",
   "description_en": "Assess worker fatigue and convenience",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-CRO-008",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-008",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 인간공학 평가 수행 능력 입증"
 }

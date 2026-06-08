@@ -2,16 +2,32 @@
   "skill_id": "RSF-IRC-012",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0012",
+  "internal_uri": "urn:rsf:skill:irc-0012",
+  "esco_uri": null,
   "preferred_label_ko": "시뮬레이션 기반 프로그래밍",
   "preferred_label_en": "Simulation-Based Programming",
   "description_ko": "시뮬레이션 환경에서 프로그램 테스트",
   "description_en": "Test programs in simulation environment",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "산업용 로봇 제어 현장에서 시뮬레이션 기반 프로그래밍 역량 구현"
 }

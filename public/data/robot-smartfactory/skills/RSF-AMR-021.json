@@ -2,16 +2,38 @@
   "skill_id": "RSF-AMR-021",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0021",
+  "internal_uri": "urn:rsf:skill:amr-0021",
+  "esco_uri": null,
   "preferred_label_ko": "확장성 계획",
   "preferred_label_en": "Scalability Planning",
   "description_ko": "로봇 수 증가 시 시스템 확장 방안",
   "description_en": "Plan system expansion as robot count increases",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-009",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-009",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 확장성 계획 수행 능력 입증"
 }

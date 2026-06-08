@@ -2,16 +2,39 @@
   "skill_id": "RSF-IRC-008",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0008",
+  "internal_uri": "urn:rsf:skill:irc-0008",
+  "esco_uri": null,
   "preferred_label_ko": "좌표계 설정 및 보정",
   "preferred_label_en": "Coordinate Frame Setup and Calibration",
   "description_ko": "로봇의 기준점을 설정하고 정확성 검증",
   "description_en": "Set robot reference points and validate accuracy",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-009",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "산업용 로봇 제어 현장에서 좌표계 설정 및 보정 역량 구현"
 }

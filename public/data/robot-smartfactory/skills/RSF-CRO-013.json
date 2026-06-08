@@ -2,16 +2,33 @@
   "skill_id": "RSF-CRO-013",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0013",
+  "internal_uri": "urn:rsf:skill:cro-0013",
+  "esco_uri": null,
   "preferred_label_ko": "사용자 안전 교육",
   "preferred_label_en": "User Safety Training",
   "description_ko": "협동로봇 사용자에게 안전 교육",
   "description_en": "Provide safety training to collaborative robot users",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-014",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "협동로봇 운용 현장에서 사용자 안전 교육 역량 구현"
 }

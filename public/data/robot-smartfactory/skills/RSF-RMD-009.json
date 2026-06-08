@@ -2,16 +2,39 @@
   "skill_id": "RSF-RMD-009",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0009",
+  "internal_uri": "urn:rsf:skill:rmd-0009",
+  "esco_uri": null,
   "preferred_label_ko": "베어링 검사 및 교체",
   "preferred_label_en": "Bearing Inspection and Replacement",
   "description_ko": "베어링 마모 상태 확인 및 교체",
   "description_en": "Check bearing wear and replace",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단 현장에서 베어링 검사 및 교체 역량 구현"
 }

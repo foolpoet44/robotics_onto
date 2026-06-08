@@ -2,16 +2,32 @@
   "skill_id": "RSF-MVS-011",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0011",
+  "internal_uri": "urn:rsf:skill:mvs-0011",
+  "esco_uri": null,
   "preferred_label_ko": "카메라 캘리브레이션",
   "preferred_label_en": "Camera Calibration",
   "description_ko": "카메라의 왜곡 보정 및 좌표 변환",
   "description_en": "Correct camera distortion and coordinate transformation",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합 현장에서 카메라 캘리브레이션 역량 구현"
 }

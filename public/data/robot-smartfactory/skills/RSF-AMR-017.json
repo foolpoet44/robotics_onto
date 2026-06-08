@@ -2,16 +2,39 @@
   "skill_id": "RSF-AMR-017",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0017",
+  "internal_uri": "urn:rsf:skill:amr-0017",
+  "esco_uri": null,
   "preferred_label_ko": "자율 주행 운영",
   "preferred_label_en": "Autonomous Navigation Operation",
   "description_ko": "정해진 경로 내에서 자율 주행 실현",
   "description_en": "Achieve autonomous navigation within specified routes",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 자율 주행 운영 수행 능력 입증"
 }

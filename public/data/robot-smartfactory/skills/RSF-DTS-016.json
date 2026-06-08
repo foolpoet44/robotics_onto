@@ -2,16 +2,39 @@
   "skill_id": "RSF-DTS-016",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0016",
+  "internal_uri": "urn:rsf:skill:dts-0016",
+  "esco_uri": null,
   "preferred_label_ko": "설계 리스크 식별",
   "preferred_label_en": "Design Risk Identification",
   "description_ko": "시뮬레이션 기반 설계 문제 사전 발견",
   "description_en": "Identify design issues through simulation before implementation",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-DTS-006",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-006",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-015",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-017",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 설계 리스크 식별 수행 능력 입증"
 }

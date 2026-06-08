@@ -1,0 +1,103 @@
+.pageShell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+}
+
+.pageHeading {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.pageHeading h1 {
+  margin: 0.45rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.pageHeading > p:last-child,
+.organizationEn,
+.description,
+.infoPanel p {
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.organizationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.organizationCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.6rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: 180ms ease;
+}
+
+.organizationCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.organizationIcon {
+  font-size: 3rem;
+}
+
+.organizationEn {
+  font-size: 0.88rem;
+}
+
+.description {
+  flex: 1;
+}
+
+.stats {
+  display: flex;
+  gap: 1.6rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  color: var(--color-primary-dark);
+  font-size: 1.7rem;
+}
+
+.stats span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.infoPanel {
+  margin-top: 2rem;
+  padding: 1.4rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+}
+
+.infoPanel h2 {
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+}

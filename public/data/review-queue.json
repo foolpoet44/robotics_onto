@@ -1,0 +1,3680 @@
+{
+  "stats": {
+    "total": 215,
+    "organizationMappings": 10,
+    "ontologyRelations": 205,
+    "statuses": {
+      "pending": 215,
+      "approved": 0,
+      "held": 0,
+      "rejected": 0
+    }
+  },
+  "items": [
+    {
+      "id": "organization_mapping:robot_solution:RS_010",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "Flex RPS 기반 모듈화 구조",
+      "organization_skill": {
+        "skill_id": "RS_010",
+        "label_ko": "로봇 매개변수 관리"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-IRC-009",
+        "label_ko": "모션 제어 파라미터 조정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_011",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "Flex RPS 기반 모듈화 구조",
+      "organization_skill": {
+        "skill_id": "RS_011",
+        "label_ko": "로봇 제어 알고리즘"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-IRC-002",
+        "label_ko": "로봇 제어 이론",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_016",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "로봇 솔루션 표준 패키지화",
+      "organization_skill": {
+        "skill_id": "RS_016",
+        "label_ko": "Hand-Eye Calibration"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-011",
+        "label_ko": "카메라 캘리브레이션",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_022",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "로봇 솔루션 표준 패키지화",
+      "organization_skill": {
+        "skill_id": "RS_022",
+        "label_ko": "2D/3D 비전 시스템"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-004",
+        "label_ko": "컴퓨터 비전 알고리즘",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_024",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "로봇 솔루션 표준 패키지화",
+      "organization_skill": {
+        "skill_id": "RS_024",
+        "label_ko": "비전 가이드 로봇 (VGR)"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-009",
+        "label_ko": "센서-로봇 동기화",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_025",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "로봇 솔루션 표준 패키지화",
+      "organization_skill": {
+        "skill_id": "RS_025",
+        "label_ko": "OpenCV / Halcon"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-004",
+        "label_ko": "컴퓨터 비전 알고리즘",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_035",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "IRIS 기반 AI 기술 적용",
+      "organization_skill": {
+        "skill_id": "RS_035",
+        "label_ko": "이상 탐지 알고리즘"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_036",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "IRIS 기반 AI 기술 적용",
+      "organization_skill": {
+        "skill_id": "RS_036",
+        "label_ko": "시계열 데이터 분석"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_039",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "IRIS 기반 AI 기술 적용",
+      "organization_skill": {
+        "skill_id": "RS_039",
+        "label_ko": "객체 검출 AI"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "organization_mapping:robot_solution:RS_042",
+      "kind": "organization_mapping",
+      "priority": "high",
+      "status": "pending",
+      "organization_id": "robot_solution",
+      "organization_name": "로봇솔루션 Task",
+      "enabler_name": "IRIS 기반 AI 기술 적용",
+      "organization_skill": {
+        "skill_id": "RS_042",
+        "label_ko": "실시간 데이터 처리"
+      },
+      "ontology_skill": {
+        "skill_id": "RSF-DTS-005",
+        "label_ko": "실시간 데이터 파이프라인",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-AMR-001:RSF-CRO-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-AMR-001:RSF-RMD-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-CRO-001:RSF-MVS-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-DTS-001:RSF-IRC-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-DTS-001:RSF-RMD-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:cross_domain:RSF-IRC-001:RSF-MVS-001",
+      "kind": "ontology_relation",
+      "priority": "high",
+      "status": "pending",
+      "relation_type": "cross_domain",
+      "source_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-001:RSF-AMR-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-002",
+        "label_ko": "경로 계획 알고리즘",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-001:RSF-AMR-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-021",
+        "label_ko": "확장성 계획",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-002:RSF-AMR-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-002",
+        "label_ko": "경로 계획 알고리즘",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-003",
+        "label_ko": "차량 동역학 및 제어",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-003:RSF-AMR-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-003",
+        "label_ko": "차량 동역학 및 제어",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-004",
+        "label_ko": "무선 네트워크 및 통신",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-004:RSF-AMR-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-004",
+        "label_ko": "무선 네트워크 및 통신",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-005",
+        "label_ko": "함대 관리 시스템",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-005:RSF-AMR-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-005",
+        "label_ko": "함대 관리 시스템",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-006",
+        "label_ko": "환경 맵 작성",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-006:RSF-AMR-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-006",
+        "label_ko": "환경 맵 작성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-007",
+        "label_ko": "경로 계획 매개변수 조정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-007:RSF-AMR-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-007",
+        "label_ko": "경로 계획 매개변수 조정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-008",
+        "label_ko": "충돌 회피 설정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-008:RSF-AMR-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-008",
+        "label_ko": "충돌 회피 설정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-009",
+        "label_ko": "멀티-로봇 교통 관제",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-009:RSF-AMR-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-009",
+        "label_ko": "멀티-로봇 교통 관제",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-010",
+        "label_ko": "함대 성능 모니터링",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-010:RSF-AMR-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-010",
+        "label_ko": "함대 성능 모니터링",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-011",
+        "label_ko": "GPS 및 GNSS 활용",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-011:RSF-AMR-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-011",
+        "label_ko": "GPS 및 GNSS 활용",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-012",
+        "label_ko": "수동 조종 모드",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-012:RSF-AMR-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-012",
+        "label_ko": "수동 조종 모드",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-013",
+        "label_ko": "스테이션 도킹 설정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-013:RSF-AMR-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-013",
+        "label_ko": "스테이션 도킹 설정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-014",
+        "label_ko": "네트워크 통신 설정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-014:RSF-AMR-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-014",
+        "label_ko": "네트워크 통신 설정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-015",
+        "label_ko": "제조 환경 맵 생성",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-015:RSF-AMR-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-015",
+        "label_ko": "제조 환경 맵 생성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-016",
+        "label_ko": "맵 정확도 검증",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-016:RSF-AMR-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-016",
+        "label_ko": "맵 정확도 검증",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-017",
+        "label_ko": "자율 주행 운영",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-017:RSF-AMR-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-017",
+        "label_ko": "자율 주행 운영",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-018",
+        "label_ko": "충돌 발생 시 분석",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-018:RSF-AMR-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-018",
+        "label_ko": "충돌 발생 시 분석",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-019",
+        "label_ko": "운영 매뉴얼 작성",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-019:RSF-AMR-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-019",
+        "label_ko": "운영 매뉴얼 작성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-020",
+        "label_ko": "성능 지표 분석",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AMR-020:RSF-AMR-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AMR-020",
+        "label_ko": "성능 지표 분석",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-021",
+        "label_ko": "확장성 계획",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-001:RSF-CRO-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-002",
+        "label_ko": "힘/토크 모니터링 원리",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-001:RSF-CRO-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-021",
+        "label_ko": "협동 로봇 배치 최적화",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-002:RSF-CRO-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-002",
+        "label_ko": "힘/토크 모니터링 원리",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-003",
+        "label_ko": "사용자 친화적 프로그래밍",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-003:RSF-CRO-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-003",
+        "label_ko": "사용자 친화적 프로그래밍",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-004",
+        "label_ko": "협동로봇 산업 응용",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-004:RSF-CRO-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-004",
+        "label_ko": "협동로봇 산업 응용",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-005",
+        "label_ko": "인간공학 및 인적 요소",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-005:RSF-CRO-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-005",
+        "label_ko": "인간공학 및 인적 요소",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-006",
+        "label_ko": "협동로봇 안전 설정",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-006:RSF-CRO-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-006",
+        "label_ko": "협동로봇 안전 설정",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-007",
+        "label_ko": "드래그-앤-드롭 티칭",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-007:RSF-CRO-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-007",
+        "label_ko": "드래그-앤-드롭 티칭",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-008",
+        "label_ko": "협동로봇 프로그래밍",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-008:RSF-CRO-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-008",
+        "label_ko": "협동로봇 프로그래밍",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-009",
+        "label_ko": "인간-로봇 상호작용 설계",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-009:RSF-CRO-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-009",
+        "label_ko": "인간-로봇 상호작용 설계",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-010",
+        "label_ko": "협동 작업 태스크 분석",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-010:RSF-CRO-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-010",
+        "label_ko": "협동 작업 태스크 분석",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-011",
+        "label_ko": "터치 감지 및 안전 반응",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-011:RSF-CRO-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-011",
+        "label_ko": "터치 감지 및 안전 반응",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-012",
+        "label_ko": "협동 작업 시뮬레이션",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-012:RSF-CRO-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-012",
+        "label_ko": "협동 작업 시뮬레이션",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-013",
+        "label_ko": "사용자 안전 교육",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-013:RSF-CRO-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-013",
+        "label_ko": "사용자 안전 교육",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-014",
+        "label_ko": "힘 제어 파라미터 튜닝",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-014:RSF-CRO-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-014",
+        "label_ko": "힘 제어 파라미터 튜닝",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-015",
+        "label_ko": "협동 워크셀 안전성 검증",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-015:RSF-CRO-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-015",
+        "label_ko": "협동 워크셀 안전성 검증",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-016",
+        "label_ko": "사용자 가이드 작성",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-016:RSF-CRO-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-016",
+        "label_ko": "사용자 가이드 작성",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-017",
+        "label_ko": "협동 작업 사이클 타임 측정",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-017:RSF-CRO-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-017",
+        "label_ko": "협동 작업 사이클 타임 측정",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-018",
+        "label_ko": "안전성 평가 보고서",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-018:RSF-CRO-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-018",
+        "label_ko": "안전성 평가 보고서",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-019",
+        "label_ko": "작업 개선 제안",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-019:RSF-CRO-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-019",
+        "label_ko": "작업 개선 제안",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-020",
+        "label_ko": "인간공학 평가",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-CRO-020:RSF-CRO-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-020",
+        "label_ko": "인간공학 평가",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-021",
+        "label_ko": "협동 로봇 배치 최적화",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-002",
+        "label_ko": "물리 시뮬레이션 엔진",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-021",
+        "label_ko": "의사결정 지원",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-002:RSF-DTS-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-002",
+        "label_ko": "물리 시뮬레이션 엔진",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-003",
+        "label_ko": "3D 모델링 및 메시 생성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-003:RSF-DTS-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-003",
+        "label_ko": "3D 모델링 및 메시 생성",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-004",
+        "label_ko": "로봇 시뮬레이션 소프트웨어",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-004:RSF-DTS-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-004",
+        "label_ko": "로봇 시뮬레이션 소프트웨어",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-005",
+        "label_ko": "실시간 데이터 파이프라인",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-005:RSF-DTS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-005",
+        "label_ko": "실시간 데이터 파이프라인",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-006",
+        "label_ko": "3D 모델 CAD 임포트",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-006:RSF-DTS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-006",
+        "label_ko": "3D 모델 CAD 임포트",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-007",
+        "label_ko": "로봇 시뮬레이션 환경 구성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-007:RSF-DTS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-007",
+        "label_ko": "로봇 시뮬레이션 환경 구성",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-008",
+        "label_ko": "생산 라인 레이아웃 검증",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-008:RSF-DTS-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-008",
+        "label_ko": "생산 라인 레이아웃 검증",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-009",
+        "label_ko": "사이클 타임 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-009:RSF-DTS-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-009",
+        "label_ko": "사이클 타임 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-010",
+        "label_ko": "실제 로봇 동기화",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-010:RSF-DTS-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-010",
+        "label_ko": "실제 로봇 동기화",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-011",
+        "label_ko": "성능 데이터 수집",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-011:RSF-DTS-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-011",
+        "label_ko": "성능 데이터 수집",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-012",
+        "label_ko": "시나리오 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-012:RSF-DTS-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-012",
+        "label_ko": "시나리오 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-013",
+        "label_ko": "최적화 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-013:RSF-DTS-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-013",
+        "label_ko": "최적화 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-014",
+        "label_ko": "결과 분석 및 시각화",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-014:RSF-DTS-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-014",
+        "label_ko": "결과 분석 및 시각화",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-015",
+        "label_ko": "신규 라인 설계 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-015:RSF-DTS-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-015",
+        "label_ko": "신규 라인 설계 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-016",
+        "label_ko": "설계 리스크 식별",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-016:RSF-DTS-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-016",
+        "label_ko": "설계 리스크 식별",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-017",
+        "label_ko": "운영 시나리오 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-017:RSF-DTS-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-017",
+        "label_ko": "운영 시나리오 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-018",
+        "label_ko": "최적화된 사이클 타임 달성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-018:RSF-DTS-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-018",
+        "label_ko": "최적화된 사이클 타임 달성",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-019",
+        "label_ko": "디지털트윈 유지보수",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-019:RSF-DTS-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-019",
+        "label_ko": "디지털트윈 유지보수",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-020",
+        "label_ko": "설계-운영 연동",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-020:RSF-DTS-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-020",
+        "label_ko": "설계-운영 연동",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-021",
+        "label_ko": "의사결정 지원",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-002",
+        "label_ko": "로봇 제어 이론",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-022",
+        "label_ko": "생산성 향상 제안",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-002:RSF-IRC-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-002",
+        "label_ko": "로봇 제어 이론",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-003",
+        "label_ko": "산업용 로봇 안전 기준",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-003:RSF-IRC-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-003",
+        "label_ko": "산업용 로봇 안전 기준",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-004",
+        "label_ko": "로봇 티칭 방법론",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-004:RSF-IRC-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-004",
+        "label_ko": "로봇 티칭 방법론",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-005",
+        "label_ko": "모션 플래닝 기초",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-005:RSF-IRC-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-005",
+        "label_ko": "모션 플래닝 기초",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-006",
+        "label_ko": "로봇 매뉴얼 티칭",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-006:RSF-IRC-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-006",
+        "label_ko": "로봇 매뉴얼 티칭",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-007",
+        "label_ko": "로봇 프로그래밍",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-007:RSF-IRC-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-007",
+        "label_ko": "로봇 프로그래밍",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-008",
+        "label_ko": "좌표계 설정 및 보정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-008:RSF-IRC-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-008",
+        "label_ko": "좌표계 설정 및 보정",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-009",
+        "label_ko": "모션 제어 파라미터 조정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-009:RSF-IRC-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-009",
+        "label_ko": "모션 제어 파라미터 조정",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-010",
+        "label_ko": "경로 최적화",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-010:RSF-IRC-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-010",
+        "label_ko": "경로 최적화",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-011",
+        "label_ko": "로봇 안전 설정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-011:RSF-IRC-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-011",
+        "label_ko": "로봇 안전 설정",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-012",
+        "label_ko": "시뮬레이션 기반 프로그래밍",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-012:RSF-IRC-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-012",
+        "label_ko": "시뮬레이션 기반 프로그래밍",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-013",
+        "label_ko": "다축 동기 제어",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-013:RSF-IRC-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-013",
+        "label_ko": "다축 동기 제어",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-014",
+        "label_ko": "센서 입출력 처리",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-014:RSF-IRC-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-014",
+        "label_ko": "센서 입출력 처리",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-015",
+        "label_ko": "에러 로그 분석",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-015:RSF-IRC-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-015",
+        "label_ko": "에러 로그 분석",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-016",
+        "label_ko": "생산 라인 로봇 운용",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-016:RSF-IRC-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-016",
+        "label_ko": "생산 라인 로봇 운용",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-017",
+        "label_ko": "사이클 타임 달성",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-017:RSF-IRC-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-017",
+        "label_ko": "사이클 타임 달성",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-018",
+        "label_ko": "로봇 고장 대응",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-018:RSF-IRC-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-018",
+        "label_ko": "로봇 고장 대응",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-019",
+        "label_ko": "작업 문서화",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-019:RSF-IRC-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-019",
+        "label_ko": "작업 문서화",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-020",
+        "label_ko": "라인 밸런싱",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-020:RSF-IRC-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-020",
+        "label_ko": "라인 밸런싱",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-021",
+        "label_ko": "협력업체 기술 지원",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-021:RSF-IRC-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-021",
+        "label_ko": "협력업체 기술 지원",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-022",
+        "label_ko": "생산성 향상 제안",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-001:RSF-MVS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-002",
+        "label_ko": "머신비전 카메라 및 광학",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-001:RSF-MVS-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-021",
+        "label_ko": "카메라 교체 작업",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-002:RSF-MVS-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-002",
+        "label_ko": "머신비전 카메라 및 광학",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-003",
+        "label_ko": "센서 신호 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-003:RSF-MVS-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-003",
+        "label_ko": "센서 신호 처리",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-004",
+        "label_ko": "컴퓨터 비전 알고리즘",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-004:RSF-MVS-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-004",
+        "label_ko": "컴퓨터 비전 알고리즘",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-005",
+        "label_ko": "센서 캘리브레이션 이론",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-005:RSF-MVS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-005",
+        "label_ko": "센서 캘리브레이션 이론",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-006",
+        "label_ko": "카메라 설정 및 조광",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-006:RSF-MVS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-006",
+        "label_ko": "카메라 설정 및 조광",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-007:RSF-MVS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-008",
+        "label_ko": "센서 신호 수집 및 필터링",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-008:RSF-MVS-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-008",
+        "label_ko": "센서 신호 수집 및 필터링",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-009",
+        "label_ko": "센서-로봇 동기화",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-009:RSF-MVS-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-009",
+        "label_ko": "센서-로봇 동기화",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-010",
+        "label_ko": "시뮬레이션 비전 파이프라인",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-010:RSF-MVS-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-010",
+        "label_ko": "시뮬레이션 비전 파이프라인",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-011",
+        "label_ko": "카메라 캘리브레이션",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-011:RSF-MVS-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-011",
+        "label_ko": "카메라 캘리브레이션",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-012",
+        "label_ko": "특징 추출 및 매칭",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-012:RSF-MVS-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-012",
+        "label_ko": "특징 추출 및 매칭",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-013",
+        "label_ko": "실시간 이미지 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-013:RSF-MVS-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-013",
+        "label_ko": "실시간 이미지 처리",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-014",
+        "label_ko": "멀티 센서 융합",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-014:RSF-MVS-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-014",
+        "label_ko": "멀티 센서 융합",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-015",
+        "label_ko": "제조 환경 비전 시스템 구축",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-015:RSF-MVS-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-015",
+        "label_ko": "제조 환경 비전 시스템 구축",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-016",
+        "label_ko": "검출율 목표 달성",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-016:RSF-MVS-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-016",
+        "label_ko": "검출율 목표 달성",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-017",
+        "label_ko": "센서 고장 진단",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-017:RSF-MVS-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-017",
+        "label_ko": "센서 고장 진단",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-018",
+        "label_ko": "대체 센서 제안",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-018:RSF-MVS-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-018",
+        "label_ko": "대체 센서 제안",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-019",
+        "label_ko": "센서 데이터 로깅",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-019:RSF-MVS-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-019",
+        "label_ko": "센서 데이터 로깅",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-020",
+        "label_ko": "성능 보고서 작성",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-020:RSF-MVS-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-020",
+        "label_ko": "성능 보고서 작성",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-021",
+        "label_ko": "카메라 교체 작업",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-001:RSF-RMD-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-002",
+        "label_ko": "신뢰성 공학",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-001:RSF-RMD-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-021",
+        "label_ko": "부품 공급업체 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-002:RSF-RMD-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-002",
+        "label_ko": "신뢰성 공학",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-003",
+        "label_ko": "예방적 유지보수 전략",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-003:RSF-RMD-004",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-003",
+        "label_ko": "예방적 유지보수 전략",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-004",
+        "label_ko": "로봇 진단 도구 및 로깅",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-004:RSF-RMD-005",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-004",
+        "label_ko": "로봇 진단 도구 및 로깅",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-005",
+        "label_ko": "윤활유 및 냉각액 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-005:RSF-RMD-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-005",
+        "label_ko": "윤활유 및 냉각액 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-006",
+        "label_ko": "로봇 상태 모니터링",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-006:RSF-RMD-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-006",
+        "label_ko": "로봇 상태 모니터링",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-007:RSF-RMD-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-008",
+        "label_ko": "고장 코드 해석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-008:RSF-RMD-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-008",
+        "label_ko": "고장 코드 해석",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-009",
+        "label_ko": "베어링 검사 및 교체",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-009:RSF-RMD-010",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-009",
+        "label_ko": "베어링 검사 및 교체",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-010",
+        "label_ko": "기어 및 모터 검사",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-010:RSF-RMD-011",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-010",
+        "label_ko": "기어 및 모터 검사",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-011",
+        "label_ko": "소프트웨어 업그레이드",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-011:RSF-RMD-012",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-011",
+        "label_ko": "소프트웨어 업그레이드",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-012",
+        "label_ko": "성능 벤치마크 테스트",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-012:RSF-RMD-013",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-012",
+        "label_ko": "성능 벤치마크 테스트",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-013",
+        "label_ko": "부품 청소 및 검사",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-013:RSF-RMD-014",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-013",
+        "label_ko": "부품 청소 및 검사",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-014",
+        "label_ko": "윤활유 교체",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-014:RSF-RMD-015",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-014",
+        "label_ko": "윤활유 교체",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-015",
+        "label_ko": "예방적 유지보수 계획 수립",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-015:RSF-RMD-016",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-015",
+        "label_ko": "예방적 유지보수 계획 수립",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-016",
+        "label_ko": "긴급 고장 대응",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-016:RSF-RMD-017",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-016",
+        "label_ko": "긴급 고장 대응",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-017",
+        "label_ko": "부품 수명 예측",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-017:RSF-RMD-018",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-017",
+        "label_ko": "부품 수명 예측",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-018",
+        "label_ko": "재고 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-018:RSF-RMD-019",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-018",
+        "label_ko": "재고 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-019",
+        "label_ko": "유지보수 보고서 작성",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-019:RSF-RMD-020",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-019",
+        "label_ko": "유지보수 보고서 작성",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-020",
+        "label_ko": "성능 지표 개선",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-RMD-020:RSF-RMD-021",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-RMD-020",
+        "label_ko": "성능 지표 개선",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-021",
+        "label_ko": "부품 공급업체 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-006:RSF-AMR-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-006",
+        "label_ko": "환경 맵 작성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-007:RSF-AMR-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-007",
+        "label_ko": "경로 계획 매개변수 조정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-001",
+        "label_ko": "SLAM 개념",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-008:RSF-AMR-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-008",
+        "label_ko": "충돌 회피 설정",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-002",
+        "label_ko": "경로 계획 알고리즘",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-009:RSF-AMR-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-009",
+        "label_ko": "멀티-로봇 교통 관제",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-002",
+        "label_ko": "경로 계획 알고리즘",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-010:RSF-AMR-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-010",
+        "label_ko": "함대 성능 모니터링",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-003",
+        "label_ko": "차량 동역학 및 제어",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-015:RSF-AMR-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-015",
+        "label_ko": "제조 환경 맵 생성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-006",
+        "label_ko": "환경 맵 작성",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-016:RSF-AMR-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-016",
+        "label_ko": "맵 정확도 검증",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-006",
+        "label_ko": "환경 맵 작성",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-017:RSF-AMR-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-017",
+        "label_ko": "자율 주행 운영",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-007",
+        "label_ko": "경로 계획 매개변수 조정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-018:RSF-AMR-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-018",
+        "label_ko": "충돌 발생 시 분석",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-007",
+        "label_ko": "경로 계획 매개변수 조정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-019:RSF-AMR-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-019",
+        "label_ko": "운영 매뉴얼 작성",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-008",
+        "label_ko": "충돌 회피 설정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-020:RSF-AMR-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-020",
+        "label_ko": "성능 지표 분석",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-008",
+        "label_ko": "충돌 회피 설정",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-AMR-021:RSF-AMR-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-AMR-021",
+        "label_ko": "확장성 계획",
+        "domain": "autonomous-mobile-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AMR-009",
+        "label_ko": "멀티-로봇 교통 관제",
+        "domain": "autonomous-mobile-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-006:RSF-CRO-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-006",
+        "label_ko": "협동로봇 안전 설정",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-007:RSF-CRO-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-007",
+        "label_ko": "드래그-앤-드롭 티칭",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-001",
+        "label_ko": "협동로봇 안전 개념",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-008:RSF-CRO-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-008",
+        "label_ko": "협동로봇 프로그래밍",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-002",
+        "label_ko": "힘/토크 모니터링 원리",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-009:RSF-CRO-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-009",
+        "label_ko": "인간-로봇 상호작용 설계",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-002",
+        "label_ko": "힘/토크 모니터링 원리",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-010:RSF-CRO-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-010",
+        "label_ko": "협동 작업 태스크 분석",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-003",
+        "label_ko": "사용자 친화적 프로그래밍",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-015:RSF-CRO-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-015",
+        "label_ko": "협동 워크셀 안전성 검증",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-006",
+        "label_ko": "협동로봇 안전 설정",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-016:RSF-CRO-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-016",
+        "label_ko": "사용자 가이드 작성",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-006",
+        "label_ko": "협동로봇 안전 설정",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-017:RSF-CRO-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-017",
+        "label_ko": "협동 작업 사이클 타임 측정",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-007",
+        "label_ko": "드래그-앤-드롭 티칭",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-018:RSF-CRO-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-018",
+        "label_ko": "안전성 평가 보고서",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-007",
+        "label_ko": "드래그-앤-드롭 티칭",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-019:RSF-CRO-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-019",
+        "label_ko": "작업 개선 제안",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-008",
+        "label_ko": "협동로봇 프로그래밍",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-020:RSF-CRO-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-020",
+        "label_ko": "인간공학 평가",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-008",
+        "label_ko": "협동로봇 프로그래밍",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-CRO-021:RSF-CRO-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-CRO-021",
+        "label_ko": "협동 로봇 배치 최적화",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-009",
+        "label_ko": "인간-로봇 상호작용 설계",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-006:RSF-DTS-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-006",
+        "label_ko": "3D 모델 CAD 임포트",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-007:RSF-DTS-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-007",
+        "label_ko": "로봇 시뮬레이션 환경 구성",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-001",
+        "label_ko": "디지털트윈 아키텍처",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-008:RSF-DTS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-008",
+        "label_ko": "생산 라인 레이아웃 검증",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-002",
+        "label_ko": "물리 시뮬레이션 엔진",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-009:RSF-DTS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-009",
+        "label_ko": "사이클 타임 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-002",
+        "label_ko": "물리 시뮬레이션 엔진",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-010:RSF-DTS-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-010",
+        "label_ko": "실제 로봇 동기화",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-003",
+        "label_ko": "3D 모델링 및 메시 생성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-015:RSF-DTS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-015",
+        "label_ko": "신규 라인 설계 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-006",
+        "label_ko": "3D 모델 CAD 임포트",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-016:RSF-DTS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-016",
+        "label_ko": "설계 리스크 식별",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-006",
+        "label_ko": "3D 모델 CAD 임포트",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-017:RSF-DTS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-017",
+        "label_ko": "운영 시나리오 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-007",
+        "label_ko": "로봇 시뮬레이션 환경 구성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-018:RSF-DTS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-018",
+        "label_ko": "최적화된 사이클 타임 달성",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-007",
+        "label_ko": "로봇 시뮬레이션 환경 구성",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-019:RSF-DTS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-019",
+        "label_ko": "디지털트윈 유지보수",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-008",
+        "label_ko": "생산 라인 레이아웃 검증",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-020:RSF-DTS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-020",
+        "label_ko": "설계-운영 연동",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-008",
+        "label_ko": "생산 라인 레이아웃 검증",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-DTS-021:RSF-DTS-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-DTS-021",
+        "label_ko": "의사결정 지원",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-009",
+        "label_ko": "사이클 타임 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-006:RSF-IRC-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-006",
+        "label_ko": "로봇 매뉴얼 티칭",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-007:RSF-IRC-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-007",
+        "label_ko": "로봇 프로그래밍",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-001",
+        "label_ko": "로봇 구조 및 운동학",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-008:RSF-IRC-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-008",
+        "label_ko": "좌표계 설정 및 보정",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-002",
+        "label_ko": "로봇 제어 이론",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-009:RSF-IRC-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-009",
+        "label_ko": "모션 제어 파라미터 조정",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-002",
+        "label_ko": "로봇 제어 이론",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-010:RSF-IRC-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-010",
+        "label_ko": "경로 최적화",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-003",
+        "label_ko": "산업용 로봇 안전 기준",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-016:RSF-IRC-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-016",
+        "label_ko": "생산 라인 로봇 운용",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-006",
+        "label_ko": "로봇 매뉴얼 티칭",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-017:RSF-IRC-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-017",
+        "label_ko": "사이클 타임 달성",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-006",
+        "label_ko": "로봇 매뉴얼 티칭",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-018:RSF-IRC-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-018",
+        "label_ko": "로봇 고장 대응",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-007",
+        "label_ko": "로봇 프로그래밍",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-019:RSF-IRC-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-019",
+        "label_ko": "작업 문서화",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-007",
+        "label_ko": "로봇 프로그래밍",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-020:RSF-IRC-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-020",
+        "label_ko": "라인 밸런싱",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-008",
+        "label_ko": "좌표계 설정 및 보정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-021:RSF-IRC-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-021",
+        "label_ko": "협력업체 기술 지원",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-008",
+        "label_ko": "좌표계 설정 및 보정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-IRC-022:RSF-IRC-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-IRC-022",
+        "label_ko": "생산성 향상 제안",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-009",
+        "label_ko": "모션 제어 파라미터 조정",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-006:RSF-MVS-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-006",
+        "label_ko": "카메라 설정 및 조광",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-007:RSF-MVS-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-001",
+        "label_ko": "디지털 이미지 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-008:RSF-MVS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-008",
+        "label_ko": "센서 신호 수집 및 필터링",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-002",
+        "label_ko": "머신비전 카메라 및 광학",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-009:RSF-MVS-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-009",
+        "label_ko": "센서-로봇 동기화",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-002",
+        "label_ko": "머신비전 카메라 및 광학",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-010:RSF-MVS-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-010",
+        "label_ko": "시뮬레이션 비전 파이프라인",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-003",
+        "label_ko": "센서 신호 처리",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-015:RSF-MVS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-015",
+        "label_ko": "제조 환경 비전 시스템 구축",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-006",
+        "label_ko": "카메라 설정 및 조광",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-016:RSF-MVS-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-016",
+        "label_ko": "검출율 목표 달성",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-006",
+        "label_ko": "카메라 설정 및 조광",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-017:RSF-MVS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-017",
+        "label_ko": "센서 고장 진단",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-018:RSF-MVS-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-018",
+        "label_ko": "대체 센서 제안",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-007",
+        "label_ko": "이미지 기반 결함 검출",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-019:RSF-MVS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-019",
+        "label_ko": "센서 데이터 로깅",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-008",
+        "label_ko": "센서 신호 수집 및 필터링",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-020:RSF-MVS-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-020",
+        "label_ko": "성능 보고서 작성",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-008",
+        "label_ko": "센서 신호 수집 및 필터링",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-MVS-021:RSF-MVS-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-MVS-021",
+        "label_ko": "카메라 교체 작업",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-009",
+        "label_ko": "센서-로봇 동기화",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-006:RSF-RMD-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-006",
+        "label_ko": "로봇 상태 모니터링",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-007:RSF-RMD-001",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-001",
+        "label_ko": "로봇 부품 분류 및 수명 관리",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-008:RSF-RMD-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-008",
+        "label_ko": "고장 코드 해석",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-002",
+        "label_ko": "신뢰성 공학",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-009:RSF-RMD-002",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-009",
+        "label_ko": "베어링 검사 및 교체",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-002",
+        "label_ko": "신뢰성 공학",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-010:RSF-RMD-003",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-010",
+        "label_ko": "기어 및 모터 검사",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-003",
+        "label_ko": "예방적 유지보수 전략",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-015:RSF-RMD-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-015",
+        "label_ko": "예방적 유지보수 계획 수립",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-006",
+        "label_ko": "로봇 상태 모니터링",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-016:RSF-RMD-006",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-016",
+        "label_ko": "긴급 고장 대응",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-006",
+        "label_ko": "로봇 상태 모니터링",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-017:RSF-RMD-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-017",
+        "label_ko": "부품 수명 예측",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-018:RSF-RMD-007",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-018",
+        "label_ko": "재고 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-007",
+        "label_ko": "트렌드 분석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-019:RSF-RMD-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-019",
+        "label_ko": "유지보수 보고서 작성",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-008",
+        "label_ko": "고장 코드 해석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-020:RSF-RMD-008",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-020",
+        "label_ko": "성능 지표 개선",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-008",
+        "label_ko": "고장 코드 해석",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    },
+    {
+      "id": "ontology_relation:specialization:RSF-RMD-021:RSF-RMD-009",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "specialization",
+      "source_skill": {
+        "skill_id": "RSF-RMD-021",
+        "label_ko": "부품 공급업체 관리",
+        "domain": "robot-maintenance-diagnostics"
+      },
+      "target_skill": {
+        "skill_id": "RSF-RMD-009",
+        "label_ko": "베어링 검사 및 교체",
+        "domain": "robot-maintenance-diagnostics"
+      }
+    }
+  ]
+}

@@ -2,16 +2,32 @@
   "skill_id": "RSF-MVS-013",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0013",
+  "internal_uri": "urn:rsf:skill:mvs-0013",
+  "esco_uri": null,
   "preferred_label_ko": "실시간 이미지 처리",
   "preferred_label_en": "Real-Time Image Processing",
   "description_ko": "고속으로 이미지를 처리하고 결과 전달",
   "description_en": "Process images in real-time and deliver results",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-014",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합 현장에서 실시간 이미지 처리 역량 구현"
 }

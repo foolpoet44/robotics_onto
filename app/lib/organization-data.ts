@@ -1,10 +1,17 @@
+import type { CollegeId, LevelTier } from "./college-types";
+
 export interface OrganizationSkill {
   skill_id: string;
+  internal_uri: string;
+  esco_uri: string | null;
   label_ko: string;
   label_en: string;
   importance: number;
   target_proficiency: string;
   match_type: "exact" | "approximate" | "custom";
+  ontology_skill_id: string | null;
+  ontology_match_type: "exact" | "approximate" | "none";
+  ontology_review_status?: "approved";
   notes?: string;
 }
 
@@ -14,6 +21,8 @@ export interface Enabler {
   name_en: string;
   description: string;
   priority: number;
+  collegeId?: CollegeId;
+  levelTier?: LevelTier;
   skills: OrganizationSkill[];
 }
 
@@ -31,10 +40,13 @@ export interface Organization {
   enablers: Enabler[];
 }
 
-export async function loadOrganization(orgId: string): Promise<Organization> {
-  const response = await fetch(`/data/organizations/${orgId}.json`);
-  if (!response.ok) {
-    throw new Error("조직 데이터를 불러오지 못했습니다.");
-  }
-  return response.json();
+export interface OrganizationSummary {
+  id: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  enablerCount: number;
+  skillCount: number;
 }
+
+export const ORGANIZATION_IDS = ["robot-solution"] as const;

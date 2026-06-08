@@ -2,16 +2,39 @@
   "skill_id": "RSF-IRC-009",
   "domain": "industrial-robot-control",
   "domain_en": "Industrial Robot Control",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0009",
+  "internal_uri": "urn:rsf:skill:irc-0009",
+  "esco_uri": null,
   "preferred_label_ko": "모션 제어 파라미터 조정",
   "preferred_label_en": "Motion Control Parameter Adjustment",
   "description_ko": "속도, 가속도, 감속도 등 파라미터 최적화",
   "description_en": "Optimize parameters such as speed and acceleration",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-IRC-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "산업용 로봇 제어 현장에서 모션 제어 파라미터 조정 역량 구현"
 }

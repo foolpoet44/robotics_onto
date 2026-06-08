@@ -2,16 +2,39 @@
   "skill_id": "RSF-AMR-007",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0007",
+  "internal_uri": "urn:rsf:skill:amr-0007",
+  "esco_uri": null,
   "preferred_label_ko": "경로 계획 매개변수 조정",
   "preferred_label_en": "Path Planning Parameter Adjustment",
   "description_ko": "목표점까지의 경로 계획 최적화",
   "description_en": "Optimize path planning to destination",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-006",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "자율이동로봇 현장에서 경로 계획 매개변수 조정 역량 구현"
 }

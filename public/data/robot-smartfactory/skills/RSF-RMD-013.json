@@ -2,16 +2,32 @@
   "skill_id": "RSF-RMD-013",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0013",
+  "internal_uri": "urn:rsf:skill:rmd-0013",
+  "esco_uri": null,
   "preferred_label_ko": "부품 청소 및 검사",
   "preferred_label_en": "Component Cleaning and Inspection",
   "description_ko": "부품의 먼지, 이물질 제거 및 상태 확인",
   "description_en": "Clean components and check condition",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-014",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단 현장에서 부품 청소 및 검사 역량 구현"
 }

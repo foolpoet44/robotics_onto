@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Test ontology rules
+        run: npm run test:ontology
+
+      - name: Test organization mapping rules
+        run: npm run test:organization
+
+      - name: Test review queue rules
+        run: npm run test:review-queue
+
+      - name: Test review decision rules
+        run: npm run test:review-decisions
+
+      - name: Test skill detail lookup
+        run: npm run test:skill-detail
+
+      - name: Test development track rules
+        run: npm run test:development
+
+      - name: Test development record updates
+        run: npm run test:development-update
+
+      - name: Validate review decisions
+        run: npm run validate:review-decisions
+
+      - name: Validate data
+        run: npm run validate:data
+
+      - name: Validate development data
+        run: npm run validate:development
+
+      - name: Test data
+        run: npm run test:data
+
+      - name: Build
+        run: npm run build

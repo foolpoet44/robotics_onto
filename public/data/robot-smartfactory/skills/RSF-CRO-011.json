@@ -2,16 +2,33 @@
   "skill_id": "RSF-CRO-011",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0011",
+  "internal_uri": "urn:rsf:skill:cro-0011",
+  "esco_uri": null,
   "preferred_label_ko": "터치 감지 및 안전 반응",
   "preferred_label_en": "Touch Sensing and Safety Response",
   "description_ko": "접촉 감지 시 로봇의 안전한 반응 설정",
   "description_en": "Configure safe robot reactions to touch detection",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "협동로봇 운용 현장에서 터치 감지 및 안전 반응 역량 구현"
 }

@@ -2,16 +2,45 @@
   "skill_id": "RSF-DTS-001",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0001",
+  "internal_uri": "urn:rsf:skill:dts-0001",
+  "esco_uri": null,
   "preferred_label_ko": "디지털트윈 아키텍처",
   "preferred_label_en": "Digital Twin Architecture",
   "description_ko": "물리 시스템과 디지털 복제본의 동기화 아키텍처",
   "description_en": "Synchronization architecture between physical systems and digital replicas",
   "skill_type": "knowledge",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-001",
+      "type": "cross_domain",
+      "weight": 0.6,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-001",
+      "type": "cross_domain",
+      "weight": 0.6,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
 }

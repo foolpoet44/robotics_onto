@@ -2,16 +2,33 @@
   "skill_id": "RSF-MVS-004",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0004",
+  "internal_uri": "urn:rsf:skill:mvs-0004",
+  "esco_uri": null,
   "preferred_label_ko": "컴퓨터 비전 알고리즘",
   "preferred_label_en": "Computer Vision Algorithms",
   "description_ko": "CNN, 특징 추출, 물체 인식 기초",
   "description_en": "Fundamentals of CNNs, feature extraction, and object recognition",
   "skill_type": "knowledge",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-003",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
 }

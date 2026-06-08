@@ -2,16 +2,38 @@
   "skill_id": "RSF-DTS-018",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0018",
+  "internal_uri": "urn:rsf:skill:dts-0018",
+  "esco_uri": null,
   "preferred_label_ko": "최적화된 사이클 타임 달성",
   "preferred_label_en": "Optimized Cycle Time Achievement",
   "description_ko": "시뮬레이션으로 검증된 최적 사이클 타임 달성",
   "description_en": "Achieve optimized cycle time verified through simulation",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-DTS-007",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-017",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 최적화된 사이클 타임 달성 수행 능력 입증"
 }

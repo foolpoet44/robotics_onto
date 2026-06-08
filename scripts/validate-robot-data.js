@@ -14,6 +14,13 @@
 
 const fs = require("fs");
 const path = require("path");
+const {
+  getRelationTarget,
+  validateOntologySemantics,
+} = require("./lib/ontology-validation");
+const {
+  validateOrganizationMapping,
+} = require("./lib/organization-validation");
 
 // ==================== 색상 출력 헬퍼 ====================
 const colors = {
@@ -38,8 +45,9 @@ function header(title) {
 // ==================== 검증 로직 ====================
 
 class RobotDataValidator {
-  constructor(dataPath) {
+  constructor(dataPath, options = {}) {
     this.dataPath = dataPath;
+    this.strict = options.strict ?? false;
     this.data = null;
     this.errors = [];
     this.warnings = [];
@@ -256,7 +264,8 @@ class RobotDataValidator {
 
     this.data.forEach((skill) => {
       if (skill.related_skills && Array.isArray(skill.related_skills)) {
-        skill.related_skills.forEach((relatedId) => {
+        skill.related_skills.forEach((relation) => {
+          const relatedId = getRelationTarget(relation);
           if (!skillIds.has(relatedId)) {
             invalidReferences.push({
               skill_id: skill.skill_id,
@@ -279,6 +288,59 @@ class RobotDataValidator {
     }
 
     return invalidReferences;
+  }
+
+  // 9. strict 모드: 온톨로지의 의미적 무결성 검증
+  validateOntologySemantics() {
+    header("9️⃣ 온톨로지 의미 검증 (strict)");
+    const result = validateOntologySemantics(this.data);
+
+    console.table(result.metrics);
+    result.errors.forEach((error) => this.errors.push(error));
+    result.warnings.forEach((warning) => this.warnings.push(warning));
+
+    if (result.valid) {
+      log("✅ 온톨로지 의미 검증 통과", "green");
+    } else {
+      log(`❌ 온톨로지 의미 오류: ${result.errors.length}개`, "red");
+    }
+
+    return result;
+  }
+
+  // 10. strict 모드: 조직 역량과 기준 온톨로지 연결 검증
+  validateOrganizationMappings() {
+    header("🔟 조직 역량 매핑 검증 (strict)");
+    const organizationsDir = path.join(
+      __dirname,
+      "../public/data/organizations",
+    );
+    const files = fs
+      .readdirSync(organizationsDir)
+      .filter((file) => file.endsWith(".json"));
+    const metrics = { skills: 0, mapped: 0, unmapped: 0 };
+
+    files.forEach((file) => {
+      const organization = JSON.parse(
+        fs.readFileSync(path.join(organizationsDir, file), "utf-8"),
+      );
+      const result = validateOrganizationMapping(organization, this.data);
+      result.errors.forEach((error) => this.errors.push(`${file}: ${error}`));
+      result.warnings.forEach((warning) =>
+        this.warnings.push(`${file}: ${warning}`),
+      );
+      metrics.skills += result.metrics.skills;
+      metrics.mapped += result.metrics.mapped;
+      metrics.unmapped += result.metrics.unmapped;
+    });
+
+    metrics.coverage =
+      metrics.skills === 0
+        ? 0
+        : Number(((metrics.mapped / metrics.skills) * 100).toFixed(1));
+    console.table(metrics);
+    log("✅ 조직 역량 매핑 검증 완료", "green");
+    return metrics;
   }
 
   // 7. 추가 통계: proficiency_level 분포
@@ -327,7 +389,6 @@ class RobotDataValidator {
     const requiredFields = [
       "skill_id",
       "domain",
-      "esco_uri",
       "preferred_label_ko",
       "preferred_label_en",
       "skill_type",
@@ -392,6 +453,12 @@ class RobotDataValidator {
     const invalidReferences = this.validateRelatedSkills();
     const profStats = this.validateProficiencyDistribution();
     const fieldsComplete = this.validateFieldCompleteness();
+    const ontologyResult = this.strict
+      ? this.validateOntologySemantics()
+      : null;
+    const organizationMetrics = this.strict
+      ? this.validateOrganizationMappings()
+      : null;
 
     // 최종 요약 테이블
     header("📊 최종 요약");
@@ -403,6 +470,19 @@ class RobotDataValidator {
       { Metric: "Competence 스킬", Value: typeStats.competence || 0 },
       { Metric: "고아 스킬", Value: orphans.length },
       { Metric: "유효하지 않은 참조", Value: invalidReferences.length },
+      ...(ontologyResult
+        ? [
+            { Metric: "관계 엣지", Value: ontologyResult.metrics.edges },
+            { Metric: "고립 노드", Value: ontologyResult.metrics.isolated },
+          ]
+        : []),
+      ...(organizationMetrics
+        ? [
+            { Metric: "조직 역량", Value: organizationMetrics.skills },
+            { Metric: "기준 스킬 연결", Value: organizationMetrics.mapped },
+            { Metric: "조직 고유 역량", Value: organizationMetrics.unmapped },
+          ]
+        : []),
     ];
     console.table(summary);
 
@@ -413,8 +493,13 @@ class RobotDataValidator {
 }
 
 // ==================== 메인 실행 ====================
-const dataPath = path.join(__dirname, "../public/data/robot-smartfactory.json");
-const validator = new RobotDataValidator(dataPath);
+const strict = process.argv.includes("--strict");
+const dataArgumentIndex = process.argv.indexOf("--data");
+const dataPath =
+  dataArgumentIndex >= 0
+    ? path.resolve(process.argv[dataArgumentIndex + 1])
+    : path.join(__dirname, "../public/data/robot-smartfactory.json");
+const validator = new RobotDataValidator(dataPath, { strict });
 const success = validator.run();
 
 process.exit(success ? 0 : 1);

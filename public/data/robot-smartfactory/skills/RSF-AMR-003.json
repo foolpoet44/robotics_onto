@@ -2,16 +2,33 @@
   "skill_id": "RSF-AMR-003",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0003",
+  "internal_uri": "urn:rsf:skill:amr-0003",
+  "esco_uri": null,
   "preferred_label_ko": "차량 동역학 및 제어",
   "preferred_label_en": "Vehicle Dynamics and Control",
   "description_ko": "휠 기구학, 속도 제어, 조향 제어",
   "description_en": "Wheel kinematics, velocity control, and steering control",
   "skill_type": "knowledge",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "자율이동로봇의 이론적 기초"
 }

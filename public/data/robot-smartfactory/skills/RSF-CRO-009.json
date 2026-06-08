@@ -2,16 +2,39 @@
   "skill_id": "RSF-CRO-009",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0009",
+  "internal_uri": "urn:rsf:skill:cro-0009",
+  "esco_uri": null,
   "preferred_label_ko": "인간-로봇 상호작용 설계",
   "preferred_label_en": "Human-Robot Interaction Design",
   "description_ko": "안전한 협동 작업 시나리오 설계",
   "description_en": "Design safe collaborative work scenarios",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-CRO-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "협동로봇 운용 현장에서 인간-로봇 상호작용 설계 역량 구현"
 }

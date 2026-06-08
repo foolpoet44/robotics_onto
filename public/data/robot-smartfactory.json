@@ -3,16 +3,45 @@
     "skill_id": "RSF-IRC-001",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0001",
+    "internal_uri": "urn:rsf:skill:irc-0001",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 구조 및 운동학",
     "preferred_label_en": "Robot Kinematics and Dynamics",
     "description_ko": "로봇의 물리적 구조, 조인트 운동, 역운동학을 이해하는 기초 지식",
     "description_en": "Fundamental knowledge of robot physical structure, joint motion, and inverse kinematics",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-022",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
   },
@@ -20,16 +49,33 @@
     "skill_id": "RSF-IRC-002",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0002",
+    "internal_uri": "urn:rsf:skill:irc-0002",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 제어 이론",
     "preferred_label_en": "Robot Control Theory",
     "description_ko": "PID 제어, 궤적 계획, 모션 제어의 이론적 기초",
     "description_en": "Theoretical foundation of PID control, trajectory planning, and motion control",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
   },
@@ -37,16 +83,33 @@
     "skill_id": "RSF-IRC-003",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0003",
+    "internal_uri": "urn:rsf:skill:irc-0003",
+    "esco_uri": null,
     "preferred_label_ko": "산업용 로봇 안전 기준",
     "preferred_label_en": "Industrial Robot Safety Standards (ISO 10218)",
     "description_ko": "ISO 10218, ANSI/NFPA 79 등 산업용 로봇 안전 표준 및 규제",
     "description_en": "Safety standards and regulations for industrial robots including ISO 10218 and ANSI/NFPA 79",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
   },
@@ -54,16 +117,33 @@
     "skill_id": "RSF-IRC-004",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0004",
+    "internal_uri": "urn:rsf:skill:irc-0004",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 티칭 방법론",
     "preferred_label_en": "Robot Teaching Methodologies",
     "description_ko": "온라인 티칭, 오프라인 프로그래밍, 매뉴얼 가이딩 등 다양한 티칭 방식",
     "description_en": "Various teaching approaches including online teaching, offline programming, and manual guiding",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
   },
@@ -71,16 +151,33 @@
     "skill_id": "RSF-IRC-005",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0005",
+    "internal_uri": "urn:rsf:skill:irc-0005",
+    "esco_uri": null,
     "preferred_label_ko": "모션 플래닝 기초",
     "preferred_label_en": "Motion Planning Fundamentals",
     "description_ko": "경로 계획, 충돌 회피, 움직임 최적화의 기초 개념",
     "description_en": "Fundamental concepts of path planning, collision avoidance, and motion optimization",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어의 이론적 기초"
   },
@@ -88,16 +185,39 @@
     "skill_id": "RSF-IRC-006",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0006",
+    "internal_uri": "urn:rsf:skill:irc-0006",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 매뉴얼 티칭",
     "preferred_label_en": "Robot Manual Teaching",
     "description_ko": "손으로 로봇 팔을 조작하여 작업 경로를 기록",
     "description_en": "Record work paths by manually manipulating robot arm",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 로봇 매뉴얼 티칭 역량 구현"
   },
@@ -105,16 +225,39 @@
     "skill_id": "RSF-IRC-007",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0007",
+    "internal_uri": "urn:rsf:skill:irc-0007",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 프로그래밍",
     "preferred_label_en": "Robot Programming",
     "description_ko": "로봇 고유 언어(RAPID, KRL 등)로 프로그래밍",
     "description_en": "Program using robot-specific languages (RAPID, KRL, etc.)",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 로봇 프로그래밍 역량 구현"
   },
@@ -122,16 +265,39 @@
     "skill_id": "RSF-IRC-008",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0008",
+    "internal_uri": "urn:rsf:skill:irc-0008",
+    "esco_uri": null,
     "preferred_label_ko": "좌표계 설정 및 보정",
     "preferred_label_en": "Coordinate Frame Setup and Calibration",
     "description_ko": "로봇의 기준점을 설정하고 정확성 검증",
     "description_en": "Set robot reference points and validate accuracy",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 좌표계 설정 및 보정 역량 구현"
   },
@@ -139,16 +305,39 @@
     "skill_id": "RSF-IRC-009",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0009",
+    "internal_uri": "urn:rsf:skill:irc-0009",
+    "esco_uri": null,
     "preferred_label_ko": "모션 제어 파라미터 조정",
     "preferred_label_en": "Motion Control Parameter Adjustment",
     "description_ko": "속도, 가속도, 감속도 등 파라미터 최적화",
     "description_en": "Optimize parameters such as speed and acceleration",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 모션 제어 파라미터 조정 역량 구현"
   },
@@ -156,16 +345,39 @@
     "skill_id": "RSF-IRC-010",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0010",
+    "internal_uri": "urn:rsf:skill:irc-0010",
+    "esco_uri": null,
     "preferred_label_ko": "경로 최적화",
     "preferred_label_en": "Path Optimization",
     "description_ko": "충돌 회피하면서 이동 거리 최소화",
     "description_en": "Minimize travel distance while avoiding collisions",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 경로 최적화 역량 구현"
   },
@@ -173,16 +385,32 @@
     "skill_id": "RSF-IRC-011",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0011",
+    "internal_uri": "urn:rsf:skill:irc-0011",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 안전 설정",
     "preferred_label_en": "Robot Safety Configuration",
     "description_ko": "안전 펜스, 속도 제한 등 안전 기능 설정",
     "description_en": "Configure safety features including fences and speed limits",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 로봇 안전 설정 역량 구현"
   },
@@ -190,16 +418,32 @@
     "skill_id": "RSF-IRC-012",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0012",
+    "internal_uri": "urn:rsf:skill:irc-0012",
+    "esco_uri": null,
     "preferred_label_ko": "시뮬레이션 기반 프로그래밍",
     "preferred_label_en": "Simulation-Based Programming",
     "description_ko": "시뮬레이션 환경에서 프로그램 테스트",
     "description_en": "Test programs in simulation environment",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 시뮬레이션 기반 프로그래밍 역량 구현"
   },
@@ -207,16 +451,32 @@
     "skill_id": "RSF-IRC-013",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0013",
+    "internal_uri": "urn:rsf:skill:irc-0013",
+    "esco_uri": null,
     "preferred_label_ko": "다축 동기 제어",
     "preferred_label_en": "Multi-Axis Synchronized Control",
     "description_ko": "여러 로봇의 협력 동작 제어",
     "description_en": "Control coordinated movements of multiple robots",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 다축 동기 제어 역량 구현"
   },
@@ -224,16 +484,32 @@
     "skill_id": "RSF-IRC-014",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0014",
+    "internal_uri": "urn:rsf:skill:irc-0014",
+    "esco_uri": null,
     "preferred_label_ko": "센서 입출력 처리",
     "preferred_label_en": "Sensor Input/Output Processing",
     "description_ko": "센서 신호를 로봇 동작에 반영",
     "description_en": "Integrate sensor signals into robot motion",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 센서 입출력 처리 역량 구현"
   },
@@ -241,16 +517,32 @@
     "skill_id": "RSF-IRC-015",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0015",
+    "internal_uri": "urn:rsf:skill:irc-0015",
+    "esco_uri": null,
     "preferred_label_ko": "에러 로그 분석",
     "preferred_label_en": "Error Log Analysis",
     "description_ko": "로봇 에러 코드 해석 및 해결 방법 찾기",
     "description_en": "Interpret robot error codes and find solutions",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "산업용 로봇 제어 현장에서 에러 로그 분석 역량 구현"
   },
@@ -258,16 +550,39 @@
     "skill_id": "RSF-IRC-016",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0016",
+    "internal_uri": "urn:rsf:skill:irc-0016",
+    "esco_uri": null,
     "preferred_label_ko": "생산 라인 로봇 운용",
     "preferred_label_en": "Production Line Robot Operation",
     "description_ko": "실제 제조 환경에서 로봇 운용",
     "description_en": "Operate robots in actual manufacturing environment",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 생산 라인 로봇 운용 수행 능력 입증"
   },
@@ -275,16 +590,39 @@
     "skill_id": "RSF-IRC-017",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0017",
+    "internal_uri": "urn:rsf:skill:irc-0017",
+    "esco_uri": null,
     "preferred_label_ko": "사이클 타임 달성",
     "preferred_label_en": "Cycle Time Achievement",
     "description_ko": "정해진 시간 내에 작업 완료",
     "description_en": "Complete work within specified cycle time",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 사이클 타임 달성 수행 능력 입증"
   },
@@ -292,16 +630,39 @@
     "skill_id": "RSF-IRC-018",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0018",
+    "internal_uri": "urn:rsf:skill:irc-0018",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 고장 대응",
     "preferred_label_en": "Robot Fault Response",
     "description_ko": "로봇 오류 발생 시 신속한 진단 및 복구",
     "description_en": "Quickly diagnose and recover from robot failures",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 로봇 고장 대응 수행 능력 입증"
   },
@@ -309,16 +670,38 @@
     "skill_id": "RSF-IRC-019",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0019",
+    "internal_uri": "urn:rsf:skill:irc-0019",
+    "esco_uri": null,
     "preferred_label_ko": "작업 문서화",
     "preferred_label_en": "Work Documentation",
     "description_ko": "프로그램 및 설정 내용 상세히 기록",
     "description_en": "Document programs and configurations in detail",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 작업 문서화 수행 능력 입증"
   },
@@ -326,16 +709,38 @@
     "skill_id": "RSF-IRC-020",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0020",
+    "internal_uri": "urn:rsf:skill:irc-0020",
+    "esco_uri": null,
     "preferred_label_ko": "라인 밸런싱",
     "preferred_label_en": "Line Balancing",
     "description_ko": "여러 로봇의 작업 시간을 균등하게 배분",
     "description_en": "Balance work time across multiple robots",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 라인 밸런싱 수행 능력 입증"
   },
@@ -343,16 +748,38 @@
     "skill_id": "RSF-IRC-021",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0021",
+    "internal_uri": "urn:rsf:skill:irc-0021",
+    "esco_uri": null,
     "preferred_label_ko": "협력업체 기술 지원",
     "preferred_label_en": "Technical Support to Contractors",
     "description_ko": "외부 인력에게 로봇 운용 방법 교육",
     "description_en": "Train external staff on robot operation",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-022",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 협력업체 기술 지원 수행 능력 입증"
   },
@@ -360,16 +787,38 @@
     "skill_id": "RSF-IRC-022",
     "domain": "industrial-robot-control",
     "domain_en": "Industrial Robot Control",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-irc-0022",
+    "internal_uri": "urn:rsf:skill:irc-0022",
+    "esco_uri": null,
     "preferred_label_ko": "생산성 향상 제안",
     "preferred_label_en": "Productivity Improvement Proposal",
     "description_ko": "로봇 운용 효율성 개선 방안 제시",
     "description_en": "Propose improvements to robot operation efficiency",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-IRC-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-IRC-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 생산성 향상 제안 수행 능력 입증"
   },
@@ -377,16 +826,45 @@
     "skill_id": "RSF-MVS-001",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0001",
+    "internal_uri": "urn:rsf:skill:mvs-0001",
+    "esco_uri": null,
     "preferred_label_ko": "디지털 이미지 처리",
     "preferred_label_en": "Digital Image Processing",
     "description_ko": "필터링, 엣지 검출, 화소 조작 등 이미지 처리 기초",
     "description_en": "Fundamentals of image processing including filtering, edge detection, and pixel manipulation",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
   },
@@ -394,16 +872,33 @@
     "skill_id": "RSF-MVS-002",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0002",
+    "internal_uri": "urn:rsf:skill:mvs-0002",
+    "esco_uri": null,
     "preferred_label_ko": "머신비전 카메라 및 광학",
     "preferred_label_en": "Machine Vision Cameras and Optics",
     "description_ko": "카메라 센서 종류, 렌즈 특성, 조광 원리",
     "description_en": "Camera sensor types, lens characteristics, and lighting principles",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
   },
@@ -411,16 +906,33 @@
     "skill_id": "RSF-MVS-003",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0003",
+    "internal_uri": "urn:rsf:skill:mvs-0003",
+    "esco_uri": null,
     "preferred_label_ko": "센서 신호 처리",
     "preferred_label_en": "Sensor Signal Processing",
     "description_ko": "아날로그-디지털 변환, 필터링, 노이즈 제거 기초",
     "description_en": "Analog-to-digital conversion, filtering, and noise reduction fundamentals",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
   },
@@ -428,16 +940,33 @@
     "skill_id": "RSF-MVS-004",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0004",
+    "internal_uri": "urn:rsf:skill:mvs-0004",
+    "esco_uri": null,
     "preferred_label_ko": "컴퓨터 비전 알고리즘",
     "preferred_label_en": "Computer Vision Algorithms",
     "description_ko": "CNN, 특징 추출, 물체 인식 기초",
     "description_en": "Fundamentals of CNNs, feature extraction, and object recognition",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
   },
@@ -445,16 +974,33 @@
     "skill_id": "RSF-MVS-005",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0005",
+    "internal_uri": "urn:rsf:skill:mvs-0005",
+    "esco_uri": null,
     "preferred_label_ko": "센서 캘리브레이션 이론",
     "preferred_label_en": "Sensor Calibration Theory",
     "description_ko": "카메라 캘리브레이션, 좌표 변환, 정확도 평가",
     "description_en": "Camera calibration, coordinate transformation, and accuracy assessment",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합의 이론적 기초"
   },
@@ -462,16 +1008,39 @@
     "skill_id": "RSF-MVS-006",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0006",
+    "internal_uri": "urn:rsf:skill:mvs-0006",
+    "esco_uri": null,
     "preferred_label_ko": "카메라 설정 및 조광",
     "preferred_label_en": "Camera Setup and Illumination Adjustment",
     "description_ko": "카메라 해상도, 노출, 포커스 조정",
     "description_en": "Adjust camera resolution, exposure, and focus",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 카메라 설정 및 조광 역량 구현"
   },
@@ -479,16 +1048,39 @@
     "skill_id": "RSF-MVS-007",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0007",
+    "internal_uri": "urn:rsf:skill:mvs-0007",
+    "esco_uri": null,
     "preferred_label_ko": "이미지 기반 결함 검출",
     "preferred_label_en": "Image-Based Defect Detection",
     "description_ko": "비전 소프트웨어를 이용한 결함 검출 설정",
     "description_en": "Configure defect detection using vision software",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 이미지 기반 결함 검출 역량 구현"
   },
@@ -496,16 +1088,39 @@
     "skill_id": "RSF-MVS-008",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0008",
+    "internal_uri": "urn:rsf:skill:mvs-0008",
+    "esco_uri": null,
     "preferred_label_ko": "센서 신호 수집 및 필터링",
     "preferred_label_en": "Sensor Signal Acquisition and Filtering",
     "description_ko": "여러 센서에서 신호 수집 및 노이즈 제거",
     "description_en": "Collect sensor signals and remove noise",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 센서 신호 수집 및 필터링 역량 구현"
   },
@@ -513,16 +1128,39 @@
     "skill_id": "RSF-MVS-009",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0009",
+    "internal_uri": "urn:rsf:skill:mvs-0009",
+    "esco_uri": null,
     "preferred_label_ko": "센서-로봇 동기화",
     "preferred_label_en": "Sensor-Robot Synchronization",
     "description_ko": "센서 신호를 로봇 동작과 동기화",
     "description_en": "Synchronize sensor signals with robot motion",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 센서-로봇 동기화 역량 구현"
   },
@@ -530,16 +1168,39 @@
     "skill_id": "RSF-MVS-010",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0010",
+    "internal_uri": "urn:rsf:skill:mvs-0010",
+    "esco_uri": null,
     "preferred_label_ko": "시뮬레이션 비전 파이프라인",
     "preferred_label_en": "Simulation Vision Pipeline",
     "description_ko": "시뮬레이션 환경에서 비전 시스템 구성",
     "description_en": "Configure vision system in simulation",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 시뮬레이션 비전 파이프라인 역량 구현"
   },
@@ -547,16 +1208,32 @@
     "skill_id": "RSF-MVS-011",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0011",
+    "internal_uri": "urn:rsf:skill:mvs-0011",
+    "esco_uri": null,
     "preferred_label_ko": "카메라 캘리브레이션",
     "preferred_label_en": "Camera Calibration",
     "description_ko": "카메라의 왜곡 보정 및 좌표 변환",
     "description_en": "Correct camera distortion and coordinate transformation",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 카메라 캘리브레이션 역량 구현"
   },
@@ -564,16 +1241,32 @@
     "skill_id": "RSF-MVS-012",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0012",
+    "internal_uri": "urn:rsf:skill:mvs-0012",
+    "esco_uri": null,
     "preferred_label_ko": "특징 추출 및 매칭",
     "preferred_label_en": "Feature Extraction and Matching",
     "description_ko": "이미지에서 특징 찾기 및 매칭",
     "description_en": "Extract and match features in images",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 특징 추출 및 매칭 역량 구현"
   },
@@ -581,16 +1274,32 @@
     "skill_id": "RSF-MVS-013",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0013",
+    "internal_uri": "urn:rsf:skill:mvs-0013",
+    "esco_uri": null,
     "preferred_label_ko": "실시간 이미지 처리",
     "preferred_label_en": "Real-Time Image Processing",
     "description_ko": "고속으로 이미지를 처리하고 결과 전달",
     "description_en": "Process images in real-time and deliver results",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 실시간 이미지 처리 역량 구현"
   },
@@ -598,16 +1307,32 @@
     "skill_id": "RSF-MVS-014",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0014",
+    "internal_uri": "urn:rsf:skill:mvs-0014",
+    "esco_uri": null,
     "preferred_label_ko": "멀티 센서 융합",
     "preferred_label_en": "Multi-Sensor Fusion",
     "description_ko": "여러 센서의 정보를 통합하여 의사결정",
     "description_en": "Integrate information from multiple sensors for decision-making",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "머신비전 & 센서 통합 현장에서 멀티 센서 융합 역량 구현"
   },
@@ -615,16 +1340,39 @@
     "skill_id": "RSF-MVS-015",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0015",
+    "internal_uri": "urn:rsf:skill:mvs-0015",
+    "esco_uri": null,
     "preferred_label_ko": "제조 환경 비전 시스템 구축",
     "preferred_label_en": "Manufacturing Vision System Implementation",
     "description_ko": "실제 제조 라인에 비전 시스템 설치 및 검증",
     "description_en": "Install and verify vision system on actual production line",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 제조 환경 비전 시스템 구축 수행 능력 입증"
   },
@@ -632,16 +1380,39 @@
     "skill_id": "RSF-MVS-016",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0016",
+    "internal_uri": "urn:rsf:skill:mvs-0016",
+    "esco_uri": null,
     "preferred_label_ko": "검출율 목표 달성",
     "preferred_label_en": "Defect Detection Rate Achievement",
     "description_ko": "정해진 검출율(95% 이상) 달성",
     "description_en": "Achieve specified detection rate (95% or higher)",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 검출율 목표 달성 수행 능력 입증"
   },
@@ -649,16 +1420,39 @@
     "skill_id": "RSF-MVS-017",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0017",
+    "internal_uri": "urn:rsf:skill:mvs-0017",
+    "esco_uri": null,
     "preferred_label_ko": "센서 고장 진단",
     "preferred_label_en": "Sensor Fault Diagnosis",
     "description_ko": "센서 고장을 정확히 식별하고 원인 파악",
     "description_en": "Identify sensor faults and determine root causes",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 센서 고장 진단 수행 능력 입증"
   },
@@ -666,16 +1460,38 @@
     "skill_id": "RSF-MVS-018",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0018",
+    "internal_uri": "urn:rsf:skill:mvs-0018",
+    "esco_uri": null,
     "preferred_label_ko": "대체 센서 제안",
     "preferred_label_en": "Alternative Sensor Proposal",
     "description_ko": "고장난 센서 대신 다른 센서 제안 및 적용",
     "description_en": "Propose and implement alternative sensors",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 대체 센서 제안 수행 능력 입증"
   },
@@ -683,16 +1499,38 @@
     "skill_id": "RSF-MVS-019",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0019",
+    "internal_uri": "urn:rsf:skill:mvs-0019",
+    "esco_uri": null,
     "preferred_label_ko": "센서 데이터 로깅",
     "preferred_label_en": "Sensor Data Logging",
     "description_ko": "센서 데이터를 자동으로 기록하고 분석",
     "description_en": "Automatically log and analyze sensor data",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 센서 데이터 로깅 수행 능력 입증"
   },
@@ -700,16 +1538,38 @@
     "skill_id": "RSF-MVS-020",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0020",
+    "internal_uri": "urn:rsf:skill:mvs-0020",
+    "esco_uri": null,
     "preferred_label_ko": "성능 보고서 작성",
     "preferred_label_en": "Performance Report Generation",
     "description_ko": "비전 시스템 성능 지표 정리 및 보고",
     "description_en": "Compile and report vision system performance metrics",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 성능 보고서 작성 수행 능력 입증"
   },
@@ -717,16 +1577,38 @@
     "skill_id": "RSF-MVS-021",
     "domain": "machine-vision-sensor",
     "domain_en": "Machine Vision & Sensor Integration",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0021",
+    "internal_uri": "urn:rsf:skill:mvs-0021",
+    "esco_uri": null,
     "preferred_label_ko": "카메라 교체 작업",
     "preferred_label_en": "Camera Replacement",
     "description_ko": "고장난 카메라를 신제품으로 교체",
     "description_en": "Replace faulty cameras with new ones",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-MVS-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-MVS-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 카메라 교체 작업 수행 능력 입증"
   },
@@ -734,16 +1616,45 @@
     "skill_id": "RSF-CRO-001",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0001",
+    "internal_uri": "urn:rsf:skill:cro-0001",
+    "esco_uri": null,
     "preferred_label_ko": "협동로봇 안전 개념",
     "preferred_label_en": "Collaborative Robot Safety Concepts",
     "description_ko": "ISO/TS 15066, 힘 제한, 속도 제한의 안전 원칙",
     "description_en": "Safety principles including ISO/TS 15066, force limiting, and speed limiting",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용의 이론적 기초"
   },
@@ -751,16 +1662,33 @@
     "skill_id": "RSF-CRO-002",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0002",
+    "internal_uri": "urn:rsf:skill:cro-0002",
+    "esco_uri": null,
     "preferred_label_ko": "힘/토크 모니터링 원리",
     "preferred_label_en": "Force/Torque Monitoring Principles",
     "description_ko": "육축 센서, 임피던스 제어, 힘 피드백 제어",
     "description_en": "Six-axis sensors, impedance control, and force feedback control",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용의 이론적 기초"
   },
@@ -768,16 +1696,33 @@
     "skill_id": "RSF-CRO-003",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0003",
+    "internal_uri": "urn:rsf:skill:cro-0003",
+    "esco_uri": null,
     "preferred_label_ko": "사용자 친화적 프로그래밍",
     "preferred_label_en": "User-Friendly Programming Interfaces",
     "description_ko": "드래그-앤-드롭, 그래픽 프로그래밍, 음성 인터페이스",
     "description_en": "Drag-and-drop, graphical programming, and voice interfaces",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용의 이론적 기초"
   },
@@ -785,16 +1730,33 @@
     "skill_id": "RSF-CRO-004",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0004",
+    "internal_uri": "urn:rsf:skill:cro-0004",
+    "esco_uri": null,
     "preferred_label_ko": "협동로봇 산업 응용",
     "preferred_label_en": "Collaborative Robot Industrial Applications",
     "description_ko": "조립, 검사, 포장 등 협동 로봇의 주요 응용 사례",
     "description_en": "Key collaborative robot applications in assembly, inspection, and packaging",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용의 이론적 기초"
   },
@@ -802,16 +1764,33 @@
     "skill_id": "RSF-CRO-005",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0005",
+    "internal_uri": "urn:rsf:skill:cro-0005",
+    "esco_uri": null,
     "preferred_label_ko": "인간공학 및 인적 요소",
     "preferred_label_en": "Ergonomics and Human Factors",
     "description_ko": "작업 설계, 사용자 편의성, 피로도 관리",
     "description_en": "Job design, user convenience, and fatigue management",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용의 이론적 기초"
   },
@@ -819,16 +1798,39 @@
     "skill_id": "RSF-CRO-006",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0006",
+    "internal_uri": "urn:rsf:skill:cro-0006",
+    "esco_uri": null,
     "preferred_label_ko": "협동로봇 안전 설정",
     "preferred_label_en": "Collaborative Robot Safety Configuration",
     "description_ko": "속도 제한, 힘 제한, 안전 영역 설정",
     "description_en": "Configure speed limits, force limits, and safety zones",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 협동로봇 안전 설정 역량 구현"
   },
@@ -836,16 +1838,39 @@
     "skill_id": "RSF-CRO-007",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0007",
+    "internal_uri": "urn:rsf:skill:cro-0007",
+    "esco_uri": null,
     "preferred_label_ko": "드래그-앤-드롭 티칭",
     "preferred_label_en": "Drag-and-Drop Teaching",
     "description_ko": "GUI를 통한 간편 티칭",
     "description_en": "Teach using graphical user interface",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 드래그-앤-드롭 티칭 역량 구현"
   },
@@ -853,16 +1878,39 @@
     "skill_id": "RSF-CRO-008",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0008",
+    "internal_uri": "urn:rsf:skill:cro-0008",
+    "esco_uri": null,
     "preferred_label_ko": "협동로봇 프로그래밍",
     "preferred_label_en": "Collaborative Robot Programming",
     "description_ko": "URScript, Python 등으로 협동로봇 프로그래밍",
     "description_en": "Program collaborative robots using URScript, Python, etc.",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 협동로봇 프로그래밍 역량 구현"
   },
@@ -870,16 +1918,39 @@
     "skill_id": "RSF-CRO-009",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0009",
+    "internal_uri": "urn:rsf:skill:cro-0009",
+    "esco_uri": null,
     "preferred_label_ko": "인간-로봇 상호작용 설계",
     "preferred_label_en": "Human-Robot Interaction Design",
     "description_ko": "안전한 협동 작업 시나리오 설계",
     "description_en": "Design safe collaborative work scenarios",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 인간-로봇 상호작용 설계 역량 구현"
   },
@@ -887,16 +1958,39 @@
     "skill_id": "RSF-CRO-010",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0010",
+    "internal_uri": "urn:rsf:skill:cro-0010",
+    "esco_uri": null,
     "preferred_label_ko": "협동 작업 태스크 분석",
     "preferred_label_en": "Collaborative Task Analysis",
     "description_ko": "인간과 로봇의 작업 분담 계획",
     "description_en": "Plan task allocation between human and robot",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 협동 작업 태스크 분석 역량 구현"
   },
@@ -904,16 +1998,33 @@
     "skill_id": "RSF-CRO-011",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0011",
+    "internal_uri": "urn:rsf:skill:cro-0011",
+    "esco_uri": null,
     "preferred_label_ko": "터치 감지 및 안전 반응",
     "preferred_label_en": "Touch Sensing and Safety Response",
     "description_ko": "접촉 감지 시 로봇의 안전한 반응 설정",
     "description_en": "Configure safe robot reactions to touch detection",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 터치 감지 및 안전 반응 역량 구현"
   },
@@ -921,16 +2032,33 @@
     "skill_id": "RSF-CRO-012",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0012",
+    "internal_uri": "urn:rsf:skill:cro-0012",
+    "esco_uri": null,
     "preferred_label_ko": "협동 작업 시뮬레이션",
     "preferred_label_en": "Collaborative Work Simulation",
     "description_ko": "시뮬레이션에서 인간-로봇 협력 검증",
     "description_en": "Verify human-robot collaboration in simulation",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 협동 작업 시뮬레이션 역량 구현"
   },
@@ -938,16 +2066,33 @@
     "skill_id": "RSF-CRO-013",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0013",
+    "internal_uri": "urn:rsf:skill:cro-0013",
+    "esco_uri": null,
     "preferred_label_ko": "사용자 안전 교육",
     "preferred_label_en": "User Safety Training",
     "description_ko": "협동로봇 사용자에게 안전 교육",
     "description_en": "Provide safety training to collaborative robot users",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 사용자 안전 교육 역량 구현"
   },
@@ -955,16 +2100,33 @@
     "skill_id": "RSF-CRO-014",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0014",
+    "internal_uri": "urn:rsf:skill:cro-0014",
+    "esco_uri": null,
     "preferred_label_ko": "힘 제어 파라미터 튜닝",
     "preferred_label_en": "Force Control Parameter Tuning",
     "description_ko": "힘 제어의 감도 및 응답성 조정",
     "description_en": "Adjust force control sensitivity and responsiveness",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "협동로봇 운용 현장에서 힘 제어 파라미터 튜닝 역량 구현"
   },
@@ -972,16 +2134,39 @@
     "skill_id": "RSF-CRO-015",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0015",
+    "internal_uri": "urn:rsf:skill:cro-0015",
+    "esco_uri": null,
     "preferred_label_ko": "협동 워크셀 안전성 검증",
     "preferred_label_en": "Collaborative Workcell Safety Verification",
     "description_ko": "실제 환경에서 협동 작업의 안전성 확인",
     "description_en": "Verify safety of collaborative operations in actual environment",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 협동 워크셀 안전성 검증 수행 능력 입증"
   },
@@ -989,16 +2174,39 @@
     "skill_id": "RSF-CRO-016",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0016",
+    "internal_uri": "urn:rsf:skill:cro-0016",
+    "esco_uri": null,
     "preferred_label_ko": "사용자 가이드 작성",
     "preferred_label_en": "User Guide Documentation",
     "description_ko": "협동로봇 사용자를 위한 상세 매뉴얼 작성",
     "description_en": "Write detailed manual for collaborative robot users",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 사용자 가이드 작성 수행 능력 입증"
   },
@@ -1006,16 +2214,39 @@
     "skill_id": "RSF-CRO-017",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0017",
+    "internal_uri": "urn:rsf:skill:cro-0017",
+    "esco_uri": null,
     "preferred_label_ko": "협동 작업 사이클 타임 측정",
     "preferred_label_en": "Collaborative Work Cycle Time Measurement",
     "description_ko": "인간-로봇 협력 작업의 소요 시간 측정",
     "description_en": "Measure time required for human-robot collaborative work",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 협동 작업 사이클 타임 측정 수행 능력 입증"
   },
@@ -1023,16 +2254,38 @@
     "skill_id": "RSF-CRO-018",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0018",
+    "internal_uri": "urn:rsf:skill:cro-0018",
+    "esco_uri": null,
     "preferred_label_ko": "안전성 평가 보고서",
     "preferred_label_en": "Safety Assessment Report",
     "description_ko": "협동 작업의 안전성 평가 결과 보고",
     "description_en": "Report safety assessment results for collaborative work",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 안전성 평가 보고서 수행 능력 입증"
   },
@@ -1040,16 +2293,38 @@
     "skill_id": "RSF-CRO-019",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0019",
+    "internal_uri": "urn:rsf:skill:cro-0019",
+    "esco_uri": null,
     "preferred_label_ko": "작업 개선 제안",
     "preferred_label_en": "Work Improvement Proposal",
     "description_ko": "협동 작업 효율 개선 방안 제안",
     "description_en": "Propose improvements to collaborative work efficiency",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 작업 개선 제안 수행 능력 입증"
   },
@@ -1057,16 +2332,38 @@
     "skill_id": "RSF-CRO-020",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0020",
+    "internal_uri": "urn:rsf:skill:cro-0020",
+    "esco_uri": null,
     "preferred_label_ko": "인간공학 평가",
     "preferred_label_en": "Ergonomic Assessment",
     "description_ko": "작업자의 피로도 및 편의성 평가",
     "description_en": "Assess worker fatigue and convenience",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 인간공학 평가 수행 능력 입증"
   },
@@ -1074,16 +2371,38 @@
     "skill_id": "RSF-CRO-021",
     "domain": "collaborative-robot",
     "domain_en": "Collaborative Robot Operation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0021",
+    "internal_uri": "urn:rsf:skill:cro-0021",
+    "esco_uri": null,
     "preferred_label_ko": "협동 로봇 배치 최적화",
     "preferred_label_en": "Collaborative Robot Placement Optimization",
     "description_ko": "작업 공간 내 협동로봇의 최적 위치 결정",
     "description_en": "Determine optimal placement of collaborative robots in workspace",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-CRO-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-CRO-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 협동 로봇 배치 최적화 수행 능력 입증"
   },
@@ -1091,16 +2410,45 @@
     "skill_id": "RSF-AMR-001",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0001",
+    "internal_uri": "urn:rsf:skill:amr-0001",
+    "esco_uri": null,
     "preferred_label_ko": "SLAM 개념",
     "preferred_label_en": "Simultaneous Localization and Mapping (SLAM)",
     "description_ko": "동시 위치 파악 및 맵 작성의 기초 이론",
     "description_en": "Fundamental theory of simultaneous localization and mapping",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇의 이론적 기초"
   },
@@ -1108,16 +2456,33 @@
     "skill_id": "RSF-AMR-002",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0002",
+    "internal_uri": "urn:rsf:skill:amr-0002",
+    "esco_uri": null,
     "preferred_label_ko": "경로 계획 알고리즘",
     "preferred_label_en": "Path Planning Algorithms",
     "description_ko": "Dijkstra, A*, RRT 등 주요 경로 계획 알고리즘",
     "description_en": "Major path planning algorithms including Dijkstra, A*, and RRT",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇의 이론적 기초"
   },
@@ -1125,16 +2490,33 @@
     "skill_id": "RSF-AMR-003",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0003",
+    "internal_uri": "urn:rsf:skill:amr-0003",
+    "esco_uri": null,
     "preferred_label_ko": "차량 동역학 및 제어",
     "preferred_label_en": "Vehicle Dynamics and Control",
     "description_ko": "휠 기구학, 속도 제어, 조향 제어",
     "description_en": "Wheel kinematics, velocity control, and steering control",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇의 이론적 기초"
   },
@@ -1142,16 +2524,33 @@
     "skill_id": "RSF-AMR-004",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0004",
+    "internal_uri": "urn:rsf:skill:amr-0004",
+    "esco_uri": null,
     "preferred_label_ko": "무선 네트워크 및 통신",
     "preferred_label_en": "Wireless Networks and Communication Protocols",
     "description_ko": "WiFi, 5G, ROS 통신, 지연 및 안정성",
     "description_en": "WiFi, 5G, ROS communication, latency, and reliability",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇의 이론적 기초"
   },
@@ -1159,16 +2558,33 @@
     "skill_id": "RSF-AMR-005",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0005",
+    "internal_uri": "urn:rsf:skill:amr-0005",
+    "esco_uri": null,
     "preferred_label_ko": "함대 관리 시스템",
     "preferred_label_en": "Fleet Management Systems",
     "description_ko": "멀티-로봇 조율, 중앙 제어, 교통 관제",
     "description_en": "Multi-robot coordination, centralized control, and traffic management",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇의 이론적 기초"
   },
@@ -1176,16 +2592,39 @@
     "skill_id": "RSF-AMR-006",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0006",
+    "internal_uri": "urn:rsf:skill:amr-0006",
+    "esco_uri": null,
     "preferred_label_ko": "환경 맵 작성",
     "preferred_label_en": "Environment Mapping",
     "description_ko": "LiDAR, 카메라를 이용한 환경 맵 생성",
     "description_en": "Generate environment map using LiDAR and camera",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 환경 맵 작성 역량 구현"
   },
@@ -1193,16 +2632,39 @@
     "skill_id": "RSF-AMR-007",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0007",
+    "internal_uri": "urn:rsf:skill:amr-0007",
+    "esco_uri": null,
     "preferred_label_ko": "경로 계획 매개변수 조정",
     "preferred_label_en": "Path Planning Parameter Adjustment",
     "description_ko": "목표점까지의 경로 계획 최적화",
     "description_en": "Optimize path planning to destination",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 경로 계획 매개변수 조정 역량 구현"
   },
@@ -1210,16 +2672,39 @@
     "skill_id": "RSF-AMR-008",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0008",
+    "internal_uri": "urn:rsf:skill:amr-0008",
+    "esco_uri": null,
     "preferred_label_ko": "충돌 회피 설정",
     "preferred_label_en": "Collision Avoidance Configuration",
     "description_ko": "장애물 감지 및 회피 설정",
     "description_en": "Configure obstacle detection and avoidance",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 충돌 회피 설정 역량 구현"
   },
@@ -1227,16 +2712,39 @@
     "skill_id": "RSF-AMR-009",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0009",
+    "internal_uri": "urn:rsf:skill:amr-0009",
+    "esco_uri": null,
     "preferred_label_ko": "멀티-로봇 교통 관제",
     "preferred_label_en": "Multi-Robot Traffic Management",
     "description_ko": "여러 AMR의 움직임을 조율하여 충돌 방지",
     "description_en": "Coordinate movements of multiple AMRs to prevent collisions",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 멀티-로봇 교통 관제 역량 구현"
   },
@@ -1244,16 +2752,39 @@
     "skill_id": "RSF-AMR-010",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0010",
+    "internal_uri": "urn:rsf:skill:amr-0010",
+    "esco_uri": null,
     "preferred_label_ko": "함대 성능 모니터링",
     "preferred_label_en": "Fleet Performance Monitoring",
     "description_ko": "전체 함대의 운영 현황 모니터링",
     "description_en": "Monitor operational status of entire robot fleet",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 함대 성능 모니터링 역량 구현"
   },
@@ -1261,16 +2792,32 @@
     "skill_id": "RSF-AMR-011",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0011",
+    "internal_uri": "urn:rsf:skill:amr-0011",
+    "esco_uri": null,
     "preferred_label_ko": "GPS 및 GNSS 활용",
     "preferred_label_en": "GPS and GNSS Utilization",
     "description_ko": "글로벌 위치 정보를 이용한 네비게이션",
     "description_en": "Navigation using global positioning information",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 GPS 및 GNSS 활용 역량 구현"
   },
@@ -1278,16 +2825,32 @@
     "skill_id": "RSF-AMR-012",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0012",
+    "internal_uri": "urn:rsf:skill:amr-0012",
+    "esco_uri": null,
     "preferred_label_ko": "수동 조종 모드",
     "preferred_label_en": "Manual Control Mode",
     "description_ko": "필요시 원격으로 AMR 제어",
     "description_en": "Remotely control AMR when necessary",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 수동 조종 모드 역량 구현"
   },
@@ -1295,16 +2858,32 @@
     "skill_id": "RSF-AMR-013",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0013",
+    "internal_uri": "urn:rsf:skill:amr-0013",
+    "esco_uri": null,
     "preferred_label_ko": "스테이션 도킹 설정",
     "preferred_label_en": "Station Docking Configuration",
     "description_ko": "충전소 및 화물 거래소 자동 도킹 설정",
     "description_en": "Configure automatic docking at charging and transfer stations",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 스테이션 도킹 설정 역량 구현"
   },
@@ -1312,16 +2891,32 @@
     "skill_id": "RSF-AMR-014",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0014",
+    "internal_uri": "urn:rsf:skill:amr-0014",
+    "esco_uri": null,
     "preferred_label_ko": "네트워크 통신 설정",
     "preferred_label_en": "Network Communication Configuration",
     "description_ko": "중앙 제어 시스템과 통신 설정",
     "description_en": "Configure communication with central control system",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "자율이동로봇 현장에서 네트워크 통신 설정 역량 구현"
   },
@@ -1329,16 +2924,39 @@
     "skill_id": "RSF-AMR-015",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0015",
+    "internal_uri": "urn:rsf:skill:amr-0015",
+    "esco_uri": null,
     "preferred_label_ko": "제조 환경 맵 생성",
     "preferred_label_en": "Manufacturing Environment Mapping",
     "description_ko": "실제 제조 현장의 정확한 맵 생성",
     "description_en": "Generate accurate map of actual manufacturing facility",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 제조 환경 맵 생성 수행 능력 입증"
   },
@@ -1346,16 +2964,39 @@
     "skill_id": "RSF-AMR-016",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0016",
+    "internal_uri": "urn:rsf:skill:amr-0016",
+    "esco_uri": null,
     "preferred_label_ko": "맵 정확도 검증",
     "preferred_label_en": "Map Accuracy Verification",
     "description_ko": "생성된 맵의 정확성 확인 및 개선",
     "description_en": "Verify and improve accuracy of generated map",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 맵 정확도 검증 수행 능력 입증"
   },
@@ -1363,16 +3004,39 @@
     "skill_id": "RSF-AMR-017",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0017",
+    "internal_uri": "urn:rsf:skill:amr-0017",
+    "esco_uri": null,
     "preferred_label_ko": "자율 주행 운영",
     "preferred_label_en": "Autonomous Navigation Operation",
     "description_ko": "정해진 경로 내에서 자율 주행 실현",
     "description_en": "Achieve autonomous navigation within specified routes",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 자율 주행 운영 수행 능력 입증"
   },
@@ -1380,16 +3044,38 @@
     "skill_id": "RSF-AMR-018",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0018",
+    "internal_uri": "urn:rsf:skill:amr-0018",
+    "esco_uri": null,
     "preferred_label_ko": "충돌 발생 시 분석",
     "preferred_label_en": "Collision Incident Analysis",
     "description_ko": "충돌 발생 원인 파악 및 개선",
     "description_en": "Identify causes of collisions and improve",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 충돌 발생 시 분석 수행 능력 입증"
   },
@@ -1397,16 +3083,38 @@
     "skill_id": "RSF-AMR-019",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0019",
+    "internal_uri": "urn:rsf:skill:amr-0019",
+    "esco_uri": null,
     "preferred_label_ko": "운영 매뉴얼 작성",
     "preferred_label_en": "Operations Manual Documentation",
     "description_ko": "AMR 운영자를 위한 상세 매뉴얼 작성",
     "description_en": "Write detailed manual for AMR operators",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 운영 매뉴얼 작성 수행 능력 입증"
   },
@@ -1414,16 +3122,38 @@
     "skill_id": "RSF-AMR-020",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0020",
+    "internal_uri": "urn:rsf:skill:amr-0020",
+    "esco_uri": null,
     "preferred_label_ko": "성능 지표 분석",
     "preferred_label_en": "Performance Metrics Analysis",
     "description_ko": "주행 거리, 배터리 소모, 업타임 등 분석",
     "description_en": "Analyze traveled distance, battery consumption, uptime, etc.",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 성능 지표 분석 수행 능력 입증"
   },
@@ -1431,16 +3161,38 @@
     "skill_id": "RSF-AMR-021",
     "domain": "autonomous-mobile-robot",
     "domain_en": "AMR/AGV Systems",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0021",
+    "internal_uri": "urn:rsf:skill:amr-0021",
+    "esco_uri": null,
     "preferred_label_ko": "확장성 계획",
     "preferred_label_en": "Scalability Planning",
     "description_ko": "로봇 수 증가 시 시스템 확장 방안",
     "description_en": "Plan system expansion as robot count increases",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-AMR-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-AMR-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 확장성 계획 수행 능력 입증"
   },
@@ -1448,16 +3200,45 @@
     "skill_id": "RSF-RMD-001",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0001",
+    "internal_uri": "urn:rsf:skill:rmd-0001",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 부품 분류 및 수명 관리",
     "preferred_label_en": "Robot Component Classification and Life Management",
     "description_ko": "BOM(자재명세서), MTBF, 부품 수명 예측",
     "description_en": "BOM, MTBF, and component lifespan prediction",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AMR-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
   },
@@ -1465,16 +3246,33 @@
     "skill_id": "RSF-RMD-002",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0002",
+    "internal_uri": "urn:rsf:skill:rmd-0002",
+    "esco_uri": null,
     "preferred_label_ko": "신뢰성 공학",
     "preferred_label_en": "Reliability Engineering",
     "description_ko": "MTBF, MTTF, 가용성, 신뢰도 분석",
     "description_en": "MTBF, MTTF, availability, and reliability analysis",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
   },
@@ -1482,16 +3280,33 @@
     "skill_id": "RSF-RMD-003",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0003",
+    "internal_uri": "urn:rsf:skill:rmd-0003",
+    "esco_uri": null,
     "preferred_label_ko": "예방적 유지보수 전략",
     "preferred_label_en": "Preventive Maintenance Strategies",
     "description_ko": "예방적 유지보수(PM), 예측적 유지보수(PdM), 상태 기반 유지보수",
     "description_en": "Preventive maintenance (PM), predictive maintenance (PdM), and condition-based maintenance",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
   },
@@ -1499,16 +3314,33 @@
     "skill_id": "RSF-RMD-004",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0004",
+    "internal_uri": "urn:rsf:skill:rmd-0004",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 진단 도구 및 로깅",
     "preferred_label_en": "Robot Diagnostics Tools and Logging Systems",
     "description_ko": "고장 코드, 센서 로깅, 성능 지표",
     "description_en": "Fault codes, sensor logging, and performance metrics",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
   },
@@ -1516,16 +3348,33 @@
     "skill_id": "RSF-RMD-005",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0005",
+    "internal_uri": "urn:rsf:skill:rmd-0005",
+    "esco_uri": null,
     "preferred_label_ko": "윤활유 및 냉각액 관리",
     "preferred_label_en": "Lubricant and Coolant Management",
     "description_ko": "윤활유 종류, 냉각 시스템, 품질 관리",
     "description_en": "Lubricant types, cooling systems, and quality management",
     "skill_type": "knowledge",
     "proficiency_level": 1,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단의 이론적 기초"
   },
@@ -1533,16 +3382,39 @@
     "skill_id": "RSF-RMD-006",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0006",
+    "internal_uri": "urn:rsf:skill:rmd-0006",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 상태 모니터링",
     "preferred_label_en": "Robot Status Monitoring",
     "description_ko": "센서 데이터를 통한 로봇 상태 실시간 모니터링",
     "description_en": "Real-time robot status monitoring through sensor data",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 로봇 상태 모니터링 역량 구현"
   },
@@ -1550,16 +3422,39 @@
     "skill_id": "RSF-RMD-007",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0007",
+    "internal_uri": "urn:rsf:skill:rmd-0007",
+    "esco_uri": null,
     "preferred_label_ko": "트렌드 분석",
     "preferred_label_en": "Trend Analysis",
     "description_ko": "시간에 따른 성능 변화 추적 및 분석",
     "description_en": "Track and analyze performance changes over time",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 트렌드 분석 역량 구현"
   },
@@ -1567,16 +3462,39 @@
     "skill_id": "RSF-RMD-008",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0008",
+    "internal_uri": "urn:rsf:skill:rmd-0008",
+    "esco_uri": null,
     "preferred_label_ko": "고장 코드 해석",
     "preferred_label_en": "Fault Code Interpretation",
     "description_ko": "로봇 진단 코드의 의미 파악",
     "description_en": "Understand robot diagnostic codes",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 고장 코드 해석 역량 구현"
   },
@@ -1584,16 +3502,39 @@
     "skill_id": "RSF-RMD-009",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0009",
+    "internal_uri": "urn:rsf:skill:rmd-0009",
+    "esco_uri": null,
     "preferred_label_ko": "베어링 검사 및 교체",
     "preferred_label_en": "Bearing Inspection and Replacement",
     "description_ko": "베어링 마모 상태 확인 및 교체",
     "description_en": "Check bearing wear and replace",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 베어링 검사 및 교체 역량 구현"
   },
@@ -1601,16 +3542,39 @@
     "skill_id": "RSF-RMD-010",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0010",
+    "internal_uri": "urn:rsf:skill:rmd-0010",
+    "esco_uri": null,
     "preferred_label_ko": "기어 및 모터 검사",
     "preferred_label_en": "Gear and Motor Inspection",
     "description_ko": "기어 손상, 모터 성능 검사",
     "description_en": "Inspect gear damage and motor performance",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 기어 및 모터 검사 역량 구현"
   },
@@ -1618,16 +3582,32 @@
     "skill_id": "RSF-RMD-011",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0011",
+    "internal_uri": "urn:rsf:skill:rmd-0011",
+    "esco_uri": null,
     "preferred_label_ko": "소프트웨어 업그레이드",
     "preferred_label_en": "Software Upgrade",
     "description_ko": "로봇 펌웨어 및 소프트웨어 업데이트",
     "description_en": "Update robot firmware and software",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 소프트웨어 업그레이드 역량 구현"
   },
@@ -1635,16 +3615,32 @@
     "skill_id": "RSF-RMD-012",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0012",
+    "internal_uri": "urn:rsf:skill:rmd-0012",
+    "esco_uri": null,
     "preferred_label_ko": "성능 벤치마크 테스트",
     "preferred_label_en": "Performance Benchmark Testing",
     "description_ko": "정해진 기준으로 로봇 성능 측정",
     "description_en": "Measure robot performance against standards",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 성능 벤치마크 테스트 역량 구현"
   },
@@ -1652,16 +3648,32 @@
     "skill_id": "RSF-RMD-013",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0013",
+    "internal_uri": "urn:rsf:skill:rmd-0013",
+    "esco_uri": null,
     "preferred_label_ko": "부품 청소 및 검사",
     "preferred_label_en": "Component Cleaning and Inspection",
     "description_ko": "부품의 먼지, 이물질 제거 및 상태 확인",
     "description_en": "Clean components and check condition",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 부품 청소 및 검사 역량 구현"
   },
@@ -1669,16 +3681,32 @@
     "skill_id": "RSF-RMD-014",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0014",
+    "internal_uri": "urn:rsf:skill:rmd-0014",
+    "esco_uri": null,
     "preferred_label_ko": "윤활유 교체",
     "preferred_label_en": "Lubricant Replacement",
     "description_ko": "로봇 관절 및 기어의 윤활유 교체",
     "description_en": "Replace lubricant in robot joints and gears",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "로봇 유지보수 & 진단 현장에서 윤활유 교체 역량 구현"
   },
@@ -1686,16 +3714,39 @@
     "skill_id": "RSF-RMD-015",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0015",
+    "internal_uri": "urn:rsf:skill:rmd-0015",
+    "esco_uri": null,
     "preferred_label_ko": "예방적 유지보수 계획 수립",
     "preferred_label_en": "Preventive Maintenance Plan Development",
     "description_ko": "장기 유지보수 일정 개발 및 실행",
     "description_en": "Develop and execute long-term maintenance schedule",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 예방적 유지보수 계획 수립 수행 능력 입증"
   },
@@ -1703,16 +3754,39 @@
     "skill_id": "RSF-RMD-016",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0016",
+    "internal_uri": "urn:rsf:skill:rmd-0016",
+    "esco_uri": null,
     "preferred_label_ko": "긴급 고장 대응",
     "preferred_label_en": "Emergency Fault Response",
     "description_ko": "생산 중단 상황에서 신속한 복구",
     "description_en": "Quickly restore service during production stoppage",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 긴급 고장 대응 수행 능력 입증"
   },
@@ -1720,16 +3794,39 @@
     "skill_id": "RSF-RMD-017",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0017",
+    "internal_uri": "urn:rsf:skill:rmd-0017",
+    "esco_uri": null,
     "preferred_label_ko": "부품 수명 예측",
     "preferred_label_en": "Component Lifespan Prediction",
     "description_ko": "부품 교체 시기 미리 예측",
     "description_en": "Predict when components need replacement",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 부품 수명 예측 수행 능력 입증"
   },
@@ -1737,16 +3834,38 @@
     "skill_id": "RSF-RMD-018",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0018",
+    "internal_uri": "urn:rsf:skill:rmd-0018",
+    "esco_uri": null,
     "preferred_label_ko": "재고 관리",
     "preferred_label_en": "Spare Parts Inventory Management",
     "description_ko": "필요한 예비 부품 보유 및 관리",
     "description_en": "Maintain and manage spare parts inventory",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 재고 관리 수행 능력 입증"
   },
@@ -1754,16 +3873,38 @@
     "skill_id": "RSF-RMD-019",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0019",
+    "internal_uri": "urn:rsf:skill:rmd-0019",
+    "esco_uri": null,
     "preferred_label_ko": "유지보수 보고서 작성",
     "preferred_label_en": "Maintenance Report Documentation",
     "description_ko": "유지보수 활동 상세 기록 및 보고",
     "description_en": "Document and report maintenance activities in detail",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 유지보수 보고서 작성 수행 능력 입증"
   },
@@ -1771,16 +3912,38 @@
     "skill_id": "RSF-RMD-020",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0020",
+    "internal_uri": "urn:rsf:skill:rmd-0020",
+    "esco_uri": null,
     "preferred_label_ko": "성능 지표 개선",
     "preferred_label_en": "Performance Metrics Improvement",
     "description_ko": "가동률, 신뢰도 등 개선",
     "description_en": "Improve availability, reliability, and other metrics",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 성능 지표 개선 수행 능력 입증"
   },
@@ -1788,16 +3951,38 @@
     "skill_id": "RSF-RMD-021",
     "domain": "robot-maintenance-diagnostics",
     "domain_en": "Robot Maintenance & Diagnostics",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0021",
+    "internal_uri": "urn:rsf:skill:rmd-0021",
+    "esco_uri": null,
     "preferred_label_ko": "부품 공급업체 관리",
     "preferred_label_en": "Supplier Relationship Management",
     "description_ko": "부품 공급업체와의 협력 및 품질 관리",
     "description_en": "Collaborate with suppliers and manage quality",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-RMD-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-RMD-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 부품 공급업체 관리 수행 능력 입증"
   },
@@ -1805,16 +3990,45 @@
     "skill_id": "RSF-DTS-001",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0001",
+    "internal_uri": "urn:rsf:skill:dts-0001",
+    "esco_uri": null,
     "preferred_label_ko": "디지털트윈 아키텍처",
     "preferred_label_en": "Digital Twin Architecture",
     "description_ko": "물리 시스템과 디지털 복제본의 동기화 아키텍처",
     "description_en": "Synchronization architecture between physical systems and digital replicas",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-RMD-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
   },
@@ -1822,16 +4036,33 @@
     "skill_id": "RSF-DTS-002",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0002",
+    "internal_uri": "urn:rsf:skill:dts-0002",
+    "esco_uri": null,
     "preferred_label_ko": "물리 시뮬레이션 엔진",
     "preferred_label_en": "Physics Simulation Engines",
     "description_ko": "Gazebo, CoppeliaSim, Isaac Sim 등 시뮬레이션 플랫폼",
     "description_en": "Simulation platforms including Gazebo, CoppeliaSim, and Isaac Sim",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
   },
@@ -1839,16 +4070,33 @@
     "skill_id": "RSF-DTS-003",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0003",
+    "internal_uri": "urn:rsf:skill:dts-0003",
+    "esco_uri": null,
     "preferred_label_ko": "3D 모델링 및 메시 생성",
     "preferred_label_en": "3D Modeling and Mesh Generation",
     "description_ko": "CAD, STL, URDF, 메시 최적화",
     "description_en": "CAD, STL, URDF, and mesh optimization",
     "skill_type": "knowledge",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
   },
@@ -1856,16 +4104,33 @@
     "skill_id": "RSF-DTS-004",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0004",
+    "internal_uri": "urn:rsf:skill:dts-0004",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 시뮬레이션 소프트웨어",
     "preferred_label_en": "Robot Simulation Software",
     "description_ko": "ROS, MoveIt, URSim 등 로봇 시뮬레이션 플랫폼",
     "description_en": "Robot simulation platforms including ROS, MoveIt, and URSim",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
   },
@@ -1873,16 +4138,33 @@
     "skill_id": "RSF-DTS-005",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0005",
+    "internal_uri": "urn:rsf:skill:dts-0005",
+    "esco_uri": null,
     "preferred_label_ko": "실시간 데이터 파이프라인",
     "preferred_label_en": "Real-Time Data Pipelines",
     "description_ko": "센서 데이터 수집, 스트리밍, 클라우드 연결",
     "description_en": "Sensor data collection, streaming, and cloud integration",
     "skill_type": "knowledge",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
   },
@@ -1890,16 +4172,39 @@
     "skill_id": "RSF-DTS-006",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0006",
+    "internal_uri": "urn:rsf:skill:dts-0006",
+    "esco_uri": null,
     "preferred_label_ko": "3D 모델 CAD 임포트",
     "preferred_label_en": "3D CAD Model Import",
     "description_ko": "CAD 파일을 시뮬레이션 환경으로 가져오기",
     "description_en": "Import CAD files into simulation environment",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": "RSF-DTS-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 3D 모델 CAD 임포트 역량 구현"
   },
@@ -1907,16 +4212,39 @@
     "skill_id": "RSF-DTS-007",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0007",
+    "internal_uri": "urn:rsf:skill:dts-0007",
+    "esco_uri": null,
     "preferred_label_ko": "로봇 시뮬레이션 환경 구성",
     "preferred_label_en": "Robot Simulation Environment Setup",
     "description_ko": "Gazebo, CoppeliaSim 등에서 로봇 환경 설정",
     "description_en": "Configure robot environment in Gazebo, CoppeliaSim, etc.",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": "RSF-DTS-001",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-001",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 로봇 시뮬레이션 환경 구성 역량 구현"
   },
@@ -1924,16 +4252,39 @@
     "skill_id": "RSF-DTS-008",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0008",
+    "internal_uri": "urn:rsf:skill:dts-0008",
+    "esco_uri": null,
     "preferred_label_ko": "생산 라인 레이아웃 검증",
     "preferred_label_en": "Production Line Layout Validation",
     "description_ko": "장비 배치의 충돌 여부 확인",
     "description_en": "Verify equipment placement for collisions",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": "RSF-DTS-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 생산 라인 레이아웃 검증 역량 구현"
   },
@@ -1941,16 +4292,39 @@
     "skill_id": "RSF-DTS-009",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0009",
+    "internal_uri": "urn:rsf:skill:dts-0009",
+    "esco_uri": null,
     "preferred_label_ko": "사이클 타임 시뮬레이션",
     "preferred_label_en": "Cycle Time Simulation",
     "description_ko": "프로그램 실행 시간 측정",
     "description_en": "Measure program execution time",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": "RSF-DTS-002",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-002",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 사이클 타임 시뮬레이션 역량 구현"
   },
@@ -1958,16 +4332,39 @@
     "skill_id": "RSF-DTS-010",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0010",
+    "internal_uri": "urn:rsf:skill:dts-0010",
+    "esco_uri": null,
     "preferred_label_ko": "실제 로봇 동기화",
     "preferred_label_en": "Real Robot Synchronization",
     "description_ko": "시뮬레이션과 실제 로봇 동기화",
     "description_en": "Synchronize simulation with actual robot",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": "RSF-DTS-003",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-003",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 실제 로봇 동기화 역량 구현"
   },
@@ -1975,16 +4372,33 @@
     "skill_id": "RSF-DTS-011",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0011",
+    "internal_uri": "urn:rsf:skill:dts-0011",
+    "esco_uri": null,
     "preferred_label_ko": "성능 데이터 수집",
     "preferred_label_en": "Performance Data Collection",
     "description_ko": "시뮬레이션에서 성능 지표 추출",
     "description_en": "Extract performance metrics from simulation",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 성능 데이터 수집 역량 구현"
   },
@@ -1992,16 +4406,33 @@
     "skill_id": "RSF-DTS-012",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0012",
+    "internal_uri": "urn:rsf:skill:dts-0012",
+    "esco_uri": null,
     "preferred_label_ko": "시나리오 시뮬레이션",
     "preferred_label_en": "Scenario Simulation",
     "description_ko": "고장, 병목 상황 시뮬레이션",
     "description_en": "Simulate failure and bottleneck scenarios",
     "skill_type": "skill",
     "proficiency_level": 3,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 시나리오 시뮬레이션 역량 구현"
   },
@@ -2009,16 +4440,33 @@
     "skill_id": "RSF-DTS-013",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0013",
+    "internal_uri": "urn:rsf:skill:dts-0013",
+    "esco_uri": null,
     "preferred_label_ko": "최적화 시뮬레이션",
     "preferred_label_en": "Optimization Simulation",
     "description_ko": "최적의 파라미터 찾기 위한 시뮬레이션",
     "description_en": "Simulate to find optimal parameters",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 최적화 시뮬레이션 역량 구현"
   },
@@ -2026,16 +4474,33 @@
     "skill_id": "RSF-DTS-014",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0014",
+    "internal_uri": "urn:rsf:skill:dts-0014",
+    "esco_uri": null,
     "preferred_label_ko": "결과 분석 및 시각화",
     "preferred_label_en": "Result Analysis and Visualization",
     "description_ko": "시뮬레이션 결과를 그래프, 표로 표현",
     "description_en": "Present simulation results as graphs and tables",
     "skill_type": "skill",
     "proficiency_level": 2,
-    "role_mapping": ["engineer", "developer"],
+    "role_mapping": [
+      "engineer",
+      "developer"
+    ],
     "parent_skill_id": null,
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 결과 분석 및 시각화 역량 구현"
   },
@@ -2043,16 +4508,39 @@
     "skill_id": "RSF-DTS-015",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0015",
+    "internal_uri": "urn:rsf:skill:dts-0015",
+    "esco_uri": null,
     "preferred_label_ko": "신규 라인 설계 시뮬레이션",
     "preferred_label_en": "New Production Line Design Simulation",
     "description_ko": "신규 제조 라인 설계 시 시뮬레이션 검증 완료",
     "description_en": "Complete simulation validation for new production line design",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 신규 라인 설계 시뮬레이션 수행 능력 입증"
   },
@@ -2060,16 +4548,39 @@
     "skill_id": "RSF-DTS-016",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0016",
+    "internal_uri": "urn:rsf:skill:dts-0016",
+    "esco_uri": null,
     "preferred_label_ko": "설계 리스크 식별",
     "preferred_label_en": "Design Risk Identification",
     "description_ko": "시뮬레이션 기반 설계 문제 사전 발견",
     "description_en": "Identify design issues through simulation before implementation",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-006",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-006",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 설계 리스크 식별 수행 능력 입증"
   },
@@ -2077,16 +4588,39 @@
     "skill_id": "RSF-DTS-017",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0017",
+    "internal_uri": "urn:rsf:skill:dts-0017",
+    "esco_uri": null,
     "preferred_label_ko": "운영 시나리오 시뮬레이션",
     "preferred_label_en": "Operational Scenario Simulation",
     "description_ko": "고장, 지연 등 운영 상황 사전 검토",
     "description_en": "Pre-evaluate operational situations including failures and delays",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["operator", "engineer"],
+    "role_mapping": [
+      "operator",
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 운영 시나리오 시뮬레이션 수행 능력 입증"
   },
@@ -2094,16 +4628,38 @@
     "skill_id": "RSF-DTS-018",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0018",
+    "internal_uri": "urn:rsf:skill:dts-0018",
+    "esco_uri": null,
     "preferred_label_ko": "최적화된 사이클 타임 달성",
     "preferred_label_en": "Optimized Cycle Time Achievement",
     "description_ko": "시뮬레이션으로 검증된 최적 사이클 타임 달성",
     "description_en": "Achieve optimized cycle time verified through simulation",
     "skill_type": "competence",
     "proficiency_level": 3,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-007",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-007",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 최적화된 사이클 타임 달성 수행 능력 입증"
   },
@@ -2111,16 +4667,38 @@
     "skill_id": "RSF-DTS-019",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0019",
+    "internal_uri": "urn:rsf:skill:dts-0019",
+    "esco_uri": null,
     "preferred_label_ko": "디지털트윈 유지보수",
     "preferred_label_en": "Digital Twin Maintenance",
     "description_ko": "시뮬레이션 모델을 최신 상태로 유지",
     "description_en": "Keep simulation model up to date",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 디지털트윈 유지보수 수행 능력 입증"
   },
@@ -2128,16 +4706,38 @@
     "skill_id": "RSF-DTS-020",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0020",
+    "internal_uri": "urn:rsf:skill:dts-0020",
+    "esco_uri": null,
     "preferred_label_ko": "설계-운영 연동",
     "preferred_label_en": "Design-Operations Integration",
     "description_ko": "설계 변경 사항을 빠르게 운영에 반영",
     "description_en": "Quickly reflect design changes in operations",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-008",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-008",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 설계-운영 연동 수행 능력 입증"
   },
@@ -2145,16 +4745,38 @@
     "skill_id": "RSF-DTS-021",
     "domain": "digital-twin-simulation",
     "domain_en": "Digital Twin & Simulation",
-    "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0021",
+    "internal_uri": "urn:rsf:skill:dts-0021",
+    "esco_uri": null,
     "preferred_label_ko": "의사결정 지원",
     "preferred_label_en": "Decision Support",
     "description_ko": "시뮬레이션 기반 운영 개선 방안 제시",
     "description_en": "Propose operational improvements based on simulation",
     "skill_type": "competence",
     "proficiency_level": 4,
-    "role_mapping": ["engineer"],
+    "role_mapping": [
+      "engineer"
+    ],
     "parent_skill_id": "RSF-DTS-009",
-    "related_skills": [],
+    "related_skills": [
+      {
+        "target": "RSF-DTS-009",
+        "type": "specialization",
+        "weight": 1,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 의사결정 지원 수행 능력 입증"
   }

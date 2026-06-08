@@ -2,16 +2,33 @@
   "skill_id": "RSF-CRO-003",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0003",
+  "internal_uri": "urn:rsf:skill:cro-0003",
+  "esco_uri": null,
   "preferred_label_ko": "사용자 친화적 프로그래밍",
   "preferred_label_en": "User-Friendly Programming Interfaces",
   "description_ko": "드래그-앤-드롭, 그래픽 프로그래밍, 음성 인터페이스",
   "description_en": "Drag-and-drop, graphical programming, and voice interfaces",
   "skill_type": "knowledge",
   "proficiency_level": 1,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "협동로봇 운용의 이론적 기초"
 }

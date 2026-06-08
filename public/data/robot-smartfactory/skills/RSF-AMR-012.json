@@ -2,16 +2,32 @@
   "skill_id": "RSF-AMR-012",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0012",
+  "internal_uri": "urn:rsf:skill:amr-0012",
+  "esco_uri": null,
   "preferred_label_ko": "수동 조종 모드",
   "preferred_label_en": "Manual Control Mode",
   "description_ko": "필요시 원격으로 AMR 제어",
   "description_en": "Remotely control AMR when necessary",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "자율이동로봇 현장에서 수동 조종 모드 역량 구현"
 }

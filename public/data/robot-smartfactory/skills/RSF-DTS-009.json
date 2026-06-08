@@ -2,16 +2,39 @@
   "skill_id": "RSF-DTS-009",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0009",
+  "internal_uri": "urn:rsf:skill:dts-0009",
+  "esco_uri": null,
   "preferred_label_ko": "사이클 타임 시뮬레이션",
   "preferred_label_en": "Cycle Time Simulation",
   "description_ko": "프로그램 실행 시간 측정",
   "description_en": "Measure program execution time",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": "RSF-DTS-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "디지털트윈 & 시뮬레이션 현장에서 사이클 타임 시뮬레이션 역량 구현"
 }

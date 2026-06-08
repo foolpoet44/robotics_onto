@@ -2,16 +2,38 @@
   "skill_id": "RSF-CRO-021",
   "domain": "collaborative-robot",
   "domain_en": "Collaborative Robot Operation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-cro-0021",
+  "internal_uri": "urn:rsf:skill:cro-0021",
+  "esco_uri": null,
   "preferred_label_ko": "협동 로봇 배치 최적화",
   "preferred_label_en": "Collaborative Robot Placement Optimization",
   "description_ko": "작업 공간 내 협동로봇의 최적 위치 결정",
   "description_en": "Determine optimal placement of collaborative robots in workspace",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-CRO-009",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-CRO-009",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "현장 검증: 협동 로봇 배치 최적화 수행 능력 입증"
 }

@@ -2,16 +2,39 @@
   "skill_id": "RSF-RMD-008",
   "domain": "robot-maintenance-diagnostics",
   "domain_en": "Robot Maintenance & Diagnostics",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-rmd-0008",
+  "internal_uri": "urn:rsf:skill:rmd-0008",
+  "esco_uri": null,
   "preferred_label_ko": "고장 코드 해석",
   "preferred_label_en": "Fault Code Interpretation",
   "description_ko": "로봇 진단 코드의 의미 파악",
   "description_en": "Understand robot diagnostic codes",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-002",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-RMD-002",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-RMD-009",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "로봇 유지보수 & 진단 현장에서 고장 코드 해석 역량 구현"
 }

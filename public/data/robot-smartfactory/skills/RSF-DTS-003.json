@@ -2,16 +2,33 @@
   "skill_id": "RSF-DTS-003",
   "domain": "digital-twin-simulation",
   "domain_en": "Digital Twin & Simulation",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-dts-0003",
+  "internal_uri": "urn:rsf:skill:dts-0003",
+  "esco_uri": null,
   "preferred_label_ko": "3D 모델링 및 메시 생성",
   "preferred_label_en": "3D Modeling and Mesh Generation",
   "description_ko": "CAD, STL, URDF, 메시 최적화",
   "description_en": "CAD, STL, URDF, and mesh optimization",
   "skill_type": "knowledge",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-DTS-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "디지털트윈 & 시뮬레이션의 이론적 기초"
 }

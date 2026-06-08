@@ -2,16 +2,39 @@
   "skill_id": "RSF-MVS-006",
   "domain": "machine-vision-sensor",
   "domain_en": "Machine Vision & Sensor Integration",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-mvs-0006",
+  "internal_uri": "urn:rsf:skill:mvs-0006",
+  "esco_uri": null,
   "preferred_label_ko": "카메라 설정 및 조광",
   "preferred_label_en": "Camera Setup and Illumination Adjustment",
   "description_ko": "카메라 해상도, 노출, 포커스 조정",
   "description_en": "Adjust camera resolution, exposure, and focus",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-001",
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-MVS-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "머신비전 & 센서 통합 현장에서 카메라 설정 및 조광 역량 구현"
 }

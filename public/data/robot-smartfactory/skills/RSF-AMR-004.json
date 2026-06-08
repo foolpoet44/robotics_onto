@@ -2,16 +2,33 @@
   "skill_id": "RSF-AMR-004",
   "domain": "autonomous-mobile-robot",
   "domain_en": "AMR/AGV Systems",
-  "esco_uri": "http://data.europa.eu/esco/skill/rsf-amr-0004",
+  "internal_uri": "urn:rsf:skill:amr-0004",
+  "esco_uri": null,
   "preferred_label_ko": "무선 네트워크 및 통신",
   "preferred_label_en": "Wireless Networks and Communication Protocols",
   "description_ko": "WiFi, 5G, ROS 통신, 지연 및 안정성",
   "description_en": "WiFi, 5G, ROS communication, latency, and reliability",
   "skill_type": "knowledge",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
-  "related_skills": [],
+  "related_skills": [
+    {
+      "target": "RSF-AMR-003",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AMR-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
   "esco_broader": null,
   "smartfactory_context": "자율이동로봇의 이론적 기초"
 }
