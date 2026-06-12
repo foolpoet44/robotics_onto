@@ -160,8 +160,17 @@ export default function EmployeeCompetencyDashboard({
                 return (
                   <tr key={employee.employeeId}>
                     <td>
-                      <strong>{employee.name}</strong>
-                      <span>{employee.employeeId}</span>
+                      <div className={styles.nameCell}>
+                        <EmployeeAvatar
+                          employeeId={employee.employeeId}
+                          name={employee.name}
+                          accent={collegeAccent[employee.primaryCollegeId]}
+                        />
+                        <div>
+                          <strong>{employee.name}</strong>
+                          <span>{employee.employeeId}</span>
+                        </div>
+                      </div>
                     </td>
                     <td>
                       <strong>{employee.team}</strong>
@@ -201,6 +210,40 @@ export default function EmployeeCompetencyDashboard({
         </div>
       </section>
     </section>
+  );
+}
+
+function EmployeeAvatar({
+  employeeId,
+  name,
+  accent,
+}: {
+  employeeId: string;
+  name: string;
+  accent: string;
+}) {
+  const [hasPhoto, setHasPhoto] = useState(true);
+  const initial = name.trim().slice(-2);
+
+  return (
+    <span
+      className={styles.avatar}
+      style={{ backgroundColor: accent }}
+      aria-hidden={hasPhoto ? undefined : "true"}
+    >
+      {hasPhoto ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          className={styles.avatarImage}
+          src={`/photos/employees/${employeeId}.jpg`}
+          alt={`${name} 프로필 사진`}
+          loading="lazy"
+          onError={() => setHasPhoto(false)}
+        />
+      ) : (
+        <span className={styles.avatarInitial}>{initial}</span>
+      )}
+    </span>
   );
 }
 

@@ -198,6 +198,40 @@
   line-height: 1.45;
 }
 
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.nameCell .avatar {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  color: white;
+}
+
+.nameCell .avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nameCell .avatarInitial {
+  display: block;
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+  color: white;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
