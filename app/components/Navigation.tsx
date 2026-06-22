@@ -11,6 +11,7 @@ const items = [
   { href: "/competencies", label: "역량", icon: "▣" },
   { href: "/development-tracks", label: "육성", icon: "↗" },
   { href: "/reviews", label: "검수", icon: "✓" },
+  { href: "/evaluation", label: "평가", icon: "◎" },
 ];
 
 export default function Navigation() {
