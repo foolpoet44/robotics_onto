@@ -1,0 +1,38 @@
+{
+  "version": "2026-06-22",
+  "note": "사전 지정 평가자 명부. codeHash = sha256(`${id}:${접속코드}`). 접속코드 평문은 저장하지 않습니다. 샘플 코드는 docs/SKILL_EVALUATION_OPERATIONS.md 참고.",
+  "evaluators": [
+    {
+      "id": "EVAL-001",
+      "name": "김현장",
+      "department": "생산기술팀",
+      "collegeId": "physical-ai",
+      "active": true,
+      "codeHash": "c03672eb437729b3995808211ae75877257966667d35d7a36c09980a6acdce15"
+    },
+    {
+      "id": "EVAL-002",
+      "name": "이판단",
+      "department": "제조AI팀",
+      "collegeId": "agentic-ai",
+      "active": true,
+      "codeHash": "b7235a84c1ef8a6cfeab76f70a99b4b19b7d484a7cc524ef763ed53a41a896cc"
+    },
+    {
+      "id": "EVAL-003",
+      "name": "박트윈",
+      "department": "시뮬레이션팀",
+      "collegeId": "digital-twin",
+      "active": true,
+      "codeHash": "818383cac5cac46d8d826270f886629b7f88f1422adfdddc3e234b19d73b146b"
+    },
+    {
+      "id": "EVAL-004",
+      "name": "최데이터",
+      "department": "데이터분석팀",
+      "collegeId": "data-intelligence",
+      "active": true,
+      "codeHash": "eb2b01a01824ec242032b34456dc2f79f86bbdfc43962f7d080feeca053015a0"
+    }
+  ]
+}

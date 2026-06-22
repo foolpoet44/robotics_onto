@@ -20,8 +20,15 @@
 - [x] 평가자가 도메인별 의견(중요도·근거)을 남길 수 있는 입력 폼 추가
   - 도메인별 스킬 중요도 5점 척도 평가 + 평가 근거 입력 기능으로 반영
     (`app/components/DomainImportanceRating.tsx`).
+- [x] 스킬 평가 전용 페이지 분리 + 로그인 기반 신원 자동 적용 + 라벨 아카이빙
+  - `/evaluation/skills` 워크벤치 신설. 사전 지정 평가자 명부 로그인으로 신원을
+    자동 적용하고(수기 입력 제거), 평가 라벨을 서버에 아카이빙합니다.
+  - 운영은 관리형 DB(`@vercel/postgres`), 로컬은 파일 폴백. 상세는
+    `docs/SKILL_EVALUATION_OPERATIONS.md` 참고.
 - [ ] 도메인별 대표 스킬 예시를 토글 방식으로 선택 노출해 평가 근거 강화.
 - [ ] 평가 결과를 `review-decisions` 데이터와 연계해 후속 보완 이력 관리.
-  - 현재 도메인 중요도 평가는 브라우저 `localStorage`에 저장됩니다. 검수
-    장부와 연계하려면 서버 저장 및 `public/data/review-decisions.json`
-    연동 설계가 필요합니다.
+  - 스킬 평가 라벨은 서버(DB/파일)에 아카이빙됩니다. 검수 장부와 연계하려면
+    `skill_evaluation_labels` → `public/data/review-decisions.json` export
+    파이프라인 설계가 필요합니다.
+  - 도메인 중요도 평가(`DomainImportanceRating`)는 아직 `localStorage` 기반이며,
+    동일한 서버 아카이빙으로의 이관이 후속 과제입니다.

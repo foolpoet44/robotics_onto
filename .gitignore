@@ -25,6 +25,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# local evaluation ledger (file-store fallback)
+/.data
+
 # vercel
 .vercel
 tsconfig.tsbuildinfo
