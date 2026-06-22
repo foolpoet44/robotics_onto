@@ -30,9 +30,28 @@ const SCORE_VALUES = [1, 2, 3, 4, 5];
 const STORAGE_KEY = "factory-robotics-skillmap:domain-importance-ratings";
 
 function loadRatings(): DomainRating[] {
+  if (typeof window === "undefined") {
+    return [];
+  }
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    return saved ? (JSON.parse(saved) as DomainRating[]) : [];
+    if (!saved) return [];
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter((item): item is DomainRating => {
+      if (!item || typeof item !== "object") return false;
+      const record = item as Record<string, unknown>;
+      return (
+        typeof record.id === "string" &&
+        typeof record.evaluatorName === "string" &&
+        typeof record.domainKey === "string" &&
+        typeof record.score === "number" &&
+        !Number.isNaN(record.score) &&
+        typeof record.notes === "string" &&
+        typeof record.createdAt === "string" &&
+        !Number.isNaN(new Date(record.createdAt).getTime())
+      );
+    });
   } catch {
     return [];
   }
@@ -131,7 +150,10 @@ export default function DomainImportanceRating({
       <label className={styles.evaluatorField}>
         평가자
         <input
-          onChange={(event) => setEvaluatorName(event.target.value)}
+          onChange={(event) => {
+            setEvaluatorName(event.target.value);
+            setMessage("");
+          }}
           placeholder="예: 생산기술팀 김OO"
           value={evaluatorName}
         />
@@ -169,7 +191,7 @@ export default function DomainImportanceRating({
                 <div>
                   <dt>평균 중요도</dt>
                   <dd>
-                    {average ? `${average.toFixed(1)} / 5` : "평가 대기"}
+                    {average !== null ? `${average.toFixed(1)} / 5` : "평가 대기"}
                     {summary && summary.count > 0
                       ? ` · ${summary.count}명`
                       : ""}
@@ -189,9 +211,10 @@ export default function DomainImportanceRating({
                           : styles.scoreButton
                       }
                       key={value}
-                      onClick={() =>
-                        setScores((prev) => ({ ...prev, [domain.key]: value }))
-                      }
+                      onClick={() => {
+                        setScores((prev) => ({ ...prev, [domain.key]: value }));
+                        setMessage("");
+                      }}
                       type="button"
                     >
                       <strong>{value}</strong>
@@ -204,12 +227,13 @@ export default function DomainImportanceRating({
               <label className={styles.notes}>
                 평가 근거 <span>선택</span>
                 <textarea
-                  onChange={(event) =>
+                  onChange={(event) => {
                     setNotes((prev) => ({
                       ...prev,
                       [domain.key]: event.target.value,
-                    }))
-                  }
+                    }));
+                    setMessage("");
+                  }}
                   placeholder="이 도메인이 왜 중요한지, 어떤 현장에 필요한지 남겨 주세요."
                   rows={2}
                   value={notes[domain.key] ?? ""}
