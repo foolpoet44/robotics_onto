@@ -25,11 +25,7 @@
 }
 
 .hero p:last-child,
-.sectionHeading p:last-child,
-.domainDescription,
-.domainEn,
-.checkCard p,
-.improvementBox li {
+.sectionHeading p:last-child {
   color: var(--text-secondary);
 }
 
@@ -41,133 +37,13 @@
   letter-spacing: 0.14em;
 }
 
-.domainSection,
-.reportSection {
+.domainSection {
   margin-top: 2.5rem;
-}
-
-.domainGrid,
-.checkGrid {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.domainGrid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.domainCard,
-.checkCard,
-.improvementBox {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.domainCard {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  min-height: 280px;
-  padding: 1.5rem;
-  border-top: 4px solid;
-}
-
-.domainIcon {
-  font-size: 2.4rem;
-}
-
-.domainCard h3,
-.checkCard h3,
-.improvementBox h3 {
-  margin: 0;
-  color: var(--text-primary);
-}
-
-.domainEn {
-  margin: 0.25rem 0 0;
-  font-size: 0.88rem;
-}
-
-.domainDescription {
-  flex: 1;
-  margin: 0;
-}
-
-.domainMeta {
-  display: grid;
-  gap: 0.7rem;
-  margin: 0;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.domainMeta div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.domainMeta dt {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.domainMeta dd {
-  margin: 0;
-  color: var(--color-primary-dark);
-  font-weight: 800;
-  text-align: right;
-}
-
-.checkGrid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.checkCard {
-  padding: 1.25rem;
-}
-
-.statusPass,
-.statusNeedsWork {
-  display: inline-flex;
-  margin-bottom: 0.75rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 800;
-}
-
-.statusPass {
-  color: #166534;
-  background: #dcfce7;
-}
-
-.statusNeedsWork {
-  color: #92400e;
-  background: #fef3c7;
-}
-
-.improvementBox {
-  margin-top: 1.25rem;
-  padding: 1.5rem;
-}
-
-.improvementBox ul {
-  margin: 0.85rem 0 0;
-  padding-left: 1.25rem;
-}
-
-.improvementBox li + li {
-  margin-top: 0.5rem;
 }
 
 .referenceLink {
   display: inline-flex;
-  margin-top: 1.25rem;
+  margin-top: 2.25rem;
   color: var(--color-primary-dark);
   font-weight: 800;
   text-decoration: none;
