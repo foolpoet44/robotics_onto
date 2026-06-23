@@ -80,29 +80,29 @@ export default function SkillExplorer({ skills, stats }: SkillExplorerProps) {
       <div className="page-header">
         <h1 className="page-title">로봇테크 for 스마트팩토리</h1>
         <p className="page-description">
-          6개 도메인, 3개 역할, 4단계 숙련도의 {stats.totalSkills}개
-          로봇테크 스킬 탐색
+          6개 도메인, 3개 역할, 4단계 숙련도의 {stats.totalSkills}개 로봇테크
+          스킬 탐색
         </p>
       </div>
 
       {/* 통계 */}
       <div className="statistics-grid">
-          <div className="stat-card">
-            <div className="stat-value">{stats.totalSkills}</div>
-            <div className="stat-label">총 스킬</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value">{stats.domainCount}</div>
-            <div className="stat-label">도메인</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value">{stats.roleDistribution.length}</div>
-            <div className="stat-label">역할</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value">4</div>
-            <div className="stat-label">숙련도 단계</div>
-          </div>
+        <div className="stat-card">
+          <div className="stat-value">{stats.totalSkills}</div>
+          <div className="stat-label">총 스킬</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">{stats.domainCount}</div>
+          <div className="stat-label">도메인</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">{stats.roleDistribution.length}</div>
+          <div className="stat-label">역할</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">4</div>
+          <div className="stat-label">숙련도 단계</div>
+        </div>
       </div>
 
       {/* 검색 & 필터 */}

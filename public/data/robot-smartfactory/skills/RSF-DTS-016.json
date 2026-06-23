@@ -10,10 +10,7 @@
   "description_en": "Identify design issues through simulation before implementation",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-DTS-006",
   "related_skills": [
     {

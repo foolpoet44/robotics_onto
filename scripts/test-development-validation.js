@@ -25,8 +25,18 @@ function makeTrack(overrides = {}) {
       { id: "leadership", scale_max: 5 },
     ],
     stages: [
-      { id: "potential_pool", order: 0, target_headcount: 100, required_skill_ids: [] },
-      { id: "early_selection", order: 1, target_headcount: 50, required_skill_ids: [] },
+      {
+        id: "potential_pool",
+        order: 0,
+        target_headcount: 100,
+        required_skill_ids: [],
+      },
+      {
+        id: "early_selection",
+        order: 1,
+        target_headcount: 50,
+        required_skill_ids: [],
+      },
     ],
     ...overrides,
   };
@@ -51,7 +61,12 @@ function makeCandidate(overrides = {}) {
 }
 
 function expectError(name, track, candidates, expectedText) {
-  const result = validateDevelopmentData(track, candidates, ontologySkills, domainKeys);
+  const result = validateDevelopmentData(
+    track,
+    candidates,
+    ontologySkills,
+    domainKeys,
+  );
   assert.strictEqual(result.valid, false, `${name}: 오류가 감지되어야 합니다.`);
   assert.ok(
     result.errors.some((error) => error.includes(expectedText)),
@@ -60,13 +75,20 @@ function expectError(name, track, candidates, expectedText) {
 }
 
 assert.strictEqual(
-  validateDevelopmentData(makeTrack(), [makeCandidate()], ontologySkills, domainKeys).valid,
+  validateDevelopmentData(
+    makeTrack(),
+    [makeCandidate()],
+    ontologySkills,
+    domainKeys,
+  ).valid,
   true,
 );
 expectError(
   "존재하지 않는 도메인",
   makeTrack({
-    expert_area_profiles: [{ id: "control", domain_keys: ["missing"], core_skill_ids: [] }],
+    expert_area_profiles: [
+      { id: "control", domain_keys: ["missing"], core_skill_ids: [] },
+    ],
   }),
   [makeCandidate()],
   "존재하지 않는 도메인",
@@ -74,7 +96,9 @@ expectError(
 expectError(
   "존재하지 않는 핵심 스킬",
   makeTrack({
-    expert_area_profiles: [{ id: "control", domain_keys: [], core_skill_ids: ["RSF-XXX-999"] }],
+    expert_area_profiles: [
+      { id: "control", domain_keys: [], core_skill_ids: ["RSF-XXX-999"] },
+    ],
   }),
   [makeCandidate()],
   "존재하지 않는 기준 스킬",
@@ -83,8 +107,18 @@ expectError(
   "단계 순서 중복",
   makeTrack({
     stages: [
-      { id: "potential_pool", order: 0, target_headcount: 100, required_skill_ids: [] },
-      { id: "early_selection", order: 0, target_headcount: 50, required_skill_ids: [] },
+      {
+        id: "potential_pool",
+        order: 0,
+        target_headcount: 100,
+        required_skill_ids: [],
+      },
+      {
+        id: "early_selection",
+        order: 0,
+        target_headcount: 50,
+        required_skill_ids: [],
+      },
     ],
   }),
   [makeCandidate()],
@@ -94,8 +128,18 @@ expectError(
   "목표 인원 역전",
   makeTrack({
     stages: [
-      { id: "potential_pool", order: 0, target_headcount: 50, required_skill_ids: [] },
-      { id: "early_selection", order: 1, target_headcount: 60, required_skill_ids: [] },
+      {
+        id: "potential_pool",
+        order: 0,
+        target_headcount: 50,
+        required_skill_ids: [],
+      },
+      {
+        id: "early_selection",
+        order: 1,
+        target_headcount: 60,
+        required_skill_ids: [],
+      },
     ],
   }),
   [makeCandidate()],
@@ -116,22 +160,50 @@ expectError(
 expectError(
   "직능 점수 범위 위반",
   makeTrack(),
-  [makeCandidate({ competency_assessments: [{ axis_id: "problem", score: 6 }] })],
+  [
+    makeCandidate({
+      competency_assessments: [{ axis_id: "problem", score: 6 }],
+    }),
+  ],
   "점수 범위 위반",
 );
 expectError(
   "현장 과제 설명 누락",
   makeTrack(),
-  [makeCandidate({ impact_proposal: { title: "", problem: "", expected_impact: "", status: "draft" } })],
+  [
+    makeCandidate({
+      impact_proposal: {
+        title: "",
+        problem: "",
+        expected_impact: "",
+        status: "draft",
+      },
+    }),
+  ],
   "필수 설명 누락",
 );
 expectError(
   "미래 단계 완료",
   makeTrack({
     stages: [
-      { id: "potential_pool", order: 0, target_headcount: 100, required_skill_ids: [] },
-      { id: "early_selection", order: 1, target_headcount: 50, required_skill_ids: [] },
-      { id: "integrated_bootcamp", order: 2, target_headcount: 40, required_skill_ids: [] },
+      {
+        id: "potential_pool",
+        order: 0,
+        target_headcount: 100,
+        required_skill_ids: [],
+      },
+      {
+        id: "early_selection",
+        order: 1,
+        target_headcount: 50,
+        required_skill_ids: [],
+      },
+      {
+        id: "integrated_bootcamp",
+        order: 2,
+        target_headcount: 40,
+        required_skill_ids: [],
+      },
     ],
   }),
   [

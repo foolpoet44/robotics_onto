@@ -10,10 +10,7 @@
   "description_en": "Verify human-robot collaboration in simulation",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": null,
   "related_skills": [
     {

@@ -27,7 +27,10 @@ function assert(condition, message) {
 assert(dataset.source?.spreadsheetId, "원본 스프레드시트 ID가 없습니다.");
 assert(dataset.assessment?.year === 2025, "평가 연도가 예상과 다릅니다.");
 assert(Array.isArray(dataset.employees), "employees 배열이 없습니다.");
-assert(dataset.employees.length === 273, "개인별 역량 인원 수가 예상과 다릅니다.");
+assert(
+  dataset.employees.length === 273,
+  "개인별 역량 인원 수가 예상과 다릅니다.",
+);
 assert(
   dataset.summary.employeeCount === dataset.employees.length,
   "summary.employeeCount와 employees 길이가 다릅니다.",

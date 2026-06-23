@@ -57,16 +57,12 @@ assert.deepStrictEqual(healthy.metrics, {
 
 expectError(
   "매핑 필드 누락",
-  makeOrganization([
-    makeSkill({ ontology_skill_id: undefined }),
-  ]),
+  makeOrganization([makeSkill({ ontology_skill_id: undefined })]),
   "ontology_skill_id",
 );
 expectError(
   "존재하지 않는 기준 스킬",
-  makeOrganization([
-    makeSkill({ ontology_skill_id: "RSF-IRC-999" }),
-  ]),
+  makeOrganization([makeSkill({ ontology_skill_id: "RSF-IRC-999" })]),
   "존재하지 않는 기준 스킬",
 );
 expectError(
@@ -90,9 +86,7 @@ expectError(
 );
 expectError(
   "리뷰 상태 범위 위반",
-  makeOrganization([
-    makeSkill({ ontology_review_status: "invalid" }),
-  ]),
+  makeOrganization([makeSkill({ ontology_review_status: "invalid" })]),
   "ontology_review_status",
 );
 

@@ -4,5 +4,7 @@ import { getAllRobotSkills } from "./lib/server-data";
 
 export default async function RobotSmartFactoryPage() {
   const skills = await getAllRobotSkills();
-  return <SkillExplorer skills={skills} stats={computeRobotStatistics(skills)} />;
+  return (
+    <SkillExplorer skills={skills} stats={computeRobotStatistics(skills)} />
+  );
 }

@@ -10,9 +10,7 @@
   "description_en": "Keep simulation model up to date",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": "RSF-DTS-008",
   "related_skills": [
     {

@@ -57,10 +57,17 @@ export default function DevelopmentTrackDashboard({
                 key={stage.id}
                 style={{ width: `${100 - index * 9}%` }}
               >
-                <small>{index === 0 ? "진입" : `STAGE ${String(index).padStart(2, "0")}`}</small>
+                <small>
+                  {index === 0
+                    ? "진입"
+                    : `STAGE ${String(index).padStart(2, "0")}`}
+                </small>
                 <strong>{stage.name}</strong>
                 <span>{stage.description}</span>
-                <b>{stage.target_headcount}{index === 0 ? "+" : ""}명 목표</b>
+                <b>
+                  {stage.target_headcount}
+                  {index === 0 ? "+" : ""}명 목표
+                </b>
               </article>
             ))}
           </div>
@@ -73,19 +80,43 @@ export default function DevelopmentTrackDashboard({
             교육 이수보다 실제 PoC와 임팩트 과제를 증빙으로 사용합니다.
           </span>
           <div className={styles.messageStats}>
-            <div><strong>30</strong><span>명 Lv3 Tech Leader Pool</span></div>
-            <div><strong>{track.expert_area_profiles.length}</strong><span>개 기술 전문 영역</span></div>
-            <div><strong>{track.competency_axes.length}</strong><span>개 직능 역량</span></div>
-            <div><strong>1人1案</strong><span>현장 임팩트 단위</span></div>
+            <div>
+              <strong>30</strong>
+              <span>명 Lv3 Tech Leader Pool</span>
+            </div>
+            <div>
+              <strong>{track.expert_area_profiles.length}</strong>
+              <span>개 기술 전문 영역</span>
+            </div>
+            <div>
+              <strong>{track.competency_axes.length}</strong>
+              <span>개 직능 역량</span>
+            </div>
+            <div>
+              <strong>1人1案</strong>
+              <span>현장 임팩트 단위</span>
+            </div>
           </div>
         </aside>
       </section>
 
       <section className={styles.summaryGrid}>
-        <div><strong>{candidates.length}</strong><span>샘플 후보자</span></div>
-        <div><strong>{stageCounts.lv3_certification ?? 0}</strong><span>인증 완료</span></div>
-        <div><strong>{heldCount}</strong><span>현재 보류</span></div>
-        <div><strong>{getAverageCompetency(candidates)}</strong><span>평균 직능 역량</span></div>
+        <div>
+          <strong>{candidates.length}</strong>
+          <span>샘플 후보자</span>
+        </div>
+        <div>
+          <strong>{stageCounts.lv3_certification ?? 0}</strong>
+          <span>인증 완료</span>
+        </div>
+        <div>
+          <strong>{heldCount}</strong>
+          <span>현재 보류</span>
+        </div>
+        <div>
+          <strong>{getAverageCompetency(candidates)}</strong>
+          <span>평균 직능 역량</span>
+        </div>
       </section>
 
       <section className={styles.areaSection}>
@@ -93,10 +124,15 @@ export default function DevelopmentTrackDashboard({
         <div className={styles.areaGrid}>
           {track.expert_area_profiles.map((area, index) => (
             <article key={area.id}>
-              <small>DOMAIN {String(index + 1).padStart(2, "0")}{area.id === "data-intelligence" ? " · HUB" : ""}</small>
+              <small>
+                DOMAIN {String(index + 1).padStart(2, "0")}
+                {area.id === "data-intelligence" ? " · HUB" : ""}
+              </small>
               <strong>{area.name}</strong>
               <p>{area.description}</p>
-              <span>{areaCounts[area.id]}명 · 목표 Lv{area.target_proficiency_level}</span>
+              <span>
+                {areaCounts[area.id]}명 · 목표 Lv{area.target_proficiency_level}
+              </span>
             </article>
           ))}
         </div>
@@ -108,7 +144,9 @@ export default function DevelopmentTrackDashboard({
           {track.competency_axes.map((axis) => (
             <article key={axis.id}>
               <strong>{axis.name}</strong>
-              <span>{getAverageAxisScore(candidates, axis.id)} / {axis.scale_max}</span>
+              <span>
+                {getAverageAxisScore(candidates, axis.id)} / {axis.scale_max}
+              </span>
               <p>{axis.description}</p>
             </article>
           ))}

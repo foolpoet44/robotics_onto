@@ -10,10 +10,7 @@
   "description_en": "Various teaching approaches including online teaching, offline programming, and manual guiding",
   "skill_type": "knowledge",
   "proficiency_level": 1,
-  "role_mapping": [
-    "engineer",
-    "developer"
-  ],
+  "role_mapping": ["engineer", "developer"],
   "parent_skill_id": null,
   "related_skills": [
     {

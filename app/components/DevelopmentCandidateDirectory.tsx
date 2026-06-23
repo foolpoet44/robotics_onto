@@ -37,7 +37,10 @@ export default function DevelopmentCandidateDirectory({
       <div className={styles.filters}>
         <label>
           전문 영역
-          <select onChange={(event) => setAreaId(event.target.value)} value={areaId}>
+          <select
+            onChange={(event) => setAreaId(event.target.value)}
+            value={areaId}
+          >
             <option value="all">전체 영역</option>
             {track.expert_area_profiles.map((area) => (
               <option key={area.id} value={area.id}>
@@ -48,7 +51,10 @@ export default function DevelopmentCandidateDirectory({
         </label>
         <label>
           현재 단계
-          <select onChange={(event) => setStageId(event.target.value)} value={stageId}>
+          <select
+            onChange={(event) => setStageId(event.target.value)}
+            value={stageId}
+          >
             <option value="all">전체 단계</option>
             {track.stages.map((stage) => (
               <option key={stage.id} value={stage.id}>
@@ -85,7 +91,9 @@ export default function DevelopmentCandidateDirectory({
         })}
       </div>
       {visibleCandidates.length === 0 && (
-        <p className={styles.empty}>선택한 조건에 해당하는 후보자가 없습니다.</p>
+        <p className={styles.empty}>
+          선택한 조건에 해당하는 후보자가 없습니다.
+        </p>
       )}
     </section>
   );

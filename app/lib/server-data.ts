@@ -24,7 +24,9 @@ export async function getAllRobotSkills(): Promise<RobotSkill[]> {
   return readJsonFile<RobotSkill[]>("robot-smartfactory.json");
 }
 
-export async function getRobotSkill(skillId: string): Promise<RobotSkill | null> {
+export async function getRobotSkill(
+  skillId: string,
+): Promise<RobotSkill | null> {
   const skills = await getAllRobotSkills();
   return skills.find((skill) => skill.skill_id === skillId) ?? null;
 }
@@ -87,7 +89,9 @@ export async function getDevelopmentTracksForOrganization(
   );
 }
 
-export async function getDomainSkills(domainKey: string): Promise<RobotSkill[]> {
+export async function getDomainSkills(
+  domainKey: string,
+): Promise<RobotSkill[]> {
   const skills = await getAllRobotSkills();
   return skills.filter((skill) => skill.domain === domainKey);
 }

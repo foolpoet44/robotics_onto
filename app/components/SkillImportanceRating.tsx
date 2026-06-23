@@ -136,7 +136,9 @@ export default function SkillImportanceRating({
       setRatings(nextRatings);
       return true;
     } catch {
-      setMessage("평가를 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.");
+      setMessage(
+        "평가를 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.",
+      );
       return false;
     }
   }
@@ -215,7 +217,9 @@ export default function SkillImportanceRating({
     if (saveMissingSkillProposals(nextProposals)) {
       setMissingSkillName("");
       setMissingSkillNeed("");
-      setMessage("누락 스킬 제안을 저장했습니다. 검수 후 스킬맵에 반영할 수 있습니다.");
+      setMessage(
+        "누락 스킬 제안을 저장했습니다. 검수 후 스킬맵에 반영할 수 있습니다.",
+      );
     }
   }
 
@@ -245,7 +249,9 @@ export default function SkillImportanceRating({
             각 영역의 전문가가 현장 관점에서 이 스킬의 중요도를 평가합니다.
           </span>
         </div>
-        <strong>{ratings.length}건 평가 · {missingSkillProposals.length}건 제안</strong>
+        <strong>
+          {ratings.length}건 평가 · {missingSkillProposals.length}건 제안
+        </strong>
       </div>
 
       <form className={styles.ratingForm} onSubmit={handleSubmit}>
@@ -267,7 +273,8 @@ export default function SkillImportanceRating({
           >
             {EXPERT_DOMAINS.map((domain) => (
               <option key={domain.id} value={domain.id}>
-                {domain.name}{domain.isHub ? " · HUB" : ""}
+                {domain.name}
+                {domain.isHub ? " · HUB" : ""}
               </option>
             ))}
           </select>
@@ -305,7 +312,10 @@ export default function SkillImportanceRating({
         <button type="submit">평가 저장</button>
       </form>
 
-      <form className={styles.missingSkillForm} onSubmit={handleMissingSkillSubmit}>
+      <form
+        className={styles.missingSkillForm}
+        onSubmit={handleMissingSkillSubmit}
+      >
         <div className={styles.formTitle}>
           <p>MISSING SKILL PROPOSAL</p>
           <h3>스킬맵에 없는 현장 스킬 추가 요청</h3>
@@ -348,10 +358,16 @@ export default function SkillImportanceRating({
         <div className={styles.summaryGrid}>
           {summaries.map((summary) => (
             <article key={summary.id}>
-              <span>{summary.name}{summary.isHub ? " · HUB" : ""}</span>
-              <strong>{summary.average ? summary.average.toFixed(1) : "-"}</strong>
+              <span>
+                {summary.name}
+                {summary.isHub ? " · HUB" : ""}
+              </span>
+              <strong>
+                {summary.average ? summary.average.toFixed(1) : "-"}
+              </strong>
               <small>
-                {summary.count > 0 ? `${summary.count}명 평가` : "평가 대기"} · 5점 만점
+                {summary.count > 0 ? `${summary.count}명 평가` : "평가 대기"} ·
+                5점 만점
               </small>
             </article>
           ))}
@@ -364,8 +380,9 @@ export default function SkillImportanceRating({
           <div className={styles.historyList}>
             {ratings.slice(0, 5).map((rating) => {
               const domainName =
-                EXPERT_DOMAINS.find((domain) => domain.id === rating.expertDomain)
-                  ?.name ?? rating.expertDomain;
+                EXPERT_DOMAINS.find(
+                  (domain) => domain.id === rating.expertDomain,
+                )?.name ?? rating.expertDomain;
               return (
                 <article key={rating.id}>
                   <div>
@@ -380,10 +397,7 @@ export default function SkillImportanceRating({
                     </span>
                     {rating.notes && <p>{rating.notes}</p>}
                   </div>
-                  <button
-                    onClick={() => handleDelete(rating.id)}
-                    type="button"
-                  >
+                  <button onClick={() => handleDelete(rating.id)} type="button">
                     삭제
                   </button>
                 </article>
@@ -399,8 +413,9 @@ export default function SkillImportanceRating({
           <div className={styles.historyList}>
             {missingSkillProposals.slice(0, 5).map((proposal) => {
               const domainName =
-                EXPERT_DOMAINS.find((domain) => domain.id === proposal.expertDomain)
-                  ?.name ?? proposal.expertDomain;
+                EXPERT_DOMAINS.find(
+                  (domain) => domain.id === proposal.expertDomain,
+                )?.name ?? proposal.expertDomain;
               return (
                 <article key={proposal.id}>
                   <div>

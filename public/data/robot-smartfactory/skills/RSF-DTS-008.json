@@ -10,10 +10,7 @@
   "description_en": "Verify equipment placement for collisions",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": [
-    "engineer",
-    "developer"
-  ],
+  "role_mapping": ["engineer", "developer"],
   "parent_skill_id": "RSF-DTS-002",
   "related_skills": [
     {

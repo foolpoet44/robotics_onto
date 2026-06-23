@@ -10,9 +10,7 @@
   "description_en": "Correct camera distortion and coordinate transformation",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": null,
   "related_skills": [
     {

@@ -10,7 +10,11 @@
       "id": "physical-ai",
       "name": "Physical AI & Robotics",
       "description": "협동로봇, AMR, 자율 로봇을 현장에서 작동 가능한 솔루션으로 구현합니다.",
-      "domain_keys": ["industrial-robot-control", "collaborative-robot", "autonomous-mobile-robot"],
+      "domain_keys": [
+        "industrial-robot-control",
+        "collaborative-robot",
+        "autonomous-mobile-robot"
+      ],
       "core_skill_ids": ["RSF-IRC-007", "RSF-CRO-006", "RSF-AMR-001"],
       "target_proficiency_level": 3
     },
@@ -26,7 +30,10 @@
       "id": "digital-twin",
       "name": "Digital Twin & Simulation",
       "description": "공정 시뮬레이션과 AI 융합 트윈으로 설계와 현장 검증 속도를 높입니다.",
-      "domain_keys": ["digital-twin-simulation", "robot-maintenance-diagnostics"],
+      "domain_keys": [
+        "digital-twin-simulation",
+        "robot-maintenance-diagnostics"
+      ],
       "core_skill_ids": ["RSF-DTS-001", "RSF-DTS-002", "RSF-RMD-019"],
       "target_proficiency_level": 3
     },

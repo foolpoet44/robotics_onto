@@ -51,9 +51,18 @@ export default function EmployeeCompetencyDashboard({
   return (
     <section className={styles.dashboard}>
       <div className={styles.summaryGrid}>
-        <MetricCard label="평가 인원" value={`${dataset.summary.employeeCount}명`} />
-        <MetricCard label="핵심역량" value={`${dataset.summary.coreCompetencyCount}개`} />
-        <MetricCard label="평균 점수" value={dataset.summary.averageScore.toFixed(2)} />
+        <MetricCard
+          label="평가 인원"
+          value={`${dataset.summary.employeeCount}명`}
+        />
+        <MetricCard
+          label="핵심역량"
+          value={`${dataset.summary.coreCompetencyCount}개`}
+        />
+        <MetricCard
+          label="평균 점수"
+          value={dataset.summary.averageScore.toFixed(2)}
+        />
         <MetricCard label="평가 차수" value={dataset.assessment.roundName} />
       </div>
 
@@ -115,7 +124,10 @@ export default function EmployeeCompetencyDashboard({
           </label>
           <label>
             팀
-            <select value={team} onChange={(event) => setTeam(event.target.value)}>
+            <select
+              value={team}
+              onChange={(event) => setTeam(event.target.value)}
+            >
               <option value="all">전체 팀</option>
               {dataset.summary.teams.map((teamName) => (
                 <option key={teamName} value={teamName}>
@@ -191,7 +203,8 @@ export default function EmployeeCompetencyDashboard({
                     <td>
                       <strong>{topCompetency.minorCategory}</strong>
                       <span>
-                        {topCompetency.majorCategory} / {topCompetency.middleCategory}
+                        {topCompetency.majorCategory} /{" "}
+                        {topCompetency.middleCategory}
                       </span>
                     </td>
                     <td>
@@ -205,7 +218,9 @@ export default function EmployeeCompetencyDashboard({
             </tbody>
           </table>
           {filteredEmployees.length === 0 ? (
-            <p className={styles.empty}>조건에 맞는 개인 역량정보가 없습니다.</p>
+            <p className={styles.empty}>
+              조건에 맞는 개인 역량정보가 없습니다.
+            </p>
           ) : null}
         </div>
       </section>

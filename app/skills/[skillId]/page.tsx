@@ -93,7 +93,9 @@ export default async function SkillDetailPage({
         <dl className={styles.definitionList}>
           <div>
             <dt>필요 역할</dt>
-            <dd>{skill.role_mapping.map((role) => ROLE_LABELS[role]).join(", ")}</dd>
+            <dd>
+              {skill.role_mapping.map((role) => ROLE_LABELS[role]).join(", ")}
+            </dd>
           </div>
           <div>
             <dt>내부 식별자</dt>

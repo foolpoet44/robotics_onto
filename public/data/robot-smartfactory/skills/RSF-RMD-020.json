@@ -10,9 +10,7 @@
   "description_en": "Improve availability, reliability, and other metrics",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": "RSF-RMD-008",
   "related_skills": [
     {

@@ -10,9 +10,7 @@
   "description_en": "Report safety assessment results for collaborative work",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": "RSF-CRO-007",
   "related_skills": [
     {

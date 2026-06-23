@@ -1,8 +1,5 @@
 const assert = require("assert");
-const {
-  buildSkillReferences,
-  findSkillById,
-} = require("./lib/skill-detail");
+const { buildSkillReferences, findSkillById } = require("./lib/skill-detail");
 
 const skills = [
   {

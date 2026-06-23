@@ -10,10 +10,7 @@
   "description_en": "Complete work within specified cycle time",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-IRC-006",
   "related_skills": [
     {
