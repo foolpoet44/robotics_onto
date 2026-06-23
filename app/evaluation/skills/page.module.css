@@ -4,28 +4,19 @@
   padding: 3.5rem 1.25rem 4.5rem;
 }
 
-.hero,
-.sectionHeading {
+.hero {
+  max-width: 760px;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
-.hero {
-  max-width: 760px;
-  margin: 0 auto 2.75rem;
-}
-
-.hero h1,
-.sectionHeading h2 {
+.hero h1 {
   margin: 0.45rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: var(--text-primary);
 }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-}
-
-.hero p:last-child,
-.sectionHeading p:last-child {
+.hero p:last-child {
   color: var(--text-secondary);
 }
 
@@ -37,13 +28,9 @@
   letter-spacing: 0.14em;
 }
 
-.domainSection {
-  margin-top: 2.5rem;
-}
-
 .referenceLink {
   display: inline-flex;
-  margin-top: 2.25rem;
+  margin-top: 2rem;
   color: var(--color-primary-dark);
   font-weight: 800;
   text-decoration: none;

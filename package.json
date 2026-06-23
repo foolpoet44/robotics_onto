@@ -14,6 +14,7 @@
     "apply:review-decisions": "node scripts/apply-review-decisions.js",
     "record:review-decision": "node scripts/record-review-decision.js",
     "update:development-candidate": "node scripts/update-development-candidate.js",
+    "generate:evaluator-code-hash": "node scripts/generate-evaluator-code-hash.js",
     "import:employee-competency": "node scripts/import-employee-competency.js",
     "validate:review-decisions": "node scripts/validate-review-decisions.js",
     "validate:development": "node scripts/validate-development-data.js",
@@ -31,6 +32,7 @@
     "test:data": "node scripts/test-robot-smartfactory.js"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.10.0",
     "next": "^15.5.18",
     "react": "18.2.0",
     "react-dom": "18.2.0"

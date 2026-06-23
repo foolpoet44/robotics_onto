@@ -12,10 +12,20 @@ const items = [
   { href: "/development-tracks", label: "육성", icon: "↗" },
   { href: "/reviews", label: "검수", icon: "✓" },
   { href: "/evaluation", label: "평가", icon: "◎" },
+  { href: "/evaluation/skills", label: "스킬평가", icon: "✍" },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
+
+  // 가장 구체적인(가장 긴) 일치 항목 하나만 활성화한다.
+  const activeHref = items
+    .filter(
+      (item) =>
+        pathname === item.href ||
+        (item.href !== "/" && pathname.startsWith(`${item.href}/`)),
+    )
+    .sort((a, b) => b.href.length - a.href.length)[0]?.href;
 
   return (
     <nav className={styles.navigation} aria-label="주요 메뉴">
@@ -26,9 +36,7 @@ export default function Navigation() {
         </Link>
         <div className={styles.navLinks}>
           {items.map((item) => {
-            const active =
-              pathname === item.href ||
-              (item.href !== "/" && pathname.startsWith(item.href));
+            const active = item.href === activeHref;
             return (
               <Link
                 key={item.href}

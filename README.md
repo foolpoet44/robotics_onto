@@ -84,6 +84,21 @@ npm run record:review-decision -- \
 각 기준 스킬은 `/skills/[skillId]` 상세 페이지에서 정의, 스마트팩토리 적용
 맥락, 숙련도, 역할, 상위 스킬, 관련 스킬을 확인할 수 있습니다.
 
+## 스킬 평가 워크벤치
+
+`/evaluation`은 도메인 단위 평가, `/evaluation/skills`는 스킬 단위 평가 전용
+화면입니다. 스킬 평가 워크벤치는 사전 지정 평가자 명부(`public/data/evaluators.json`)
+로그인으로 신원을 자동 적용하고(수기 입력 제거), 도메인/역할 필터와 "내 미평가만"
+큐로 스킬을 한 건씩 중요도(1~5점)·라벨로 평가합니다. 평가 라벨은 서버에
+아카이빙되며 운영은 관리형 DB(`POSTGRES_URL`), 로컬은 파일 폴백을 사용합니다.
+
+운영·명부 관리·환경 변수·DB 스키마는 `docs/SKILL_EVALUATION_OPERATIONS.md`를
+따릅니다. 새 평가자 접속 코드 해시는 다음으로 생성합니다.
+
+```bash
+npm run generate:evaluator-code-hash -- --id EVAL-005 --code "배정코드"
+```
+
 ## 기술 전문가 육성 트랙
 
 `/development-tracks`는 잠재 후보군부터 `Lv3 Tech Leader` 인증까지 이어지는
