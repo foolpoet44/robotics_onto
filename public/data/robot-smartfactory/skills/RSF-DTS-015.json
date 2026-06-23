@@ -10,10 +10,7 @@
   "description_en": "Complete simulation validation for new production line design",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-DTS-006",
   "related_skills": [
     {

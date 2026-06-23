@@ -28,7 +28,7 @@
 - 의미가 충분히 겹치는 항목만 `ontology_skill_id`로 연결하고, 조직 고유 역량은
   `null`로 보존한다. 억지 매핑보다 설명 가능한 미매핑이 더 정확하다.
 - `npm run enrich:organization`으로 보정을 반복 적용하고, `npm run
-  validate:data`의 strict 모드에서 연결 대상과 ESCO 출처 형식을 검증한다.
+validate:data`의 strict 모드에서 연결 대상과 ESCO 출처 형식을 검증한다.
 
 ## 전문가 리뷰 큐
 
@@ -41,10 +41,10 @@
   화면에서 직접 쓰지 않고 `npm run apply:review-decisions`로 승인만 원본에
   반영한다.
 - 보류와 반려는 후보 원본을 바꾸지 않는다. 승인 관계는 `source:
-  "reviewed"`로, 승인 조직 근사 매핑은 `ontology_review_status:
-  "approved"`로 기록한다.
+"reviewed"`로, 승인 조직 근사 매핑은 `ontology_review_status:
+"approved"`로 기록한다.
 - `npm run record:review-decision -- --item-id ... --status ... --reviewer
-  ...`로 결정 장부를 안전하게 갱신한다.
+...`로 결정 장부를 안전하게 갱신한다.
 
 ## 스킬 정의 페이지
 

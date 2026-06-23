@@ -70,7 +70,9 @@ export default async function CandidateDevelopmentPage({
         <div>
           <p>CANDIDATE DEVELOPMENT CARD</p>
           <h1>{candidate.display_name}</h1>
-          <span>{candidate.candidate_id} · {track.cohort}</span>
+          <span>
+            {candidate.candidate_id} · {track.cohort}
+          </span>
         </div>
         <div className={styles.currentStage}>
           <small>현재 단계</small>
@@ -106,9 +108,14 @@ export default async function CandidateDevelopmentPage({
             {candidate.skill_assessments.map((assessment) => {
               const skill = skillsById.get(assessment.skill_id);
               return (
-                <Link href={`/skills/${assessment.skill_id}`} key={assessment.skill_id}>
+                <Link
+                  href={`/skills/${assessment.skill_id}`}
+                  key={assessment.skill_id}
+                >
                   <div>
-                    <strong>{skill?.preferred_label_ko ?? assessment.skill_id}</strong>
+                    <strong>
+                      {skill?.preferred_label_ko ?? assessment.skill_id}
+                    </strong>
                     <span>{assessment.skill_id}</span>
                   </div>
                   <b>
@@ -131,8 +138,14 @@ export default async function CandidateDevelopmentPage({
               return (
                 <div key={axis.id}>
                   <span>{axis.name}</span>
-                  <div><i style={{ width: `${(score / axis.scale_max) * 100}%` }} /></div>
-                  <strong>{score}/{axis.scale_max}</strong>
+                  <div>
+                    <i
+                      style={{ width: `${(score / axis.scale_max) * 100}%` }}
+                    />
+                  </div>
+                  <strong>
+                    {score}/{axis.scale_max}
+                  </strong>
                 </div>
               );
             })}
@@ -145,13 +158,17 @@ export default async function CandidateDevelopmentPage({
           <h2>1人1案 현장 임팩트 과제</h2>
           {candidate.impact_proposal ? (
             <article className={styles.proposal}>
-              <span>{IMPACT_STATUS_LABELS[candidate.impact_proposal.status]}</span>
+              <span>
+                {IMPACT_STATUS_LABELS[candidate.impact_proposal.status]}
+              </span>
               <h3>{candidate.impact_proposal.title}</h3>
               <p>{candidate.impact_proposal.problem}</p>
               <strong>{candidate.impact_proposal.expected_impact}</strong>
             </article>
           ) : (
-            <p className={styles.empty}>아직 등록된 현장 임팩트 과제가 없습니다.</p>
+            <p className={styles.empty}>
+              아직 등록된 현장 임팩트 과제가 없습니다.
+            </p>
           )}
         </section>
 

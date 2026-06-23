@@ -7,17 +7,20 @@ const evaluationChecks = [
   {
     label: "도메인만 표시",
     status: "적합",
-    detail: "스킬, 조직, 역량, 육성, 검수 정보는 제외하고 6개 도메인 요약만 노출합니다.",
+    detail:
+      "스킬, 조직, 역량, 육성, 검수 정보는 제외하고 6개 도메인 요약만 노출합니다.",
   },
   {
     label: "평가 목적 명확성",
     status: "적합",
-    detail: "상단 안내와 검증 기준을 통해 도메인 분류 적합성 평가용 페이지임을 명시합니다.",
+    detail:
+      "상단 안내와 검증 기준을 통해 도메인 분류 적합성 평가용 페이지임을 명시합니다.",
   },
   {
     label: "데이터 완전성 확인",
     status: "보완 필요",
-    detail: "도메인별 스킬 수는 자동 집계하지만, 평가자 코멘트 입력/저장 기능은 아직 제공하지 않습니다.",
+    detail:
+      "도메인별 스킬 수는 자동 집계하지만, 평가자 코멘트 입력/저장 기능은 아직 제공하지 않습니다.",
   },
 ];
 
@@ -40,16 +43,21 @@ export default async function EvaluationPage() {
         <p className={styles.eyebrow}>EVALUATION ONLY</p>
         <h1>도메인 분류 평가 페이지</h1>
         <p>
-          평가자가 로보틱스 온톨로지의 상위 도메인 구성만 검토할 수 있도록
-          스킬 상세와 부가 운영 메뉴를 제외한 전용 화면입니다.
+          평가자가 로보틱스 온톨로지의 상위 도메인 구성만 검토할 수 있도록 스킬
+          상세와 부가 운영 메뉴를 제외한 전용 화면입니다.
         </p>
       </header>
 
-      <section className={styles.domainSection} aria-labelledby="domain-only-title">
+      <section
+        className={styles.domainSection}
+        aria-labelledby="domain-only-title"
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>DOMAIN SCOPE</p>
           <h2 id="domain-only-title">평가 대상 도메인</h2>
-          <p>각 카드는 도메인명, 영문명, 설명, 현재 매핑된 스킬 수만 표시합니다.</p>
+          <p>
+            각 카드는 도메인명, 영문명, 설명, 현재 매핑된 스킬 수만 표시합니다.
+          </p>
         </div>
         <div className={styles.domainGrid}>
           {ROBOT_DOMAINS.map((domain) => (
@@ -81,7 +89,10 @@ export default async function EvaluationPage() {
         </div>
       </section>
 
-      <section className={styles.reportSection} aria-labelledby="evaluation-report-title">
+      <section
+        className={styles.reportSection}
+        aria-labelledby="evaluation-report-title"
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>VALIDATION REPORT</p>
           <h2 id="evaluation-report-title">평가 목적 적합성 검증</h2>
@@ -91,7 +102,9 @@ export default async function EvaluationPage() {
             <article className={styles.checkCard} key={check.label}>
               <span
                 className={
-                  check.status === "적합" ? styles.statusPass : styles.statusNeedsWork
+                  check.status === "적합"
+                    ? styles.statusPass
+                    : styles.statusNeedsWork
                 }
               >
                 {check.status}

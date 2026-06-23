@@ -10,10 +10,7 @@
   "description_en": "Generate accurate map of actual manufacturing facility",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-AMR-006",
   "related_skills": [
     {

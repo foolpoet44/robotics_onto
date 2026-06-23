@@ -10,9 +10,7 @@
   "description_en": "Extract and match features in images",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": null,
   "related_skills": [
     {

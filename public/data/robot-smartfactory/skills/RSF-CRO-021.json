@@ -10,9 +10,7 @@
   "description_en": "Determine optimal placement of collaborative robots in workspace",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": "RSF-CRO-009",
   "related_skills": [
     {

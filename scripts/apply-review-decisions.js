@@ -48,12 +48,20 @@ organizationFiles.forEach((file, index) => {
   );
 });
 
-execFileSync(process.execPath, [path.join(__dirname, "generate-robot-smartfactory-raw.js")], {
-  stdio: "inherit",
-});
-execFileSync(process.execPath, [path.join(__dirname, "generate-review-queue.js")], {
-  stdio: "inherit",
-});
+execFileSync(
+  process.execPath,
+  [path.join(__dirname, "generate-robot-smartfactory-raw.js")],
+  {
+    stdio: "inherit",
+  },
+);
+execFileSync(
+  process.execPath,
+  [path.join(__dirname, "generate-review-queue.js")],
+  {
+    stdio: "inherit",
+  },
+);
 
 console.log(
   `승인 반영 완료: 관계 ${result.metrics.relationsPromoted}개, ` +

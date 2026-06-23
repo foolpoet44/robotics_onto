@@ -38,7 +38,9 @@ function ReviewCard({ item }: { item: ReviewItem }) {
         <header>
           <span className={styles.highPriority}>우선 검수</span>
           <span>조직 역량 매핑</span>
-          <span className={styles[item.status]}>{STATUS_LABELS[item.status]}</span>
+          <span className={styles[item.status]}>
+            {STATUS_LABELS[item.status]}
+          </span>
         </header>
         <h2>{item.organization_skill.label_ko}</h2>
         <p>
@@ -66,7 +68,9 @@ function ReviewCard({ item }: { item: ReviewItem }) {
       <header>
         <span className={styles[item.priority]}>관계 후보</span>
         <span>{RELATION_LABELS[item.relation_type]}</span>
-        <span className={styles[item.status]}>{STATUS_LABELS[item.status]}</span>
+        <span className={styles[item.status]}>
+          {STATUS_LABELS[item.status]}
+        </span>
       </header>
       <div className={styles.mapping}>
         <SkillLink skill={item.source_skill} />

@@ -10,10 +10,7 @@
   "description_en": "Simulate to find optimal parameters",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": [
-    "engineer",
-    "developer"
-  ],
+  "role_mapping": ["engineer", "developer"],
   "parent_skill_id": null,
   "related_skills": [
     {

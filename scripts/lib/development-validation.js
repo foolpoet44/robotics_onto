@@ -1,7 +1,12 @@
 const STAGE_STATUSES = new Set(["pending", "in_progress", "completed", "held"]);
 const IMPACT_STATUSES = new Set(["draft", "approved", "delivered"]);
 
-function validateDevelopmentData(track, candidates, ontologySkills, domainKeys) {
+function validateDevelopmentData(
+  track,
+  candidates,
+  ontologySkills,
+  domainKeys,
+) {
   const errors = [];
   const warnings = [];
   const ontologySkillIds = new Set(
@@ -32,7 +37,10 @@ function validateDevelopmentData(track, candidates, ontologySkills, domainKeys) 
     (a, b) => a.order - b.order,
   );
   for (let index = 1; index < sortedStages.length; index += 1) {
-    if (sortedStages[index].target_headcount > sortedStages[index - 1].target_headcount) {
+    if (
+      sortedStages[index].target_headcount >
+      sortedStages[index - 1].target_headcount
+    ) {
       errors.push(
         `${sortedStages[index].id}: 뒤 단계 목표 인원이 앞 단계보다 많습니다.`,
       );
@@ -124,18 +132,26 @@ function validateStageHistory(errors, candidate, stagesById, currentOrder) {
   for (const history of candidate.stage_history ?? []) {
     const stage = stagesById.get(history.stage_id);
     if (!stage) {
-      errors.push(`${candidate.candidate_id}: 이력에 존재하지 않는 단계 ${history.stage_id}`);
+      errors.push(
+        `${candidate.candidate_id}: 이력에 존재하지 않는 단계 ${history.stage_id}`,
+      );
       continue;
     }
     if (!STAGE_STATUSES.has(history.status)) {
-      errors.push(`${candidate.candidate_id}: 유효하지 않은 단계 상태 ${history.status}`);
+      errors.push(
+        `${candidate.candidate_id}: 유효하지 않은 단계 상태 ${history.status}`,
+      );
     }
     if (historyByStage.has(history.stage_id)) {
-      errors.push(`${candidate.candidate_id}: 중복 단계 이력 ${history.stage_id}`);
+      errors.push(
+        `${candidate.candidate_id}: 중복 단계 이력 ${history.stage_id}`,
+      );
     }
     historyByStage.set(history.stage_id, history);
     if (stage.order > currentOrder && history.status === "completed") {
-      errors.push(`${candidate.candidate_id}: 현재 단계보다 뒤 단계가 완료 처리되었습니다.`);
+      errors.push(
+        `${candidate.candidate_id}: 현재 단계보다 뒤 단계가 완료 처리되었습니다.`,
+      );
     }
   }
 
@@ -147,11 +163,15 @@ function validateStageHistory(errors, candidate, stagesById, currentOrder) {
 function validateSkillAssessments(errors, candidate, ontologySkillIds) {
   for (const assessment of candidate.skill_assessments ?? []) {
     if (!ontologySkillIds.has(assessment.skill_id)) {
-      errors.push(`${candidate.candidate_id}: 존재하지 않는 평가 스킬 ${assessment.skill_id}`);
+      errors.push(
+        `${candidate.candidate_id}: 존재하지 않는 평가 스킬 ${assessment.skill_id}`,
+      );
     }
     for (const level of [assessment.current_level, assessment.target_level]) {
       if (!Number.isInteger(level) || level < 1 || level > 4) {
-        errors.push(`${candidate.candidate_id}: 스킬 숙련도는 1~4 범위여야 합니다.`);
+        errors.push(
+          `${candidate.candidate_id}: 스킬 숙련도는 1~4 범위여야 합니다.`,
+        );
       }
     }
   }
@@ -161,7 +181,9 @@ function validateCompetencyAssessments(errors, candidate, axesById) {
   for (const assessment of candidate.competency_assessments ?? []) {
     const axis = axesById.get(assessment.axis_id);
     if (!axis) {
-      errors.push(`${candidate.candidate_id}: 존재하지 않는 직능 역량 ${assessment.axis_id}`);
+      errors.push(
+        `${candidate.candidate_id}: 존재하지 않는 직능 역량 ${assessment.axis_id}`,
+      );
       continue;
     }
     if (
@@ -169,7 +191,9 @@ function validateCompetencyAssessments(errors, candidate, axesById) {
       assessment.score < 0 ||
       assessment.score > axis.scale_max
     ) {
-      errors.push(`${candidate.candidate_id}: ${assessment.axis_id} 점수 범위 위반`);
+      errors.push(
+        `${candidate.candidate_id}: ${assessment.axis_id} 점수 범위 위반`,
+      );
     }
   }
 }
@@ -181,7 +205,9 @@ function validateImpactProposal(errors, candidate) {
     errors.push(`${candidate.candidate_id}: 현장 임팩트 과제 필수 설명 누락`);
   }
   if (!IMPACT_STATUSES.has(proposal.status)) {
-    errors.push(`${candidate.candidate_id}: 유효하지 않은 현장 임팩트 과제 상태`);
+    errors.push(
+      `${candidate.candidate_id}: 유효하지 않은 현장 임팩트 과제 상태`,
+    );
   }
 }
 

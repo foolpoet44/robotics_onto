@@ -10,10 +10,7 @@
   "description_en": "Safety standards and regulations for industrial robots including ISO 10218 and ANSI/NFPA 79",
   "skill_type": "knowledge",
   "proficiency_level": 1,
-  "role_mapping": [
-    "engineer",
-    "developer"
-  ],
+  "role_mapping": ["engineer", "developer"],
   "parent_skill_id": null,
   "related_skills": [
     {

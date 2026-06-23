@@ -10,10 +10,7 @@
   "description_en": "Adjust camera resolution, exposure, and focus",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-MVS-001",
   "related_skills": [
     {

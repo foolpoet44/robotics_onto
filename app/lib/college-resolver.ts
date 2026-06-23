@@ -69,7 +69,9 @@ export function resolvePrerequisiteChain(
 
     for (const prerequisiteId of level.prerequisites) {
       if (path.has(prerequisiteId)) {
-        throw new Error(`레벨 선수관계 순환이 감지되었습니다: ${prerequisiteId}`);
+        throw new Error(
+          `레벨 선수관계 순환이 감지되었습니다: ${prerequisiteId}`,
+        );
       }
       if (visited.has(prerequisiteId)) {
         continue;
@@ -95,7 +97,8 @@ export function hasHubPrerequisite(
   const prerequisiteChain = resolvePrerequisiteChain(levelId, levels);
   const levelsById = new Map(levels.map((level) => [level.id, level]));
   const hubPrerequisites = prerequisiteChain.filter(
-    (prerequisiteId) => levelsById.get(prerequisiteId)?.collegeId === hubCollegeId,
+    (prerequisiteId) =>
+      levelsById.get(prerequisiteId)?.collegeId === hubCollegeId,
   );
 
   if (hubPrerequisites.length === 0) {
@@ -103,7 +106,9 @@ export function hasHubPrerequisite(
   }
 
   const completed = new Set(completedLevels);
-  return hubPrerequisites.every((prerequisiteId) => completed.has(prerequisiteId));
+  return hubPrerequisites.every((prerequisiteId) =>
+    completed.has(prerequisiteId),
+  );
 }
 
 export function validateCollegeMappingData(data: CollegeMappingData): string[] {
@@ -125,12 +130,16 @@ export function validateCollegeMappingData(data: CollegeMappingData): string[] {
 
   for (const [domainId, mapping] of Object.entries(data.domainMapping)) {
     if (!collegeIds.has(mapping.primary)) {
-      errors.push(`${domainId}: 존재하지 않는 primary college '${mapping.primary}'`);
+      errors.push(
+        `${domainId}: 존재하지 않는 primary college '${mapping.primary}'`,
+      );
     }
 
     for (const collegeId of mapping.secondary) {
       if (!collegeIds.has(collegeId)) {
-        errors.push(`${domainId}: 존재하지 않는 secondary college '${collegeId}'`);
+        errors.push(
+          `${domainId}: 존재하지 않는 secondary college '${collegeId}'`,
+        );
       }
     }
 

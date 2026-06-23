@@ -10,10 +10,7 @@
   "description_en": "Synchronize simulation with actual robot",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": [
-    "engineer",
-    "developer"
-  ],
+  "role_mapping": ["engineer", "developer"],
   "parent_skill_id": "RSF-DTS-003",
   "related_skills": [
     {

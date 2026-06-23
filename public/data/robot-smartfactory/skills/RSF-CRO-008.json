@@ -10,10 +10,7 @@
   "description_en": "Program collaborative robots using URScript, Python, etc.",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-CRO-002",
   "related_skills": [
     {
