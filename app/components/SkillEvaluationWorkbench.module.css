@@ -145,6 +145,7 @@
   align-items: center;
   gap: 0.6rem;
   width: 100%;
+  margin: 0;
   padding: 0.7rem 0.8rem;
   text-align: left;
   background: var(--bg-card);
@@ -414,4 +415,348 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
   text-align: center;
+}
+
+.emptyBlock {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 0;
+}
+
+/* ── 단계 표시(스테퍼) ── */
+.stepper {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  flex: 1;
+}
+
+.stepButton {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.stepButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 50%;
+}
+
+.stepTitle {
+  min-width: 0;
+}
+
+.stepActive .stepButton {
+  color: white;
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.stepActive .stepNumber {
+  color: var(--color-primary-dark);
+  background: white;
+}
+
+.stepDone .stepButton {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.stepDone .stepNumber {
+  color: white;
+  background: var(--color-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .stepTitle {
+    display: none;
+  }
+
+  .step {
+    flex: 0 0 auto;
+  }
+}
+
+/* ── 1단계: 선택 패널 ── */
+.selectPanel {
+  display: grid;
+  gap: 1rem;
+}
+
+.skillCheckbox {
+  flex-shrink: 0;
+  width: 1.05rem;
+  height: 1.05rem;
+  cursor: pointer;
+  accent-color: var(--color-primary-dark);
+}
+
+.skillSelectButton {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.rowDetailLink {
+  flex-shrink: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.rowDetailLink:hover {
+  text-decoration: underline;
+}
+
+.stepFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stepFooterText {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.primaryButton {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: white;
+  background: var(--color-primary-dark);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--color-primary-dark);
+}
+
+.secondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.clearPickedButton {
+  align-self: center;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.clearPickedButton:hover {
+  color: var(--text-primary);
+  border-color: var(--color-primary-dark);
+}
+
+/* ── 2단계: 상세 헤더/액션 ── */
+.panelActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.detailHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.detailLink {
+  flex-shrink: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.detailLink:hover {
+  border-color: var(--color-primary-dark);
+  background: var(--bg-card);
+}
+
+/* ── 3단계: 현황 패널 ── */
+.statusPanel {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.statusSummary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.statusStat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.statusActions {
+  display: flex;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+.statusList {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.statusCard {
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.statusCardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.statusCardTitle {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.statusScore {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: white;
+  background: var(--color-primary-dark);
+  border-radius: 999px;
+}
+
+.statusTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.statusTag {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--bg-secondary);
+  border-radius: 999px;
+}
+
+.statusNotes {
+  margin: 0.6rem 0 0;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.statusTime {
+  margin: 0.6rem 0 0;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
 }
