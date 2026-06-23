@@ -3,11 +3,21 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import EmptyState from "./EmptyState";
-import {
-  RelationType,
-  RobotDomain,
-  RobotSkill,
-} from "../lib/robotics-data";
+import DomainEvaluationMode from "./DomainEvaluationMode";
+import DomainRapidDeck from "./DomainRapidDeck";
+import DomainPriorityMatrix from "./DomainPriorityMatrix";
+import type { CollegeId } from "../lib/college-types";
+import { resolveDefaultExpertDomain } from "../lib/skill-rating-store";
+import { RelationType, RobotDomain, RobotSkill } from "../lib/robotics-data";
+
+type ExplorerMode = "browse" | "evaluate" | "rapid" | "matrix";
+
+const MODE_LABELS: { id: ExplorerMode; label: string }[] = [
+  { id: "browse", label: "둘러보기" },
+  { id: "evaluate", label: "평가 모드" },
+  { id: "rapid", label: "빠른평가" },
+  { id: "matrix", label: "매트릭스" },
+];
 
 interface SkillReference {
   domain: string;
@@ -33,6 +43,13 @@ export default function DomainSkillExplorer({
   skillReferences,
 }: DomainSkillExplorerProps) {
   const [query, setQuery] = useState("");
+  // 둘러보기 / 평가(테이블) / 빠른평가(덱) / 매트릭스 4개 모드.
+  const [mode, setMode] = useState<ExplorerMode>("browse");
+  // 평가자 정보는 여기서 소유해 평가·빠른평가 모드가 공유한다(모드 전환 시 재입력 방지).
+  const [expertName, setExpertName] = useState("");
+  const [expertDomain, setExpertDomain] = useState<CollegeId>(
+    resolveDefaultExpertDomain(domain.key),
+  );
 
   const filtered = useMemo(() => {
     const lowerQuery = query.trim().toLowerCase();
@@ -56,54 +73,94 @@ export default function DomainSkillExplorer({
           <p>{domain.nameEn}</p>
           <p>{domain.description}</p>
         </div>
-      </header>
-      <input
-        className="search-input"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="이 도메인에서 스킬 검색..."
-      />
-      <p className="result-count">{filtered.length}개 스킬</p>
-      {filtered.length === 0 ? (
-        <EmptyState message="검색 조건에 맞는 스킬이 없습니다." />
-      ) : (
-        <div className="skill-grid">
-          {filtered.map((skill) => (
-            <article className="skill-card" id={skill.skill_id} key={skill.skill_id}>
-              <div className="skill-header">
-                <h2>
-                  <Link href={`/skills/${skill.skill_id}`}>
-                    {skill.preferred_label_ko}
-                  </Link>
-                </h2>
-                <span>{skill.skill_type}</span>
-              </div>
-              <p>{skill.description_ko}</p>
-              <div className="related-skills">
-                <strong>관련 스킬</strong>
-                <div>
-                  {skill.related_skills.map((relation) => {
-                    const reference = skillReferences[relation.target];
-                    return (
-                      <Link
-                        href={`/skills/${relation.target}`}
-                        className="relation-link"
-                        key={`${relation.type}-${relation.target}`}
-                      >
-                        <span>{RELATION_LABELS[relation.type]}</span>
-                        {reference?.label ?? relation.target}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-              <footer>
-                <span>LV{skill.proficiency_level}</span>
-                <span>{skill.skill_id}</span>
-              </footer>
-            </article>
+        <div className="mode-toggle" role="group" aria-label="보기 모드">
+          {MODE_LABELS.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={mode === item.id ? "active" : ""}
+              onClick={() => setMode(item.id)}
+            >
+              {item.label}
+            </button>
           ))}
         </div>
+      </header>
+      {mode === "evaluate" ? (
+        <DomainEvaluationMode
+          domain={domain}
+          skills={skills}
+          expertName={expertName}
+          expertDomain={expertDomain}
+          onExpertNameChange={setExpertName}
+          onExpertDomainChange={setExpertDomain}
+        />
+      ) : mode === "rapid" ? (
+        <DomainRapidDeck
+          domain={domain}
+          skills={skills}
+          expertName={expertName}
+          expertDomain={expertDomain}
+          onExpertNameChange={setExpertName}
+          onExpertDomainChange={setExpertDomain}
+        />
+      ) : mode === "matrix" ? (
+        <DomainPriorityMatrix domain={domain} skills={skills} />
+      ) : (
+        <>
+          <input
+            className="search-input"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="이 도메인에서 스킬 검색..."
+          />
+          <p className="result-count">{filtered.length}개 스킬</p>
+          {filtered.length === 0 ? (
+            <EmptyState message="검색 조건에 맞는 스킬이 없습니다." />
+          ) : (
+            <div className="skill-grid">
+              {filtered.map((skill) => (
+                <article
+                  className="skill-card"
+                  id={skill.skill_id}
+                  key={skill.skill_id}
+                >
+                  <div className="skill-header">
+                    <h2>
+                      <Link href={`/skills/${skill.skill_id}`}>
+                        {skill.preferred_label_ko}
+                      </Link>
+                    </h2>
+                    <span>{skill.skill_type}</span>
+                  </div>
+                  <p>{skill.description_ko}</p>
+                  <div className="related-skills">
+                    <strong>관련 스킬</strong>
+                    <div>
+                      {skill.related_skills.map((relation) => {
+                        const reference = skillReferences[relation.target];
+                        return (
+                          <Link
+                            href={`/skills/${relation.target}`}
+                            className="relation-link"
+                            key={`${relation.type}-${relation.target}`}
+                          >
+                            <span>{RELATION_LABELS[relation.type]}</span>
+                            {reference?.label ?? relation.target}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <footer>
+                    <span>LV{skill.proficiency_level}</span>
+                    <span>{skill.skill_id}</span>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          )}
+        </>
       )}
       <style jsx>{`
         .page-shell {
@@ -121,6 +178,7 @@ export default function DomainSkillExplorer({
         .domain-heading {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 1.2rem;
           padding: 1.5rem;
           margin-bottom: 1.5rem;
@@ -131,6 +189,42 @@ export default function DomainSkillExplorer({
         }
         .domain-heading > span {
           font-size: 3.4rem;
+        }
+        .mode-toggle {
+          display: inline-flex;
+          margin-left: auto;
+          align-self: flex-start;
+          border: 1px solid var(--border-color);
+          border-radius: 0.6rem;
+          overflow: hidden;
+          background: white;
+        }
+        .mode-toggle button {
+          padding: 0.55rem 0.85rem;
+          border: none;
+          border-right: 1px solid var(--border-color);
+          background: white;
+          color: var(--text-secondary);
+          font-size: 0.82rem;
+          font-weight: 800;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        .mode-toggle button:last-child {
+          border-right: none;
+        }
+        .mode-toggle button.active {
+          background: var(--color-primary);
+          color: white;
+        }
+        @media (max-width: 640px) {
+          .mode-toggle {
+            margin-left: 0;
+            width: 100%;
+          }
+          .mode-toggle button {
+            flex: 1;
+          }
         }
         h1 {
           margin-bottom: 0.2rem;
