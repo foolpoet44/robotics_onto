@@ -56,7 +56,11 @@ function buildOntologyRelationItems(ontologySkills, skillsById) {
     (skill.related_skills ?? []).forEach((relation) => {
       if (!["heuristic", "reviewed"].includes(relation.source)) return;
 
-      const key = getRelationKey(skill.skill_id, relation.target, relation.type);
+      const key = getRelationKey(
+        skill.skill_id,
+        relation.target,
+        relation.type,
+      );
       if (seen.has(key)) return;
       seen.add(key);
 
@@ -95,14 +99,17 @@ function buildReviewQueue(
       a.id.localeCompare(b.id),
   );
 
-  return mergeReviewDecisions({
-    stats: {
-      total: items.length,
-      organizationMappings: organizationItems.length,
-      ontologyRelations: relationItems.length,
+  return mergeReviewDecisions(
+    {
+      stats: {
+        total: items.length,
+        organizationMappings: organizationItems.length,
+        ontologyRelations: relationItems.length,
+      },
+      items,
     },
-    items,
-  }, reviewDecisions);
+    reviewDecisions,
+  );
 }
 
 module.exports = { buildReviewQueue };

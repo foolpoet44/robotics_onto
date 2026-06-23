@@ -10,10 +10,7 @@
   "description_en": "Identify sensor faults and determine root causes",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-MVS-007",
   "related_skills": [
     {

@@ -10,10 +10,7 @@
   "description_en": "Develop and execute long-term maintenance schedule",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-RMD-006",
   "related_skills": [
     {

@@ -10,10 +10,7 @@
   "description_en": "Measure time required for human-robot collaborative work",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-CRO-007",
   "related_skills": [
     {

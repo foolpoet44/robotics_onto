@@ -16,7 +16,9 @@ function validateReviewDecisions(queue, reviewDecisions) {
       errors.push(`리뷰 큐에 없는 항목: ${decision.item_id}`);
     }
     if (!ALLOWED_STATUSES.has(decision.status)) {
-      errors.push(`${decision.item_id}: 허용되지 않은 상태 '${decision.status}'`);
+      errors.push(
+        `${decision.item_id}: 허용되지 않은 상태 '${decision.status}'`,
+      );
     }
     if (!decision.reviewer?.trim()) {
       errors.push(`${decision.item_id}: reviewer가 필요합니다.`);
@@ -68,14 +70,18 @@ function promoteRelation(item, skillsById) {
       .get(sourceId)
       ?.related_skills.find(
         (candidate) =>
-          candidate.target === targetId && candidate.type === item.relation_type,
+          candidate.target === targetId &&
+          candidate.type === item.relation_type,
       );
     if (!relation || relation.source === "reviewed") return 0;
     relation.source = "reviewed";
     return 1;
   };
 
-  let promoted = promote(item.source_skill.skill_id, item.target_skill.skill_id);
+  let promoted = promote(
+    item.source_skill.skill_id,
+    item.target_skill.skill_id,
+  );
   if (SYMMETRIC_RELATION_TYPES.has(item.relation_type)) {
     promoted += promote(item.target_skill.skill_id, item.source_skill.skill_id);
   }
@@ -88,7 +94,9 @@ function promoteOrganizationMapping(item, organizations) {
   );
   const skill = organization?.enablers
     .flatMap((enabler) => enabler.skills)
-    .find((candidate) => candidate.skill_id === item.organization_skill.skill_id);
+    .find(
+      (candidate) => candidate.skill_id === item.organization_skill.skill_id,
+    );
   if (!skill || skill.ontology_review_status === "approved") return 0;
   skill.ontology_review_status = "approved";
   return 1;

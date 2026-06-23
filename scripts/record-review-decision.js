@@ -35,8 +35,16 @@ if (!validation.valid) {
   process.exit(1);
 }
 
-fs.writeFileSync(decisionsPath, `${JSON.stringify(updated, null, 2)}\n`, "utf-8");
-execFileSync(process.execPath, [path.join(__dirname, "generate-review-queue.js")], {
-  stdio: "inherit",
-});
+fs.writeFileSync(
+  decisionsPath,
+  `${JSON.stringify(updated, null, 2)}\n`,
+  "utf-8",
+);
+execFileSync(
+  process.execPath,
+  [path.join(__dirname, "generate-review-queue.js")],
+  {
+    stdio: "inherit",
+  },
+);
 console.log(`리뷰 결정 기록 완료: ${decision.item_id} -> ${decision.status}`);

@@ -42,12 +42,20 @@ const COLLEGES = [
   },
 ];
 
-const COLLEGE_BY_ID = Object.fromEntries(COLLEGES.map((college) => [college.id, college]));
+const COLLEGE_BY_ID = Object.fromEntries(
+  COLLEGES.map((college) => [college.id, college]),
+);
 
 const KEYWORD_RULES = [
   {
     collegeId: "digital-twin",
-    keywords: ["시뮬레이션", "해석", "소음/진동", "공장운영시나리오", "레이아웃"],
+    keywords: [
+      "시뮬레이션",
+      "해석",
+      "소음/진동",
+      "공장운영시나리오",
+      "레이아웃",
+    ],
   },
   {
     collegeId: "data-intelligence",
@@ -105,9 +113,9 @@ function parseCsv(text) {
     const char = text[index];
     const next = text[index + 1];
 
-    if (char === "\"") {
-      if (inQuotes && next === "\"") {
-        field += "\"";
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        field += '"';
         index += 1;
       } else {
         inQuotes = !inQuotes;
@@ -153,7 +161,10 @@ function normalizeHeader(header) {
 
 function toRecord(headers, values) {
   return Object.fromEntries(
-    headers.map((header, index) => [normalizeHeader(header), values[index]?.trim() ?? ""]),
+    headers.map((header, index) => [
+      normalizeHeader(header),
+      values[index]?.trim() ?? "",
+    ]),
   );
 }
 
@@ -192,7 +203,10 @@ function makeEmptyCollegeSummary(collegeId) {
 
 function summarizeItems(items) {
   const byCollege = Object.fromEntries(
-    COLLEGES.map((college) => [college.id, makeEmptyCollegeSummary(college.id)]),
+    COLLEGES.map((college) => [
+      college.id,
+      makeEmptyCollegeSummary(college.id),
+    ]),
   );
 
   for (const item of items) {
@@ -212,16 +226,15 @@ function summarizeItems(items) {
 }
 
 function pickPrimaryCollege(byCollege) {
-  return [...Object.values(byCollege)]
-    .sort((a, b) => {
-      if (b.averageScore !== a.averageScore) {
-        return b.averageScore - a.averageScore;
-      }
-      if (b.count !== a.count) {
-        return b.count - a.count;
-      }
-      return COLLEGE_BY_ID[a.collegeId].order - COLLEGE_BY_ID[b.collegeId].order;
-    })[0].collegeId;
+  return [...Object.values(byCollege)].sort((a, b) => {
+    if (b.averageScore !== a.averageScore) {
+      return b.averageScore - a.averageScore;
+    }
+    if (b.count !== a.count) {
+      return b.count - a.count;
+    }
+    return COLLEGE_BY_ID[a.collegeId].order - COLLEGE_BY_ID[b.collegeId].order;
+  })[0].collegeId;
 }
 
 function buildDataset(records) {
@@ -232,7 +245,9 @@ function buildDataset(records) {
     const score = Number(row["최종점수"]);
 
     if (!employeeId || Number.isNaN(score)) {
-      throw new Error(`${index + 2}행의 사번 또는 최종점수가 유효하지 않습니다.`);
+      throw new Error(
+        `${index + 2}행의 사번 또는 최종점수가 유효하지 않습니다.`,
+      );
     }
 
     if (!employees.has(employeeId)) {
@@ -271,7 +286,9 @@ function buildDataset(records) {
       (sum, item) => sum + item.score,
       0,
     );
-    const maxScore = Math.max(...employee.competencies.map((item) => item.score));
+    const maxScore = Math.max(
+      ...employee.competencies.map((item) => item.score),
+    );
     const primaryCollegeId = pickPrimaryCollege(byCollege);
 
     return {
@@ -298,9 +315,9 @@ function buildDataset(records) {
 
   const allItems = employeeList.flatMap((employee) => employee.competencies);
   const organizationSummary = summarizeItems(allItems);
-  const teams = [...new Set(employeeList.map((employee) => employee.team))].sort(
-    (a, b) => a.localeCompare(b, "ko"),
-  );
+  const teams = [
+    ...new Set(employeeList.map((employee) => employee.team)),
+  ].sort((a, b) => a.localeCompare(b, "ko"));
 
   return {
     source: {

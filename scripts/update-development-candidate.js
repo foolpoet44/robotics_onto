@@ -2,7 +2,9 @@
 
 const fs = require("fs");
 const path = require("path");
-const { updateDevelopmentCandidate } = require("./lib/development-candidate-update");
+const {
+  updateDevelopmentCandidate,
+} = require("./lib/development-candidate-update");
 const { validateDevelopmentData } = require("./lib/development-validation");
 
 const dataDir = path.join(__dirname, "../public/data");
@@ -18,7 +20,9 @@ try {
   const track = readJson(
     path.join(dataDir, "development-tracks/smartfactory-tech-leader.json"),
   );
-  const ontologySkills = readJson(path.join(dataDir, "robot-smartfactory.json"));
+  const ontologySkills = readJson(
+    path.join(dataDir, "robot-smartfactory.json"),
+  );
   const validation = validateDevelopmentData(
     track,
     updatedCandidates,
@@ -35,7 +39,10 @@ try {
   if (!validation.valid) {
     throw new Error(validation.errors.join("\n"));
   }
-  fs.writeFileSync(candidatePath, `${JSON.stringify(updatedCandidates, null, 2)}\n`);
+  fs.writeFileSync(
+    candidatePath,
+    `${JSON.stringify(updatedCandidates, null, 2)}\n`,
+  );
   console.log(`육성 기록 갱신 완료: ${options.candidateId}`);
 } catch (error) {
   console.error(`육성 기록 갱신 실패: ${error.message}`);

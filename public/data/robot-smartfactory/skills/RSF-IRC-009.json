@@ -10,10 +10,7 @@
   "description_en": "Optimize parameters such as speed and acceleration",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": [
-    "operator",
-    "engineer"
-  ],
+  "role_mapping": ["operator", "engineer"],
   "parent_skill_id": "RSF-IRC-002",
   "related_skills": [
     {

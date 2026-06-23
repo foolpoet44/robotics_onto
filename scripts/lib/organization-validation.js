@@ -6,7 +6,9 @@ const ONTOLOGY_MATCH_TYPES = new Set(["exact", "approximate", "none"]);
 function validateOrganizationMapping(organization, ontologySkills) {
   const errors = [];
   const warnings = [];
-  const ontologySkillIds = new Set(ontologySkills.map((skill) => skill.skill_id));
+  const ontologySkillIds = new Set(
+    ontologySkills.map((skill) => skill.skill_id),
+  );
   const organizationSkillIds = new Set();
   let skills = 0;
   let mapped = 0;

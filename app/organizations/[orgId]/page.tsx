@@ -97,7 +97,11 @@ export default async function OrganizationDetailPage({
           <h2>연관 육성 트랙</h2>
           <div className={styles.trackGrid}>
             {developmentTracks.map((track) => (
-              <Link className={styles.trackCard} href="/development-tracks" key={track.id}>
+              <Link
+                className={styles.trackCard}
+                href="/development-tracks"
+                key={track.id}
+              >
                 <span>{track.cohort}</span>
                 <strong>{track.name}</strong>
                 <p>{track.subtitle}</p>
@@ -117,7 +121,9 @@ export default async function OrganizationDetailPage({
               <article className={styles.enablerCard} key={enabler.id}>
                 <header>
                   <div>
-                    <p className={styles.priority}>PRIORITY {enabler.priority}</p>
+                    <p className={styles.priority}>
+                      PRIORITY {enabler.priority}
+                    </p>
                     <h3>{enabler.name}</h3>
                     <p>{enabler.name_en}</p>
                   </div>

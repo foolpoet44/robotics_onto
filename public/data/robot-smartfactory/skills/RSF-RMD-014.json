@@ -10,9 +10,7 @@
   "description_en": "Replace lubricant in robot joints and gears",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": null,
   "related_skills": [
     {

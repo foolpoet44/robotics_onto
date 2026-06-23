@@ -15,12 +15,12 @@
 
 ### 2.1 관계 유형 (엣지 타입)
 
-| 유형 | 의미 | 방향성 | 예 |
-|---|---|---|---|
-| `prerequisite` | A를 배우려면 B가 선행 | 유향 (A→B) | "역운동학" → "선형대수 기초" |
-| `co_required` | 현장에서 함께 요구 | 무향(대칭) | "비전 캘리브레이션" ↔ "좌표계 변환" |
-| `specialization` | A가 B의 구체화/하위 | 유향 (A→B) | "협동로봇 안전설정" → "로봇 안전 일반" |
-| `cross_domain` | 도메인 경계를 잇는 브리지 | 무향 | "디지털트윈 동기화" ↔ "센서 데이터 수집" |
+| 유형             | 의미                      | 방향성     | 예                                       |
+| ---------------- | ------------------------- | ---------- | ---------------------------------------- |
+| `prerequisite`   | A를 배우려면 B가 선행     | 유향 (A→B) | "역운동학" → "선형대수 기초"             |
+| `co_required`    | 현장에서 함께 요구        | 무향(대칭) | "비전 캘리브레이션" ↔ "좌표계 변환"      |
+| `specialization` | A가 B의 구체화/하위       | 유향 (A→B) | "협동로봇 안전설정" → "로봇 안전 일반"   |
+| `cross_domain`   | 도메인 경계를 잇는 브리지 | 무향       | "디지털트윈 동기화" ↔ "센서 데이터 수집" |
 
 ### 2.2 권장 스키마
 
@@ -106,8 +106,8 @@ esco_uri:     null | "<진짜 ESCO UUID URI>" // 실재 매핑이 있을 때만
 
 ```ts
 export interface RobotSkill {
-  skill_id: string;                  // 내부 PK, 데이터 내 유일
-  domain: string;                    // ROBOT_DOMAINS.key 중 하나
+  skill_id: string; // 내부 PK, 데이터 내 유일
+  domain: string; // ROBOT_DOMAINS.key 중 하나
   domain_en: string;
   preferred_label_ko: string;
   preferred_label_en: string;
@@ -116,12 +116,16 @@ export interface RobotSkill {
   skill_type: "knowledge" | "skill" | "competence";
   proficiency_level: 1 | 2 | 3 | 4;
   role_mapping: ("operator" | "engineer" | "developer")[];
-  parent_skill_id: string | null;    // 존재하는 skill_id 또는 null (순환 금지)
-  related_skills: SkillRelation[];   // §2.2 — 비어 있으면 P3-1 실패
+  parent_skill_id: string | null; // 존재하는 skill_id 또는 null (순환 금지)
+  related_skills: SkillRelation[]; // §2.2 — 비어 있으면 P3-1 실패
   // 출처(§4): 옵션 A 또는 B 중 택일하여 구현
-  internal_uri?: string;             // 옵션 B
-  esco_uri: string | null;           // 실재 ESCO 매핑일 때만 채움
-  esco_mapping?: { uri: string | null; confidence: string; matched_label?: string }; // 옵션 A
+  internal_uri?: string; // 옵션 B
+  esco_uri: string | null; // 실재 ESCO 매핑일 때만 채움
+  esco_mapping?: {
+    uri: string | null;
+    confidence: string;
+    matched_label?: string;
+  }; // 옵션 A
   smartfactory_context: string;
 }
 ```

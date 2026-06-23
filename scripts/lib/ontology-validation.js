@@ -73,7 +73,9 @@ function validateOntologySemantics(skills) {
     } else {
       skill.role_mapping.forEach((role) => {
         if (!ALLOWED_ROLES.has(role)) {
-          errors.push(`${skill.skill_id}: 허용되지 않은 role_mapping '${role}'`);
+          errors.push(
+            `${skill.skill_id}: 허용되지 않은 role_mapping '${role}'`,
+          );
         }
       });
     }
@@ -92,10 +94,17 @@ function validateOntologySemantics(skills) {
       errors.push(`${skill.skill_id}: 가짜 ESCO URI '${skill.esco_uri}'`);
     }
     if (!skill.internal_uri && !skill.esco_uri) {
-      errors.push(`${skill.skill_id}: internal_uri 또는 esco_uri가 필요합니다.`);
+      errors.push(
+        `${skill.skill_id}: internal_uri 또는 esco_uri가 필요합니다.`,
+      );
     }
-    if (skill.internal_uri && !skill.internal_uri.startsWith("urn:rsf:skill:")) {
-      errors.push(`${skill.skill_id}: 잘못된 internal_uri '${skill.internal_uri}'`);
+    if (
+      skill.internal_uri &&
+      !skill.internal_uri.startsWith("urn:rsf:skill:")
+    ) {
+      errors.push(
+        `${skill.skill_id}: 잘못된 internal_uri '${skill.internal_uri}'`,
+      );
     }
 
     relations.forEach((relation) => {
@@ -142,7 +151,9 @@ function validateOntologySemantics(skills) {
   );
 
   if (isolatedCount > 0) {
-    errors.push(`고립 노드 ${isolatedCount}개: related_skills가 비어 있습니다.`);
+    errors.push(
+      `고립 노드 ${isolatedCount}개: related_skills가 비어 있습니다.`,
+    );
   }
   if (averageEdges < 2) {
     errors.push(`평균 관계 ${averageEdges.toFixed(2)}개: 최소 기준 2개 미달`);

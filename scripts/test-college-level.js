@@ -9,7 +9,10 @@ const ts = require("typescript");
 const projectRoot = process.cwd();
 const mappingPath = path.join(projectRoot, "public/data/college-mapping.json");
 const resolverPath = path.join(projectRoot, "app/lib/college-resolver.ts");
-const robotDataPath = path.join(projectRoot, "public/data/robot-smartfactory.json");
+const robotDataPath = path.join(
+  projectRoot,
+  "public/data/robot-smartfactory.json",
+);
 
 function loadResolver() {
   const source = fs.readFileSync(resolverPath, "utf-8");
@@ -48,15 +51,23 @@ function normalize(value) {
 }
 
 assert.strictEqual(mappingData.colleges.length, 4, "4개 칼리지가 필요합니다.");
-assert.strictEqual(mappingData.levels.length, 16, "4개 칼리지 x 4개 레벨이 필요합니다.");
+assert.strictEqual(
+  mappingData.levels.length,
+  16,
+  "4개 칼리지 x 4개 레벨이 필요합니다.",
+);
 
 const validationErrors = validateCollegeMappingData(mappingData);
 assert.strictEqual(validationErrors.length, 0, validationErrors.join("\n"));
 
 const collegeIds = new Set(mappingData.colleges.map((college) => college.id));
-assert.ok(collegeIds.has("data-intelligence"), "Data Intelligence HUB 칼리지가 필요합니다.");
+assert.ok(
+  collegeIds.has("data-intelligence"),
+  "Data Intelligence HUB 칼리지가 필요합니다.",
+);
 assert.strictEqual(
-  mappingData.colleges.find((college) => college.id === "data-intelligence").isHub,
+  mappingData.colleges.find((college) => college.id === "data-intelligence")
+    .isHub,
   true,
   "Data Intelligence는 HUB로 표시되어야 합니다.",
 );

@@ -77,13 +77,13 @@ npm run test:data      # 데이터 스모크 테스트
 
 ## 7. 패키지 지도
 
-| 파일 | 역할 |
-|---|---|
-| `CLAUDE.md` | (이 문서) 진입점·불변식·작업 사이클 |
-| `docs/improvement/README.md` | 패키지 사용법, Claude Code 온보딩 |
-| `docs/improvement/00_DIAGNOSIS.md` | 비평가 관점 진단과 증거(실측) |
-| `docs/improvement/01_ROADMAP.md` | 5단계(P0~P4) 로드맵과 시퀀싱 |
-| `docs/improvement/02_TASKS.md` | 실행 가능한 태스크 카드 + DoD |
-| `docs/improvement/03_DATA_ONTOLOGY_SPEC.md` | 관계망·ESCO 출처 설계 명세 |
-| `docs/improvement/04_VERIFICATION.md` | 검증 절차·게이트·체크 스크립트 |
-| `.claude/commands/next-task.md` | `/next-task` 슬래시 커맨드 |
+| 파일                                        | 역할                                |
+| ------------------------------------------- | ----------------------------------- |
+| `CLAUDE.md`                                 | (이 문서) 진입점·불변식·작업 사이클 |
+| `docs/improvement/README.md`                | 패키지 사용법, Claude Code 온보딩   |
+| `docs/improvement/00_DIAGNOSIS.md`          | 비평가 관점 진단과 증거(실측)       |
+| `docs/improvement/01_ROADMAP.md`            | 5단계(P0~P4) 로드맵과 시퀀싱        |
+| `docs/improvement/02_TASKS.md`              | 실행 가능한 태스크 카드 + DoD       |
+| `docs/improvement/03_DATA_ONTOLOGY_SPEC.md` | 관계망·ESCO 출처 설계 명세          |
+| `docs/improvement/04_VERIFICATION.md`       | 검증 절차·게이트·체크 스크립트      |
+| `.claude/commands/next-task.md`             | `/next-task` 슬래시 커맨드          |

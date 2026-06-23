@@ -50,8 +50,8 @@ export default async function OrganizationsPage() {
       <section className={styles.infoPanel}>
         <h2>조직 스킬 매칭이 필요한 이유</h2>
         <p>
-          기술 목록만 보면 무엇부터 준비해야 하는지 판단하기 어렵습니다. 조직 탭은
-          실제 과제를 중심으로 필요한 스킬과 목표 숙련도를 연결합니다.
+          기술 목록만 보면 무엇부터 준비해야 하는지 판단하기 어렵습니다. 조직
+          탭은 실제 과제를 중심으로 필요한 스킬과 목표 숙련도를 연결합니다.
         </p>
       </section>
     </main>

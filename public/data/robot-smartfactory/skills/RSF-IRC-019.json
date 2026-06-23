@@ -10,9 +10,7 @@
   "description_en": "Document programs and configurations in detail",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": [
-    "engineer"
-  ],
+  "role_mapping": ["engineer"],
   "parent_skill_id": "RSF-IRC-007",
   "related_skills": [
     {
