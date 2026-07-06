@@ -1,14 +1,33 @@
 import Link from "next/link";
-import { getAllRobotSkills } from "../lib/server-data";
+import { resolveSkillCollege } from "../lib/college-resolver";
+import { getAllRobotSkills, getCollegeMappingData } from "../lib/server-data";
 import DomainImportanceRating from "../components/DomainImportanceRating";
 import styles from "./page.module.css";
 
 export default async function EvaluationPage() {
-  const skills = await getAllRobotSkills();
+  const [skills, collegeMapping] = await Promise.all([
+    getAllRobotSkills(),
+    getCollegeMappingData(),
+  ]);
   const counts = skills.reduce<Record<string, number>>((acc, skill) => {
     acc[skill.domain] = (acc[skill.domain] ?? 0) + 1;
     return acc;
   }, {});
+
+  const collegeCounts = skills.reduce<Record<string, number>>((acc, skill) => {
+    const resolution = resolveSkillCollege(
+      skill,
+      collegeMapping.domainMapping,
+      collegeMapping.skillOverrides,
+    );
+    if (resolution) {
+      acc[resolution.primary] = (acc[resolution.primary] ?? 0) + 1;
+    }
+    return acc;
+  }, {});
+  const collegeCards = [...collegeMapping.colleges].sort(
+    (a, b) => a.order - b.order,
+  );
 
   return (
     <main className={styles.pageShell}>
@@ -20,6 +39,21 @@ export default async function EvaluationPage() {
           스킬 중요도를 직접 평가할 수 있는 전용 화면입니다.
         </p>
       </header>
+
+      <section className={styles.collegeStrip} aria-label="4대 도메인 분포">
+        {collegeCards.map((college) => (
+          <div className={styles.collegeCard} key={college.id}>
+            <strong>{college.name}</strong>
+            <span>
+              {college.role}
+              {college.isHub ? " · 허브" : ""}
+            </span>
+            <span className={styles.collegeCount}>
+              {collegeCounts[college.id] ?? 0}개 스킬
+            </span>
+          </div>
+        ))}
+      </section>
 
       <section className={styles.domainSection} aria-labelledby="domain-only-title">
         <div className={styles.sectionHeading}>

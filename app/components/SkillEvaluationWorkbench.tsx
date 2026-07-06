@@ -18,6 +18,7 @@ export interface SkillSummary {
   label: string;
   proficiency: number;
   roles: string[];
+  college: string | null;
 }
 
 interface DomainSummary {
@@ -26,10 +27,16 @@ interface DomainSummary {
   color: string;
 }
 
+interface CollegeSummary {
+  id: string;
+  name: string;
+}
+
 interface SkillEvaluationWorkbenchProps {
   evaluator: EvaluatorPublic;
   skills: SkillSummary[];
   domains: DomainSummary[];
+  colleges: CollegeSummary[];
   initialLabels: SkillEvaluationLabel[];
 }
 
@@ -51,11 +58,19 @@ export default function SkillEvaluationWorkbench({
   evaluator,
   skills,
   domains,
+  colleges,
   initialLabels,
 }: SkillEvaluationWorkbenchProps) {
   const router = useRouter();
   const [labels, setLabels] = useState<SkillEvaluationLabel[]>(initialLabels);
   const [step, setStep] = useState<Step>(1);
+  // 평가자 소속 칼리지를 기본 큐로 보여준다. 명부의 collegeId가
+  // 칼리지 목록에 없으면 전체로 폴백한다.
+  const [collegeFilter, setCollegeFilter] = useState(() =>
+    colleges.some((college) => college.id === evaluator.collegeId)
+      ? evaluator.collegeId
+      : "all",
+  );
   const [domainFilter, setDomainFilter] = useState("all");
   const [roleFilter, setRoleFilter] = useState("all");
   const [query, setQuery] = useState("");
@@ -97,10 +112,21 @@ export default function SkillEvaluationWorkbench({
     return set;
   }, [labels, evaluator.id]);
 
+  const collegeMap = useMemo(() => {
+    const map: Record<string, CollegeSummary> = {};
+    colleges.forEach((college) => {
+      map[college.id] = college;
+    });
+    return map;
+  }, [colleges]);
+
   // 1단계: 필터가 적용된 전체 스킬 목록(선택 대상)
   const filteredSkills = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     return skills.filter((skill) => {
+      if (collegeFilter !== "all" && skill.college !== collegeFilter) {
+        return false;
+      }
       if (domainFilter !== "all" && skill.domain !== domainFilter) {
         return false;
       }
@@ -119,7 +145,15 @@ export default function SkillEvaluationWorkbench({
       }
       return true;
     });
-  }, [skills, domainFilter, roleFilter, onlyUnevaluated, mySkillIds, query]);
+  }, [
+    skills,
+    collegeFilter,
+    domainFilter,
+    roleFilter,
+    onlyUnevaluated,
+    mySkillIds,
+    query,
+  ]);
 
   // 2단계: 내가 선택한 스킬만(원본 순서 유지)
   const pickedSkills = useMemo(
@@ -337,7 +371,22 @@ export default function SkillEvaluationWorkbench({
         <>
           <div className={styles.toolbar}>
             <label>
-              도메인
+              4대 도메인
+              <select
+                onChange={(event) => setCollegeFilter(event.target.value)}
+                value={collegeFilter}
+              >
+                <option value="all">전체</option>
+                {colleges.map((college) => (
+                  <option key={college.id} value={college.id}>
+                    {college.name}
+                    {college.id === evaluator.collegeId ? " (내 소속)" : ""}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              기능 도메인
               <select
                 onChange={(event) => setDomainFilter(event.target.value)}
                 value={domainFilter}
@@ -425,7 +474,10 @@ export default function SkillEvaluationWorkbench({
                           {skill.label}
                         </span>
                         <span className={styles.skillItemMeta}>
-                          {domain?.name ?? skill.domain} · Lv{skill.proficiency}
+                          {(skill.college && collegeMap[skill.college]?.name) ??
+                            "미배정"}{" "}
+                          · {domain?.name ?? skill.domain} · Lv
+                          {skill.proficiency}
                         </span>
                       </span>
                       <Link
@@ -505,7 +557,10 @@ export default function SkillEvaluationWorkbench({
                           {skill.label}
                         </span>
                         <span className={styles.skillItemMeta}>
-                          {domain?.name ?? skill.domain} · Lv{skill.proficiency}
+                          {(skill.college && collegeMap[skill.college]?.name) ??
+                            "미배정"}{" "}
+                          · {domain?.name ?? skill.domain} · Lv
+                          {skill.proficiency}
                         </span>
                       </span>
                       {evaluatedByMe && (
@@ -548,6 +603,9 @@ export default function SkillEvaluationWorkbench({
                 <div className={styles.detailHeader}>
                   <div className={styles.detailHeaderTop}>
                     <p className={styles.detailDomain}>
+                      {selectedSkill.college &&
+                        collegeMap[selectedSkill.college] &&
+                        `${collegeMap[selectedSkill.college].name} / `}
                       {domainMap[selectedSkill.domain]?.name ??
                         selectedSkill.domain}
                     </p>

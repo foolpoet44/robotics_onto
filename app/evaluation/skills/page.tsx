@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ROBOT_DOMAINS } from "../../lib/robotics-data";
-import { getAllRobotSkills } from "../../lib/server-data";
+import { resolveSkillCollege } from "../../lib/college-resolver";
+import { getAllRobotSkills, getCollegeMappingData } from "../../lib/server-data";
 import { getActiveEvaluators, toPublicEvaluator } from "../../lib/evaluator-data";
 import { getCurrentEvaluator } from "../../lib/session";
 import { getEvaluationStore } from "../../lib/evaluation-store";
@@ -36,13 +37,23 @@ export default async function SkillEvaluationPage() {
   }
 
   const skills = await getAllRobotSkills();
+  const collegeMapping = await getCollegeMappingData();
   const skillSummaries: SkillSummary[] = skills.map((skill) => ({
     skillId: skill.skill_id,
     domain: skill.domain,
     label: skill.preferred_label_ko,
     proficiency: skill.proficiency_level,
     roles: skill.role_mapping,
+    college:
+      resolveSkillCollege(
+        skill,
+        collegeMapping.domainMapping,
+        collegeMapping.skillOverrides,
+      )?.primary ?? null,
   }));
+  const colleges = [...collegeMapping.colleges]
+    .sort((a, b) => a.order - b.order)
+    .map((college) => ({ id: college.id, name: college.name }));
   const labels = await getEvaluationStore().list();
 
   return (
@@ -64,6 +75,7 @@ export default async function SkillEvaluationPage() {
           name: domain.name,
           color: domain.color,
         }))}
+        colleges={colleges}
         initialLabels={labels}
       />
 

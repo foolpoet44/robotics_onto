@@ -189,9 +189,22 @@ Physical AI 비중이 높은 것은 온톨로지 자체가 로봇 현장 역량 
   `agentic-ai`입니다. 반영 후 primary 분포:
   **Physical AI 74 / Agentic AI 30 / Data Intelligence 23 / Digital Twin 21
   (총 148개 스킬)**.
-- [ ] Phase 2: 리졸버 오버라이드 우선 조회 + `validate:data` 검증 연결.
-- [ ] Phase 3: 스킬 `collegeId` 스탬핑, 4대 도메인 화면·워크벤치 필터.
+- [x] **Phase 2 완료.** `resolveSkillCollege()`가 `skillOverrides`를 우선
+  조회하도록 확장했고(칼리지 배정만 대체, levelTier 규칙은 유지),
+  `validateCollegeMappingData()`에 오버라이드 무결성 검증(스킬 실존·칼리지
+  실존·primary/secondary 중복·source 화이트리스트)을 추가해 `validate:data`
+  strict에 연결했습니다. 스크립트는 `scripts/lib/college-resolver-loader.js`로
+  TS 리졸버를 단일 진실 원천으로 재사용합니다.
+- [x] **Phase 3 완료.** 스킬의 칼리지는 데이터 스탬핑 대신 서버 사이드에서
+  리졸버로 계산해 노출합니다(이중 관리 방지). 스킬 상세 페이지에 칼리지
+  배지·연계 칼리지·재분류 상태(제안/확정), `/evaluation`에 4대 도메인 분포
+  카드, 스킬 평가 워크벤치에 4대 도메인 필터(평가자 소속 칼리지가 기본
+  큐)를 추가했습니다.
 - [ ] Phase 4: 내부전문가 검수로 오버라이드 `reviewed` 승격.
+  - 검수 절차: 내부전문가를 `evaluators.json`에 칼리지별로 등록 → 워크벤치
+    `재정의대상` 라벨로 이견 수집 → 합의된 항목은 `college-mapping.json`의
+    해당 오버라이드 `source`를 `"reviewed"`로 변경(또는 항목 삭제/수정) →
+    `npm run validate:data`로 확인.
 
 ## 9. 영향도·비변경 사항
 

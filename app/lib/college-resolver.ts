@@ -3,6 +3,7 @@ import type {
   CollegeId,
   CollegeMappingData,
   CollegeResolution,
+  CollegeSkillOverride,
   Level,
 } from "./college-types";
 
@@ -28,8 +29,9 @@ export function resolveCollege(
 }
 
 export function resolveSkillCollege(
-  skill: { domain: string; proficiency_level?: number },
+  skill: { skill_id?: string; domain: string; proficiency_level?: number },
   mapping: Record<string, CollegeDomainMapping>,
+  skillOverrides?: Record<string, CollegeSkillOverride>,
 ): CollegeResolution | null {
   const domainMapping = mapping[skill.domain];
   if (!domainMapping) {
@@ -41,11 +43,21 @@ export function resolveSkillCollege(
     domainMapping.defaultLevelTier,
   );
 
+  // 스킬 단위 오버라이드는 칼리지 배정만 대체하고,
+  // levelTier 산정(숙련도 우선, 도메인 기본값 폴백)은 그대로 따른다.
+  const override = skill.skill_id
+    ? skillOverrides?.[skill.skill_id]
+    : undefined;
+  const primary = override?.primary ?? domainMapping.primary;
+  const secondary = override
+    ? [...override.secondary]
+    : [...domainMapping.secondary];
+
   return {
-    primary: domainMapping.primary,
-    secondary: [...domainMapping.secondary],
+    primary,
+    secondary,
     levelTier,
-    levelId: makeLevelId(domainMapping.primary, levelTier),
+    levelId: makeLevelId(primary, levelTier),
   };
 }
 
@@ -111,7 +123,12 @@ export function hasHubPrerequisite(
   );
 }
 
-export function validateCollegeMappingData(data: CollegeMappingData): string[] {
+const ALLOWED_OVERRIDE_SOURCES = new Set(["proposed", "reviewed"]);
+
+export function validateCollegeMappingData(
+  data: CollegeMappingData,
+  knownSkillIds?: Set<string>,
+): string[] {
   const errors: string[] = [];
   const collegeIds = new Set(data.colleges.map((college) => college.id));
   const levelIds = new Set(data.levels.map((level) => level.id));
@@ -146,6 +163,38 @@ export function validateCollegeMappingData(data: CollegeMappingData): string[] {
     const levelId = makeLevelId(mapping.primary, mapping.defaultLevelTier);
     if (!levelIds.has(levelId)) {
       errors.push(`${domainId}: 기본 레벨 '${levelId}'이 존재하지 않습니다.`);
+    }
+  }
+
+  for (const [skillId, override] of Object.entries(data.skillOverrides ?? {})) {
+    if (knownSkillIds && !knownSkillIds.has(skillId)) {
+      errors.push(`skillOverrides/${skillId}: 존재하지 않는 스킬입니다.`);
+    }
+
+    if (!collegeIds.has(override.primary)) {
+      errors.push(
+        `skillOverrides/${skillId}: 존재하지 않는 primary college '${override.primary}'`,
+      );
+    }
+
+    for (const collegeId of override.secondary) {
+      if (!collegeIds.has(collegeId)) {
+        errors.push(
+          `skillOverrides/${skillId}: 존재하지 않는 secondary college '${collegeId}'`,
+        );
+      }
+    }
+
+    if (override.secondary.includes(override.primary)) {
+      errors.push(
+        `skillOverrides/${skillId}: primary '${override.primary}'가 secondary에 중복됩니다.`,
+      );
+    }
+
+    if (!ALLOWED_OVERRIDE_SOURCES.has(override.source)) {
+      errors.push(
+        `skillOverrides/${skillId}: 허용되지 않은 source '${override.source}'`,
+      );
     }
   }
 
