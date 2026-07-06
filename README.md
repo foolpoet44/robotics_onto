@@ -85,6 +85,23 @@ npm run record:review-decision -- \
 각 기준 스킬은 `/skills/[skillId]` 상세 페이지에서 정의, 스마트팩토리 적용
 맥락, 숙련도, 역할, 상위 스킬, 관련 스킬을 확인할 수 있습니다.
 
+## 4대 도메인(칼리지) 재분류
+
+기능 도메인과 별개로 모든 스킬은 4대 운영 도메인(Physical AI / Agentic AI /
+Digital Twin / Data Intelligence)에 배정됩니다. 기본값은 도메인 매핑이고,
+예외는 `public/data/college-mapping.json`의 `skillOverrides`로 관리합니다.
+오버라이드 검수 결정은 다음 명령으로 기록합니다(장부:
+`public/data/college-override-decisions.json`).
+
+```bash
+npm run record:college-override -- \
+  --skill-id RSF-MVS-007 \
+  --status approved \
+  --reviewer "변재민"
+```
+
+설계와 검수 절차는 `docs/DOMAIN_RECLASSIFICATION_PLAN.md`를 따릅니다.
+
 ## 스킬 평가 워크벤치
 
 `/evaluation`은 도메인 단위 평가, `/evaluation/skills`는 스킬 단위 평가 전용

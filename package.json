@@ -13,6 +13,7 @@
     "generate:review-queue": "node scripts/generate-review-queue.js",
     "apply:review-decisions": "node scripts/apply-review-decisions.js",
     "record:review-decision": "node scripts/record-review-decision.js",
+    "record:college-override": "node scripts/record-college-override-decision.js",
     "update:development-candidate": "node scripts/update-development-candidate.js",
     "generate:evaluator-code-hash": "node scripts/generate-evaluator-code-hash.js",
     "import:employee-competency": "node scripts/import-employee-competency.js",
@@ -28,6 +29,7 @@
     "test:development": "node scripts/test-development-validation.js",
     "test:development-update": "node scripts/test-development-candidate-update.js",
     "test:college-level": "node scripts/test-college-level.js",
+    "test:college-override": "node scripts/test-college-override-decision.js",
     "test:employee-competency": "node scripts/test-employee-competency-data.js",
     "test:data": "node scripts/test-robot-smartfactory.js"
   },

@@ -200,11 +200,32 @@ Physical AI 비중이 높은 것은 온톨로지 자체가 로봇 현장 역량 
   배지·연계 칼리지·재분류 상태(제안/확정), `/evaluation`에 4대 도메인 분포
   카드, 스킬 평가 워크벤치에 4대 도메인 필터(평가자 소속 칼리지가 기본
   큐)를 추가했습니다.
-- [ ] Phase 4: 내부전문가 검수로 오버라이드 `reviewed` 승격.
-  - 검수 절차: 내부전문가를 `evaluators.json`에 칼리지별로 등록 → 워크벤치
-    `재정의대상` 라벨로 이견 수집 → 합의된 항목은 `college-mapping.json`의
-    해당 오버라이드 `source`를 `"reviewed"`로 변경(또는 항목 삭제/수정) →
-    `npm run validate:data`로 확인.
+- [x] **Phase 4 준비 완료 — 검수 실행은 내부전문가 몫.** 검수 인프라를
+  구축했고, 오버라이드 36건은 전문가 결정이 기록될 때까지 `proposed`로
+  유지됩니다.
+  - 내부전문가 5인을 평가자 명부에 등록: EVAL-101 김대환·EVAL-102 박석우
+    (Physical AI), EVAL-103 변재민(Agentic AI), EVAL-104 고민석(Digital
+    Twin), EVAL-105 서우진(Data Intelligence). 데모 접속 코드는
+    `docs/SKILL_EVALUATION_OPERATIONS.md` 참고(운영 전환 시 교체).
+  - 결정 기록 도구: 결정은 JSON 직접 편집 없이 다음 명령으로 기록하며,
+    `public/data/college-override-decisions.json` 장부에 검수자·시각·제안
+    스냅샷과 함께 남습니다.
+
+    ```bash
+    npm run record:college-override -- \
+      --skill-id RSF-MVS-007 \
+      --status approved \
+      --reviewer "변재민" \
+      --notes "품질 자동 판정은 Agentic AI 소관"
+    ```
+
+    `approved`는 오버라이드를 `reviewed`로 승격, `rejected`는 오버라이드를
+    제거해 도메인 기본 매핑으로 복귀, `held`는 `proposed`를 유지합니다.
+    상태 전이는 `npm run test:college-override`로 검증됩니다.
+  - 검수 흐름: ① 전문가가 워크벤치(`/evaluation/skills`)에서 자기 칼리지
+    스킬을 평가하며 `재정의대상` 라벨로 이견 표시 → ② 재분류 협의 →
+    ③ `record:college-override`로 스킬별 결정 기록 → ④ `npm run
+    validate:data`로 무결성 확인(proposed/reviewed 잔량이 리포트에 집계됨).
 
 ## 9. 영향도·비변경 사항
 

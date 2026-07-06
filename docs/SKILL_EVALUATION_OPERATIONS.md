@@ -70,6 +70,14 @@ npm run generate:evaluator-code-hash -- --id EVAL-005 --code "배정코드"
 | EVAL-002 이판단 | `robot02` |
 | EVAL-003 박트윈 | `robot03` |
 | EVAL-004 최데이터 | `robot04` |
+| EVAL-101 김대환 (Physical AI 위원) | `expert01` |
+| EVAL-102 박석우 (Physical AI 책임) | `expert02` |
+| EVAL-103 변재민 (Agentic AI 위원) | `expert03` |
+| EVAL-104 고민석 (Digital Twin 팀장) | `expert04` |
+| EVAL-105 서우진 (Data Intelligence 팀장) | `expert05` |
+
+내부전문가(EVAL-101~105)는 4대 도메인 재분류 검수를 담당합니다. 검수 절차는
+`docs/DOMAIN_RECLASSIFICATION_PLAN.md` 8절(Phase 4)을 따릅니다.
 
 ## 라벨 데이터 아카이빙
 
