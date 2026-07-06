@@ -128,6 +128,41 @@ CREATE INDEX IF NOT EXISTS idx_skill_eval_skill
   ON skill_evaluation_labels (skill_id);
 ```
 
+## 도메인 변경요청 (`/evaluation`)
+
+도메인 분류 평가 페이지의 각 도메인 카드에서 "하위 스킬 조회"를 열면 스킬
+목록이 나오고, 로그인한 평가자는 스킬별로 **도메인 변경요청**을 접수할 수
+있습니다. 조회는 로그인 없이 가능하고, 변경요청 접수만 로그인이 필요합니다.
+
+- 변경 대상 축은 두 가지입니다: **기능 도메인**(스킬의 `domain`) 또는
+  **4대 도메인**(칼리지 배정).
+- 현재 값은 서버가 확정하고, 요청 값은 축별 화이트리스트로 검증합니다.
+  현재와 동일한 도메인 요청은 거부됩니다. 변경 사유는 필수입니다.
+- 요청자 신원은 로그인 세션에서 자동 적용됩니다.
+- 요청은 즉시 데이터에 반영되지 않고 `pending` 상태로 아카이빙됩니다
+  (API: `/api/domain-change-requests`, 저장소: DB `domain_change_requests`
+  테이블 또는 파일 폴백 `.data/domain-change-requests.json`).
+- 반영 절차: 4대 도메인 요청은 검수 후 `npm run record:college-override`로
+  확정하고, 기능 도메인 요청은 생성기
+  (`scripts/generate-robot-smartfactory-data.py`) 정의 이동으로 반영합니다.
+
+```sql
+CREATE TABLE IF NOT EXISTS domain_change_requests (
+  id UUID PRIMARY KEY,
+  skill_id TEXT NOT NULL,
+  axis TEXT NOT NULL,
+  current_value TEXT NOT NULL,
+  requested_value TEXT NOT NULL,
+  reason TEXT NOT NULL,
+  evaluator_id TEXT NOT NULL,
+  evaluator_name TEXT NOT NULL,
+  evaluator_college TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  app_version TEXT NOT NULL
+);
+```
+
 ## 직접 확인 절차
 
 ```bash

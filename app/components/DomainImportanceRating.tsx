@@ -2,10 +2,19 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ROBOT_DOMAINS } from "../lib/robotics-data";
+import DomainSkillBrowser, {
+  type BrowserChangeRequest,
+  type BrowserCollege,
+  type BrowserSkill,
+} from "./DomainSkillBrowser";
 import styles from "./DomainImportanceRating.module.css";
 
 interface DomainImportanceRatingProps {
   domainCounts: Record<string, number>;
+  skillsByDomain?: Record<string, BrowserSkill[]>;
+  colleges?: BrowserCollege[];
+  sessionEvaluatorName?: string | null;
+  initialChangeRequests?: BrowserChangeRequest[];
 }
 
 interface DomainRating {
@@ -63,6 +72,10 @@ function createRecordId() {
 
 export default function DomainImportanceRating({
   domainCounts,
+  skillsByDomain,
+  colleges,
+  sessionEvaluatorName = null,
+  initialChangeRequests,
 }: DomainImportanceRatingProps) {
   const [ratings, setRatings] = useState<DomainRating[]>([]);
   const [evaluatorName, setEvaluatorName] = useState("");
@@ -247,6 +260,21 @@ export default function DomainImportanceRating({
               >
                 평가 저장
               </button>
+
+              {skillsByDomain && colleges && (
+                <DomainSkillBrowser
+                  colleges={colleges}
+                  domainKey={domain.key}
+                  evaluatorName={sessionEvaluatorName}
+                  initialRequests={(initialChangeRequests ?? []).filter(
+                    (request) =>
+                      (skillsByDomain[domain.key] ?? []).some(
+                        (skill) => skill.skillId === request.skillId,
+                      ),
+                  )}
+                  skills={skillsByDomain[domain.key] ?? []}
+                />
+              )}
             </article>
           );
         })}

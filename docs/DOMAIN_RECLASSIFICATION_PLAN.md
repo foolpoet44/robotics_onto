@@ -223,9 +223,12 @@ Physical AI 비중이 높은 것은 온톨로지 자체가 로봇 현장 역량 
     제거해 도메인 기본 매핑으로 복귀, `held`는 `proposed`를 유지합니다.
     상태 전이는 `npm run test:college-override`로 검증됩니다.
   - 검수 흐름: ① 전문가가 워크벤치(`/evaluation/skills`)에서 자기 칼리지
-    스킬을 평가하며 `재정의대상` 라벨로 이견 표시 → ② 재분류 협의 →
-    ③ `record:college-override`로 스킬별 결정 기록 → ④ `npm run
-    validate:data`로 무결성 확인(proposed/reviewed 잔량이 리포트에 집계됨).
+    스킬을 평가하며 `재정의대상` 라벨로 이견 표시하거나, 도메인 분류 평가
+    페이지(`/evaluation`)의 하위 스킬 조회에서 **도메인 변경요청**을 접수
+    (기능 도메인/4대 도메인 축 선택, 사유 필수, 신원 자동 적용) →
+    ② 재분류 협의 → ③ `record:college-override`로 스킬별 결정 기록 →
+    ④ `npm run validate:data`로 무결성 확인(proposed/reviewed 잔량이
+    리포트에 집계됨).
 
 ## 9. 영향도·비변경 사항
 

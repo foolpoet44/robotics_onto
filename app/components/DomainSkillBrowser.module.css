@@ -1,0 +1,240 @@
+.browser {
+  margin-top: 0.9rem;
+  border-top: 1px dashed var(--border-soft, rgba(148, 163, 184, 0.4));
+  padding-top: 0.75rem;
+}
+
+.toggleButton {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-soft, rgba(148, 163, 184, 0.4));
+  border-radius: 10px;
+  background: transparent;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.skillArea {
+  margin-top: 0.75rem;
+}
+
+.loginHint {
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.14);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.loginHint a {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skillList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.skillRow {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border-soft, rgba(148, 163, 184, 0.3));
+  border-radius: 10px;
+  background: var(--bg-card);
+}
+
+.skillLine {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.skillInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.skillName {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-decoration: none;
+}
+
+.skillName:hover {
+  text-decoration: underline;
+}
+
+.skillMeta {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.pendingBadge {
+  flex-shrink: 0;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(234, 88, 12, 0.14);
+  color: #c2540a;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.requestButton {
+  flex-shrink: 0;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-primary-dark);
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.requestButton:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.requestForm {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border-soft, rgba(148, 163, 184, 0.35));
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.axisFieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.axisFieldset legend {
+  padding: 0;
+  margin-bottom: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.axisOption {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.axisCurrent {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.targetField,
+.reasonField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.reasonField span {
+  color: #c2540a;
+  font-weight: 700;
+}
+
+.targetField select,
+.reasonField textarea {
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--border-soft, rgba(148, 163, 184, 0.45));
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 400;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.identityNote {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.submitButton {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary-dark);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.requestHistory {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.requestHistory li {
+  padding: 0.4rem 0.55rem;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.requestHistory li p {
+  margin: 0.2rem 0 0;
+  color: var(--text-primary);
+}
+
+.message {
+  margin: 0.6rem 0 0;
+  color: var(--color-primary-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
