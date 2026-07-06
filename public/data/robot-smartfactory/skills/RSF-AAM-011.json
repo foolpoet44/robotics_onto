@@ -1,0 +1,31 @@
+{
+  "skill_id": "RSF-AAM-011",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0011",
+  "esco_uri": null,
+  "preferred_label_ko": "작업지시 자동 생성",
+  "preferred_label_en": "Automated Work Order Generation",
+  "description_ko": "생산 상황을 반영한 작업지시 자동 작성",
+  "description_en": "Automatically create work orders reflecting production status",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-010",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-012",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 작업지시 자동 생성 역량 구현"
+}

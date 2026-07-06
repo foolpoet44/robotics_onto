@@ -33,7 +33,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-DTS-001",
+        "target": "RSF-AAM-001",
         "type": "cross_domain",
         "weight": 0.6,
         "source": "heuristic"
@@ -184,7 +184,7 @@
       {
         "target": "RSF-IRC-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -221,7 +221,7 @@
       {
         "target": "RSF-IRC-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -258,7 +258,7 @@
       {
         "target": "RSF-IRC-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -295,7 +295,7 @@
       {
         "target": "RSF-IRC-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -332,7 +332,7 @@
       {
         "target": "RSF-IRC-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -524,7 +524,7 @@
       {
         "target": "RSF-IRC-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -561,7 +561,7 @@
       {
         "target": "RSF-IRC-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -598,7 +598,7 @@
       {
         "target": "RSF-IRC-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -635,7 +635,7 @@
       {
         "target": "RSF-IRC-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -672,7 +672,7 @@
       {
         "target": "RSF-IRC-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -709,7 +709,7 @@
       {
         "target": "RSF-IRC-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -746,7 +746,7 @@
       {
         "target": "RSF-IRC-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -950,7 +950,7 @@
       {
         "target": "RSF-MVS-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -987,7 +987,7 @@
       {
         "target": "RSF-MVS-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1024,7 +1024,7 @@
       {
         "target": "RSF-MVS-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1061,7 +1061,7 @@
       {
         "target": "RSF-MVS-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1098,7 +1098,7 @@
       {
         "target": "RSF-MVS-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1259,7 +1259,7 @@
       {
         "target": "RSF-MVS-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1296,7 +1296,7 @@
       {
         "target": "RSF-MVS-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1333,7 +1333,7 @@
       {
         "target": "RSF-MVS-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1370,7 +1370,7 @@
       {
         "target": "RSF-MVS-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1407,7 +1407,7 @@
       {
         "target": "RSF-MVS-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1444,7 +1444,7 @@
       {
         "target": "RSF-MVS-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1481,7 +1481,7 @@
       {
         "target": "RSF-MVS-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1685,7 +1685,7 @@
       {
         "target": "RSF-CRO-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1722,7 +1722,7 @@
       {
         "target": "RSF-CRO-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1759,7 +1759,7 @@
       {
         "target": "RSF-CRO-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1796,7 +1796,7 @@
       {
         "target": "RSF-CRO-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1833,7 +1833,7 @@
       {
         "target": "RSF-CRO-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -1994,7 +1994,7 @@
       {
         "target": "RSF-CRO-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2031,7 +2031,7 @@
       {
         "target": "RSF-CRO-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2068,7 +2068,7 @@
       {
         "target": "RSF-CRO-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2105,7 +2105,7 @@
       {
         "target": "RSF-CRO-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2142,7 +2142,7 @@
       {
         "target": "RSF-CRO-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2179,7 +2179,7 @@
       {
         "target": "RSF-CRO-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2216,7 +2216,7 @@
       {
         "target": "RSF-CRO-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2420,7 +2420,7 @@
       {
         "target": "RSF-AMR-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2457,7 +2457,7 @@
       {
         "target": "RSF-AMR-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2494,7 +2494,7 @@
       {
         "target": "RSF-AMR-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2531,7 +2531,7 @@
       {
         "target": "RSF-AMR-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2568,7 +2568,7 @@
       {
         "target": "RSF-AMR-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2729,7 +2729,7 @@
       {
         "target": "RSF-AMR-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2766,7 +2766,7 @@
       {
         "target": "RSF-AMR-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2803,7 +2803,7 @@
       {
         "target": "RSF-AMR-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2840,7 +2840,7 @@
       {
         "target": "RSF-AMR-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2877,7 +2877,7 @@
       {
         "target": "RSF-AMR-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2914,7 +2914,7 @@
       {
         "target": "RSF-AMR-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -2951,7 +2951,7 @@
       {
         "target": "RSF-AMR-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3155,7 +3155,7 @@
       {
         "target": "RSF-RMD-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3192,7 +3192,7 @@
       {
         "target": "RSF-RMD-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3229,7 +3229,7 @@
       {
         "target": "RSF-RMD-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3266,7 +3266,7 @@
       {
         "target": "RSF-RMD-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3303,7 +3303,7 @@
       {
         "target": "RSF-RMD-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3464,7 +3464,7 @@
       {
         "target": "RSF-RMD-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3501,7 +3501,7 @@
       {
         "target": "RSF-RMD-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3538,7 +3538,7 @@
       {
         "target": "RSF-RMD-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3575,7 +3575,7 @@
       {
         "target": "RSF-RMD-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3612,7 +3612,7 @@
       {
         "target": "RSF-RMD-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3649,7 +3649,7 @@
       {
         "target": "RSF-RMD-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3686,7 +3686,7 @@
       {
         "target": "RSF-RMD-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3739,7 +3739,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-IRC-001",
+        "target": "RSF-AAM-001",
         "type": "cross_domain",
         "weight": 0.6,
         "source": "heuristic"
@@ -3890,7 +3890,7 @@
       {
         "target": "RSF-DTS-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3927,7 +3927,7 @@
       {
         "target": "RSF-DTS-001",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -3964,7 +3964,7 @@
       {
         "target": "RSF-DTS-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4001,7 +4001,7 @@
       {
         "target": "RSF-DTS-002",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4038,7 +4038,7 @@
       {
         "target": "RSF-DTS-003",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4199,7 +4199,7 @@
       {
         "target": "RSF-DTS-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4236,7 +4236,7 @@
       {
         "target": "RSF-DTS-006",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4273,7 +4273,7 @@
       {
         "target": "RSF-DTS-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4310,7 +4310,7 @@
       {
         "target": "RSF-DTS-007",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4347,7 +4347,7 @@
       {
         "target": "RSF-DTS-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4384,7 +4384,7 @@
       {
         "target": "RSF-DTS-008",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4421,7 +4421,7 @@
       {
         "target": "RSF-DTS-009",
         "type": "specialization",
-        "weight": 1,
+        "weight": 1.0,
         "source": "heuristic"
       },
       {
@@ -4439,5 +4439,740 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 의사결정 지원 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-001",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0001",
+    "esco_uri": null,
+    "preferred_label_ko": "AI 에이전트 기초 개념",
+    "preferred_label_en": "Agentic AI Fundamentals",
+    "description_ko": "목표 지향 에이전트, 계획-실행-관찰 루프, 도구 호출의 기본 개념",
+    "description_en": "Core concepts of goal-driven agents, plan-act-observe loops, and tool calling",
+    "skill_type": "knowledge",
+    "proficiency_level": 1,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-001",
+        "type": "cross_domain",
+        "weight": 0.6,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+  },
+  {
+    "skill_id": "RSF-AAM-002",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0002",
+    "esco_uri": null,
+    "preferred_label_ko": "LLM 및 프롬프트 엔지니어링 기초",
+    "preferred_label_en": "LLM and Prompt Engineering Basics",
+    "description_ko": "대규모 언어 모델의 동작 특성, 프롬프트 설계 원칙, 한계와 실패 유형",
+    "description_en": "Behavior of large language models, prompt design principles, limitations and failure modes",
+    "skill_type": "knowledge",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+  },
+  {
+    "skill_id": "RSF-AAM-003",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0003",
+    "esco_uri": null,
+    "preferred_label_ko": "MES 및 제조 실행 프로세스",
+    "preferred_label_en": "MES and Manufacturing Execution Processes",
+    "description_ko": "작업지시, 실적 집계, 품질 이력 등 제조 실행 시스템의 핵심 프로세스",
+    "description_en": "Core MES processes including work orders, production reporting, and quality history",
+    "skill_type": "knowledge",
+    "proficiency_level": 1,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-002",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+  },
+  {
+    "skill_id": "RSF-AAM-004",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0004",
+    "esco_uri": null,
+    "preferred_label_ko": "통계적 공정 관리(SPC)",
+    "preferred_label_en": "Statistical Process Control (SPC)",
+    "description_ko": "관리도, 공정능력지수, 이상 패턴 판정 등 품질관리 통계 기법",
+    "description_en": "Quality control statistics including control charts, process capability, and anomaly patterns",
+    "skill_type": "knowledge",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-003",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+  },
+  {
+    "skill_id": "RSF-AAM-005",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0005",
+    "esco_uri": null,
+    "preferred_label_ko": "생산계획 및 스케줄링 이론",
+    "preferred_label_en": "Production Planning and Scheduling Theory",
+    "description_ko": "APS, 유한 능력 스케줄링, 제약 기반 계획 수립의 이론적 기초",
+    "description_en": "Theoretical foundation of APS, finite-capacity scheduling, and constraint-based planning",
+    "skill_type": "knowledge",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-004",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+  },
+  {
+    "skill_id": "RSF-AAM-006",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0006",
+    "esco_uri": null,
+    "preferred_label_ko": "공정 에이전트 설계",
+    "preferred_label_en": "Process Agent Design",
+    "description_ko": "공정 목표와 제약을 반영한 AI 에이전트 역할·행동 설계",
+    "description_en": "Design agent roles and behaviors reflecting process goals and constraints",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": "RSF-AAM-001",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-001",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-005",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 공정 에이전트 설계 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-007",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0007",
+    "esco_uri": null,
+    "preferred_label_ko": "에이전트 도구 연동",
+    "preferred_label_en": "Agent Tool Integration",
+    "description_ko": "MES, 설비, 데이터 API를 에이전트 도구로 연결",
+    "description_en": "Connect MES, equipment, and data APIs as agent tools",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": "RSF-AAM-001",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-001",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-006",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 에이전트 도구 연동 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-008",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0008",
+    "esco_uri": null,
+    "preferred_label_ko": "프롬프트 설계 및 평가",
+    "preferred_label_en": "Prompt Design and Evaluation",
+    "description_ko": "제조 업무용 프롬프트 작성과 응답 품질 평가",
+    "description_en": "Author manufacturing prompts and evaluate response quality",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": "RSF-AAM-002",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-002",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-007",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 프롬프트 설계 및 평가 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-009",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0009",
+    "esco_uri": null,
+    "preferred_label_ko": "멀티 에이전트 오케스트레이션",
+    "preferred_label_en": "Multi-Agent Orchestration",
+    "description_ko": "여러 에이전트의 역할 분담과 협업 흐름 구성",
+    "description_en": "Coordinate role division and collaboration flows across agents",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": "RSF-AAM-002",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-002",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-008",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 멀티 에이전트 오케스트레이션 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-010",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0010",
+    "esco_uri": null,
+    "preferred_label_ko": "MES 워크플로 자동화",
+    "preferred_label_en": "MES Workflow Automation",
+    "description_ko": "반복적인 MES 업무 흐름을 에이전트로 자동화",
+    "description_en": "Automate repetitive MES workflows with agents",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": "RSF-AAM-003",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-003",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-009",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 MES 워크플로 자동화 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-011",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0011",
+    "esco_uri": null,
+    "preferred_label_ko": "작업지시 자동 생성",
+    "preferred_label_en": "Automated Work Order Generation",
+    "description_ko": "생산 상황을 반영한 작업지시 자동 작성",
+    "description_en": "Automatically create work orders reflecting production status",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-010",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 작업지시 자동 생성 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-012",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0012",
+    "esco_uri": null,
+    "preferred_label_ko": "품질 이상 자동 판정",
+    "preferred_label_en": "Automated Quality Judgment",
+    "description_ko": "검사 데이터 기반 불량 판정 및 원인 후보 제시",
+    "description_en": "Judge defects from inspection data and suggest probable causes",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-011",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 품질 이상 자동 판정 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-013",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0013",
+    "esco_uri": null,
+    "preferred_label_ko": "휴먼-인-더-루프 승인 흐름 설계",
+    "preferred_label_en": "Human-in-the-Loop Approval Design",
+    "description_ko": "자동 판단에 사람 승인 단계를 배치하는 흐름 설계",
+    "description_en": "Design flows placing human approval steps around automated decisions",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-012",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 휴먼-인-더-루프 승인 흐름 설계 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-014",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0014",
+    "esco_uri": null,
+    "preferred_label_ko": "에이전트 가드레일 구성",
+    "preferred_label_en": "Agent Guardrail Configuration",
+    "description_ko": "행동 범위 제한, 금지 규칙, 이상 행동 차단 설정",
+    "description_en": "Configure action limits, prohibition rules, and anomaly blocking",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-013",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "Agentic AI 제조 현장에서 에이전트 가드레일 구성 역량 구현"
+  },
+  {
+    "skill_id": "RSF-AAM-015",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0015",
+    "esco_uri": null,
+    "preferred_label_ko": "자율 운영 예외 대응",
+    "preferred_label_en": "Autonomous Operation Exception Handling",
+    "description_ko": "에이전트 자율 운영 중 예외 상황을 안전하게 수습",
+    "description_en": "Safely handle exceptions during autonomous agent operation",
+    "skill_type": "competence",
+    "proficiency_level": 3,
+    "role_mapping": ["operator", "engineer"],
+    "parent_skill_id": "RSF-AAM-006",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-006",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-014",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 자율 운영 예외 대응 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-016",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0016",
+    "esco_uri": null,
+    "preferred_label_ko": "품질 이상 자동 격리 운영",
+    "preferred_label_en": "Automated Quality Quarantine Operation",
+    "description_ko": "불량 판정품의 자동 격리 프로세스 운영 및 검증",
+    "description_en": "Operate and verify automated quarantine of judged defects",
+    "skill_type": "competence",
+    "proficiency_level": 3,
+    "role_mapping": ["operator", "engineer"],
+    "parent_skill_id": "RSF-AAM-006",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-006",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-015",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 품질 이상 자동 격리 운영 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-017",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0017",
+    "esco_uri": null,
+    "preferred_label_ko": "생산계획 자동 수립 운영",
+    "preferred_label_en": "Automated Production Planning Operation",
+    "description_ko": "APS 기반 자동 계획 수립을 운영하고 결과 검증",
+    "description_en": "Operate APS-based automated planning and verify outcomes",
+    "skill_type": "competence",
+    "proficiency_level": 3,
+    "role_mapping": ["operator", "engineer"],
+    "parent_skill_id": "RSF-AAM-007",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-007",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-016",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 생산계획 자동 수립 운영 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-018",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0018",
+    "esco_uri": null,
+    "preferred_label_ko": "에이전트 성과 평가",
+    "preferred_label_en": "Agent Performance Evaluation",
+    "description_ko": "자동화율, 개입률, 오판정률 등 에이전트 성과 측정",
+    "description_en": "Measure agent performance including automation, intervention, and error rates",
+    "skill_type": "competence",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": "RSF-AAM-007",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-007",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-017",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 에이전트 성과 평가 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-019",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0019",
+    "esco_uri": null,
+    "preferred_label_ko": "에이전트 안전성 검증",
+    "preferred_label_en": "Agent Safety Validation",
+    "description_ko": "배포 전 에이전트 행동의 안전성·규정 준수 검증 완료",
+    "description_en": "Complete safety and compliance validation of agent behavior before deployment",
+    "skill_type": "competence",
+    "proficiency_level": 4,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": "RSF-AAM-008",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-008",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-018",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 에이전트 안전성 검증 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-020",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0020",
+    "esco_uri": null,
+    "preferred_label_ko": "에이전트 감사 추적 운영",
+    "preferred_label_en": "Agent Audit Trail Operation",
+    "description_ko": "에이전트 판단·행동 이력의 기록과 추적 체계 운영",
+    "description_en": "Operate logging and traceability for agent decisions and actions",
+    "skill_type": "competence",
+    "proficiency_level": 4,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": "RSF-AAM-008",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-008",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-019",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 에이전트 감사 추적 운영 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-021",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0021",
+    "esco_uri": null,
+    "preferred_label_ko": "자율화 확산 계획",
+    "preferred_label_en": "Autonomy Scale-Up Planning",
+    "description_ko": "검증된 자율화를 타 공정으로 확산하는 로드맵 수립",
+    "description_en": "Plan roadmaps to scale validated autonomy to other processes",
+    "skill_type": "competence",
+    "proficiency_level": 4,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": "RSF-AAM-009",
+    "related_skills": [
+      {
+        "target": "RSF-AAM-009",
+        "type": "specialization",
+        "weight": 1.0,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-020",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "현장 검증: 자율화 확산 계획 수행 능력 입증"
   }
 ]

@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-016",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0016",
+  "esco_uri": null,
+  "preferred_label_ko": "품질 이상 자동 격리 운영",
+  "preferred_label_en": "Automated Quality Quarantine Operation",
+  "description_ko": "불량 판정품의 자동 격리 프로세스 운영 및 검증",
+  "description_en": "Operate and verify automated quarantine of judged defects",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AAM-006",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-006",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-015",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-017",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 품질 이상 자동 격리 운영 수행 능력 입증"
+}

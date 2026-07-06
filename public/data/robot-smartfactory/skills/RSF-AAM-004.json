@@ -1,0 +1,31 @@
+{
+  "skill_id": "RSF-AAM-004",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0004",
+  "esco_uri": null,
+  "preferred_label_ko": "통계적 공정 관리(SPC)",
+  "preferred_label_en": "Statistical Process Control (SPC)",
+  "description_ko": "관리도, 공정능력지수, 이상 패턴 판정 등 품질관리 통계 기법",
+  "description_en": "Quality control statistics including control charts, process capability, and anomaly patterns",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-003",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+}

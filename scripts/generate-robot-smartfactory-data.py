@@ -59,6 +59,12 @@ DOMAINS = {
         "code": "DTS",
         "target_count": 21,
     },
+    "agentic-ai-manufacturing": {
+        "name_ko": "Agentic AI 제조",
+        "name_en": "Agentic AI Manufacturing",
+        "code": "AAM",
+        "target_count": 21,
+    },
 }
 
 # 3개 역할
@@ -289,6 +295,43 @@ KNOWLEDGE_SKILLS = {
             "proficiency": 3,
         },
     ],
+    "agentic-ai-manufacturing": [
+        {
+            "label_ko": "AI 에이전트 기초 개념",
+            "label_en": "Agentic AI Fundamentals",
+            "description_ko": "목표 지향 에이전트, 계획-실행-관찰 루프, 도구 호출의 기본 개념",
+            "description_en": "Core concepts of goal-driven agents, plan-act-observe loops, and tool calling",
+            "proficiency": 1,
+        },
+        {
+            "label_ko": "LLM 및 프롬프트 엔지니어링 기초",
+            "label_en": "LLM and Prompt Engineering Basics",
+            "description_ko": "대규모 언어 모델의 동작 특성, 프롬프트 설계 원칙, 한계와 실패 유형",
+            "description_en": "Behavior of large language models, prompt design principles, limitations and failure modes",
+            "proficiency": 2,
+        },
+        {
+            "label_ko": "MES 및 제조 실행 프로세스",
+            "label_en": "MES and Manufacturing Execution Processes",
+            "description_ko": "작업지시, 실적 집계, 품질 이력 등 제조 실행 시스템의 핵심 프로세스",
+            "description_en": "Core MES processes including work orders, production reporting, and quality history",
+            "proficiency": 1,
+        },
+        {
+            "label_ko": "통계적 공정 관리(SPC)",
+            "label_en": "Statistical Process Control (SPC)",
+            "description_ko": "관리도, 공정능력지수, 이상 패턴 판정 등 품질관리 통계 기법",
+            "description_en": "Quality control statistics including control charts, process capability, and anomaly patterns",
+            "proficiency": 2,
+        },
+        {
+            "label_ko": "생산계획 및 스케줄링 이론",
+            "label_en": "Production Planning and Scheduling Theory",
+            "description_ko": "APS, 유한 능력 스케줄링, 제약 기반 계획 수립의 이론적 기초",
+            "description_en": "Theoretical foundation of APS, finite-capacity scheduling, and constraint-based planning",
+            "proficiency": 2,
+        },
+    ],
 }
 
 # ==================== 스킬 정의 (Skill & Competence) ====================
@@ -425,6 +468,28 @@ SKILL_COMPETENCE_TEMPLATES = {
             ("디지털트윈 유지보수", "Digital Twin Maintenance", "시뮬레이션 모델을 최신 상태로 유지", "Keep simulation model up to date"),
             ("설계-운영 연동", "Design-Operations Integration", "설계 변경 사항을 빠르게 운영에 반영", "Quickly reflect design changes in operations"),
             ("의사결정 지원", "Decision Support", "시뮬레이션 기반 운영 개선 방안 제시", "Propose operational improvements based on simulation"),
+        ],
+    },
+    "agentic-ai-manufacturing": {
+        "skill": [
+            ("공정 에이전트 설계", "Process Agent Design", "공정 목표와 제약을 반영한 AI 에이전트 역할·행동 설계", "Design agent roles and behaviors reflecting process goals and constraints"),
+            ("에이전트 도구 연동", "Agent Tool Integration", "MES, 설비, 데이터 API를 에이전트 도구로 연결", "Connect MES, equipment, and data APIs as agent tools"),
+            ("프롬프트 설계 및 평가", "Prompt Design and Evaluation", "제조 업무용 프롬프트 작성과 응답 품질 평가", "Author manufacturing prompts and evaluate response quality"),
+            ("멀티 에이전트 오케스트레이션", "Multi-Agent Orchestration", "여러 에이전트의 역할 분담과 협업 흐름 구성", "Coordinate role division and collaboration flows across agents"),
+            ("MES 워크플로 자동화", "MES Workflow Automation", "반복적인 MES 업무 흐름을 에이전트로 자동화", "Automate repetitive MES workflows with agents"),
+            ("작업지시 자동 생성", "Automated Work Order Generation", "생산 상황을 반영한 작업지시 자동 작성", "Automatically create work orders reflecting production status"),
+            ("품질 이상 자동 판정", "Automated Quality Judgment", "검사 데이터 기반 불량 판정 및 원인 후보 제시", "Judge defects from inspection data and suggest probable causes"),
+            ("휴먼-인-더-루프 승인 흐름 설계", "Human-in-the-Loop Approval Design", "자동 판단에 사람 승인 단계를 배치하는 흐름 설계", "Design flows placing human approval steps around automated decisions"),
+            ("에이전트 가드레일 구성", "Agent Guardrail Configuration", "행동 범위 제한, 금지 규칙, 이상 행동 차단 설정", "Configure action limits, prohibition rules, and anomaly blocking"),
+        ],
+        "competence": [
+            ("자율 운영 예외 대응", "Autonomous Operation Exception Handling", "에이전트 자율 운영 중 예외 상황을 안전하게 수습", "Safely handle exceptions during autonomous agent operation"),
+            ("품질 이상 자동 격리 운영", "Automated Quality Quarantine Operation", "불량 판정품의 자동 격리 프로세스 운영 및 검증", "Operate and verify automated quarantine of judged defects"),
+            ("생산계획 자동 수립 운영", "Automated Production Planning Operation", "APS 기반 자동 계획 수립을 운영하고 결과 검증", "Operate APS-based automated planning and verify outcomes"),
+            ("에이전트 성과 평가", "Agent Performance Evaluation", "자동화율, 개입률, 오판정률 등 에이전트 성과 측정", "Measure agent performance including automation, intervention, and error rates"),
+            ("에이전트 안전성 검증", "Agent Safety Validation", "배포 전 에이전트 행동의 안전성·규정 준수 검증 완료", "Complete safety and compliance validation of agent behavior before deployment"),
+            ("에이전트 감사 추적 운영", "Agent Audit Trail Operation", "에이전트 판단·행동 이력의 기록과 추적 체계 운영", "Operate logging and traceability for agent decisions and actions"),
+            ("자율화 확산 계획", "Autonomy Scale-Up Planning", "검증된 자율화를 타 공정으로 확산하는 로드맵 수립", "Plan roadmaps to scale validated autonomy to other processes"),
         ],
     },
 }
@@ -598,6 +663,8 @@ def generate_robot_smartfactory_data() -> List[Dict[str, Any]]:
 
             # 역할 매핑: domain과 index에 따라 다양하게 분배
             if domain == "digital-twin-simulation":
+                roles = ["engineer", "developer"]
+            elif domain == "agentic-ai-manufacturing":
                 roles = ["engineer", "developer"]
             elif domain == "collaborative-robot":
                 roles = ["operator", "engineer"]

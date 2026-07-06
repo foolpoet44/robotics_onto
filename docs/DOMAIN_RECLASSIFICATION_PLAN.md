@@ -180,7 +180,20 @@ Physical AI 비중이 높은 것은 온톨로지 자체가 로봇 현장 역량 
 장부로 확정합니다. 확정 전까지 오버라이드에는 `source: "proposed"`,
 확정 후 `"reviewed"`를 표기해 온톨로지의 기존 검수 관행과 통일합니다.
 
-## 8. 영향도·비변경 사항
+## 8. 진행 현황
+
+- [x] **Phase 1 완료.** `college-mapping.json`에 `skillOverrides` 36건을
+  `source: "proposed"`로 추가했고, 6절의 갭 해소를 위해 신규 기능 도메인
+  `agentic-ai-manufacturing`(RSF-AAM-001~021, Knowledge 5 / Skill 9 /
+  Competence 7)을 생성 파이프라인에 증설했습니다. 신규 도메인의 primary는
+  `agentic-ai`입니다. 반영 후 primary 분포:
+  **Physical AI 74 / Agentic AI 30 / Data Intelligence 23 / Digital Twin 21
+  (총 148개 스킬)**.
+- [ ] Phase 2: 리졸버 오버라이드 우선 조회 + `validate:data` 검증 연결.
+- [ ] Phase 3: 스킬 `collegeId` 스탬핑, 4대 도메인 화면·워크벤치 필터.
+- [ ] Phase 4: 내부전문가 검수로 오버라이드 `reviewed` 승격.
+
+## 9. 영향도·비변경 사항
 
 - `skill_id`, `urn:rsf:skill:*`, `related_skills`, 검수 장부, 조직 매핑,
   아카이빙된 평가 라벨은 **전혀 변경되지 않습니다** (2계층 설계).

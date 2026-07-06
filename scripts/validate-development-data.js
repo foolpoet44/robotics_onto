@@ -15,6 +15,7 @@ const domainKeys = [
   "autonomous-mobile-robot",
   "robot-maintenance-diagnostics",
   "digital-twin-simulation",
+  "agentic-ai-manufacturing",
 ];
 const result = validateDevelopmentData(
   track,

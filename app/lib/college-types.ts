@@ -30,10 +30,17 @@ export interface CollegeDomainMapping {
   defaultLevelTier: LevelTier;
 }
 
+export interface CollegeSkillOverride {
+  primary: CollegeId;
+  secondary: CollegeId[];
+  source: "proposed" | "reviewed";
+}
+
 export interface CollegeMappingData {
   colleges: College[];
   levels: Level[];
   domainMapping: Record<string, CollegeDomainMapping>;
+  skillOverrides?: Record<string, CollegeSkillOverride>;
 }
 
 export interface EnablerCollegeMeta {

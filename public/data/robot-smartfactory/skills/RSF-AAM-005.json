@@ -1,0 +1,31 @@
+{
+  "skill_id": "RSF-AAM-005",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0005",
+  "esco_uri": null,
+  "preferred_label_ko": "생산계획 및 스케줄링 이론",
+  "preferred_label_en": "Production Planning and Scheduling Theory",
+  "description_ko": "APS, 유한 능력 스케줄링, 제약 기반 계획 수립의 이론적 기초",
+  "description_en": "Theoretical foundation of APS, finite-capacity scheduling, and constraint-based planning",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-006",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+}

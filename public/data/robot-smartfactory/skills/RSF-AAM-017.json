@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-017",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0017",
+  "esco_uri": null,
+  "preferred_label_ko": "생산계획 자동 수립 운영",
+  "preferred_label_en": "Automated Production Planning Operation",
+  "description_ko": "APS 기반 자동 계획 수립을 운영하고 결과 검증",
+  "description_en": "Operate APS-based automated planning and verify outcomes",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AAM-007",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 생산계획 자동 수립 운영 수행 능력 입증"
+}

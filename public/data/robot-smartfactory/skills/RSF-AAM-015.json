@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-015",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0015",
+  "esco_uri": null,
+  "preferred_label_ko": "자율 운영 예외 대응",
+  "preferred_label_en": "Autonomous Operation Exception Handling",
+  "description_ko": "에이전트 자율 운영 중 예외 상황을 안전하게 수습",
+  "description_en": "Safely handle exceptions during autonomous agent operation",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": ["operator", "engineer"],
+  "parent_skill_id": "RSF-AAM-006",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-006",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-014",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-016",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 자율 운영 예외 대응 수행 능력 입증"
+}

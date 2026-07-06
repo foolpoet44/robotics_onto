@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-007",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0007",
+  "esco_uri": null,
+  "preferred_label_ko": "에이전트 도구 연동",
+  "preferred_label_en": "Agent Tool Integration",
+  "description_ko": "MES, 설비, 데이터 API를 에이전트 도구로 연결",
+  "description_en": "Connect MES, equipment, and data APIs as agent tools",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": "RSF-AAM-001",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-006",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-008",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 에이전트 도구 연동 역량 구현"
+}

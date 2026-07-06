@@ -27,6 +27,7 @@ const collegeToRobotDomains = {
     "robot-maintenance-diagnostics",
   ],
   "agentic-ai": [
+    "agentic-ai-manufacturing",
     "autonomous-mobile-robot",
     "industrial-robot-control",
     "digital-twin-simulation",

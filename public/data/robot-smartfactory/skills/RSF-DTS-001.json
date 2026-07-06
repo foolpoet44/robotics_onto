@@ -32,7 +32,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-IRC-001",
+      "target": "RSF-AAM-001",
       "type": "cross_domain",
       "weight": 0.6,
       "source": "heuristic"

@@ -98,6 +98,7 @@ class RobotDataValidator {
       "autonomous-mobile-robot",
       "robot-maintenance-diagnostics",
       "digital-twin-simulation",
+      "agentic-ai-manufacturing",
     ];
 
     const domainStats = {};

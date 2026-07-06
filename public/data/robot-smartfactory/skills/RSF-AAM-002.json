@@ -1,0 +1,31 @@
+{
+  "skill_id": "RSF-AAM-002",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0002",
+  "esco_uri": null,
+  "preferred_label_ko": "LLM 및 프롬프트 엔지니어링 기초",
+  "preferred_label_en": "LLM and Prompt Engineering Basics",
+  "description_ko": "대규모 언어 모델의 동작 특성, 프롬프트 설계 원칙, 한계와 실패 유형",
+  "description_en": "Behavior of large language models, prompt design principles, limitations and failure modes",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": ["engineer", "developer"],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-003",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+}

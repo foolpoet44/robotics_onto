@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-020",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0020",
+  "esco_uri": null,
+  "preferred_label_ko": "에이전트 감사 추적 운영",
+  "preferred_label_en": "Agent Audit Trail Operation",
+  "description_ko": "에이전트 판단·행동 이력의 기록과 추적 체계 운영",
+  "description_en": "Operate logging and traceability for agent decisions and actions",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-AAM-008",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-008",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 에이전트 감사 추적 운영 수행 능력 입증"
+}

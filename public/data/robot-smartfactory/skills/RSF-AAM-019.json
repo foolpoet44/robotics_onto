@@ -1,0 +1,37 @@
+{
+  "skill_id": "RSF-AAM-019",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0019",
+  "esco_uri": null,
+  "preferred_label_ko": "에이전트 안전성 검증",
+  "preferred_label_en": "Agent Safety Validation",
+  "description_ko": "배포 전 에이전트 행동의 안전성·규정 준수 검증 완료",
+  "description_en": "Complete safety and compliance validation of agent behavior before deployment",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": ["engineer"],
+  "parent_skill_id": "RSF-AAM-008",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-008",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-018",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 에이전트 안전성 검증 수행 능력 입증"
+}

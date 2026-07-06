@@ -103,6 +103,7 @@ class RobotSmartFactoryTester {
       "autonomous-mobile-robot",
       "robot-maintenance-diagnostics",
       "digital-twin-simulation",
+      "agentic-ai-manufacturing",
     ];
     this.expectedRoles = ["operator", "engineer", "developer"];
     this.expectedSkillTypes = ["knowledge", "skill", "competence"];
@@ -531,6 +532,7 @@ class RobotSmartFactoryTester {
         "AMR/AGV",
         "Maintenance & Diagnostics",
         "Digital Twin",
+        "Agentic AI Manufacturing",
       ];
 
       let allDomainsInDoc = true;
@@ -540,7 +542,7 @@ class RobotSmartFactoryTester {
         }
       });
 
-      assert(allDomainsInDoc, "설계 문서에 모든 6개 도메인이 포함됨");
+      assert(allDomainsInDoc, "설계 문서에 모든 도메인이 포함됨");
       assert(
         docContent.includes("3층") ||
           docContent.includes("Knowledge") ||
