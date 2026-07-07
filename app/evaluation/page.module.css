@@ -41,41 +41,6 @@
   margin-top: 2.5rem;
 }
 
-.collegeStrip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 0.9rem;
-  max-width: 920px;
-  margin: 0 auto 2.5rem;
-}
-
-.collegeCard {
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--border-soft, rgba(148, 163, 184, 0.35));
-  border-radius: 14px;
-  background: var(--bg-card);
-  text-align: left;
-}
-
-.collegeCard strong {
-  display: block;
-  color: var(--text-primary);
-  font-size: 0.9rem;
-}
-
-.collegeCard span {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-}
-
-.collegeCount {
-  display: block;
-  margin-top: 0.35rem;
-  color: var(--color-primary-dark);
-  font-size: 1.4rem;
-  font-weight: 800;
-}
-
 .referenceLink {
   display: inline-flex;
   margin-top: 2.25rem;

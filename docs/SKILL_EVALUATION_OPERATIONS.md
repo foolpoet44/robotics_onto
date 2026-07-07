@@ -128,6 +128,36 @@ CREATE INDEX IF NOT EXISTS idx_skill_eval_skill
   ON skill_evaluation_labels (skill_id);
 ```
 
+## 도메인 중요도 평가 (`/evaluation`, 계층형)
+
+도메인 분류 평가는 **4대 도메인이 메인, 기능 도메인이 서브**인 계층 구조입니다.
+
+- 메인 카드(4장): 4대 도메인 직접 평가(1~5점 + 근거). 카드에는 구성(기능
+  도메인 × 스킬 수), 직접 평가 평균, **서브 롤업**(기능 도메인 평가의 스킬 수
+  가중 평균)이 함께 표시되고, 직접 평가와 롤업의 괴리가 1.0점 이상이면 근거
+  확인 배지가 뜹니다.
+- 서브 카드(7장): 기능 도메인 평가. 롤업 가중치는 리졸버의 스킬 단위 칼리지
+  배정을 따르므로, 오버라이드 검수로 배정이 바뀌면 롤업도 자동 재계산됩니다.
+- 평가 저장은 로그인 필수(신원 자동 적용), 조회는 자유입니다. 과거
+  `localStorage` 저장은 폐지되었고 서버 아카이빙으로 대체되었습니다
+  (API: `/api/domain-ratings`, 저장소: DB `domain_importance_ratings` 테이블
+  또는 파일 폴백 `.data/domain-importance-ratings.json`).
+
+```sql
+CREATE TABLE IF NOT EXISTS domain_importance_ratings (
+  id UUID PRIMARY KEY,
+  axis TEXT NOT NULL,            -- 'college' | 'functional'
+  target_key TEXT NOT NULL,      -- collegeId 또는 기능 도메인 키
+  score SMALLINT NOT NULL,
+  notes TEXT NOT NULL DEFAULT '',
+  evaluator_id TEXT NOT NULL,
+  evaluator_name TEXT NOT NULL,
+  evaluator_college TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  app_version TEXT NOT NULL
+);
+```
+
 ## 도메인 변경요청 (`/evaluation`)
 
 도메인 분류 평가 페이지의 각 도메인 카드에서 "하위 스킬 조회"를 열면 스킬

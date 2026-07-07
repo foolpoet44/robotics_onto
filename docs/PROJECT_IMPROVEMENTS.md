@@ -35,5 +35,8 @@
   - 스킬 평가 라벨은 서버(DB/파일)에 아카이빙됩니다. 검수 장부와 연계하려면
     `skill_evaluation_labels` → `public/data/review-decisions.json` export
     파이프라인 설계가 필요합니다.
-  - 도메인 중요도 평가(`DomainImportanceRating`)는 아직 `localStorage` 기반이며,
-    동일한 서버 아카이빙으로의 이관이 후속 과제입니다.
+  - ~~도메인 중요도 평가(`DomainImportanceRating`)는 아직 `localStorage` 기반~~
+    → 완료: 4대 도메인(메인)+기능 도메인(서브) 계층형 평가로 개편하면서
+    서버 아카이빙(`domain_importance_ratings`, 파일 폴백)으로 이관.
+    평가자 신원은 로그인 세션 자동 적용, 서브 평가의 스킬 수 가중 롤업을
+    메인 카드에 참고치로 표시(괴리 Δ≥1.0 배지).

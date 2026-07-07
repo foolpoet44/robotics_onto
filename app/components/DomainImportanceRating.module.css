@@ -38,24 +38,112 @@
   letter-spacing: 0.12em;
 }
 
-.evaluatorField {
-  display: grid;
-  gap: 0.4rem;
-  max-width: 360px;
-  margin-top: 1.25rem;
+.loginHint,
+.identityHint {
+  margin: 1.1rem 0 0;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.6rem;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-secondary);
   text-align: left;
 }
 
-.evaluatorField input {
-  padding: 0.55rem 0.7rem;
-  font-size: 0.95rem;
-  color: var(--text-primary);
+.loginHint {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.loginHint a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.identityHint {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.identityHint strong {
+  color: var(--color-primary-dark);
+}
+
+.collegeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.collegeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 0.6rem;
+  border-top: 4px solid var(--color-primary-dark);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.collegeHead h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.collegeRole {
+  margin: 0.25rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.composition {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.metricsRow dt {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.metricsRow dd {
+  margin: 0.15rem 0 0;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.deltaBadge {
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.55rem;
+  background: rgba(234, 88, 12, 0.12);
+  color: #c2540a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.subHeading {
+  margin-top: 2.75rem;
+}
+
+.subTitle {
+  margin: 0.2rem 0;
+  color: var(--text-primary);
 }
 
 .domainGrid {
