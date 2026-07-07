@@ -26,6 +26,10 @@
   - 운영은 관리형 DB(`@vercel/postgres`), 로컬은 파일 폴백. 상세는
     `docs/SKILL_EVALUATION_OPERATIONS.md` 참고.
 - [ ] 도메인별 대표 스킬 예시를 토글 방식으로 선택 노출해 평가 근거 강화.
+- [ ] 육성 트랙 후보자 개인별 프로파일 구축.
+  - 구축안 확정: `docs/CANDIDATE_PROFILE_PLAN.md` (Workday·SuccessFactors·
+    Degreed·Eightfold·Gloat 벤치마킹, 5블록 화면 설계, 준비도 산식,
+    온톨로지 그래프 기반 스킬 추천, P1~P4 로드맵). 구현 승인 대기.
 - [ ] Factory Robotics 기능 도메인을 4대 도메인(칼리지) 체계로 재분류.
   - 설계안 확정: `docs/DOMAIN_RECLASSIFICATION_PLAN.md` (2계층 + 스킬 단위
     오버라이드 36건, Agentic AI 갭 분석 포함). 구현은 Phase 1~4 순서로 진행.
