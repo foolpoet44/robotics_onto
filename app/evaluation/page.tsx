@@ -66,7 +66,7 @@ export default async function EvaluationPage() {
             <strong>{college.name}</strong>
             <span>
               {college.role}
-              {college.isHub ? " · 허브" : ""}
+              {college.isHub && !college.role.includes("허브") ? " · 허브" : ""}
             </span>
             <span className={styles.collegeCount}>
               {collegeCounts[college.id] ?? 0}개 스킬
