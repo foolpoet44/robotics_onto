@@ -1,0 +1,193 @@
+.wrapper {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.heading h2 {
+  margin: 0.2rem 0;
+  color: var(--text-primary);
+}
+
+.heading span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.heading > strong {
+  flex-shrink: 0;
+  padding: 0.3rem 0.6rem;
+  color: var(--color-primary-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.scrollArea {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+}
+
+.treemap {
+  display: flex;
+  gap: 2px;
+  min-width: 640px;
+  height: 520px;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.collegeColumn {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  min-width: 0;
+  gap: 2px;
+}
+
+.collegeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  padding: 0.5rem 0.65rem;
+}
+
+.collegeName {
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.collegeCount {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.tileStack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+  min-height: 0;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  flex-basis: 0;
+  min-height: 34px;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border-left: 4px solid;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: filter 120ms ease;
+}
+
+.tile:hover {
+  filter: brightness(0.94);
+}
+
+.tileSelected {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: -2px;
+}
+
+.tileName {
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tileCount {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.detailPanel {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+}
+
+.detailHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.detailPath {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.detailMeta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.detailMeta a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.detailMeta a:hover {
+  text-decoration: underline;
+}
+
+.closeButton {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
+.hint {
+  margin: 1rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}

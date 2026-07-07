@@ -3,8 +3,17 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ROBOT_DOMAINS } from "../lib/robotics-data";
-import type { DomainRatingView } from "./DomainImportanceRating";
-import styles from "./DomainImportanceRating.module.css";
+import styles from "./FunctionalDomainRating.module.css";
+
+export interface DomainRatingView {
+  id: string;
+  axis: "college" | "functional";
+  targetKey: string;
+  score: number;
+  notes: string;
+  evaluatorName: string;
+  createdAt: string;
+}
 
 interface FunctionalDomainRatingProps {
   domainCounts: Record<string, number>;

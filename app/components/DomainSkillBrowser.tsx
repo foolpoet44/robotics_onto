@@ -31,6 +31,7 @@ export interface BrowserCollege {
 
 interface DomainSkillBrowserProps {
   toggleLabel?: string;
+  defaultOpen?: boolean;
   skills: BrowserSkill[];
   colleges: BrowserCollege[];
   evaluatorName: string | null;
@@ -44,12 +45,13 @@ const AXIS_LABELS: Record<"functional" | "college", string> = {
 
 export default function DomainSkillBrowser({
   toggleLabel = "하위 스킬 조회",
+  defaultOpen = false,
   skills,
   colleges,
   evaluatorName,
   initialRequests,
 }: DomainSkillBrowserProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
   const [requests, setRequests] =
     useState<BrowserChangeRequest[]>(initialRequests);
   const [activeSkillId, setActiveSkillId] = useState<string | null>(null);

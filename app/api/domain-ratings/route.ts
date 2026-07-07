@@ -6,7 +6,6 @@ import {
 } from "../../lib/domain-rating-store";
 import { isValidScore } from "../../lib/evaluation-constants";
 import { ROBOT_DOMAINS } from "../../lib/robotics-data";
-import { getCollegeMappingData } from "../../lib/server-data";
 
 export async function GET(request: Request) {
   const evaluator = await getCurrentEvaluator();
@@ -45,7 +44,15 @@ export async function POST(request: Request) {
   const axis = body.axis as DomainRatingAxis;
   const targetKey = typeof body.targetKey === "string" ? body.targetKey : "";
 
-  if (axis !== "college" && axis !== "functional") {
+  // 4대 도메인 직접 평가는 종료되었다. 스킬 체계는 트리맵으로 조망하고,
+  // 중요도 평가는 기능 도메인(세부 기준) 축만 수집한다.
+  if (axis === "college") {
+    return NextResponse.json(
+      { error: "4대 도메인 중요도 평가 기능은 종료되었습니다." },
+      { status: 400 },
+    );
+  }
+  if (axis !== "functional") {
     return NextResponse.json(
       { error: "평가 축이 올바르지 않습니다." },
       { status: 400 },
@@ -58,22 +65,12 @@ export async function POST(request: Request) {
     );
   }
 
-  // 평가 대상 키는 축별 화이트리스트로 검증한다.
-  if (axis === "functional") {
-    if (!ROBOT_DOMAINS.some((domain) => domain.key === targetKey)) {
-      return NextResponse.json(
-        { error: "존재하지 않는 기능 도메인입니다." },
-        { status: 400 },
-      );
-    }
-  } else {
-    const collegeMapping = await getCollegeMappingData();
-    if (!collegeMapping.colleges.some((college) => college.id === targetKey)) {
-      return NextResponse.json(
-        { error: "존재하지 않는 4대 도메인입니다." },
-        { status: 400 },
-      );
-    }
+  // 평가 대상 키는 화이트리스트로 검증한다.
+  if (!ROBOT_DOMAINS.some((domain) => domain.key === targetKey)) {
+    return NextResponse.json(
+      { error: "존재하지 않는 기능 도메인입니다." },
+      { status: 400 },
+    );
   }
 
   // 신원은 세션에서만 가져온다(클라이언트 위조 불가).

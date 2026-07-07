@@ -128,19 +128,18 @@ CREATE INDEX IF NOT EXISTS idx_skill_eval_skill
   ON skill_evaluation_labels (skill_id);
 ```
 
-## 도메인 중요도 평가 (계층형)
+## 도메인 분류 평가 (`/evaluation`)
 
-도메인 분류 평가는 **4대 도메인이 메인, 기능 도메인이 서브**인 계층 구조이며
-페이지도 분리되어 있습니다.
-
-- `/evaluation` (메인): 4대 도메인 직접 평가(1~5점 + 근거). 카드에는 직접
-  평가 평균과 **서브 롤업**(기능 도메인 평가의 스킬 수 가중 평균)이 함께
-  표시되고, 괴리가 1.0점 이상이면 근거 확인 배지가 뜹니다. 하위 스킬 조회는
-  **중간분류**(`public/data/college-subcategories.json`) 단위 아코디언으로
-  제공됩니다.
-- `/evaluation/functional` (서브): 기능 도메인 평가 7장. 롤업 가중치는
-  리졸버의 스킬 단위 칼리지 배정을 따르므로, 오버라이드 검수로 배정이
-  바뀌면 롤업도 자동 재계산됩니다.
+- **4대 도메인 직접 중요도 평가는 종료되었습니다.** API도 `axis: "college"`
+  저장을 거부합니다(기존 기록은 장부에 보존). 4대 도메인은 평가 대상이
+  아니라 **기준 축**이며, `/evaluation`은 스킬 체계 조망과 변경요청 접수에
+  집중합니다.
+- `/evaluation` (메인): **도메인별 스킬 트리맵** — 4대 도메인 → 중간분류
+  (`public/data/college-subcategories.json`) → 스킬 3단 체계를 면적(스킬 수)
+  비례로 표시합니다. 중간분류 타일을 클릭하면 소속 스킬 목록과 도메인
+  변경요청 폼이 열립니다(접수는 로그인 필요).
+- `/evaluation/functional` (서브): 기능 도메인 중요도 평가(1~5점 + 근거,
+  서버 아카이빙, `axis: "functional"`)는 세부 기준 수집용으로 유지됩니다.
 - 평가 저장은 로그인 필수(신원 자동 적용), 조회는 자유입니다. 과거
   `localStorage` 저장은 폐지되었고 서버 아카이빙으로 대체되었습니다
   (API: `/api/domain-ratings`, 저장소: DB `domain_importance_ratings` 테이블
