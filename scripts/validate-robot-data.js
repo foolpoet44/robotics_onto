@@ -353,7 +353,8 @@ class RobotDataValidator {
       "../public/data/college-mapping.json",
     );
     const mappingData = JSON.parse(fs.readFileSync(mappingPath, "utf-8"));
-    const { validateCollegeMappingData } = loadCollegeResolver();
+    const { resolveSkillCollege, validateCollegeMappingData } =
+      loadCollegeResolver();
 
     const knownSkillIds = new Set(this.data.map((skill) => skill.skill_id));
     const errors = validateCollegeMappingData(mappingData, knownSkillIds);
@@ -365,12 +366,68 @@ class RobotDataValidator {
       }
     });
 
+    // 중간분류: 모든 스킬이 자기 칼리지의 중간분류에 정확히 1개 배정돼야 한다.
+    const subcategoryPath = path.join(
+      __dirname,
+      "../public/data/college-subcategories.json",
+    );
+    const subcategoryData = JSON.parse(
+      fs.readFileSync(subcategoryPath, "utf-8"),
+    );
+    const collegeIds = new Set(
+      mappingData.colleges.map((college) => college.id),
+    );
+    const subcategoriesById = new Map(
+      subcategoryData.subcategories.map((subcategory) => [
+        subcategory.id,
+        subcategory,
+      ]),
+    );
+    subcategoryData.subcategories.forEach((subcategory) => {
+      if (!collegeIds.has(subcategory.collegeId)) {
+        errors.push(
+          `중간분류 ${subcategory.id}: 존재하지 않는 collegeId '${subcategory.collegeId}'`,
+        );
+      }
+    });
+    Object.keys(subcategoryData.skillSubcategories).forEach((skillId) => {
+      if (!knownSkillIds.has(skillId)) {
+        errors.push(`중간분류 배정 ${skillId}: 존재하지 않는 스킬입니다.`);
+      }
+    });
+    this.data.forEach((skill) => {
+      const subcategoryId = subcategoryData.skillSubcategories[skill.skill_id];
+      if (!subcategoryId) {
+        errors.push(`${skill.skill_id}: 중간분류가 배정되지 않았습니다.`);
+        return;
+      }
+      const subcategory = subcategoriesById.get(subcategoryId);
+      if (!subcategory) {
+        errors.push(
+          `${skill.skill_id}: 존재하지 않는 중간분류 '${subcategoryId}'`,
+        );
+        return;
+      }
+      const resolution = resolveSkillCollege(
+        skill,
+        mappingData.domainMapping,
+        mappingData.skillOverrides,
+      );
+      if (resolution && subcategory.collegeId !== resolution.primary) {
+        errors.push(
+          `${skill.skill_id}: 중간분류 '${subcategoryId}'(${subcategory.collegeId})가 ` +
+            `칼리지 배정(${resolution.primary})과 다릅니다.`,
+        );
+      }
+    });
+
     const overrides = Object.entries(mappingData.skillOverrides ?? {});
     const metrics = {
       domains: mappedDomains.size,
       overrides: overrides.length,
       proposed: overrides.filter(([, o]) => o.source === "proposed").length,
       reviewed: overrides.filter(([, o]) => o.source === "reviewed").length,
+      subcategories: subcategoryData.subcategories.length,
     };
     console.table(metrics);
 

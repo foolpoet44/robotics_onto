@@ -6,6 +6,7 @@ import { resolveSkillCollege } from "../../lib/college-resolver";
 import {
   getAllRobotSkills,
   getCollegeMappingData,
+  getCollegeSubcategoryData,
   getRobotSkill,
 } from "../../lib/server-data";
 import styles from "./page.module.css";
@@ -47,11 +48,13 @@ export default async function SkillDetailPage({
   params: Promise<{ skillId: string }>;
 }) {
   const { skillId } = await params;
-  const [skill, allSkills, collegeMapping] = await Promise.all([
-    getRobotSkill(skillId),
-    getAllRobotSkills(),
-    getCollegeMappingData(),
-  ]);
+  const [skill, allSkills, collegeMapping, subcategoryData] =
+    await Promise.all([
+      getRobotSkill(skillId),
+      getAllRobotSkills(),
+      getCollegeMappingData(),
+      getCollegeSubcategoryData(),
+    ]);
   if (!skill) {
     notFound();
   }
@@ -70,6 +73,10 @@ export default async function SkillDetailPage({
     collegeMapping.colleges.map((college) => [college.id, college.name]),
   );
   const collegeOverride = collegeMapping.skillOverrides?.[skill.skill_id];
+  const subcategory = subcategoryData.subcategories.find(
+    (item) =>
+      item.id === subcategoryData.skillSubcategories[skill.skill_id],
+  );
 
   return (
     <main className={styles.pageShell}>
@@ -125,6 +132,7 @@ export default async function SkillDetailPage({
               <dd>
                 {collegeNameById.get(collegeResolution.primary) ??
                   collegeResolution.primary}
+                {subcategory && ` › ${subcategory.name}`}
                 {collegeResolution.secondary.length > 0 &&
                   ` (연계: ${collegeResolution.secondary
                     .map((id) => collegeNameById.get(id) ?? id)

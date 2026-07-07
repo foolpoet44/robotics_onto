@@ -230,6 +230,19 @@ Physical AI 비중이 높은 것은 온톨로지 자체가 로봇 현장 역량 
     ④ `npm run validate:data`로 무결성 확인(proposed/reviewed 잔량이
     리포트에 집계됨).
 
+- [x] **4대 도메인 중심 정보구조(IA) 개편 + 중간분류 도입.** 4대 도메인이
+  현장 언어라는 원칙에 따라 모든 화면의 1차 분류를 4대 도메인으로 통일:
+  - 중간분류 18개 신설(`public/data/college-subcategories.json`) — 스킬
+    148건을 자기 칼리지의 중간분류 1개에 전수 배정(Physical AI 5 / Agentic
+    AI 5 / Data Intelligence 4 / Digital Twin 4). 배정 무결성은
+    `validate:data`에 연결.
+  - `/domains` = 4대 도메인 허브, `/domains/college/[id]` = 중간분류
+    섹션별 스킬 목록, `/domains/functional` = 기능 도메인 서브 페이지
+    (기존 `/domains/[domain]` URL 유지).
+  - `/evaluation` = 4대 도메인 평가 전용(중간분류 단위 하위 스킬
+    조회·변경요청), `/evaluation/functional` = 기능 도메인 평가 서브
+    페이지(서브 롤업 산출용).
+
 ## 9. 영향도·비변경 사항
 
 - `skill_id`, `urn:rsf:skill:*`, `related_skills`, 검수 장부, 조직 매핑,

@@ -146,6 +146,30 @@
   color: var(--text-primary);
 }
 
+.subcategoryBrowsers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.subPageNote {
+  margin: 1.75rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.subPageNote a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.subPageNote a:hover {
+  text-decoration: underline;
+}
+
 .domainGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

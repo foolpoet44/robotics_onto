@@ -10,6 +10,12 @@ import DomainSkillBrowser, {
 } from "./DomainSkillBrowser";
 import styles from "./DomainImportanceRating.module.css";
 
+export interface CollegeSubcategoryGroup {
+  id: string;
+  name: string;
+  skills: BrowserSkill[];
+}
+
 export interface CollegeCardData {
   id: string;
   name: string;
@@ -17,6 +23,7 @@ export interface CollegeCardData {
   isHub: boolean;
   skillCount: number;
   composition: { domainKey: string; count: number }[];
+  subcategories: CollegeSubcategoryGroup[];
 }
 
 export interface DomainRatingView {
@@ -30,9 +37,7 @@ export interface DomainRatingView {
 }
 
 interface DomainImportanceRatingProps {
-  domainCounts: Record<string, number>;
   collegeCards: CollegeCardData[];
-  skillsByDomain: Record<string, BrowserSkill[]>;
   colleges: BrowserCollege[];
   sessionEvaluatorName: string | null;
   initialRatings: DomainRatingView[];
@@ -58,9 +63,7 @@ const AXIS_LABELS: Record<"college" | "functional", string> = {
 };
 
 export default function DomainImportanceRating({
-  domainCounts,
   collegeCards,
-  skillsByDomain,
   colleges,
   sessionEvaluatorName,
   initialRatings,
@@ -80,7 +83,6 @@ export default function DomainImportanceRating({
     return map;
   }, []);
 
-  // (axis, targetKey)별 평균과 건수
   const summaries = useMemo(() => {
     const map: Record<string, { total: number; count: number }> = {};
     ratings.forEach((rating) => {
@@ -111,27 +113,26 @@ export default function DomainImportanceRating({
       }
     });
     if (weightSum === 0) return null;
-    return { average: weighted / weightSum, coverage: weightSum };
+    return { average: weighted / weightSum };
   }
 
-  async function handleSave(axis: "college" | "functional", targetKey: string) {
-    const formKey = `${axis}:${targetKey}`;
-    const score = scores[formKey];
+  async function handleSave(collegeId: string) {
+    const score = scores[collegeId];
     if (!score) {
       setMessage("중요도를 선택해 주세요.");
       return;
     }
 
-    setSubmittingKey(formKey);
+    setSubmittingKey(collegeId);
     try {
       const response = await fetch("/api/domain-ratings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          axis,
-          targetKey,
+          axis: "college",
+          targetKey: collegeId,
           score,
-          notes: (notes[formKey] ?? "").trim(),
+          notes: (notes[collegeId] ?? "").trim(),
         }),
       });
       const data = (await response.json().catch(() => ({}))) as {
@@ -143,75 +144,14 @@ export default function DomainImportanceRating({
         return;
       }
       setRatings((prev) => [data.rating as DomainRatingView, ...prev]);
-      setScores((prev) => ({ ...prev, [formKey]: 0 }));
-      setNotes((prev) => ({ ...prev, [formKey]: "" }));
-      setMessage("도메인 중요도 평가를 저장했습니다.");
+      setScores((prev) => ({ ...prev, [collegeId]: 0 }));
+      setNotes((prev) => ({ ...prev, [collegeId]: "" }));
+      setMessage("4대 도메인 중요도 평가를 저장했습니다.");
     } catch {
       setMessage("네트워크 오류로 저장하지 못했습니다.");
     } finally {
       setSubmittingKey(null);
     }
-  }
-
-  function renderScoreForm(axis: "college" | "functional", targetKey: string) {
-    if (!sessionEvaluatorName) {
-      return null;
-    }
-    const formKey = `${axis}:${targetKey}`;
-    const selectedScore = scores[formKey] ?? 0;
-    return (
-      <>
-        <fieldset className={styles.scoreFieldset}>
-          <legend>중요도</legend>
-          <div className={styles.scoreOptions}>
-            {SCORE_VALUES.map((value) => (
-              <button
-                aria-pressed={selectedScore === value}
-                className={
-                  selectedScore === value
-                    ? `${styles.scoreButton} ${styles.scoreButtonActive}`
-                    : styles.scoreButton
-                }
-                key={value}
-                onClick={() => {
-                  setScores((prev) => ({ ...prev, [formKey]: value }));
-                  setMessage("");
-                }}
-                type="button"
-              >
-                <strong>{value}</strong>
-                <span>{SCORE_LABELS[value]}</span>
-              </button>
-            ))}
-          </div>
-        </fieldset>
-
-        <label className={styles.notes}>
-          평가 근거 <span>선택</span>
-          <textarea
-            onChange={(event) => {
-              setNotes((prev) => ({
-                ...prev,
-                [formKey]: event.target.value,
-              }));
-              setMessage("");
-            }}
-            placeholder="이 도메인이 왜 중요한지, 어떤 현장에 필요한지 남겨 주세요."
-            rows={2}
-            value={notes[formKey] ?? ""}
-          />
-        </label>
-
-        <button
-          className={styles.saveButton}
-          disabled={submittingKey === formKey}
-          onClick={() => handleSave(axis, targetKey)}
-          type="button"
-        >
-          {submittingKey === formKey ? "저장 중..." : "평가 저장"}
-        </button>
-      </>
-    );
   }
 
   const recentRatings = ratings.slice(0, 8);
@@ -220,13 +160,13 @@ export default function DomainImportanceRating({
     <section className={styles.panel} aria-labelledby="domain-rating-title">
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>MAIN — 4대 도메인 중요도 평가</p>
+          <p className={styles.eyebrow}>4대 도메인 중요도 평가</p>
           <h2 id="domain-rating-title">4대 도메인 중요도 평가</h2>
           <span>
-            운영 체계의 4대 도메인을 5점 척도로 평가합니다. 직접 평가와 함께,
-            아래 기능 도메인(서브) 평가를 스킬 수로 가중 평균한 참고치가
-            표시됩니다. 평가자 신원은 로그인 세션에서 자동 적용되고 결과는
-            서버에 아카이빙됩니다.
+            현장 운영 체계의 4대 도메인을 5점 척도로 평가합니다. 세부
+            기준(기능 도메인) 평가의 스킬 수 가중 평균이 참고치(서브 롤업)로
+            함께 표시됩니다. 평가자 신원은 로그인 세션에서 자동 적용되고
+            결과는 서버에 아카이빙됩니다.
           </span>
         </div>
         <strong>{ratings.length}건 평가</strong>
@@ -234,7 +174,7 @@ export default function DomainImportanceRating({
 
       {!sessionEvaluatorName && (
         <p className={styles.loginHint}>
-          평가 저장은 평가자 로그인 후 가능합니다(조회는 자유).{" "}
+          평가 저장과 변경요청은 평가자 로그인 후 가능합니다(조회는 자유).{" "}
           <Link href="/evaluation/skills">평가자 로그인 →</Link>
         </p>
       )}
@@ -251,7 +191,9 @@ export default function DomainImportanceRating({
           const rollup = rollupOf(card);
           const delta =
             direct && rollup ? direct.average - rollup.average : null;
-          const showDelta = delta !== null && Math.abs(delta) >= DELTA_THRESHOLD;
+          const showDelta =
+            delta !== null && Math.abs(delta) >= DELTA_THRESHOLD;
+          const selectedScore = scores[card.id] ?? 0;
           return (
             <article className={styles.collegeCard} key={card.id}>
               <div className={styles.collegeHead}>
@@ -260,19 +202,10 @@ export default function DomainImportanceRating({
                   {card.role}
                   {card.isHub && !card.role.includes("허브") ? " · 허브" : ""}
                   {" · "}
-                  {card.skillCount}개 스킬
+                  {card.skillCount}개 스킬 · 중간분류{" "}
+                  {card.subcategories.length}개
                 </p>
               </div>
-
-              <p className={styles.composition}>
-                구성:{" "}
-                {card.composition
-                  .map(
-                    ({ domainKey, count }) =>
-                      `${domainNameByKey[domainKey] ?? domainKey} ${count}`,
-                  )
-                  .join(" · ")}
-              </p>
 
               <dl className={styles.metricsRow}>
                 <div>
@@ -286,7 +219,9 @@ export default function DomainImportanceRating({
                 <div>
                   <dt>서브 롤업(참고)</dt>
                   <dd>
-                    {rollup ? `${rollup.average.toFixed(1)} / 5` : "서브 평가 대기"}
+                    {rollup
+                      ? `${rollup.average.toFixed(1)} / 5`
+                      : "서브 평가 대기"}
                   </dd>
                 </div>
               </dl>
@@ -298,77 +233,89 @@ export default function DomainImportanceRating({
                 </p>
               )}
 
-              {renderScoreForm("college", card.id)}
-            </article>
-          );
-        })}
-      </div>
+              {sessionEvaluatorName && (
+                <>
+                  <fieldset className={styles.scoreFieldset}>
+                    <legend>중요도</legend>
+                    <div className={styles.scoreOptions}>
+                      {SCORE_VALUES.map((value) => (
+                        <button
+                          aria-pressed={selectedScore === value}
+                          className={
+                            selectedScore === value
+                              ? `${styles.scoreButton} ${styles.scoreButtonActive}`
+                              : styles.scoreButton
+                          }
+                          key={value}
+                          onClick={() => {
+                            setScores((prev) => ({
+                              ...prev,
+                              [card.id]: value,
+                            }));
+                            setMessage("");
+                          }}
+                          type="button"
+                        >
+                          <strong>{value}</strong>
+                          <span>{SCORE_LABELS[value]}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </fieldset>
 
-      <div className={`${styles.heading} ${styles.subHeading}`}>
-        <div>
-          <p className={styles.eyebrow}>SUB — 세부 기준</p>
-          <h3 className={styles.subTitle}>기능 도메인 평가</h3>
-          <span>
-            4대 도메인 판단의 세부 근거가 되는 기능 도메인 평가입니다. 이
-            평가의 스킬 수 가중 평균이 위 카드의 &quot;서브 롤업&quot;으로
-            집계됩니다. 하위 스킬 조회에서 스킬별 도메인 변경요청도 접수할 수
-            있습니다.
-          </span>
-        </div>
-      </div>
+                  <label className={styles.notes}>
+                    평가 근거 <span>선택</span>
+                    <textarea
+                      onChange={(event) => {
+                        setNotes((prev) => ({
+                          ...prev,
+                          [card.id]: event.target.value,
+                        }));
+                        setMessage("");
+                      }}
+                      placeholder="이 도메인이 왜 중요한지, 어떤 현장에 필요한지 남겨 주세요."
+                      rows={2}
+                      value={notes[card.id] ?? ""}
+                    />
+                  </label>
 
-      <div className={styles.domainGrid}>
-        {ROBOT_DOMAINS.map((domain) => {
-          const summary = averageOf("functional", domain.key);
-          return (
-            <article
-              className={styles.domainCard}
-              key={domain.key}
-              style={{ borderTopColor: domain.color }}
-            >
-              <div className={styles.cardHead}>
-                <span className={styles.domainIcon} aria-hidden="true">
-                  {domain.icon}
-                </span>
-                <div>
-                  <h3>{domain.name}</h3>
-                  <p className={styles.domainEn}>{domain.nameEn}</p>
-                </div>
+                  <button
+                    className={styles.saveButton}
+                    disabled={submittingKey === card.id}
+                    onClick={() => handleSave(card.id)}
+                    type="button"
+                  >
+                    {submittingKey === card.id ? "저장 중..." : "평가 저장"}
+                  </button>
+                </>
+              )}
+
+              <div className={styles.subcategoryBrowsers}>
+                {card.subcategories.map((subcategory) => (
+                  <DomainSkillBrowser
+                    colleges={colleges}
+                    evaluatorName={sessionEvaluatorName}
+                    initialRequests={initialChangeRequests.filter((request) =>
+                      subcategory.skills.some(
+                        (skill) => skill.skillId === request.skillId,
+                      ),
+                    )}
+                    key={subcategory.id}
+                    skills={subcategory.skills}
+                    toggleLabel={subcategory.name}
+                  />
+                ))}
               </div>
-              <p className={styles.domainDescription}>{domain.description}</p>
-
-              <dl className={styles.domainMeta}>
-                <div>
-                  <dt>스킬 수</dt>
-                  <dd>{domainCounts[domain.key] ?? 0}</dd>
-                </div>
-                <div>
-                  <dt>평균 중요도</dt>
-                  <dd>
-                    {summary
-                      ? `${summary.average.toFixed(1)} / 5 · ${summary.count}건`
-                      : "평가 대기"}
-                  </dd>
-                </div>
-              </dl>
-
-              {renderScoreForm("functional", domain.key)}
-
-              <DomainSkillBrowser
-                colleges={colleges}
-                domainKey={domain.key}
-                evaluatorName={sessionEvaluatorName}
-                initialRequests={initialChangeRequests.filter((request) =>
-                  (skillsByDomain[domain.key] ?? []).some(
-                    (skill) => skill.skillId === request.skillId,
-                  ),
-                )}
-                skills={skillsByDomain[domain.key] ?? []}
-              />
             </article>
           );
         })}
       </div>
+
+      <p className={styles.subPageNote}>
+        세부 기준(기능 도메인) 중요도 평가는{" "}
+        <Link href="/evaluation/functional">기능 도메인 평가 페이지</Link>
+        에서 진행합니다. 그 결과가 위 카드의 서브 롤업으로 집계됩니다.
+      </p>
 
       {message && (
         <p aria-live="polite" className={styles.message}>

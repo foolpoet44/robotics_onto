@@ -10,6 +10,7 @@ export interface BrowserSkill {
   label: string;
   proficiency: number;
   collegeId: string | null;
+  domain: string;
 }
 
 export interface BrowserChangeRequest {
@@ -29,7 +30,7 @@ export interface BrowserCollege {
 }
 
 interface DomainSkillBrowserProps {
-  domainKey: string;
+  toggleLabel?: string;
   skills: BrowserSkill[];
   colleges: BrowserCollege[];
   evaluatorName: string | null;
@@ -42,7 +43,7 @@ const AXIS_LABELS: Record<"functional" | "college", string> = {
 };
 
 export default function DomainSkillBrowser({
-  domainKey,
+  toggleLabel = "하위 스킬 조회",
   skills,
   colleges,
   evaluatorName,
@@ -153,7 +154,9 @@ export default function DomainSkillBrowser({
         onClick={() => setOpen((prev) => !prev)}
         type="button"
       >
-        {open ? "하위 스킬 접기 ▲" : `하위 스킬 조회 (${skills.length}) ▼`}
+        {open
+          ? `${toggleLabel} 접기 ▲`
+          : `${toggleLabel} (${skills.length}) ▼`}
       </button>
 
       {open && (
@@ -172,7 +175,7 @@ export default function DomainSkillBrowser({
               const targetOptions =
                 axis === "functional"
                   ? ROBOT_DOMAINS.filter(
-                      (domain) => domain.key !== domainKey,
+                      (domain) => domain.key !== skill.domain,
                     ).map((domain) => ({ value: domain.key, name: domain.name }))
                   : colleges
                       .filter((college) => college.id !== currentCollegeOf(skill))
@@ -194,9 +197,7 @@ export default function DomainSkillBrowser({
                       </Link>
                       <span className={styles.skillMeta}>
                         {skill.skillId} · Lv{skill.proficiency} ·{" "}
-                        {skill.collegeId
-                          ? collegeNameById[skill.collegeId] ?? skill.collegeId
-                          : "칼리지 미배정"}
+                        {domainNameByKey[skill.domain] ?? skill.domain}
                       </span>
                     </div>
                     {pending > 0 && (
@@ -238,7 +239,8 @@ export default function DomainSkillBrowser({
                               <span className={styles.axisCurrent}>
                                 현재:{" "}
                                 {axisOption === "functional"
-                                  ? domainNameByKey[domainKey] ?? domainKey
+                                  ? domainNameByKey[skill.domain] ??
+                                    skill.domain
                                   : valueName(
                                       "college",
                                       currentCollegeOf(skill) || "-",

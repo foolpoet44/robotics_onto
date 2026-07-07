@@ -43,6 +43,20 @@ export interface CollegeMappingData {
   skillOverrides?: Record<string, CollegeSkillOverride>;
 }
 
+export interface CollegeSubcategory {
+  id: string;
+  collegeId: CollegeId;
+  name: string;
+  order: number;
+}
+
+export interface CollegeSubcategoryData {
+  version: string;
+  note?: string;
+  subcategories: CollegeSubcategory[];
+  skillSubcategories: Record<string, string>;
+}
+
 export interface EnablerCollegeMeta {
   enablerId: string;
   collegeId: CollegeId;

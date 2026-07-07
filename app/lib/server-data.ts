@@ -13,7 +13,7 @@ import {
 import { EmployeeCompetencyDataset } from "./employee-competency-data";
 import { RobotSkill } from "./robotics-data";
 import { ReviewQueue } from "./review-data";
-import { CollegeMappingData } from "./college-types";
+import { CollegeMappingData, CollegeSubcategoryData } from "./college-types";
 
 async function readJsonFile<T>(relativePath: string): Promise<T> {
   const filePath = path.join(process.cwd(), "public", "data", relativePath);
@@ -38,6 +38,10 @@ export async function getReviewQueue(): Promise<ReviewQueue> {
 
 export async function getCollegeMappingData(): Promise<CollegeMappingData> {
   return readJsonFile<CollegeMappingData>("college-mapping.json");
+}
+
+export async function getCollegeSubcategoryData(): Promise<CollegeSubcategoryData> {
+  return readJsonFile<CollegeSubcategoryData>("college-subcategories.json");
 }
 
 export async function getEmployeeCompetencyDataset(): Promise<EmployeeCompetencyDataset> {

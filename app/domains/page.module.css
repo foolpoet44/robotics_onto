@@ -70,6 +70,46 @@
   flex: 1;
 }
 
+.subcategoryList {
+  flex: 1;
+  margin: 0;
+  padding: 0.6rem 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.subcategoryList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.subcategoryList li span {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.subPageLink {
+  margin-top: 2.25rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.subPageLink a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.subPageLink a:hover {
+  text-decoration: underline;
+}
+
 .domainCount {
   display: flex;
   gap: 0.4rem;
