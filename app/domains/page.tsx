@@ -48,7 +48,7 @@ export default async function DomainsPage() {
           중간분류에 배정됩니다.
         </p>
       </header>
-      <div className={styles.domainGrid}>
+      <div className={styles.collegeGrid}>
         {colleges.map((college) => {
           const subcategories = subcategoryData.subcategories
             .filter((subcategory) => subcategory.collegeId === college.id)

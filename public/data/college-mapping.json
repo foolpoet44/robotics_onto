@@ -14,7 +14,7 @@
       "nameKo": "데이터 인텔리전스 칼리지",
       "role": "데이터 허브",
       "isHub": true,
-      "order": 2
+      "order": 4
     },
     {
       "id": "agentic-ai",
@@ -22,7 +22,7 @@
       "nameKo": "제조 Agentic AI 칼리지",
       "role": "자율 판단",
       "isHub": false,
-      "order": 3
+      "order": 2
     },
     {
       "id": "digital-twin",
@@ -30,7 +30,7 @@
       "nameKo": "디지털 트윈 칼리지",
       "role": "시뮬레이션",
       "isHub": false,
-      "order": 4
+      "order": 3
     }
   ],
   "levels": [
