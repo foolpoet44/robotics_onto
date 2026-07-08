@@ -16,6 +16,7 @@
     "record:college-override": "node scripts/record-college-override-decision.js",
     "update:development-candidate": "node scripts/update-development-candidate.js",
     "generate:evaluator-code-hash": "node scripts/generate-evaluator-code-hash.js",
+    "generate:curriculum-html": "node scripts/generate-curriculum-html.js",
     "import:employee-competency": "node scripts/import-employee-competency.js",
     "validate:review-decisions": "node scripts/validate-review-decisions.js",
     "validate:development": "node scripts/validate-development-data.js",

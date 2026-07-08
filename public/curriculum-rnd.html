@@ -1,0 +1,1338 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>R&D 연구원 육성 커리큘럼 — Factory Robotics Skill Map</title>
+<style>
+  :root {
+    --ink: #1e293b; --ink-2: #64748b; --line: #e2e8f0;
+    --bg: #f8fafc; --card: #ffffff; --accent: #4338ca;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+    color: var(--ink); background: var(--bg); line-height: 1.55; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
+  header.hero { text-align: center; margin-bottom: 36px; }
+  .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .14em; margin: 0; }
+  h1 { margin: 8px 0 6px; font-size: clamp(26px, 4vw, 38px); }
+  .hero p { color: var(--ink-2); max-width: 720px; margin: 0 auto; }
+  h2 { margin: 44px 0 6px; font-size: 22px; border-left: 5px solid var(--accent); padding-left: 10px; }
+  h2 + p { margin: 0 0 16px; color: var(--ink-2); }
+  table { width: 100%; border-collapse: collapse; background: var(--card);
+    border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14px; }
+  th { background: #f1f5f9; font-size: 13px; }
+  tr:last-child td { border-bottom: none; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 4px; font-size: 16px; }
+  .card h4 { margin: 14px 0 6px; font-size: 13px; color: var(--ink-2); }
+  .goal { margin: 0 0 8px; color: var(--ink-2); font-size: 13px; }
+  .meta-line { font-size: 12px; color: var(--ink-2); font-weight: 700; }
+  ul.skills { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+  ul.skills li { display: flex; align-items: center; gap: 7px; font-size: 13px; flex-wrap: wrap; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .skill-name { font-weight: 600; }
+  .skill-meta { color: var(--ink-2); font-size: 11.5px; }
+  .badge { font-size: 10.5px; font-weight: 800; padding: 1px 7px; border-radius: 999px; }
+  .badge-common { background: #ecfdf5; color: #047857; }
+  .college-section { margin-top: 20px; border: 1px solid var(--line); border-radius: 14px;
+    background: var(--card); overflow: hidden; }
+  .college-head { display: flex; justify-content: space-between; align-items: baseline;
+    gap: 10px; padding: 12px 18px; color: #fff; flex-wrap: wrap; }
+  .college-head h3 { margin: 0; font-size: 17px; }
+  .college-head span { font-size: 12.5px; font-weight: 700; opacity: .92; }
+  .college-body { padding: 14px 18px 18px; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px; }
+  .module { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .module h4 { margin: 0 0 2px; font-size: 14px; color: var(--ink); }
+  .capstone { margin: 10px 0 0; padding: 8px 10px; background: #fff7ed; border-radius: 8px;
+    color: #9a3412; font-size: 12.5px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 10px;
+    font-size: 12.5px; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  footer { margin-top: 48px; color: var(--ink-2); font-size: 12px; text-align: center; }
+  @media print { body { background: #fff; } .wrap { padding: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">FACTORY ROBOTICS · TRAINING CURRICULUM</p>
+    <h1>R&amp;D 연구원 육성 커리큘럼</h1>
+    <p>대상: 경력 3년 이상 10년 미만 R&amp;D 연구원 · 기준: 4대 도메인 스킬 온톨로지
+      159개 스킬 / 중간분류 21개 · 발행일 2026-07-08</p>
+    <div class="legend">
+      <span><i class="dot" style="display:inline-block;background:#4f46e5"></i>Physical AI &amp; Robotics</span><span><i class="dot" style="display:inline-block;background:#0d9488"></i>Agentic AI Manufacturing</span><span><i class="dot" style="display:inline-block;background:#9333ea"></i>Digital Twin &amp; Simulation</span><span><i class="dot" style="display:inline-block;background:#0891b2"></i>Data Intelligence</span>
+    </div>
+  </header>
+
+  <h2>1. 경력 구간별 육성 경로</h2>
+  <p>레벨 체계(AX Starter~Expert)와 육성 트랙(부트캠프 → 페어 임베드 → 솔로 임베드 → 인증)에 정렬된 3구간 경로입니다.</p>
+  <table>
+    <thead><tr><th>경력 구간</th><th>목표 레벨</th><th>이수 계획</th></tr></thead>
+    <tbody>
+      <tr><td><strong>3~5년차</strong></td><td>AX Practitioner (Lv2)</td><td>공통 모듈 전체 + 소속 도메인 핵심 모듈(Lv2 이하 스킬) 이수. 통합 부트캠프 참여.</td></tr><tr><td><strong>5~8년차</strong></td><td>AX Specialist (Lv3)</td><td>소속 도메인 심화 모듈(Lv3) + 특화 모듈 1개 선택 이수. 페어 임베드로 Production 과제 1건 완수.</td></tr><tr><td><strong>8~10년차</strong></td><td>AX Expert (Lv4)</td><td>특화 모듈 심화 + 타 도메인 크로스 모듈 1개. Cross-College Capstone과 1人1案 승인으로 인증.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 공통 모듈 (전 도메인 필수 · 총 92h)</h2>
+  <p>Data Intelligence 허브 선수 체계에 근거한 전 도메인 공통 코어입니다. 도메인 모듈에서 같은 스킬은 "공통 이수 인정"으로 중복 이수하지 않습니다.</p>
+  <div class="grid">
+    
+    <div class="card">
+      <h3>C1. 데이터·AI 리터러시</h3>
+      <p class="goal">모든 도메인 연구원이 공유하는 데이터 처리·AI 에이전트 기초 체계를 갖춘다.</p>
+      <p class="meta-line">6개 스킬 · 44h</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">AI 에이전트 기초 개념</span>
+    <span class="skill-meta">RSF-AAM-001 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">LLM 및 프롬프트 엔지니어링 기초</span>
+    <span class="skill-meta">RSF-AAM-002 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 신호 처리</span>
+    <span class="skill-meta">RSF-MVS-003 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 신호 수집 및 필터링</span>
+    <span class="skill-meta">RSF-MVS-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 데이터 로깅</span>
+    <span class="skill-meta">RSF-MVS-019 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">트렌드 분석</span>
+    <span class="skill-meta">RSF-RMD-007 · Lv2 · 8h</span>
+    
+  </li></ul>
+    </div>
+    <div class="card">
+      <h3>C2. 스마트팩토리 시스템·데이터 기반</h3>
+      <p class="goal">MES 등 기간계와 OT 네트워크, Data Fabric의 구조를 이해하고 연계 관점을 확보한다.</p>
+      <p class="meta-line">4개 스킬 · 24h</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">MES 및 제조 실행 프로세스</span>
+    <span class="skill-meta">RSF-AAM-003 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">Data Fabric·기간계 시스템 연계</span>
+    <span class="skill-meta">RSF-AAM-027 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">무선 네트워크 및 통신</span>
+    <span class="skill-meta">RSF-AMR-004 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">네트워크 통신 설정</span>
+    <span class="skill-meta">RSF-AMR-014 · Lv2 · 8h</span>
+    
+  </li></ul>
+    </div>
+    <div class="card">
+      <h3>C3. 안전·휴먼-인-더-루프</h3>
+      <p class="goal">로봇 안전 표준과 자동 판단에 대한 승인·가드레일 설계 원칙을 체득한다.</p>
+      <p class="meta-line">4개 스킬 · 24h</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">산업용 로봇 안전 기준</span>
+    <span class="skill-meta">RSF-IRC-003 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동로봇 안전 개념</span>
+    <span class="skill-meta">RSF-CRO-001 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">휴먼-인-더-루프 승인 흐름 설계</span>
+    <span class="skill-meta">RSF-AAM-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 가드레일 구성</span>
+    <span class="skill-meta">RSF-AAM-014 · Lv2 · 8h</span>
+    
+  </li></ul>
+    </div>
+  </div>
+
+  <h2>3. 도메인별 모듈 (중간분류 기준)</h2>
+  <p>소속 도메인의 중간분류가 곧 이수 모듈입니다. 3~5년차는 Lv2 이하, 5~8년차는 Lv3, 8~10년차는 Lv4 스킬까지 단계적으로 이수합니다.</p>
+  
+  <section class="college-section">
+    <div class="college-head" style="background:#4f46e5">
+      <h3>Physical AI &amp; Robotics</h3>
+      <span>현장 작동 · 스킬 77개 · 총 720h</span>
+    </div>
+    <div class="college-body">
+      
+      <div class="module">
+        <h4>산업로봇 제어·운용</h4>
+        <p class="meta-line">19개 · Lv1~4 · 172h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 구조 및 운동학</span>
+    <span class="skill-meta">RSF-IRC-001 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">산업용 로봇 안전 기준</span>
+    <span class="skill-meta">RSF-IRC-003 · Lv1 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 티칭 방법론</span>
+    <span class="skill-meta">RSF-IRC-004 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 제어 이론</span>
+    <span class="skill-meta">RSF-IRC-002 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">모션 플래닝 기초</span>
+    <span class="skill-meta">RSF-IRC-005 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 매뉴얼 티칭</span>
+    <span class="skill-meta">RSF-IRC-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 프로그래밍</span>
+    <span class="skill-meta">RSF-IRC-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">좌표계 설정 및 보정</span>
+    <span class="skill-meta">RSF-IRC-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">다축 동기 제어</span>
+    <span class="skill-meta">RSF-IRC-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">센서 입출력 처리</span>
+    <span class="skill-meta">RSF-IRC-014 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">PLC·설비 제어 연동</span>
+    <span class="skill-meta">RSF-IRC-023 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">모션 제어 파라미터 조정</span>
+    <span class="skill-meta">RSF-IRC-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">경로 최적화</span>
+    <span class="skill-meta">RSF-IRC-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 안전 설정</span>
+    <span class="skill-meta">RSF-IRC-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">생산 라인 로봇 운용</span>
+    <span class="skill-meta">RSF-IRC-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">사이클 타임 달성</span>
+    <span class="skill-meta">RSF-IRC-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 고장 대응</span>
+    <span class="skill-meta">RSF-IRC-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">작업 문서화</span>
+    <span class="skill-meta">RSF-IRC-019 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협력업체 기술 지원</span>
+    <span class="skill-meta">RSF-IRC-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>협동로봇·안전</h4>
+        <p class="meta-line">19개 · Lv1~4 · 172h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동로봇 안전 개념</span>
+    <span class="skill-meta">RSF-CRO-001 · Lv1 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">사용자 친화적 프로그래밍</span>
+    <span class="skill-meta">RSF-CRO-003 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">힘/토크 모니터링 원리</span>
+    <span class="skill-meta">RSF-CRO-002 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동로봇 산업 응용</span>
+    <span class="skill-meta">RSF-CRO-004 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">인간공학 및 인적 요소</span>
+    <span class="skill-meta">RSF-CRO-005 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동로봇 안전 설정</span>
+    <span class="skill-meta">RSF-CRO-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">드래그-앤-드롭 티칭</span>
+    <span class="skill-meta">RSF-CRO-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동로봇 프로그래밍</span>
+    <span class="skill-meta">RSF-CRO-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">사용자 안전 교육</span>
+    <span class="skill-meta">RSF-CRO-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">힘 제어 파라미터 튜닝</span>
+    <span class="skill-meta">RSF-CRO-014 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">휴머노이드 로봇 운용 기초</span>
+    <span class="skill-meta">RSF-CRO-022 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">인간-로봇 상호작용 설계</span>
+    <span class="skill-meta">RSF-CRO-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동 작업 태스크 분석</span>
+    <span class="skill-meta">RSF-CRO-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">터치 감지 및 안전 반응</span>
+    <span class="skill-meta">RSF-CRO-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">협동 워크셀 안전성 검증</span>
+    <span class="skill-meta">RSF-CRO-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">사용자 가이드 작성</span>
+    <span class="skill-meta">RSF-CRO-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">안전성 평가 보고서</span>
+    <span class="skill-meta">RSF-CRO-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">작업 개선 제안</span>
+    <span class="skill-meta">RSF-CRO-019 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">인간공학 평가</span>
+    <span class="skill-meta">RSF-CRO-020 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>설비 정비·진단</h4>
+        <p class="meta-line">15개 · Lv1~4 · 132h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">윤활유 및 냉각액 관리</span>
+    <span class="skill-meta">RSF-RMD-005 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 부품 분류 및 수명 관리</span>
+    <span class="skill-meta">RSF-RMD-001 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">신뢰성 공학</span>
+    <span class="skill-meta">RSF-RMD-002 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">예방적 유지보수 전략</span>
+    <span class="skill-meta">RSF-RMD-003 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">로봇 진단 도구 및 로깅</span>
+    <span class="skill-meta">RSF-RMD-004 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">고장 코드 해석</span>
+    <span class="skill-meta">RSF-RMD-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">부품 청소 및 검사</span>
+    <span class="skill-meta">RSF-RMD-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">윤활유 교체</span>
+    <span class="skill-meta">RSF-RMD-014 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">베어링 검사 및 교체</span>
+    <span class="skill-meta">RSF-RMD-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">기어 및 모터 검사</span>
+    <span class="skill-meta">RSF-RMD-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">소프트웨어 업그레이드</span>
+    <span class="skill-meta">RSF-RMD-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">예방적 유지보수 계획 수립</span>
+    <span class="skill-meta">RSF-RMD-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">긴급 고장 대응</span>
+    <span class="skill-meta">RSF-RMD-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">유지보수 보고서 작성</span>
+    <span class="skill-meta">RSF-RMD-019 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">부품 공급업체 관리</span>
+    <span class="skill-meta">RSF-RMD-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>자율이동로봇 운용</h4>
+        <p class="meta-line">14개 · Lv2~4 · 140h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">차량 동역학 및 제어</span>
+    <span class="skill-meta">RSF-AMR-003 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">환경 맵 작성</span>
+    <span class="skill-meta">RSF-AMR-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">경로 계획 매개변수 조정</span>
+    <span class="skill-meta">RSF-AMR-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">충돌 회피 설정</span>
+    <span class="skill-meta">RSF-AMR-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">스테이션 도킹 설정</span>
+    <span class="skill-meta">RSF-AMR-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">SLAM 개념</span>
+    <span class="skill-meta">RSF-AMR-001 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">경로 계획 알고리즘</span>
+    <span class="skill-meta">RSF-AMR-002 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">GPS 및 GNSS 활용</span>
+    <span class="skill-meta">RSF-AMR-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">수동 조종 모드</span>
+    <span class="skill-meta">RSF-AMR-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">제조 환경 맵 생성</span>
+    <span class="skill-meta">RSF-AMR-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">맵 정확도 검증</span>
+    <span class="skill-meta">RSF-AMR-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">자율 주행 운영</span>
+    <span class="skill-meta">RSF-AMR-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">충돌 발생 시 분석</span>
+    <span class="skill-meta">RSF-AMR-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">운영 매뉴얼 작성</span>
+    <span class="skill-meta">RSF-AMR-019 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>비전·센서 하드웨어</h4>
+        <p class="meta-line">10개 · Lv1~4 · 104h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">머신비전 카메라 및 광학</span>
+    <span class="skill-meta">RSF-MVS-002 · Lv1 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">센서 캘리브레이션 이론</span>
+    <span class="skill-meta">RSF-MVS-005 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">카메라 설정 및 조광</span>
+    <span class="skill-meta">RSF-MVS-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">IoT 센서·엣지 통합</span>
+    <span class="skill-meta">RSF-MVS-022 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">센서-로봇 동기화</span>
+    <span class="skill-meta">RSF-MVS-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">카메라 캘리브레이션</span>
+    <span class="skill-meta">RSF-MVS-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">제조 환경 비전 시스템 구축</span>
+    <span class="skill-meta">RSF-MVS-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">센서 고장 진단</span>
+    <span class="skill-meta">RSF-MVS-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">대체 센서 제안</span>
+    <span class="skill-meta">RSF-MVS-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">카메라 교체 작업</span>
+    <span class="skill-meta">RSF-MVS-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="college-section">
+    <div class="college-head" style="background:#0d9488">
+      <h3>Agentic AI Manufacturing</h3>
+      <span>자율 판단 · 스킬 34개 · 총 368h</span>
+    </div>
+    <div class="college-body">
+      
+      <div class="module">
+        <h4>에이전트 설계·오케스트레이션 (Orchestration AI)</h4>
+        <p class="meta-line">6개 · Lv1~3 · 40h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">AI 에이전트 기초 개념</span>
+    <span class="skill-meta">RSF-AAM-001 · Lv1 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">LLM 및 프롬프트 엔지니어링 기초</span>
+    <span class="skill-meta">RSF-AAM-002 · Lv2 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">공정 에이전트 설계</span>
+    <span class="skill-meta">RSF-AAM-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 도구 연동</span>
+    <span class="skill-meta">RSF-AAM-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">프롬프트 설계 및 평가</span>
+    <span class="skill-meta">RSF-AAM-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">멀티 에이전트 오케스트레이션</span>
+    <span class="skill-meta">RSF-AAM-009 · Lv3 · 8h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>MES·생산계획 자율화 (생산 Agent)</h4>
+        <p class="meta-line">9개 · Lv1~4 · 104h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">MES 및 제조 실행 프로세스</span>
+    <span class="skill-meta">RSF-AAM-003 · Lv1 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">생산계획 및 스케줄링 이론</span>
+    <span class="skill-meta">RSF-AAM-005 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">MES 워크플로 자동화</span>
+    <span class="skill-meta">RSF-AAM-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">작업지시 자동 생성</span>
+    <span class="skill-meta">RSF-AAM-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">생산계획 자동 수립 운영</span>
+    <span class="skill-meta">RSF-AAM-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">재고 관리</span>
+    <span class="skill-meta">RSF-RMD-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">확장성 계획</span>
+    <span class="skill-meta">RSF-AMR-021 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">라인 밸런싱</span>
+    <span class="skill-meta">RSF-IRC-020 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">생산성 향상 제안</span>
+    <span class="skill-meta">RSF-IRC-022 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>품질 자동 판정 (품질 Agent)</h4>
+        <p class="meta-line">5개 · Lv2~3 · 52h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">통계적 공정 관리(SPC)</span>
+    <span class="skill-meta">RSF-AAM-004 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">이미지 기반 결함 검출</span>
+    <span class="skill-meta">RSF-MVS-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">품질 이상 자동 판정</span>
+    <span class="skill-meta">RSF-AAM-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">품질 이상 자동 격리 운영</span>
+    <span class="skill-meta">RSF-AAM-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">검출율 목표 달성</span>
+    <span class="skill-meta">RSF-MVS-016 · Lv3 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>자율 관제·물류 (물류 Agent)</h4>
+        <p class="meta-line">6개 · Lv3~4 · 68h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자율 운영 예외 대응</span>
+    <span class="skill-meta">RSF-AAM-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자재·협력사 연동 자율화</span>
+    <span class="skill-meta">RSF-AAM-024 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">함대 관리 시스템</span>
+    <span class="skill-meta">RSF-AMR-005 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">멀티-로봇 교통 관제</span>
+    <span class="skill-meta">RSF-AMR-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">In-Factory 물류·SCM 실행 통합</span>
+    <span class="skill-meta">RSF-AAM-025 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">의사결정 지원</span>
+    <span class="skill-meta">RSF-DTS-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>안전·거버넌스 (안전환경 Agent)</h4>
+        <p class="meta-line">6개 · Lv2~4 · 80h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">휴먼-인-더-루프 승인 흐름 설계</span>
+    <span class="skill-meta">RSF-AAM-013 · Lv2 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 가드레일 구성</span>
+    <span class="skill-meta">RSF-AAM-014 · Lv2 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 성과 평가</span>
+    <span class="skill-meta">RSF-AAM-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 안전성 검증</span>
+    <span class="skill-meta">RSF-AAM-019 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">에이전트 감사 추적 운영</span>
+    <span class="skill-meta">RSF-AAM-020 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자율화 확산 계획</span>
+    <span class="skill-meta">RSF-AAM-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>자율 정비 실행 (설비 Agent)</h4>
+        <p class="meta-line">1개 · Lv3~3 · 16h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자율 정비 실행 에이전트 운영</span>
+    <span class="skill-meta">RSF-AAM-022 · Lv3 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>공정 검증·배포 (개발 Agent)</h4>
+        <p class="meta-line">1개 · Lv3~3 · 8h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">공정 시나리오 가상 검증·배포 에이전트</span>
+    <span class="skill-meta">RSF-AAM-023 · Lv3 · 8h</span>
+    
+  </li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="college-section">
+    <div class="college-head" style="background:#9333ea">
+      <h3>Digital Twin &amp; Simulation</h3>
+      <span>시뮬레이션 · 스킬 22개 · 총 216h</span>
+    </div>
+    <div class="college-body">
+      
+      <div class="module">
+        <h4>모델링·환경 구축</h4>
+        <p class="meta-line">6개 · Lv2~3 · 32h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">물리 시뮬레이션 엔진</span>
+    <span class="skill-meta">RSF-DTS-002 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">3D 모델링 및 메시 생성</span>
+    <span class="skill-meta">RSF-DTS-003 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">3D 모델 CAD 임포트</span>
+    <span class="skill-meta">RSF-DTS-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">로봇 시뮬레이션 환경 구성</span>
+    <span class="skill-meta">RSF-DTS-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">디지털트윈 아키텍처</span>
+    <span class="skill-meta">RSF-DTS-001 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">로봇 시뮬레이션 소프트웨어</span>
+    <span class="skill-meta">RSF-DTS-004 · Lv3 · 4h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>가상 검증·시뮬레이션</h4>
+        <p class="meta-line">10개 · Lv2~3 · 104h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">생산 라인 레이아웃 검증</span>
+    <span class="skill-meta">RSF-DTS-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">협동 작업 시뮬레이션</span>
+    <span class="skill-meta">RSF-CRO-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">사이클 타임 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">시나리오 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">신규 라인 설계 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">설계 리스크 식별</span>
+    <span class="skill-meta">RSF-DTS-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">운영 시나리오 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">에뮬레이션·가상 커미셔닝</span>
+    <span class="skill-meta">RSF-DTS-022 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">시뮬레이션 기반 프로그래밍</span>
+    <span class="skill-meta">RSF-IRC-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">시뮬레이션 비전 파이프라인</span>
+    <span class="skill-meta">RSF-MVS-010 · Lv3 · 8h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>트윈 운영·동기화</h4>
+        <p class="meta-line">3개 · Lv3~4 · 40h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">실제 로봇 동기화</span>
+    <span class="skill-meta">RSF-DTS-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">디지털트윈 유지보수</span>
+    <span class="skill-meta">RSF-DTS-019 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">설계-운영 연동</span>
+    <span class="skill-meta">RSF-DTS-020 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>최적화·설계 지원</h4>
+        <p class="meta-line">3개 · Lv2~4 · 40h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">최적화 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">최적화된 사이클 타임 달성</span>
+    <span class="skill-meta">RSF-DTS-018 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">협동 로봇 배치 최적화</span>
+    <span class="skill-meta">RSF-CRO-021 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="college-section">
+    <div class="college-head" style="background:#0891b2">
+      <h3>Data Intelligence</h3>
+      <span>데이터 허브 · 스킬 26개 · 총 236h</span>
+    </div>
+    <div class="college-body">
+      
+      <div class="module">
+        <h4>신호·이미지 처리</h4>
+        <p class="meta-line">6개 · Lv2~3 · 36h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">디지털 이미지 처리</span>
+    <span class="skill-meta">RSF-MVS-001 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 신호 처리</span>
+    <span class="skill-meta">RSF-MVS-003 · Lv2 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">실시간 이미지 처리</span>
+    <span class="skill-meta">RSF-MVS-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">멀티 센서 융합</span>
+    <span class="skill-meta">RSF-MVS-014 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">컴퓨터 비전 알고리즘</span>
+    <span class="skill-meta">RSF-MVS-004 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">특징 추출 및 매칭</span>
+    <span class="skill-meta">RSF-MVS-012 · Lv3 · 8h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>데이터 파이프라인·로깅</h4>
+        <p class="meta-line">4개 · Lv2~4 · 36h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 신호 수집 및 필터링</span>
+    <span class="skill-meta">RSF-MVS-008 · Lv2 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">실시간 데이터 파이프라인</span>
+    <span class="skill-meta">RSF-DTS-005 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 데이터 수집</span>
+    <span class="skill-meta">RSF-DTS-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">센서 데이터 로깅</span>
+    <span class="skill-meta">RSF-MVS-019 · Lv4 · 16h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>분석·예측 인텔리전스</h4>
+        <p class="meta-line">11개 · Lv2~4 · 128h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">결과 분석 및 시각화</span>
+    <span class="skill-meta">RSF-DTS-014 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">에러 로그 분석</span>
+    <span class="skill-meta">RSF-IRC-015 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">로봇 상태 모니터링</span>
+    <span class="skill-meta">RSF-RMD-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">트렌드 분석</span>
+    <span class="skill-meta">RSF-RMD-007 · Lv2 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">함대 성능 모니터링</span>
+    <span class="skill-meta">RSF-AMR-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">협동 작업 사이클 타임 측정</span>
+    <span class="skill-meta">RSF-CRO-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 벤치마크 테스트</span>
+    <span class="skill-meta">RSF-RMD-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">부품 수명 예측</span>
+    <span class="skill-meta">RSF-RMD-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 지표 분석</span>
+    <span class="skill-meta">RSF-AMR-020 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 보고서 작성</span>
+    <span class="skill-meta">RSF-MVS-020 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 지표 개선</span>
+    <span class="skill-meta">RSF-RMD-020 · Lv4 · 16h</span>
+    
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>OT 네트워크·통신</h4>
+        <p class="meta-line">2개 · Lv2~2 · 12h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">무선 네트워크 및 통신</span>
+    <span class="skill-meta">RSF-AMR-004 · Lv2 · 4h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">네트워크 통신 설정</span>
+    <span class="skill-meta">RSF-AMR-014 · Lv2 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li></ul>
+      </div>
+      <div class="module">
+        <h4>지식그래프·Data Fabric</h4>
+        <p class="meta-line">3개 · Lv3~3 · 24h</p>
+        <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">제조 지식그래프·온톨로지 구축</span>
+    <span class="skill-meta">RSF-AAM-026 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">Data Fabric·기간계 시스템 연계</span>
+    <span class="skill-meta">RSF-AAM-027 · Lv3 · 8h</span>
+    <span class="badge badge-common">공통 이수 인정</span>
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">제조 특화 LLM 데이터·평가</span>
+    <span class="skill-meta">RSF-AAM-028 · Lv3 · 8h</span>
+    
+  </li></ul>
+      </div>
+    </div>
+  </section>
+
+  <h2>4. 특화 모듈 (Lv3+ 선택 · 크로스 도메인)</h2>
+  <p>자사 AI Factory 핵심 기능(자율 정비 / 공정 검증·배포 / 품질 지능화 / 물류·SCM / 지식그래프·sLLM)에 대응하는 크로스 도메인 트랙입니다. 각 모듈은 1人1案 현장 임팩트 과제로 마무리합니다.</p>
+  <div class="grid">
+    
+    <div class="card">
+      <h3>S1. 예지보전·자율 정비</h3>
+      <p class="goal">상태 데이터 → 고장 예측 → 자율 정비 실행으로 이어지는 설비 Agent 체계를 구축한다.</p>
+      <p class="meta-line">7개 스킬 · 88h · 연계 도메인: Physical AI &amp; Robotics · Agentic AI Manufacturing · Data Intelligence</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">로봇 상태 모니터링</span>
+    <span class="skill-meta">RSF-RMD-006 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">트렌드 분석</span>
+    <span class="skill-meta">RSF-RMD-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">부품 수명 예측</span>
+    <span class="skill-meta">RSF-RMD-017 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">예방적 유지보수 계획 수립</span>
+    <span class="skill-meta">RSF-RMD-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">긴급 고장 대응</span>
+    <span class="skill-meta">RSF-RMD-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자율 정비 실행 에이전트 운영</span>
+    <span class="skill-meta">RSF-AAM-022 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">시나리오 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-012 · Lv3 · 8h</span>
+    
+  </li></ul>
+      <p class="capstone"><strong>캡스톤:</strong> 담당 설비 1종의 예지보전 파이프라인 구축과 자율 정비 시나리오 검증 (1人1案 연계)</p>
+    </div>
+    <div class="card">
+      <h3>S2. 가상 커미셔닝·공정 검증</h3>
+      <p class="goal">신규 공정 시나리오를 에뮬레이터로 가상 검증하고 현장 배포까지 연결한다.</p>
+      <p class="meta-line">7개 스킬 · 72h · 연계 도메인: Digital Twin &amp; Simulation · Physical AI &amp; Robotics · Agentic AI Manufacturing</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">시뮬레이션 기반 프로그래밍</span>
+    <span class="skill-meta">RSF-IRC-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#4f46e5"></span>
+    <span class="skill-name">PLC·설비 제어 연동</span>
+    <span class="skill-meta">RSF-IRC-023 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">에뮬레이션·가상 커미셔닝</span>
+    <span class="skill-meta">RSF-DTS-022 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">생산 라인 레이아웃 검증</span>
+    <span class="skill-meta">RSF-DTS-008 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">신규 라인 설계 시뮬레이션</span>
+    <span class="skill-meta">RSF-DTS-015 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#9333ea"></span>
+    <span class="skill-name">설계 리스크 식별</span>
+    <span class="skill-meta">RSF-DTS-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">공정 시나리오 가상 검증·배포 에이전트</span>
+    <span class="skill-meta">RSF-AAM-023 · Lv3 · 8h</span>
+    
+  </li></ul>
+      <p class="capstone"><strong>캡스톤:</strong> 신규 라인/개조 공정 1건의 가상 커미셔닝 및 개발 Agent 배포 파이프라인 시연</p>
+    </div>
+    <div class="card">
+      <h3>S3. 품질 지능화</h3>
+      <p class="goal">비전 검사·SPC 기반 품질 판정을 자동화하고 자동 격리 운영까지 확장한다.</p>
+      <p class="meta-line">7개 스킬 · 64h · 연계 도메인: Data Intelligence · Agentic AI Manufacturing · Physical AI &amp; Robotics</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">컴퓨터 비전 알고리즘</span>
+    <span class="skill-meta">RSF-MVS-004 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">이미지 기반 결함 검출</span>
+    <span class="skill-meta">RSF-MVS-007 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">실시간 이미지 처리</span>
+    <span class="skill-meta">RSF-MVS-013 · Lv2 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">검출율 목표 달성</span>
+    <span class="skill-meta">RSF-MVS-016 · Lv3 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">통계적 공정 관리(SPC)</span>
+    <span class="skill-meta">RSF-AAM-004 · Lv2 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">품질 이상 자동 판정</span>
+    <span class="skill-meta">RSF-AAM-012 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">품질 이상 자동 격리 운영</span>
+    <span class="skill-meta">RSF-AAM-016 · Lv3 · 16h</span>
+    
+  </li></ul>
+      <p class="capstone"><strong>캡스톤:</strong> 담당 공정 검사 항목의 자동 판정 모델 구축과 오판정률 목표 달성 리포트</p>
+    </div>
+    <div class="card">
+      <h3>S4. 자율 물류·SCM 통합</h3>
+      <p class="goal">AMR 함대 관제와 자재·협력사 연동, In-Factory 물류-SCM 실행 통합을 설계한다.</p>
+      <p class="meta-line">6개 스킬 · 60h · 연계 도메인: Physical AI &amp; Robotics · Agentic AI Manufacturing · Data Intelligence</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">함대 관리 시스템</span>
+    <span class="skill-meta">RSF-AMR-005 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">멀티-로봇 교통 관제</span>
+    <span class="skill-meta">RSF-AMR-009 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">함대 성능 모니터링</span>
+    <span class="skill-meta">RSF-AMR-010 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 지표 분석</span>
+    <span class="skill-meta">RSF-AMR-020 · Lv4 · 16h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">자재·협력사 연동 자율화</span>
+    <span class="skill-meta">RSF-AAM-024 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0d9488"></span>
+    <span class="skill-name">In-Factory 물류·SCM 실행 통합</span>
+    <span class="skill-meta">RSF-AAM-025 · Lv4 · 16h</span>
+    
+  </li></ul>
+      <p class="capstone"><strong>캡스톤:</strong> 물류 구간 1개의 함대 운영 KPI 개선안과 SCM 실행 데이터 연계 설계</p>
+    </div>
+    <div class="card">
+      <h3>S5. 제조 지식그래프·특화 LLM</h3>
+      <p class="goal">작업지도서·매뉴얼을 지식그래프로 구조화하고 제조 특화 sLLM 데이터·평가 체계를 만든다.</p>
+      <p class="meta-line">6개 스킬 · 44h · 연계 도메인: Data Intelligence · Agentic AI Manufacturing</p>
+      <ul class="skills"><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">제조 지식그래프·온톨로지 구축</span>
+    <span class="skill-meta">RSF-AAM-026 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">Data Fabric·기간계 시스템 연계</span>
+    <span class="skill-meta">RSF-AAM-027 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">제조 특화 LLM 데이터·평가</span>
+    <span class="skill-meta">RSF-AAM-028 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">실시간 데이터 파이프라인</span>
+    <span class="skill-meta">RSF-DTS-005 · Lv3 · 4h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">성능 데이터 수집</span>
+    <span class="skill-meta">RSF-DTS-011 · Lv3 · 8h</span>
+    
+  </li><li>
+    <span class="dot" style="background:#0891b2"></span>
+    <span class="skill-name">멀티 센서 융합</span>
+    <span class="skill-meta">RSF-MVS-014 · Lv2 · 8h</span>
+    
+  </li></ul>
+      <p class="capstone"><strong>캡스톤:</strong> 담당 공정 문서군의 온톨로지 구축과 sLLM 질의응답 품질 평가 리포트</p>
+    </div>
+  </div>
+
+  <h2>5. 운영·평가 체계</h2>
+  <table>
+    <thead><tr><th>구분</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td><strong>학습시간 산정</strong></td><td>지식 4h · 기술 8h · 역량 16h (스킬 타입 기준 자동 산출, 스킬 데이터 갱신 시 재발행)</td></tr>
+      <tr><td><strong>학습 방식</strong></td><td>지식: 강의/자기학습 → 기술: 실습·시뮬레이션 → 역량: OJT·페어 임베드 현장 과제</td></tr>
+      <tr><td><strong>수료 평가</strong></td><td>모듈별 스킬 진단(현재/목표 레벨), 특화 모듈은 캡스톤 산출물을 육성위원회가 승인</td></tr>
+      <tr><td><strong>인증 연계</strong></td><td>공통+도메인 Lv2 → AX Practitioner, +Lv3·특화 1개 → AX Specialist, +Cross-College Capstone → AX Expert</td></tr>
+      <tr><td><strong>이력 관리</strong></td><td>후보자 프로파일(docs/CANDIDATE_PROFILE_PLAN.md)의 학습 이력·스킬 진단에 기록</td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Factory Robotics Skill Map · 스킬 온톨로지 기반 자동 생성 문서 —
+    데이터 변경 시 <code>npm run generate:curriculum-html</code> 로 재발행하십시오.
+  </footer>
+</div>
+</body>
+</html>
