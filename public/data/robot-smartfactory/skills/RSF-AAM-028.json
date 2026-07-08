@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-028",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0028",
+  "esco_uri": null,
+  "preferred_label_ko": "제조 특화 LLM 데이터·평가",
+  "preferred_label_en": "Manufacturing-Specific LLM Data and Evaluation",
+  "description_ko": "제조 특화 sLLM 학습·평가용 데이터 구축과 응답 품질 검증",
+  "description_en": "Build datasets and evaluate response quality for manufacturing-specific small LLMs",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-027",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 제조 특화 LLM 데이터·평가"
+}

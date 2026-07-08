@@ -1,0 +1,33 @@
+{
+  "skill_id": "RSF-AAM-024",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0024",
+  "esco_uri": null,
+  "preferred_label_ko": "자재·협력사 연동 자율화",
+  "preferred_label_en": "Autonomous Material and Supplier Coordination",
+  "description_ko": "자재 부족·지연 예측과 협력사 연동 기반의 자재투입 자율 운영",
+  "description_en": "Autonomously operate material input with shortage/delay prediction and supplier coordination",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-023",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-025",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 자재·협력사 연동 자율화"
+}

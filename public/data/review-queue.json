@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total": 249,
+    "total": 260,
     "organizationMappings": 10,
-    "ontologyRelations": 239,
+    "ontologyRelations": 250,
     "statuses": {
-      "pending": 249,
+      "pending": 260,
       "approved": 0,
       "held": 0,
       "rejected": 0
@@ -328,7 +328,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-AAM-001:RSF-AAM-021",
+      "id": "ontology_relation:co_required:RSF-AAM-001:RSF-AAM-028",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -339,8 +339,8 @@
         "domain": "agentic-ai-manufacturing"
       },
       "target_skill": {
-        "skill_id": "RSF-AAM-021",
-        "label_ko": "자율화 확산 계획",
+        "skill_id": "RSF-AAM-028",
+        "label_ko": "제조 특화 LLM 데이터·평가",
         "domain": "agentic-ai-manufacturing"
       }
     },
@@ -664,6 +664,125 @@
       "target_skill": {
         "skill_id": "RSF-AAM-021",
         "label_ko": "자율화 확산 계획",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-021:RSF-AAM-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-021",
+        "label_ko": "자율화 확산 계획",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-022",
+        "label_ko": "자율 정비 실행 에이전트 운영",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-022:RSF-AAM-023",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-022",
+        "label_ko": "자율 정비 실행 에이전트 운영",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-023",
+        "label_ko": "공정 시나리오 가상 검증·배포 에이전트",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-023:RSF-AAM-024",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-023",
+        "label_ko": "공정 시나리오 가상 검증·배포 에이전트",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-024",
+        "label_ko": "자재·협력사 연동 자율화",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-024:RSF-AAM-025",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-024",
+        "label_ko": "자재·협력사 연동 자율화",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-025",
+        "label_ko": "In-Factory 물류·SCM 실행 통합",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-025:RSF-AAM-026",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-025",
+        "label_ko": "In-Factory 물류·SCM 실행 통합",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-026",
+        "label_ko": "제조 지식그래프·온톨로지 구축",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-026:RSF-AAM-027",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-026",
+        "label_ko": "제조 지식그래프·온톨로지 구축",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-027",
+        "label_ko": "Data Fabric·기간계 시스템 연계",
+        "domain": "agentic-ai-manufacturing"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-AAM-027:RSF-AAM-028",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-AAM-027",
+        "label_ko": "Data Fabric·기간계 시스템 연계",
+        "domain": "agentic-ai-manufacturing"
+      },
+      "target_skill": {
+        "skill_id": "RSF-AAM-028",
+        "label_ko": "제조 특화 LLM 데이터·평가",
         "domain": "agentic-ai-manufacturing"
       }
     },
@@ -1042,7 +1161,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-CRO-001:RSF-CRO-021",
+      "id": "ontology_relation:co_required:RSF-CRO-001:RSF-CRO-022",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1053,8 +1172,8 @@
         "domain": "collaborative-robot"
       },
       "target_skill": {
-        "skill_id": "RSF-CRO-021",
-        "label_ko": "협동 로봇 배치 최적화",
+        "skill_id": "RSF-CRO-022",
+        "label_ko": "휴머노이드 로봇 운용 기초",
         "domain": "collaborative-robot"
       }
     },
@@ -1382,6 +1501,23 @@
       }
     },
     {
+      "id": "ontology_relation:co_required:RSF-CRO-021:RSF-CRO-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-CRO-021",
+        "label_ko": "협동 로봇 배치 최적화",
+        "domain": "collaborative-robot"
+      },
+      "target_skill": {
+        "skill_id": "RSF-CRO-022",
+        "label_ko": "휴머노이드 로봇 운용 기초",
+        "domain": "collaborative-robot"
+      }
+    },
+    {
       "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-002",
       "kind": "ontology_relation",
       "priority": "normal",
@@ -1399,7 +1535,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-021",
+      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-022",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1410,8 +1546,8 @@
         "domain": "digital-twin-simulation"
       },
       "target_skill": {
-        "skill_id": "RSF-DTS-021",
-        "label_ko": "의사결정 지원",
+        "skill_id": "RSF-DTS-022",
+        "label_ko": "에뮬레이션·가상 커미셔닝",
         "domain": "digital-twin-simulation"
       }
     },
@@ -1739,6 +1875,23 @@
       }
     },
     {
+      "id": "ontology_relation:co_required:RSF-DTS-021:RSF-DTS-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-021",
+        "label_ko": "의사결정 지원",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-022",
+        "label_ko": "에뮬레이션·가상 커미셔닝",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
       "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-002",
       "kind": "ontology_relation",
       "priority": "normal",
@@ -1756,7 +1909,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-022",
+      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-023",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1767,8 +1920,8 @@
         "domain": "industrial-robot-control"
       },
       "target_skill": {
-        "skill_id": "RSF-IRC-022",
-        "label_ko": "생산성 향상 제안",
+        "skill_id": "RSF-IRC-023",
+        "label_ko": "PLC·설비 제어 연동",
         "domain": "industrial-robot-control"
       }
     },
@@ -2113,6 +2266,23 @@
       }
     },
     {
+      "id": "ontology_relation:co_required:RSF-IRC-022:RSF-IRC-023",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-022",
+        "label_ko": "생산성 향상 제안",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-023",
+        "label_ko": "PLC·설비 제어 연동",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
       "id": "ontology_relation:co_required:RSF-MVS-001:RSF-MVS-002",
       "kind": "ontology_relation",
       "priority": "normal",
@@ -2130,7 +2300,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-MVS-001:RSF-MVS-021",
+      "id": "ontology_relation:co_required:RSF-MVS-001:RSF-MVS-022",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -2141,8 +2311,8 @@
         "domain": "machine-vision-sensor"
       },
       "target_skill": {
-        "skill_id": "RSF-MVS-021",
-        "label_ko": "카메라 교체 작업",
+        "skill_id": "RSF-MVS-022",
+        "label_ko": "IoT 센서·엣지 통합",
         "domain": "machine-vision-sensor"
       }
     },
@@ -2466,6 +2636,23 @@
       "target_skill": {
         "skill_id": "RSF-MVS-021",
         "label_ko": "카메라 교체 작업",
+        "domain": "machine-vision-sensor"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-MVS-021:RSF-MVS-022",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-MVS-021",
+        "label_ko": "카메라 교체 작업",
+        "domain": "machine-vision-sensor"
+      },
+      "target_skill": {
+        "skill_id": "RSF-MVS-022",
+        "label_ko": "IoT 센서·엣지 통합",
         "domain": "machine-vision-sensor"
       }
     },

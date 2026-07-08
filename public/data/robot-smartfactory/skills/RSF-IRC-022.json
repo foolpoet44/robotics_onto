@@ -10,7 +10,9 @@
   "description_en": "Propose improvements to robot operation efficiency",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-009",
   "related_skills": [
     {
@@ -26,7 +28,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-IRC-001",
+      "target": "RSF-IRC-023",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

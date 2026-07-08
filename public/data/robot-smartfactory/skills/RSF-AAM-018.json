@@ -10,7 +10,9 @@
   "description_en": "Measure agent performance including automation, intervention, and error rates",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AAM-007",
   "related_skills": [
     {

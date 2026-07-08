@@ -10,7 +10,10 @@
   "description_en": "Automatically create work orders reflecting production status",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {

@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-CRO-022",
+  "domain": "collaborative-robot",
+  "domain_en": "Collaborative Robot Operation",
+  "internal_uri": "urn:rsf:skill:cro-0022",
+  "esco_uri": null,
+  "preferred_label_ko": "휴머노이드 로봇 운용 기초",
+  "preferred_label_en": "Humanoid Robot Operation Basics",
+  "description_ko": "휴머노이드 로봇의 안전 운용, 작업 지시, 인간 공존 환경 관리 기초",
+  "description_en": "Basics of safe humanoid robot operation, tasking, and human-coexistence management",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-CRO-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-CRO-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 휴머노이드 로봇 운용 기초"
+}

@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-MVS-022",
+  "domain": "machine-vision-sensor",
+  "domain_en": "Machine Vision & Sensor Integration",
+  "internal_uri": "urn:rsf:skill:mvs-0022",
+  "esco_uri": null,
+  "preferred_label_ko": "IoT 센서·엣지 통합",
+  "preferred_label_en": "IoT Sensor and Edge Integration",
+  "description_ko": "IoT 센서 네트워크 구성과 엣지 디바이스 데이터 수집 통합",
+  "description_en": "Configure IoT sensor networks and integrate edge device data collection",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-MVS-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-MVS-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: IoT 센서·엣지 통합"
+}

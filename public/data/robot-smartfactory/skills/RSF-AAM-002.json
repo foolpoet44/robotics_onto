@@ -10,7 +10,10 @@
   "description_en": "Behavior of large language models, prompt design principles, limitations and failure modes",
   "skill_type": "knowledge",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {

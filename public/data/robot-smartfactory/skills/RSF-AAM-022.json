@@ -1,0 +1,33 @@
+{
+  "skill_id": "RSF-AAM-022",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0022",
+  "esco_uri": null,
+  "preferred_label_ko": "자율 정비 실행 에이전트 운영",
+  "preferred_label_en": "Autonomous Maintenance Execution Agent Operation",
+  "description_ko": "고장 예측과 연계해 자율 정비를 실행하는 설비 에이전트 운영·검증",
+  "description_en": "Operate and verify equipment agents that execute autonomous maintenance from failure predictions",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-023",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 자율 정비 실행 에이전트 운영"
+}

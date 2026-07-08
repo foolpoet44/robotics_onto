@@ -10,7 +10,9 @@
   "description_en": "Balance work time across multiple robots",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-008",
   "related_skills": [
     {

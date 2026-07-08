@@ -35,31 +35,31 @@
     {
       "id": "aa-agent-design",
       "collegeId": "agentic-ai",
-      "name": "에이전트 설계·오케스트레이션",
+      "name": "에이전트 설계·오케스트레이션 (Orchestration AI)",
       "order": 1
     },
     {
       "id": "aa-mes-planning",
       "collegeId": "agentic-ai",
-      "name": "MES·생산계획 자율화",
+      "name": "MES·생산계획 자율화 (생산 Agent)",
       "order": 2
     },
     {
       "id": "aa-quality",
       "collegeId": "agentic-ai",
-      "name": "품질 자동 판정",
+      "name": "품질 자동 판정 (품질 Agent)",
       "order": 3
     },
     {
       "id": "aa-autonomous-ops",
       "collegeId": "agentic-ai",
-      "name": "자율 관제·운영",
+      "name": "자율 관제·물류 (물류 Agent)",
       "order": 4
     },
     {
       "id": "aa-governance",
       "collegeId": "agentic-ai",
-      "name": "안전·거버넌스",
+      "name": "안전·거버넌스 (안전환경 Agent)",
       "order": 5
     },
     {
@@ -109,6 +109,24 @@
       "collegeId": "digital-twin",
       "name": "최적화·설계 지원",
       "order": 4
+    },
+    {
+      "id": "aa-equipment",
+      "collegeId": "agentic-ai",
+      "name": "자율 정비 실행 (설비 Agent)",
+      "order": 6
+    },
+    {
+      "id": "aa-dev-agent",
+      "collegeId": "agentic-ai",
+      "name": "공정 검증·배포 (개발 Agent)",
+      "order": 7
+    },
+    {
+      "id": "di-knowledge",
+      "collegeId": "data-intelligence",
+      "name": "지식그래프·Data Fabric",
+      "order": 5
     }
   ],
   "skillSubcategories": {
@@ -133,6 +151,13 @@
     "RSF-AAM-019": "aa-governance",
     "RSF-AAM-020": "aa-governance",
     "RSF-AAM-021": "aa-governance",
+    "RSF-AAM-022": "aa-equipment",
+    "RSF-AAM-023": "aa-dev-agent",
+    "RSF-AAM-024": "aa-autonomous-ops",
+    "RSF-AAM-025": "aa-autonomous-ops",
+    "RSF-AAM-026": "di-knowledge",
+    "RSF-AAM-027": "di-knowledge",
+    "RSF-AAM-028": "di-knowledge",
     "RSF-AMR-001": "pa-amr",
     "RSF-AMR-002": "pa-amr",
     "RSF-AMR-003": "pa-amr",
@@ -175,6 +200,7 @@
     "RSF-CRO-019": "pa-cobot",
     "RSF-CRO-020": "pa-cobot",
     "RSF-CRO-021": "dt-optimization",
+    "RSF-CRO-022": "pa-cobot",
     "RSF-DTS-001": "dt-modeling",
     "RSF-DTS-002": "dt-modeling",
     "RSF-DTS-003": "dt-modeling",
@@ -196,6 +222,7 @@
     "RSF-DTS-019": "dt-operation",
     "RSF-DTS-020": "dt-operation",
     "RSF-DTS-021": "aa-autonomous-ops",
+    "RSF-DTS-022": "dt-validation",
     "RSF-IRC-001": "pa-industrial",
     "RSF-IRC-002": "pa-industrial",
     "RSF-IRC-003": "pa-industrial",
@@ -218,6 +245,7 @@
     "RSF-IRC-020": "aa-mes-planning",
     "RSF-IRC-021": "pa-industrial",
     "RSF-IRC-022": "aa-mes-planning",
+    "RSF-IRC-023": "pa-industrial",
     "RSF-MVS-001": "di-signal",
     "RSF-MVS-002": "pa-vision-hw",
     "RSF-MVS-003": "di-signal",
@@ -239,6 +267,7 @@
     "RSF-MVS-019": "di-pipeline",
     "RSF-MVS-020": "di-analytics",
     "RSF-MVS-021": "pa-vision-hw",
+    "RSF-MVS-022": "pa-vision-hw",
     "RSF-RMD-001": "pa-maintenance",
     "RSF-RMD-002": "pa-maintenance",
     "RSF-RMD-003": "pa-maintenance",

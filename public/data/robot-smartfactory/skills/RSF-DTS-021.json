@@ -10,7 +10,9 @@
   "description_en": "Propose operational improvements based on simulation",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-DTS-009",
   "related_skills": [
     {
@@ -26,7 +28,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-DTS-001",
+      "target": "RSF-DTS-022",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

@@ -10,7 +10,10 @@
   "description_en": "Verify safety of collaborative operations in actual environment",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-CRO-006",
   "related_skills": [
     {

@@ -10,7 +10,10 @@
   "description_en": "Operate and verify automated quarantine of judged defects",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AAM-006",
   "related_skills": [
     {

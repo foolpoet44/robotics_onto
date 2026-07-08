@@ -494,6 +494,123 @@ SKILL_COMPETENCE_TEMPLATES = {
     },
 }
 
+# ==================== 확장 스킬 (AI Factory 갭 증설) ====================
+# 자사 AI Factory 아키텍처 정렬로 추가된 스킬. 기존 스킬 ID(URN) 보존을 위해
+# 반드시 각 도메인 시퀀스의 "마지막"에 추가한다. type/roles/proficiency 를
+# 명시적으로 지정하며 parent 는 두지 않는다.
+
+EXTENSION_SKILLS = {
+    "industrial-robot-control": [
+        {
+            "type": "skill",
+            "label_ko": "PLC·설비 제어 연동",
+            "label_en": "PLC and Equipment Control Integration",
+            "description_ko": "PLC 로직 이해와 로봇-설비 간 제어 신호 연동 구성",
+            "description_en": "Understand PLC logic and configure control signal integration between robots and equipment",
+            "proficiency": 2,
+            "roles": ["operator", "engineer"],
+        },
+    ],
+    "machine-vision-sensor": [
+        {
+            "type": "skill",
+            "label_ko": "IoT 센서·엣지 통합",
+            "label_en": "IoT Sensor and Edge Integration",
+            "description_ko": "IoT 센서 네트워크 구성과 엣지 디바이스 데이터 수집 통합",
+            "description_en": "Configure IoT sensor networks and integrate edge device data collection",
+            "proficiency": 2,
+            "roles": ["engineer", "developer"],
+        },
+    ],
+    "collaborative-robot": [
+        {
+            "type": "skill",
+            "label_ko": "휴머노이드 로봇 운용 기초",
+            "label_en": "Humanoid Robot Operation Basics",
+            "description_ko": "휴머노이드 로봇의 안전 운용, 작업 지시, 인간 공존 환경 관리 기초",
+            "description_en": "Basics of safe humanoid robot operation, tasking, and human-coexistence management",
+            "proficiency": 2,
+            "roles": ["operator", "engineer"],
+        },
+    ],
+    "digital-twin-simulation": [
+        {
+            "type": "skill",
+            "label_ko": "에뮬레이션·가상 커미셔닝",
+            "label_en": "Emulation and Virtual Commissioning",
+            "description_ko": "제어 로직을 에뮬레이터로 검증해 설비 도입 전 가상 커미셔닝 수행",
+            "description_en": "Validate control logic with emulators and perform virtual commissioning before deployment",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+    ],
+    "agentic-ai-manufacturing": [
+        {
+            "type": "competence",
+            "label_ko": "자율 정비 실행 에이전트 운영",
+            "label_en": "Autonomous Maintenance Execution Agent Operation",
+            "description_ko": "고장 예측과 연계해 자율 정비를 실행하는 설비 에이전트 운영·검증",
+            "description_en": "Operate and verify equipment agents that execute autonomous maintenance from failure predictions",
+            "proficiency": 3,
+            "roles": ["engineer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "공정 시나리오 가상 검증·배포 에이전트",
+            "label_en": "Process Scenario Validation and Deployment Agent",
+            "description_ko": "신규 공정 시나리오를 가상 검증하고 현장 배포하는 개발 에이전트 구성",
+            "description_en": "Build development agents that virtually validate and deploy new process scenarios",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "자재·협력사 연동 자율화",
+            "label_en": "Autonomous Material and Supplier Coordination",
+            "description_ko": "자재 부족·지연 예측과 협력사 연동 기반의 자재투입 자율 운영",
+            "description_en": "Autonomously operate material input with shortage/delay prediction and supplier coordination",
+            "proficiency": 3,
+            "roles": ["engineer"],
+        },
+        {
+            "type": "competence",
+            "label_ko": "In-Factory 물류·SCM 실행 통합",
+            "label_en": "In-Factory Logistics and SCM Execution Integration",
+            "description_ko": "완제품 자율 이송·창고 자동화와 SCM 실행 데이터를 통합 운영",
+            "description_en": "Integrate autonomous finished-goods transport and warehouse automation with SCM execution",
+            "proficiency": 4,
+            "roles": ["engineer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "제조 지식그래프·온톨로지 구축",
+            "label_en": "Manufacturing Knowledge Graph and Ontology Engineering",
+            "description_ko": "작업지도서·설비 매뉴얼 등 제조 지식을 그래프 DB 온톨로지로 구축·운영",
+            "description_en": "Build and operate graph-DB ontologies from manufacturing knowledge such as work instructions and manuals",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "Data Fabric·기간계 시스템 연계",
+            "label_en": "Data Fabric and Enterprise System Integration",
+            "description_ko": "PLM·ERP·MES·QMS·EMS·EHS 등 기간계를 Data Fabric으로 연계·정합",
+            "description_en": "Integrate enterprise systems (PLM/ERP/MES/QMS/EMS/EHS) through a data fabric",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "제조 특화 LLM 데이터·평가",
+            "label_en": "Manufacturing-Specific LLM Data and Evaluation",
+            "description_ko": "제조 특화 sLLM 학습·평가용 데이터 구축과 응답 품질 검증",
+            "description_en": "Build datasets and evaluate response quality for manufacturing-specific small LLMs",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+    ],
+}
+
 # ==================== 메인 데이터 생성 로직 ====================
 
 def generate_skill_id(domain_code: str, index: int) -> str:
@@ -706,6 +823,25 @@ def generate_robot_smartfactory_data() -> List[Dict[str, Any]]:
                 role_mappings=roles,
                 parent_skill_id=f"RSF-{domain_code}-{len(knowledge_list) + (i // 2) + 1:03d}",
                 smartfactory_context=f"현장 검증: {label_ko} 수행 능력 입증",
+                index=index,
+            )
+            all_skills.append(skill)
+            index += 1
+
+        # 확장 스킬은 기존 ID 보존을 위해 항상 도메인 시퀀스 마지막에 붙인다.
+        for ext in EXTENSION_SKILLS.get(domain, []):
+            skill = create_skill_object(
+                domain=domain,
+                domain_code=domain_code,
+                skill_type=ext["type"],
+                label_ko=ext["label_ko"],
+                label_en=ext["label_en"],
+                description_ko=ext["description_ko"],
+                description_en=ext["description_en"],
+                proficiency_level=ext["proficiency"],
+                role_mappings=ext["roles"],
+                parent_skill_id=None,
+                smartfactory_context=f"AI Factory 정렬 증설: {ext['label_ko']}",
                 index=index,
             )
             all_skills.append(skill)

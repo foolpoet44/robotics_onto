@@ -1,0 +1,33 @@
+{
+  "skill_id": "RSF-AAM-025",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0025",
+  "esco_uri": null,
+  "preferred_label_ko": "In-Factory 물류·SCM 실행 통합",
+  "preferred_label_en": "In-Factory Logistics and SCM Execution Integration",
+  "description_ko": "완제품 자율 이송·창고 자동화와 SCM 실행 데이터를 통합 운영",
+  "description_en": "Integrate autonomous finished-goods transport and warehouse automation with SCM execution",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-024",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-026",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: In-Factory 물류·SCM 실행 통합"
+}

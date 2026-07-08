@@ -10,7 +10,9 @@
   "description_en": "Plan roadmaps to scale validated autonomy to other processes",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AAM-009",
   "related_skills": [
     {
@@ -26,7 +28,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-AAM-001",
+      "target": "RSF-AAM-022",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

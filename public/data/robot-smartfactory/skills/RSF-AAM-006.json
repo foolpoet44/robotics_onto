@@ -10,7 +10,10 @@
   "description_en": "Design agent roles and behaviors reflecting process goals and constraints",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": "RSF-AAM-001",
   "related_skills": [
     {

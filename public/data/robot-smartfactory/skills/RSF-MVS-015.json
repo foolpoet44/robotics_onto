@@ -10,7 +10,10 @@
   "description_en": "Install and verify vision system on actual production line",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-006",
   "related_skills": [
     {

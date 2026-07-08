@@ -10,7 +10,10 @@
   "description_en": "Configure action limits, prohibition rules, and anomaly blocking",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {

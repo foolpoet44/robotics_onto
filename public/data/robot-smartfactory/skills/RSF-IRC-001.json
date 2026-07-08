@@ -10,7 +10,10 @@
   "description_en": "Fundamental knowledge of robot physical structure, joint motion, and inverse kinematics",
   "skill_type": "knowledge",
   "proficiency_level": 1,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {
@@ -20,7 +23,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-IRC-022",
+      "target": "RSF-IRC-023",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

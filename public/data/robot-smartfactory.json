@@ -21,7 +21,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-IRC-022",
+        "target": "RSF-IRC-023",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -756,7 +756,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-IRC-001",
+        "target": "RSF-IRC-023",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -764,6 +764,37 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 생산성 향상 제안 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-IRC-023",
+    "domain": "industrial-robot-control",
+    "domain_en": "Industrial Robot Control",
+    "internal_uri": "urn:rsf:skill:irc-0023",
+    "esco_uri": null,
+    "preferred_label_ko": "PLC·설비 제어 연동",
+    "preferred_label_en": "PLC and Equipment Control Integration",
+    "description_ko": "PLC 로직 이해와 로봇-설비 간 제어 신호 연동 구성",
+    "description_en": "Understand PLC logic and configure control signal integration between robots and equipment",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["operator", "engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-IRC-022",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-IRC-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: PLC·설비 제어 연동"
   },
   {
     "skill_id": "RSF-MVS-001",
@@ -787,7 +818,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-MVS-021",
+        "target": "RSF-MVS-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -1491,7 +1522,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-MVS-001",
+        "target": "RSF-MVS-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -1499,6 +1530,37 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 카메라 교체 작업 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-MVS-022",
+    "domain": "machine-vision-sensor",
+    "domain_en": "Machine Vision & Sensor Integration",
+    "internal_uri": "urn:rsf:skill:mvs-0022",
+    "esco_uri": null,
+    "preferred_label_ko": "IoT 센서·엣지 통합",
+    "preferred_label_en": "IoT Sensor and Edge Integration",
+    "description_ko": "IoT 센서 네트워크 구성과 엣지 디바이스 데이터 수집 통합",
+    "description_en": "Configure IoT sensor networks and integrate edge device data collection",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-MVS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-MVS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: IoT 센서·엣지 통합"
   },
   {
     "skill_id": "RSF-CRO-001",
@@ -1522,7 +1584,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-CRO-021",
+        "target": "RSF-CRO-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -2226,7 +2288,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-CRO-001",
+        "target": "RSF-CRO-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -2234,6 +2296,37 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 협동 로봇 배치 최적화 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-CRO-022",
+    "domain": "collaborative-robot",
+    "domain_en": "Collaborative Robot Operation",
+    "internal_uri": "urn:rsf:skill:cro-0022",
+    "esco_uri": null,
+    "preferred_label_ko": "휴머노이드 로봇 운용 기초",
+    "preferred_label_en": "Humanoid Robot Operation Basics",
+    "description_ko": "휴머노이드 로봇의 안전 운용, 작업 지시, 인간 공존 환경 관리 기초",
+    "description_en": "Basics of safe humanoid robot operation, tasking, and human-coexistence management",
+    "skill_type": "skill",
+    "proficiency_level": 2,
+    "role_mapping": ["operator", "engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-CRO-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-CRO-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 휴머노이드 로봇 운용 기초"
   },
   {
     "skill_id": "RSF-AMR-001",
@@ -3727,7 +3820,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-DTS-021",
+        "target": "RSF-DTS-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -4431,7 +4524,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-DTS-001",
+        "target": "RSF-DTS-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -4439,6 +4532,37 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 의사결정 지원 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-DTS-022",
+    "domain": "digital-twin-simulation",
+    "domain_en": "Digital Twin & Simulation",
+    "internal_uri": "urn:rsf:skill:dts-0022",
+    "esco_uri": null,
+    "preferred_label_ko": "에뮬레이션·가상 커미셔닝",
+    "preferred_label_en": "Emulation and Virtual Commissioning",
+    "description_ko": "제어 로직을 에뮬레이터로 검증해 설비 도입 전 가상 커미셔닝 수행",
+    "description_en": "Validate control logic with emulators and perform virtual commissioning before deployment",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-DTS-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 에뮬레이션·가상 커미셔닝"
   },
   {
     "skill_id": "RSF-AAM-001",
@@ -4462,7 +4586,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-AAM-021",
+        "target": "RSF-AAM-028",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -5166,7 +5290,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-AAM-001",
+        "target": "RSF-AAM-022",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -5174,5 +5298,222 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "현장 검증: 자율화 확산 계획 수행 능력 입증"
+  },
+  {
+    "skill_id": "RSF-AAM-022",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0022",
+    "esco_uri": null,
+    "preferred_label_ko": "자율 정비 실행 에이전트 운영",
+    "preferred_label_en": "Autonomous Maintenance Execution Agent Operation",
+    "description_ko": "고장 예측과 연계해 자율 정비를 실행하는 설비 에이전트 운영·검증",
+    "description_en": "Operate and verify equipment agents that execute autonomous maintenance from failure predictions",
+    "skill_type": "competence",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-021",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-023",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 자율 정비 실행 에이전트 운영"
+  },
+  {
+    "skill_id": "RSF-AAM-023",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0023",
+    "esco_uri": null,
+    "preferred_label_ko": "공정 시나리오 가상 검증·배포 에이전트",
+    "preferred_label_en": "Process Scenario Validation and Deployment Agent",
+    "description_ko": "신규 공정 시나리오를 가상 검증하고 현장 배포하는 개발 에이전트 구성",
+    "description_en": "Build development agents that virtually validate and deploy new process scenarios",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-022",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-024",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 공정 시나리오 가상 검증·배포 에이전트"
+  },
+  {
+    "skill_id": "RSF-AAM-024",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0024",
+    "esco_uri": null,
+    "preferred_label_ko": "자재·협력사 연동 자율화",
+    "preferred_label_en": "Autonomous Material and Supplier Coordination",
+    "description_ko": "자재 부족·지연 예측과 협력사 연동 기반의 자재투입 자율 운영",
+    "description_en": "Autonomously operate material input with shortage/delay prediction and supplier coordination",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-023",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-025",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 자재·협력사 연동 자율화"
+  },
+  {
+    "skill_id": "RSF-AAM-025",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0025",
+    "esco_uri": null,
+    "preferred_label_ko": "In-Factory 물류·SCM 실행 통합",
+    "preferred_label_en": "In-Factory Logistics and SCM Execution Integration",
+    "description_ko": "완제품 자율 이송·창고 자동화와 SCM 실행 데이터를 통합 운영",
+    "description_en": "Integrate autonomous finished-goods transport and warehouse automation with SCM execution",
+    "skill_type": "competence",
+    "proficiency_level": 4,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-024",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-026",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: In-Factory 물류·SCM 실행 통합"
+  },
+  {
+    "skill_id": "RSF-AAM-026",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0026",
+    "esco_uri": null,
+    "preferred_label_ko": "제조 지식그래프·온톨로지 구축",
+    "preferred_label_en": "Manufacturing Knowledge Graph and Ontology Engineering",
+    "description_ko": "작업지도서·설비 매뉴얼 등 제조 지식을 그래프 DB 온톨로지로 구축·운영",
+    "description_en": "Build and operate graph-DB ontologies from manufacturing knowledge such as work instructions and manuals",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-025",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-027",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 제조 지식그래프·온톨로지 구축"
+  },
+  {
+    "skill_id": "RSF-AAM-027",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0027",
+    "esco_uri": null,
+    "preferred_label_ko": "Data Fabric·기간계 시스템 연계",
+    "preferred_label_en": "Data Fabric and Enterprise System Integration",
+    "description_ko": "PLM·ERP·MES·QMS·EMS·EHS 등 기간계를 Data Fabric으로 연계·정합",
+    "description_en": "Integrate enterprise systems (PLM/ERP/MES/QMS/EMS/EHS) through a data fabric",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-026",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-028",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: Data Fabric·기간계 시스템 연계"
+  },
+  {
+    "skill_id": "RSF-AAM-028",
+    "domain": "agentic-ai-manufacturing",
+    "domain_en": "Agentic AI Manufacturing",
+    "internal_uri": "urn:rsf:skill:aam-0028",
+    "esco_uri": null,
+    "preferred_label_ko": "제조 특화 LLM 데이터·평가",
+    "preferred_label_en": "Manufacturing-Specific LLM Data and Evaluation",
+    "description_ko": "제조 특화 sLLM 학습·평가용 데이터 구축과 응답 품질 검증",
+    "description_en": "Build datasets and evaluate response quality for manufacturing-specific small LLMs",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-AAM-027",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-AAM-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 제조 특화 LLM 데이터·평가"
   }
 ]

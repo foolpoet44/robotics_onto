@@ -10,7 +10,10 @@
   "description_en": "Automate repetitive MES workflows with agents",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": "RSF-AAM-003",
   "related_skills": [
     {

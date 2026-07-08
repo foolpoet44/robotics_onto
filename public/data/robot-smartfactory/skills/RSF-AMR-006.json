@@ -10,7 +10,10 @@
   "description_en": "Generate environment map using LiDAR and camera",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-001",
   "related_skills": [
     {

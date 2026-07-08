@@ -10,7 +10,10 @@
   "description_en": "Coordinate role division and collaboration flows across agents",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["engineer", "developer"],
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
   "parent_skill_id": "RSF-AAM-002",
   "related_skills": [
     {

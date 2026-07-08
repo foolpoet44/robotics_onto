@@ -10,7 +10,9 @@
   "description_en": "Replace faulty cameras with new ones",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-009",
   "related_skills": [
     {
@@ -26,7 +28,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-MVS-001",
+      "target": "RSF-MVS-022",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

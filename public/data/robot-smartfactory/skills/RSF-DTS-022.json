@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-DTS-022",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "internal_uri": "urn:rsf:skill:dts-0022",
+  "esco_uri": null,
+  "preferred_label_ko": "에뮬레이션·가상 커미셔닝",
+  "preferred_label_en": "Emulation and Virtual Commissioning",
+  "description_ko": "제어 로직을 에뮬레이터로 검증해 설비 도입 전 가상 커미셔닝 수행",
+  "description_en": "Validate control logic with emulators and perform virtual commissioning before deployment",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-DTS-021",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 에뮬레이션·가상 커미셔닝"
+}
