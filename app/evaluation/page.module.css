@@ -41,6 +41,24 @@
   margin-top: 2.5rem;
 }
 
+.subLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+}
+
+.subLinks a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.subLinks a:hover {
+  text-decoration: underline;
+}
+
 .referenceLink {
   display: inline-flex;
   margin-top: 2.25rem;

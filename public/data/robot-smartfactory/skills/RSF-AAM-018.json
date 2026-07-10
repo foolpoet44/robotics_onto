@@ -1,0 +1,39 @@
+{
+  "skill_id": "RSF-AAM-018",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0018",
+  "esco_uri": null,
+  "preferred_label_ko": "에이전트 성과 평가",
+  "preferred_label_en": "Agent Performance Evaluation",
+  "description_ko": "자동화율, 개입률, 오판정률 등 에이전트 성과 측정",
+  "description_en": "Measure agent performance including automation, intervention, and error rates",
+  "skill_type": "competence",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": "RSF-AAM-007",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-007",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-017",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-019",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 에이전트 성과 평가 수행 능력 입증"
+}

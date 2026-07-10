@@ -2,7 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import SkillImportanceRating from "../../components/SkillImportanceRating";
 import { getDomainName } from "../../lib/robotics-data";
-import { getAllRobotSkills, getRobotSkill } from "../../lib/server-data";
+import { resolveSkillCollege } from "../../lib/college-resolver";
+import {
+  getAllRobotSkills,
+  getCollegeMappingData,
+  getCollegeSubcategoryData,
+  getRobotSkill,
+} from "../../lib/server-data";
 import styles from "./page.module.css";
 
 const ROLE_LABELS = {
@@ -42,10 +48,13 @@ export default async function SkillDetailPage({
   params: Promise<{ skillId: string }>;
 }) {
   const { skillId } = await params;
-  const [skill, allSkills] = await Promise.all([
-    getRobotSkill(skillId),
-    getAllRobotSkills(),
-  ]);
+  const [skill, allSkills, collegeMapping, subcategoryData] =
+    await Promise.all([
+      getRobotSkill(skillId),
+      getAllRobotSkills(),
+      getCollegeMappingData(),
+      getCollegeSubcategoryData(),
+    ]);
   if (!skill) {
     notFound();
   }
@@ -54,6 +63,20 @@ export default async function SkillDetailPage({
   const parentSkill = skill.parent_skill_id
     ? skillsById.get(skill.parent_skill_id)
     : null;
+
+  const collegeResolution = resolveSkillCollege(
+    skill,
+    collegeMapping.domainMapping,
+    collegeMapping.skillOverrides,
+  );
+  const collegeNameById = new Map(
+    collegeMapping.colleges.map((college) => [college.id, college.name]),
+  );
+  const collegeOverride = collegeMapping.skillOverrides?.[skill.skill_id];
+  const subcategory = subcategoryData.subcategories.find(
+    (item) =>
+      item.id === subcategoryData.skillSubcategories[skill.skill_id],
+  );
 
   return (
     <main className={styles.pageShell}>
@@ -73,6 +96,12 @@ export default async function SkillDetailPage({
             LV{skill.proficiency_level} ·{" "}
             {PROFICIENCY_LABELS[skill.proficiency_level]}
           </span>
+          {collegeResolution && (
+            <span>
+              {collegeNameById.get(collegeResolution.primary) ??
+                collegeResolution.primary}
+            </span>
+          )}
         </div>
       </header>
 
@@ -97,6 +126,24 @@ export default async function SkillDetailPage({
               {skill.role_mapping.map((role) => ROLE_LABELS[role]).join(", ")}
             </dd>
           </div>
+          {collegeResolution && (
+            <div>
+              <dt>4대 도메인(칼리지)</dt>
+              <dd>
+                {collegeNameById.get(collegeResolution.primary) ??
+                  collegeResolution.primary}
+                {subcategory && ` › ${subcategory.name}`}
+                {collegeResolution.secondary.length > 0 &&
+                  ` (연계: ${collegeResolution.secondary
+                    .map((id) => collegeNameById.get(id) ?? id)
+                    .join(", ")})`}
+                {collegeOverride &&
+                  (collegeOverride.source === "reviewed"
+                    ? " · 재분류 확정"
+                    : " · 재분류 제안(검수 전)")}
+              </dd>
+            </div>
+          )}
           <div>
             <dt>내부 식별자</dt>
             <dd>{skill.internal_uri}</dd>

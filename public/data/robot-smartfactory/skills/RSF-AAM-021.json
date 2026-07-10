@@ -1,0 +1,39 @@
+{
+  "skill_id": "RSF-AAM-021",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0021",
+  "esco_uri": null,
+  "preferred_label_ko": "자율화 확산 계획",
+  "preferred_label_en": "Autonomy Scale-Up Planning",
+  "description_ko": "검증된 자율화를 타 공정으로 확산하는 로드맵 수립",
+  "description_en": "Plan roadmaps to scale validated autonomy to other processes",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": "RSF-AAM-009",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-009",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-020",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-022",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "현장 검증: 자율화 확산 계획 수행 능력 입증"
+}

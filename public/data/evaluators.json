@@ -33,6 +33,46 @@
       "collegeId": "data-intelligence",
       "active": true,
       "codeHash": "eb2b01a01824ec242032b34456dc2f79f86bbdfc43962f7d080feeca053015a0"
+    },
+    {
+      "id": "EVAL-101",
+      "name": "김대환",
+      "department": "내부전문가 · Physical AI 도메인 위원",
+      "collegeId": "physical-ai",
+      "active": true,
+      "codeHash": "81929c105919d2b615ecbddd8ddb5b04f25a0e843607f7abd6bc0bb5bc5e0ae9"
+    },
+    {
+      "id": "EVAL-102",
+      "name": "박석우",
+      "department": "내부전문가 · Physical AI 도메인 책임",
+      "collegeId": "physical-ai",
+      "active": true,
+      "codeHash": "2ef87a888728421b43c0a5daccd319962ee95f92c6ea0c309a1c70708e39a0a0"
+    },
+    {
+      "id": "EVAL-103",
+      "name": "변재민",
+      "department": "내부전문가 · Agentic AI 도메인 위원",
+      "collegeId": "agentic-ai",
+      "active": true,
+      "codeHash": "d16e47221ef877827b61a0687ba3c7ea035396a4ff9d763382929cebc5985bde"
+    },
+    {
+      "id": "EVAL-104",
+      "name": "고민석",
+      "department": "내부전문가 · Digital Twin 도메인 팀장",
+      "collegeId": "digital-twin",
+      "active": true,
+      "codeHash": "d5f11ef8f30261a2a23a5c78a1d7890af08605190722426d5b4e4e0157020a8c"
+    },
+    {
+      "id": "EVAL-105",
+      "name": "서우진",
+      "department": "내부전문가 · Data Intelligence 도메인 팀장",
+      "collegeId": "data-intelligence",
+      "active": true,
+      "codeHash": "a08ae91a82aca864cca006d3662bbb5c4020765c60a343ea714b5e5a89890017"
     }
   ]
 }

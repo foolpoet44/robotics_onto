@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-003",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0003",
+  "esco_uri": null,
+  "preferred_label_ko": "MES 및 제조 실행 프로세스",
+  "preferred_label_en": "MES and Manufacturing Execution Processes",
+  "description_ko": "작업지시, 실적 집계, 품질 이력 등 제조 실행 시스템의 핵심 프로세스",
+  "description_en": "Core MES processes including work orders, production reporting, and quality history",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-004",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+}

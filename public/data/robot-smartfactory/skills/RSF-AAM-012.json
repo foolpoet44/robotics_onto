@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-012",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0012",
+  "esco_uri": null,
+  "preferred_label_ko": "품질 이상 자동 판정",
+  "preferred_label_en": "Automated Quality Judgment",
+  "description_ko": "검사 데이터 기반 불량 판정 및 원인 후보 제시",
+  "description_en": "Judge defects from inspection data and suggest probable causes",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 품질 이상 자동 판정 역량 구현"
+}

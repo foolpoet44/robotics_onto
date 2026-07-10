@@ -1,0 +1,40 @@
+{
+  "skill_id": "RSF-AAM-006",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0006",
+  "esco_uri": null,
+  "preferred_label_ko": "공정 에이전트 설계",
+  "preferred_label_en": "Process Agent Design",
+  "description_ko": "공정 목표와 제약을 반영한 AI 에이전트 역할·행동 설계",
+  "description_en": "Design agent roles and behaviors reflecting process goals and constraints",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": "RSF-AAM-001",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-001",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-005",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-007",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 공정 에이전트 설계 역량 구현"
+}

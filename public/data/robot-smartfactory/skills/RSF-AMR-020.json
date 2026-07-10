@@ -10,7 +10,9 @@
   "description_en": "Analyze traveled distance, battery consumption, uptime, etc.",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-008",
   "related_skills": [
     {

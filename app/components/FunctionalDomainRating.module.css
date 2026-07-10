@@ -38,24 +38,25 @@
   letter-spacing: 0.12em;
 }
 
-.evaluatorField {
-  display: grid;
-  gap: 0.4rem;
-  max-width: 360px;
-  margin-top: 1.25rem;
+.loginHint,
+.identityHint {
+  margin: 1.1rem 0 0;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.6rem;
   font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-secondary);
   text-align: left;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
-.evaluatorField input {
-  padding: 0.55rem 0.7rem;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 0.6rem;
+.loginHint a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.identityHint strong {
+  color: var(--color-primary-dark);
 }
 
 .domainGrid {
@@ -283,20 +284,4 @@
   margin: 0.4rem 0 0;
   font-size: 0.88rem;
   color: var(--text-secondary);
-}
-
-.historyList button {
-  flex-shrink: 0;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #b91c1c;
-  background: #fee2e2;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.historyList button:hover {
-  background: #fecaca;
 }

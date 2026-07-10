@@ -10,7 +10,10 @@
   "description_en": "Inspect gear damage and motor performance",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-003",
   "related_skills": [
     {

@@ -21,6 +21,7 @@ const {
 const {
   validateOrganizationMapping,
 } = require("./lib/organization-validation");
+const { loadCollegeResolver } = require("./lib/college-resolver-loader");
 
 // ==================== 색상 출력 헬퍼 ====================
 const colors = {
@@ -98,6 +99,7 @@ class RobotDataValidator {
       "autonomous-mobile-robot",
       "robot-maintenance-diagnostics",
       "digital-twin-simulation",
+      "agentic-ai-manufacturing",
     ];
 
     const domainStats = {};
@@ -343,6 +345,103 @@ class RobotDataValidator {
     return metrics;
   }
 
+  // 11. strict 모드: 칼리지 매핑(4대 도메인) 검증
+  validateCollegeMappings() {
+    header("1️⃣1️⃣ 칼리지 매핑 검증 (strict)");
+    const mappingPath = path.join(
+      __dirname,
+      "../public/data/college-mapping.json",
+    );
+    const mappingData = JSON.parse(fs.readFileSync(mappingPath, "utf-8"));
+    const { resolveSkillCollege, validateCollegeMappingData } =
+      loadCollegeResolver();
+
+    const knownSkillIds = new Set(this.data.map((skill) => skill.skill_id));
+    const errors = validateCollegeMappingData(mappingData, knownSkillIds);
+
+    const mappedDomains = new Set(Object.keys(mappingData.domainMapping));
+    this.data.forEach((skill) => {
+      if (!mappedDomains.has(skill.domain)) {
+        errors.push(`${skill.skill_id}: 칼리지 매핑 없는 도메인 '${skill.domain}'`);
+      }
+    });
+
+    // 중간분류: 모든 스킬이 자기 칼리지의 중간분류에 정확히 1개 배정돼야 한다.
+    const subcategoryPath = path.join(
+      __dirname,
+      "../public/data/college-subcategories.json",
+    );
+    const subcategoryData = JSON.parse(
+      fs.readFileSync(subcategoryPath, "utf-8"),
+    );
+    const collegeIds = new Set(
+      mappingData.colleges.map((college) => college.id),
+    );
+    const subcategoriesById = new Map(
+      subcategoryData.subcategories.map((subcategory) => [
+        subcategory.id,
+        subcategory,
+      ]),
+    );
+    subcategoryData.subcategories.forEach((subcategory) => {
+      if (!collegeIds.has(subcategory.collegeId)) {
+        errors.push(
+          `중간분류 ${subcategory.id}: 존재하지 않는 collegeId '${subcategory.collegeId}'`,
+        );
+      }
+    });
+    Object.keys(subcategoryData.skillSubcategories).forEach((skillId) => {
+      if (!knownSkillIds.has(skillId)) {
+        errors.push(`중간분류 배정 ${skillId}: 존재하지 않는 스킬입니다.`);
+      }
+    });
+    this.data.forEach((skill) => {
+      const subcategoryId = subcategoryData.skillSubcategories[skill.skill_id];
+      if (!subcategoryId) {
+        errors.push(`${skill.skill_id}: 중간분류가 배정되지 않았습니다.`);
+        return;
+      }
+      const subcategory = subcategoriesById.get(subcategoryId);
+      if (!subcategory) {
+        errors.push(
+          `${skill.skill_id}: 존재하지 않는 중간분류 '${subcategoryId}'`,
+        );
+        return;
+      }
+      const resolution = resolveSkillCollege(
+        skill,
+        mappingData.domainMapping,
+        mappingData.skillOverrides,
+      );
+      if (resolution && subcategory.collegeId !== resolution.primary) {
+        errors.push(
+          `${skill.skill_id}: 중간분류 '${subcategoryId}'(${subcategory.collegeId})가 ` +
+            `칼리지 배정(${resolution.primary})과 다릅니다.`,
+        );
+      }
+    });
+
+    const overrides = Object.entries(mappingData.skillOverrides ?? {});
+    const metrics = {
+      domains: mappedDomains.size,
+      overrides: overrides.length,
+      proposed: overrides.filter(([, o]) => o.source === "proposed").length,
+      reviewed: overrides.filter(([, o]) => o.source === "reviewed").length,
+      subcategories: subcategoryData.subcategories.length,
+    };
+    console.table(metrics);
+
+    errors.forEach((error) => this.errors.push(`college-mapping: ${error}`));
+    if (errors.length === 0) {
+      log("✅ 칼리지 매핑 검증 통과", "green");
+    } else {
+      log(`❌ 칼리지 매핑 오류: ${errors.length}개`, "red");
+      errors.forEach((error) => log(`   - ${error}`, "red"));
+    }
+
+    return metrics;
+  }
+
   // 7. 추가 통계: proficiency_level 분포
   validateProficiencyDistribution() {
     header("7️⃣ 숙련도 레벨 분포 검증");
@@ -459,6 +558,7 @@ class RobotDataValidator {
     const organizationMetrics = this.strict
       ? this.validateOrganizationMappings()
       : null;
+    const collegeMetrics = this.strict ? this.validateCollegeMappings() : null;
 
     // 최종 요약 테이블
     header("📊 최종 요약");
@@ -481,6 +581,12 @@ class RobotDataValidator {
             { Metric: "조직 역량", Value: organizationMetrics.skills },
             { Metric: "기준 스킬 연결", Value: organizationMetrics.mapped },
             { Metric: "조직 고유 역량", Value: organizationMetrics.unmapped },
+          ]
+        : []),
+      ...(collegeMetrics
+        ? [
+            { Metric: "칼리지 스킬 오버라이드", Value: collegeMetrics.overrides },
+            { Metric: "오버라이드 검수 완료", Value: collegeMetrics.reviewed },
           ]
         : []),
     ];

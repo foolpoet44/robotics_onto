@@ -10,7 +10,9 @@
   "description_en": "Collaborate with suppliers and manage quality",
   "skill_type": "competence",
   "proficiency_level": 4,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-009",
   "related_skills": [
     {

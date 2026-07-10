@@ -1,0 +1,125 @@
+.pageShell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.backLink {
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 4px solid;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.heading h1 {
+  margin: 0.2rem 0;
+  color: var(--text-primary);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.icon {
+  font-size: 2.6rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.role {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.subcategorySection {
+  margin-top: 2rem;
+}
+
+.subcategoryHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.subcategoryHead h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+}
+
+.subcategoryHead span {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.skillList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.6rem;
+}
+
+.skillRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  transition: 150ms ease;
+}
+
+.skillRow:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.skillLabel {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.skillMeta {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.footNote {
+  margin-top: 2.5rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.footNote a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: none;
+}

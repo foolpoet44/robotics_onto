@@ -10,7 +10,10 @@
   "description_en": "Set robot reference points and validate accuracy",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-IRC-002",
   "related_skills": [
     {

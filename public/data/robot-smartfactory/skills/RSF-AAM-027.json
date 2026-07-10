@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-027",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0027",
+  "esco_uri": null,
+  "preferred_label_ko": "Data Fabric·기간계 시스템 연계",
+  "preferred_label_en": "Data Fabric and Enterprise System Integration",
+  "description_ko": "PLM·ERP·MES·QMS·EMS·EHS 등 기간계를 Data Fabric으로 연계·정합",
+  "description_en": "Integrate enterprise systems (PLM/ERP/MES/QMS/EMS/EHS) through a data fabric",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-026",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-028",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: Data Fabric·기간계 시스템 연계"
+}

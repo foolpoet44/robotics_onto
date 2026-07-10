@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-IRC-023",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "internal_uri": "urn:rsf:skill:irc-0023",
+  "esco_uri": null,
+  "preferred_label_ko": "PLC·설비 제어 연동",
+  "preferred_label_en": "PLC and Equipment Control Integration",
+  "description_ko": "PLC 로직 이해와 로봇-설비 간 제어 신호 연동 구성",
+  "description_en": "Understand PLC logic and configure control signal integration between robots and equipment",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-IRC-022",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: PLC·설비 제어 연동"
+}

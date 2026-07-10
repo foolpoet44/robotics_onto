@@ -70,6 +70,14 @@ npm run generate:evaluator-code-hash -- --id EVAL-005 --code "배정코드"
 | EVAL-002 이판단 | `robot02` |
 | EVAL-003 박트윈 | `robot03` |
 | EVAL-004 최데이터 | `robot04` |
+| EVAL-101 김대환 (Physical AI 위원) | `expert01` |
+| EVAL-102 박석우 (Physical AI 책임) | `expert02` |
+| EVAL-103 변재민 (Agentic AI 위원) | `expert03` |
+| EVAL-104 고민석 (Digital Twin 팀장) | `expert04` |
+| EVAL-105 서우진 (Data Intelligence 팀장) | `expert05` |
+
+내부전문가(EVAL-101~105)는 4대 도메인 재분류 검수를 담당합니다. 검수 절차는
+`docs/DOMAIN_RECLASSIFICATION_PLAN.md` 8절(Phase 4)을 따릅니다.
 
 ## 라벨 데이터 아카이빙
 
@@ -120,6 +128,73 @@ CREATE INDEX IF NOT EXISTS idx_skill_eval_skill
   ON skill_evaluation_labels (skill_id);
 ```
 
+## 도메인 분류 평가 (`/evaluation`)
+
+- **4대 도메인 직접 중요도 평가는 종료되었습니다.** API도 `axis: "college"`
+  저장을 거부합니다(기존 기록은 장부에 보존). 4대 도메인은 평가 대상이
+  아니라 **기준 축**이며, `/evaluation`은 스킬 체계 조망과 변경요청 접수에
+  집중합니다.
+- `/evaluation` (메인): **도메인별 스킬 트리맵** — 4대 도메인 → 중간분류
+  (`public/data/college-subcategories.json`) → 스킬 3단 체계를 면적(스킬 수)
+  비례로 표시합니다. 중간분류 타일을 클릭하면 소속 스킬 목록과 도메인
+  변경요청 폼이 열립니다(접수는 로그인 필요).
+- `/evaluation/functional` (서브): 기능 도메인 중요도 평가(1~5점 + 근거,
+  서버 아카이빙, `axis: "functional"`)는 세부 기준 수집용으로 유지됩니다.
+- 평가 저장은 로그인 필수(신원 자동 적용), 조회는 자유입니다. 과거
+  `localStorage` 저장은 폐지되었고 서버 아카이빙으로 대체되었습니다
+  (API: `/api/domain-ratings`, 저장소: DB `domain_importance_ratings` 테이블
+  또는 파일 폴백 `.data/domain-importance-ratings.json`).
+
+```sql
+CREATE TABLE IF NOT EXISTS domain_importance_ratings (
+  id UUID PRIMARY KEY,
+  axis TEXT NOT NULL,            -- 'college' | 'functional'
+  target_key TEXT NOT NULL,      -- collegeId 또는 기능 도메인 키
+  score SMALLINT NOT NULL,
+  notes TEXT NOT NULL DEFAULT '',
+  evaluator_id TEXT NOT NULL,
+  evaluator_name TEXT NOT NULL,
+  evaluator_college TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  app_version TEXT NOT NULL
+);
+```
+
+## 도메인 변경요청 (`/evaluation`)
+
+도메인 분류 평가 페이지의 각 도메인 카드에서 "하위 스킬 조회"를 열면 스킬
+목록이 나오고, 로그인한 평가자는 스킬별로 **도메인 변경요청**을 접수할 수
+있습니다. 조회는 로그인 없이 가능하고, 변경요청 접수만 로그인이 필요합니다.
+
+- 변경 대상 축은 두 가지입니다: **기능 도메인**(스킬의 `domain`) 또는
+  **4대 도메인**(칼리지 배정).
+- 현재 값은 서버가 확정하고, 요청 값은 축별 화이트리스트로 검증합니다.
+  현재와 동일한 도메인 요청은 거부됩니다. 변경 사유는 필수입니다.
+- 요청자 신원은 로그인 세션에서 자동 적용됩니다.
+- 요청은 즉시 데이터에 반영되지 않고 `pending` 상태로 아카이빙됩니다
+  (API: `/api/domain-change-requests`, 저장소: DB `domain_change_requests`
+  테이블 또는 파일 폴백 `.data/domain-change-requests.json`).
+- 반영 절차: 4대 도메인 요청은 검수 후 `npm run record:college-override`로
+  확정하고, 기능 도메인 요청은 생성기
+  (`scripts/generate-robot-smartfactory-data.py`) 정의 이동으로 반영합니다.
+
+```sql
+CREATE TABLE IF NOT EXISTS domain_change_requests (
+  id UUID PRIMARY KEY,
+  skill_id TEXT NOT NULL,
+  axis TEXT NOT NULL,
+  current_value TEXT NOT NULL,
+  requested_value TEXT NOT NULL,
+  reason TEXT NOT NULL,
+  evaluator_id TEXT NOT NULL,
+  evaluator_name TEXT NOT NULL,
+  evaluator_college TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  app_version TEXT NOT NULL
+);
+```
+
 ## 직접 확인 절차
 
 ```bash
@@ -130,7 +205,8 @@ EVAL_SESSION_SECRET=test npm run start
 
 1. `http://localhost:3000/evaluation/skills` 접속 → 로그인 화면 표시.
 2. EVAL-001 / `robot01`로 로그인 → 워크벤치 진입, 우상단에 신원·진행률 표시.
-3. 도메인/역할/검색 필터로 스킬을 추리고 "내 미평가만" 토글로 남은 작업 확인.
+3. 4대 도메인 필터가 평가자 소속 칼리지로 기본 적용되는지 확인. 기능
+   도메인/역할/검색 필터로 스킬을 추리고 "내 미평가만" 토글로 남은 작업 확인.
 4. 스킬 선택 → 중요도/라벨/근거 입력 → 저장 시 다음 미평가 스킬로 자동 이동.
 5. 로그아웃 후 평가 API가 401을 반환하는지 확인.
 

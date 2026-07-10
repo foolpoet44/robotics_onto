@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-026",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0026",
+  "esco_uri": null,
+  "preferred_label_ko": "제조 지식그래프·온톨로지 구축",
+  "preferred_label_en": "Manufacturing Knowledge Graph and Ontology Engineering",
+  "description_ko": "작업지도서·설비 매뉴얼 등 제조 지식을 그래프 DB 온톨로지로 구축·운영",
+  "description_en": "Build and operate graph-DB ontologies from manufacturing knowledge such as work instructions and manuals",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-025",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-027",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 제조 지식그래프·온톨로지 구축"
+}

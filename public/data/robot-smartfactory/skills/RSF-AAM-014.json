@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-AAM-014",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0014",
+  "esco_uri": null,
+  "preferred_label_ko": "에이전트 가드레일 구성",
+  "preferred_label_en": "Agent Guardrail Configuration",
+  "description_ko": "행동 범위 제한, 금지 규칙, 이상 행동 차단 설정",
+  "description_en": "Configure action limits, prohibition rules, and anomaly blocking",
+  "skill_type": "skill",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-013",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-015",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 에이전트 가드레일 구성 역량 구현"
+}

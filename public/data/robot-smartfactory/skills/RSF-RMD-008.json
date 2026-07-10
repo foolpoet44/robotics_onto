@@ -10,7 +10,10 @@
   "description_en": "Understand robot diagnostic codes",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-RMD-002",
   "related_skills": [
     {

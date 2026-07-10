@@ -10,7 +10,10 @@
   "description_en": "Monitor operational status of entire robot fleet",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-003",
   "related_skills": [
     {

@@ -10,7 +10,9 @@
   "description_en": "Integrate sensor signals into robot motion",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {

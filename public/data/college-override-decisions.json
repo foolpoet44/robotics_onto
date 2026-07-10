@@ -1,0 +1,5 @@
+{
+  "version": "2026-07-06",
+  "note": "칼리지 스킬 오버라이드 검수 결정 장부. npm run record:college-override 로 기록합니다. approved는 오버라이드를 reviewed로 승격, rejected는 오버라이드를 제거(도메인 기본 매핑 복귀), held는 proposed 유지.",
+  "decisions": []
+}

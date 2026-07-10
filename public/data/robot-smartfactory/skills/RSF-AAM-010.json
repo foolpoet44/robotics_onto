@@ -1,0 +1,40 @@
+{
+  "skill_id": "RSF-AAM-010",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0010",
+  "esco_uri": null,
+  "preferred_label_ko": "MES 워크플로 자동화",
+  "preferred_label_en": "MES Workflow Automation",
+  "description_ko": "반복적인 MES 업무 흐름을 에이전트로 자동화",
+  "description_en": "Automate repetitive MES workflows with agents",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": "RSF-AAM-003",
+  "related_skills": [
+    {
+      "target": "RSF-AAM-003",
+      "type": "specialization",
+      "weight": 1,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-009",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-011",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조 현장에서 MES 워크플로 자동화 역량 구현"
+}

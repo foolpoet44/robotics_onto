@@ -34,6 +34,7 @@ try {
       "autonomous-mobile-robot",
       "robot-maintenance-diagnostics",
       "digital-twin-simulation",
+      "agentic-ai-manufacturing",
     ],
   );
   if (!validation.valid) {

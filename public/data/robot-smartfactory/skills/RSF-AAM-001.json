@@ -1,0 +1,46 @@
+{
+  "skill_id": "RSF-AAM-001",
+  "domain": "agentic-ai-manufacturing",
+  "domain_en": "Agentic AI Manufacturing",
+  "internal_uri": "urn:rsf:skill:aam-0001",
+  "esco_uri": null,
+  "preferred_label_ko": "AI 에이전트 기초 개념",
+  "preferred_label_en": "Agentic AI Fundamentals",
+  "description_ko": "목표 지향 에이전트, 계획-실행-관찰 루프, 도구 호출의 기본 개념",
+  "description_en": "Core concepts of goal-driven agents, plan-act-observe loops, and tool calling",
+  "skill_type": "knowledge",
+  "proficiency_level": 1,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-AAM-002",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-AAM-028",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-001",
+      "type": "cross_domain",
+      "weight": 0.6,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-001",
+      "type": "cross_domain",
+      "weight": 0.6,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "Agentic AI 제조의 이론적 기초"
+}

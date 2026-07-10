@@ -101,6 +101,14 @@ export const ROBOT_DOMAINS: RobotDomain[] = [
     icon: "🧩",
     color: "#9333ea",
   },
+  {
+    key: "agentic-ai-manufacturing",
+    name: "Agentic AI 제조",
+    nameEn: "Agentic AI Manufacturing",
+    description: "AI 에이전트, MES 자율화, 품질 자동 판정과 휴먼-인-더-루프 운영",
+    icon: "🤖",
+    color: "#0d9488",
+  },
 ];
 
 export function getDomain(domainKey: string): RobotDomain | undefined {

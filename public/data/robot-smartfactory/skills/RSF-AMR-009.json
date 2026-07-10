@@ -10,7 +10,10 @@
   "description_en": "Coordinate movements of multiple AMRs to prevent collisions",
   "skill_type": "skill",
   "proficiency_level": 3,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": "RSF-AMR-002",
   "related_skills": [
     {

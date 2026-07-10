@@ -10,7 +10,9 @@
   "description_en": "Achieve optimized cycle time verified through simulation",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-DTS-007",
   "related_skills": [
     {

@@ -10,7 +10,10 @@
   "description_en": "Provide safety training to collaborative robot users",
   "skill_type": "skill",
   "proficiency_level": 2,
-  "role_mapping": ["operator", "engineer"],
+  "role_mapping": [
+    "operator",
+    "engineer"
+  ],
   "parent_skill_id": null,
   "related_skills": [
     {

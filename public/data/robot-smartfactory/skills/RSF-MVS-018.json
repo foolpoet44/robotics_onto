@@ -10,7 +10,9 @@
   "description_en": "Propose and implement alternative sensors",
   "skill_type": "competence",
   "proficiency_level": 3,
-  "role_mapping": ["engineer"],
+  "role_mapping": [
+    "engineer"
+  ],
   "parent_skill_id": "RSF-MVS-007",
   "related_skills": [
     {

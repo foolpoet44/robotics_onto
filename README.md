@@ -10,6 +10,7 @@
 - 자율이동로봇
 - 로봇 유지보수 및 진단
 - 디지털트윈 및 시뮬레이션
+- Agentic AI 제조 (AI 에이전트 · MES 자율화 · 품질 자동 판정)
 
 ## 실행
 
@@ -84,12 +85,40 @@ npm run record:review-decision -- \
 각 기준 스킬은 `/skills/[skillId]` 상세 페이지에서 정의, 스마트팩토리 적용
 맥락, 숙련도, 역할, 상위 스킬, 관련 스킬을 확인할 수 있습니다.
 
+## 4대 도메인(칼리지) 재분류
+
+기능 도메인과 별개로 모든 스킬은 4대 운영 도메인(Physical AI / Agentic AI /
+Digital Twin / Data Intelligence)에 배정됩니다. 기본값은 도메인 매핑이고,
+예외는 `public/data/college-mapping.json`의 `skillOverrides`로 관리합니다.
+오버라이드 검수 결정은 다음 명령으로 기록합니다(장부:
+`public/data/college-override-decisions.json`).
+
+```bash
+npm run record:college-override -- \
+  --skill-id RSF-MVS-007 \
+  --status approved \
+  --reviewer "변재민"
+```
+
+설계와 검수 절차는 `docs/DOMAIN_RECLASSIFICATION_PLAN.md`를 따릅니다.
+
 ## 스킬 평가 워크벤치
 
-`/evaluation`은 도메인 단위 평가, `/evaluation/skills`는 스킬 단위 평가 전용
-화면입니다. 스킬 평가 워크벤치는 사전 지정 평가자 명부(`public/data/evaluators.json`)
-로그인으로 신원을 자동 적용하고(수기 입력 제거), 도메인/역할 필터와 "내 미평가만"
-큐로 스킬을 한 건씩 중요도(1~5점)·라벨로 평가합니다. 평가 라벨은 서버에
+`/evaluation`은 **도메인별 스킬 트리맵** 화면입니다. 4대 도메인 → 중간분류
+→ 스킬 3단 체계를 면적(스킬 수) 비례로 조망하고, 중간분류 타일을 클릭해
+소속 스킬 조회와 스킬별 도메인 변경요청을 접수합니다(접수는 로그인 필요).
+4대 도메인 직접 중요도 평가는 종료되었고, 기능 도메인 중요도 평가만
+서브 페이지(`/evaluation/functional`)에서 수집합니다.
+`/evaluation/skills`는 스킬 단위 평가 전용 화면입니다.
+
+도메인 탐색도 4대 도메인 중심입니다: `/domains`(4대 허브) →
+`/domains/college/[collegeId]`(중간분류 섹션별 스킬). 기능 도메인은 세부
+기준(참고 분류)으로 `/domains/functional`에서 유지됩니다. 중간분류 정의와
+스킬 배정은 `public/data/college-subcategories.json`에서 관리하고
+`npm run validate:data`가 배정 무결성을 검증합니다. 스킬 평가 워크벤치는 사전 지정 평가자 명부(`public/data/evaluators.json`)
+로그인으로 신원을 자동 적용하고(수기 입력 제거), 4대 도메인(칼리지)·기능
+도메인·역할 필터와 "내 미평가만" 큐로 스킬을 한 건씩 중요도(1~5점)·라벨로
+평가합니다. 4대 도메인 필터는 평가자 소속 칼리지가 기본값입니다. 평가 라벨은 서버에
 아카이빙되며 운영은 관리형 DB(`POSTGRES_URL`), 로컬은 파일 폴백을 사용합니다.
 
 운영·명부 관리·환경 변수·DB 스키마는 `docs/SKILL_EVALUATION_OPERATIONS.md`를
