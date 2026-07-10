@@ -1,6 +1,8 @@
-# Factory Robotics Skill Map
+# AI Factory Skill Fab
 
-스마트팩토리 로보틱스 현장 역량에 집중한 독립 프로젝트입니다.
+AI Factory 4대 도메인(Physical AI · Agentic AI · Digital Twin · Data
+Intelligence)의 현장 역량을 탐색·평가·육성하는 스킬 플랫폼입니다.
+(구 명칭: Factory Robotics Skill Map)
 
 ## 포함 범위
 

@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Navigation from "./components/Navigation";
 
 export const metadata: Metadata = {
-  title: "Factory Robotics Skill Map",
-  description: "스마트팩토리 로보틱스 현장 역량을 탐색하는 전용 스킬 맵입니다.",
+  title: "AI Factory Skill Fab",
+  description:
+    "AI Factory 4대 도메인의 현장 역량을 탐색·평가·육성하는 스킬 플랫폼입니다.",
 };
 
 export default function RootLayout({

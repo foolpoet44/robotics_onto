@@ -299,7 +299,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>R&D 연구원 육성 커리큘럼 — Factory Robotics Skill Map</title>
+<title>R&D 연구원 육성 커리큘럼 — AI Factory Skill Fab</title>
 <style>
   :root { --ink:#1e293b; --ink-2:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --accent:#4338ca; }
   * { box-sizing: border-box; }
@@ -416,7 +416,7 @@ const html = `<!doctype html>
     </tbody>
   </table>
 
-  <footer>Factory Robotics Skill Map · 스킬 온톨로지 기반 자동 생성 문서 (${generatedAt})</footer>
+  <footer>AI Factory Skill Fab · 스킬 온톨로지 기반 자동 생성 문서 (${generatedAt})</footer>
 </div>
 </body>
 </html>
