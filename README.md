@@ -104,6 +104,18 @@ npm run record:college-override -- \
 
 설계와 검수 절차는 `docs/DOMAIN_RECLASSIFICATION_PLAN.md`를 따릅니다.
 
+### 도메인 스킬 맵 별도 발행
+
+도메인 페이지는 로그인·DB 의존이 없어 정적 스냅샷으로 별도 배포합니다.
+
+```bash
+npm run generate:domains-html   # → public/domains-map.html
+```
+
+산출물은 자기완결 HTML 한 장(트리맵 + 중간분류별 스킬 전체 목록)으로,
+배포 사이트의 `/domains-map.html` 외에 사내 포털·별도 정적 호스팅 등
+어디에나 게시할 수 있습니다. 온톨로지 변경 시 재발행하면 됩니다.
+
 ## 스킬 평가 워크벤치
 
 `/evaluation`은 **도메인별 스킬 트리맵** 화면입니다. 4대 도메인 → 중간분류
