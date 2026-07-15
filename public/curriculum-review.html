@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>육성 커리큘럼 전문가 검증 미팅 가이드 — AI Factory Skill Fab</title>
+<style>
+  :root { --ink:#1e293b; --ink-2:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --accent:#4338ca; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:40px 20px 80px; }
+  header.hero { text-align:center; margin-bottom:28px; }
+  .eyebrow { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; margin:0; }
+  h1 { margin:8px 0 6px; font-size:clamp(24px,4vw,34px); }
+  .hero p { color:var(--ink-2); max-width:700px; margin:0 auto; }
+  h2 { margin:40px 0 6px; font-size:20px; border-left:5px solid var(--accent); padding-left:10px; }
+  h2 + p { margin:0 0 14px; color:var(--ink-2); font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th,td { padding:9px 12px; border-bottom:1px solid var(--line); text-align:left; font-size:13.5px; vertical-align:top; }
+  th { background:#f1f5f9; font-size:12.5px; white-space:nowrap; }
+  tr:last-child td { border-bottom:none; }
+  ol.qs { margin:8px 0 0; padding-left:22px; display:flex; flex-direction:column; gap:10px; }
+  ol.qs li { font-size:14px; }
+  .note { display:block; margin-top:5px; padding:7px 9px 18px; border:1px dashed var(--line); border-radius:8px;
+    color:#94a3b8; font-size:11.5px; background:var(--card); }
+  .dcard { background:var(--card); border:1px solid var(--line); border-left:6px solid; border-radius:12px;
+    padding:14px 18px; margin-top:14px; }
+  .dcard h3 { margin:0; font-size:16px; }
+  .dcard .meta { color:var(--ink-2); font-size:12.5px; font-weight:700; margin:2px 0 4px; }
+  .dcard .focus { margin:4px 0 6px; font-size:13px; }
+  .dcard .focus b { color:var(--accent); }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chip { font-size:11.5px; font-weight:700; padding:2px 9px; border-radius:999px; background:#f1f5f9; color:var(--ink-2); }
+  .chip.hot { background:#fff7ed; color:#9a3412; }
+  .scale { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; color:var(--ink-2); font-size:12.5px; }
+  footer { margin-top:48px; color:var(--ink-2); font-size:12px; text-align:center; }
+  @media print { body{background:#fff} .wrap{padding:0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">AI FACTORY SKILL FAB · EXPERT REVIEW</p>
+    <h1>육성 커리큘럼 전문가 검증 미팅 가이드</h1>
+    <p>대상 자료: R&amp;D 연구원 육성 커리큘럼(/curriculum-rnd.html) · 4대 도메인 스킬 맵(/domains-map.html)
+      · 검증 기준: 스킬 159개 / 중간분류 21개 / 특화 트랙 5개 · 발행일 2026-07-15</p>
+  </header>
+
+  <h2>1. 미팅 개요</h2>
+  <table>
+    <tbody>
+      <tr><th>목적</th><td>커리큘럼의 ① 분류 체계 ② 레벨·시간 산정 ③ 과목 구성 ④ 특화 트랙·캡스톤을 현장 전문가 관점에서 검증하고, 반영 항목을 결정한다.</td></tr>
+      <tr><th>참석 전문가</th><td>김대환 (Physical AI 도메인 위원) · 박석우 (Physical AI 도메인 책임) · 변재민 (Agentic AI 도메인 위원) · 고민석 (Digital Twin 도메인 팀장) · 서우진 (Data Intelligence 도메인 팀장)</td></tr>
+      <tr><th>사전 배포물</th><td>본 가이드 + 커리큘럼 발행본 + 도메인 스킬 맵. 전문가는 소속 도메인 과목 표를 사전 검토하고 이견 스킬에 표시해 옵니다.</td></tr>
+      <tr><th>기록 원칙</th><td>모든 판정은 5점 척도(1 부적합 ~ 5 적합) + 사유. 스킬 단위 이견은 <b>도메인 변경요청</b>(/evaluation) 또는 워크벤치 <b>재정의대상</b> 라벨로 즉석 접수.</td></tr>
+      <tr><th>결과 반영 경로</th><td>재분류 승인 → <code>record:college-override</code> 장부 기록 / 분류·명칭 수정 → 중간분류 데이터 / 과목·시간 보정 → 커리큘럼 재발행(<code>generate:curriculum-html</code>)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 진행 안건 (권장 90분)</h2>
+  <table>
+    <thead><tr><th>시간</th><th>안건</th><th>내용</th></tr></thead>
+    <tbody><tr><td>10분</td><td><strong>도입</strong></td><td>검증 목적·자료 안내 (커리큘럼, 도메인 스킬 맵, 본 가이드)</td></tr><tr><td>25분</td><td><strong>공통 검증</strong></td><td>구조·레벨·시간·공통필수·선수체계·참고자료 (공통 질문 1~7)</td></tr><tr><td>30분</td><td><strong>도메인별 검증</strong></td><td>각 도메인 전문가 주도 — 소속 도메인 포커스 질문 + 스킬 단위 이견은 즉석에서 기록</td></tr><tr><td>15분</td><td><strong>특화 트랙 검증</strong></td><td>트랙 우선순위·캡스톤 기준 합의</td></tr><tr><td>10분</td><td><strong>마무리</strong></td><td>결정 사항 확인(재분류 승인/보류), 후속 일정·반영 담당 지정</td></tr></tbody>
+  </table>
+
+  <h2>3. 공통 질문 (전원 · 25분)</h2>
+  <p>커리큘럼 전체 골격에 대한 판정입니다. 각 항목에 5점 척도와 사유를 기록합니다.</p>
+  <ol class="qs" start="1"><li>4대 도메인 → 중간분류 → 스킬의 3단 체계가 현장 직무 구조와 일치합니까? 누락되었거나 과잉인 분류는 무엇입니까?<span class="note">메모:</span></li><li>과목의 레벨 배치(2xx 핵심 / 3xx 심화 / 4xx 전문)가 경력 3~10년차 눈높이에 맞습니까? 레벨이 과대/과소 산정된 스킬을 지목해 주십시오.<span class="note">메모:</span></li><li>학습시간 규칙(지식 4h·기술 8h·역량 16h)이 현실적입니까? 크게 보정해야 할 과목은 무엇입니까?<span class="note">메모:</span></li><li>공통필수 3과목(데이터·AI 리터러시 / 시스템·데이터 기반 / 안전·HITL)의 구성이 전 도메인 공통으로 타당합니까? 추가·제외할 스킬은?<span class="note">메모:</span></li><li>선수 체계(공통 → 핵심 → 심화 → 전문, Data Intelligence 허브 선수)가 실제 학습 순서와 부합합니까?<span class="note">메모:</span></li><li>제시된 참고자료(국제표준·교재)가 적절합니까? 사내 교보재·사례로 대체해야 할 과목은 무엇입니까?<span class="note">메모:</span></li><li>수료 판정 방식(스킬 진단 + 캡스톤 육성위원회 승인)이 실효성이 있습니까? 판정 기준에서 빠진 것은 무엇입니까?<span class="note">메모:</span></li></ol>
+  <div class="scale"><span>척도:</span><span>1 부적합</span><span>2 미흡</span><span>3 보통</span><span>4 적합</span><span>5 매우 적합</span></div>
+
+  <h2>4. 도메인별 검증 포커스 (도메인 전문가 주도 · 30분)</h2>
+  <p>소속 도메인 전문가가 주도하고, 타 도메인 전문가는 경계(스킬이 어느 도메인 소관인지) 관점에서 교차 검증합니다.</p>
+  
+  <div class="dcard" style="border-left-color:#4f46e5">
+    <h3>Physical AI &amp; Robotics</h3>
+    <p class="meta">스킬 77개 · 담당: 김대환, 박석우</p>
+    <p class="focus"><b>포커스:</b> 현장 실무 커버리지와 신규 증설 스킬의 시급성</p>
+    <ol class="qs" start="1"><li>신규 증설된 PLC·설비 제어 연동 / IoT 센서·엣지 통합 / 휴머노이드 운용 기초의 레벨(Lv2)과 시급성이 적절합니까? 휴머노이드는 지금 커리큘럼에 포함할 단계입니까?<span class="note">메모:</span></li><li>협동로봇·안전(18개)과 산업로봇 제어·운용(18개)의 비중이 실제 현장 업무 비중과 맞습니까?<span class="note">메모:</span></li><li>정비 '실무'(Physical)와 예측 '분석'(Data Intelligence)의 경계 구분이 교육 편성 관점에서 자연스럽습니까?<span class="note">메모:</span></li></ol>
+    <div class="chips"><span class="chip hot">신규 검증: PLC·설비 제어 연동 (RSF-IRC-023)</span><span class="chip hot">신규 검증: IoT 센서·엣지 통합 (RSF-MVS-022)</span><span class="chip hot">신규 검증: 휴머노이드 로봇 운용 기초 (RSF-CRO-022)</span></div>
+  </div>
+  <div class="dcard" style="border-left-color:#0d9488">
+    <h3>Agentic AI Manufacturing</h3>
+    <p class="meta">스킬 34개 · 담당: 변재민</p>
+    <p class="focus"><b>포커스:</b> 6대 Agent 체계 정합성과 얇은 분류의 증설 필요성</p>
+    <ol class="qs" start="1"><li>중간분류의 6대 Agent 매핑(생산/품질/물류/설비/개발/안전환경)이 자사 AI Factory 운영 구상과 일치합니까?<span class="note">메모:</span></li><li>설비 Agent·개발 Agent 분류가 현재 각 1개 스킬뿐입니다. 실무 관점에서 어떤 스킬을 추가 증설해야 합니까?<span class="note">메모:</span></li><li>MES·생산계획 자율화(9개)에 자재·협력사 스킬이 물류로 가는 것이 맞습니까, 생산으로 가는 것이 맞습니까?<span class="note">메모:</span></li></ol>
+    <div class="chips"><span class="chip hot">신규 검증: 자율 정비 실행 에이전트 운영 (RSF-AAM-022)</span><span class="chip hot">신규 검증: 공정 시나리오 가상 검증·배포 에이전트 (RSF-AAM-023)</span><span class="chip hot">신규 검증: 자재·협력사 연동 자율화 (RSF-AAM-024)</span><span class="chip hot">신규 검증: In-Factory 물류·SCM 실행 통합 (RSF-AAM-025)</span></div>
+  </div>
+  <div class="dcard" style="border-left-color:#9333ea">
+    <h3>Digital Twin &amp; Simulation</h3>
+    <p class="meta">스킬 22개 · 담당: 고민석</p>
+    <p class="focus"><b>포커스:</b> 시뮬레이터/에뮬레이터 구분과 운영·동기화 깊이</p>
+    <ol class="qs" start="1"><li>에뮬레이션·가상 커미셔닝을 시뮬레이션과 별도 스킬로 구분한 것이 타당합니까? 필요한 세부 스킬(예: PLC 연동 검증)이 더 있습니까?<span class="note">메모:</span></li><li>트윈 운영·동기화가 3개 스킬로 충분합니까? 실공장 동기화 운영에서 빠진 역량은?<span class="note">메모:</span></li><li>가상 검증·시뮬레이션 과목이 개발 Agent(공정 검증·배포)와 학습 순서상 어떻게 연결되어야 합니까?<span class="note">메모:</span></li></ol>
+    <div class="chips"><span class="chip hot">신규 검증: 에뮬레이션·가상 커미셔닝 (RSF-DTS-022)</span></div>
+  </div>
+  <div class="dcard" style="border-left-color:#0891b2">
+    <h3>Data Intelligence</h3>
+    <p class="meta">스킬 26개 · 담당: 서우진</p>
+    <p class="focus"><b>포커스:</b> 허브 역할의 공통 코어 적정성과 재분류 제안 승인</p>
+    <ol class="qs" start="1"><li>재분류 제안 3건 — 제조 지식그래프·온톨로지(RSF-AAM-026), Data Fabric·기간계 연계(RSF-AAM-027), 제조 특화 LLM 데이터·평가(RSF-AAM-028) — 의 Data Intelligence 배정에 동의하십니까? (미팅 중 승인/보류/반려 결정)<span class="note">메모:</span></li><li>공통필수에 포함된 데이터 스킬(신호 처리·수집·로깅·트렌드 분석)이 전 도메인 연구원의 공통 코어로 적정한 수준입니까?<span class="note">메모:</span></li><li>OT 네트워크·통신이 2개 스킬뿐입니다. OT 보안 등 증설이 필요합니까?<span class="note">메모:</span></li></ol>
+    <div class="chips"><span class="chip hot">신규 검증: 제조 지식그래프·온톨로지 구축 (RSF-AAM-026)</span><span class="chip hot">신규 검증: Data Fabric·기간계 시스템 연계 (RSF-AAM-027)</span><span class="chip hot">신규 검증: 제조 특화 LLM 데이터·평가 (RSF-AAM-028)</span></div>
+  </div>
+
+  <h2>5. 특화 트랙·캡스톤 질문 (전원 · 15분)</h2>
+  <ol class="qs" start="1"><li>특화 트랙 5개(예지보전·자율 정비 / 가상 커미셔닝·공정 검증 / 품질 지능화 / 자율 물류·SCM / 지식그래프·특화 LLM)가 자사 AI Factory 우선 과제와 일치합니까? 우선순위를 매겨 주십시오.<span class="note">메모:</span></li><li>"Specialist 과정에서 트랙 택1" 규칙이 적절합니까, 복수 이수를 허용해야 합니까?<span class="note">메모:</span></li><li>각 트랙의 캡스톤 과제 난이도가 1人1案 수준과 맞습니까? 산출물 평가 기준(정량 지표)을 무엇으로 해야 합니까?<span class="note">메모:</span></li><li>트랙별 구성 스킬에서 빠진 것(예: 트랙 수행에 필수인 타 도메인 스킬)이 있습니까?<span class="note">메모:</span></li></ol>
+
+  <h2>6. 미팅 중 결정할 항목 (체크리스트)</h2>
+  <table>
+    <thead><tr><th>#</th><th>결정 항목</th><th>결정(승인/보류/반려)</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>재분류 제안 39건 중 <b>신규 3건</b>(RSF-AAM-026/027/028 → Data Intelligence) 우선 판정</td><td></td></tr>
+      <tr><td>2</td><td>신규 증설 스킬 11개의 커리큘럼 포함 여부·레벨 확정</td><td></td></tr>
+      <tr><td>3</td><td>설비 Agent·개발 Agent 분류의 스킬 증설 여부와 후보 목록</td><td></td></tr>
+      <tr><td>4</td><td>특화 트랙 우선순위(1~5위)와 2026년 개설 트랙 선정</td><td></td></tr>
+      <tr><td>5</td><td>학습시간 규칙(4/8/16h) 유지 또는 보정 계수 결정</td><td></td></tr>
+      <tr><td>6</td><td>공통필수 3과목 구성 확정</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <footer>AI Factory Skill Fab · 전문가 검증 미팅 가이드 (2026-07-15) —
+    온톨로지 변경 시 <code>npm run generate:curriculum-review-html</code> 로 재발행하십시오.</footer>
+</div>
+</body>
+</html>
