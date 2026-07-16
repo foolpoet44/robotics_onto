@@ -10,16 +10,7 @@ import {
   getCollegeSubcategoryData,
 } from "../../../lib/server-data";
 
-const COLLEGE_IDS = [
-  "physical-ai",
-  "agentic-ai",
-  "data-intelligence",
-  "digital-twin",
-];
-
-export function generateStaticParams() {
-  return COLLEGE_IDS.map((collegeId) => ({ collegeId }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function CollegeDetailPage({
   params,
