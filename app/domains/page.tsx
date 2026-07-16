@@ -8,6 +8,8 @@ import {
   getCollegeSubcategoryData,
 } from "../lib/server-data";
 
+export const dynamic = "force-dynamic";
+
 export default async function DomainsPage() {
   const [skills, collegeMapping, subcategoryData] = await Promise.all([
     getAllRobotSkills(),

@@ -3,6 +3,8 @@ import styles from "../page.module.css";
 import { ROBOT_DOMAINS } from "../../lib/robotics-data";
 import { getAllRobotSkills } from "../../lib/server-data";
 
+export const dynamic = "force-dynamic";
+
 export default async function FunctionalDomainsPage() {
   const counts: Record<string, number> = {};
   const skills = await getAllRobotSkills();

@@ -1,11 +1,9 @@
 import { notFound } from "next/navigation";
 import DomainSkillExplorer from "../../components/DomainSkillExplorer";
-import { getDomain, ROBOT_DOMAINS } from "../../lib/robotics-data";
+import { getDomain } from "../../lib/robotics-data";
 import { getAllRobotSkills } from "../../lib/server-data";
 
-export function generateStaticParams() {
-  return ROBOT_DOMAINS.map((domain) => ({ domain: domain.key }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function DomainDetailPage({
   params,
