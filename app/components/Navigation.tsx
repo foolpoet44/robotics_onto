@@ -32,7 +32,7 @@ export default function Navigation() {
       <div className={styles.navContainer}>
         <Link href="/" className={styles.brand}>
           <span>🤖</span>
-          <span>Factory Robotics</span>
+          <span>AI Factory Skill Fab</span>
         </Link>
         <div className={styles.navLinks}>
           {items.map((item) => {
