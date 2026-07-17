@@ -53,6 +53,17 @@ jobs:
           POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
         run: npm run steward:signals
 
+      # 자격증명 preflight — 값은 절대 출력하지 않고 존재/길이만 확인해 빠르게 실패한다.
+      - name: Preflight — verify credentials
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY 가 비어 있습니다. secret 을 실제 값으로 다시 설정하세요."
+            exit 1
+          fi
+          echo "ANTHROPIC_API_KEY 존재 확인 (길이 ${#ANTHROPIC_API_KEY})"
+
       - name: Run steward loop (headless)
         # 정확한 액션 버전·인자는 활성화 시점 공식 문서로 확인해 맞춘다.
         # 핵심 계약: secrets 로 API키·DB URL 주입 · /steward 헤드리스 실행 · PR 생성.
