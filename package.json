@@ -9,6 +9,7 @@
     "type-check": "tsc --noEmit",
     "steward:signals": "node scripts/steward/export-signals.js",
     "test:steward": "node scripts/steward/test-export-signals.js",
+    "test:competency-skill": "node scripts/test-competency-skill-map.js",
     "generate:data": "python3 scripts/generate-robot-smartfactory-data.py",
     "generate:raw": "node scripts/generate-robot-smartfactory-raw.js",
     "enrich:organization": "python3 scripts/enrich-organization-mapping.py",
