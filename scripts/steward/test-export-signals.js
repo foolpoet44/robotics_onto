@@ -123,8 +123,13 @@ withFixture(
     assert(s.summary.actionable === 3, `summary.actionable=3 (실제: ${s.summary.actionable})`);
     assert(s.summary.watching >= 1, `watching 에 재정의 1건 이상 포함 (실제: ${s.summary.watching})`);
 
-    // 역량 매핑 파일 부재 → 우아하게 unavailable
-    assert(s.competencyMap.available === false, "competency-skill-map 부재 시 available=false");
+    // 역량 매핑 맵이 리포에 존재 → available=true, 커버리지 계산됨
+    // (맵/역량평가는 public/data 에서 로드 — 신호 --data-dir 와 무관)
+    assert(s.competencyMap.available === true, "competency-skill-map 존재 시 available=true");
+    assert(
+      s.competencyMap.coverage && s.competencyMap.coverage.unknown === 0,
+      "실제 맵은 unknown 0 (100% 커버리지)",
+    );
   },
 );
 

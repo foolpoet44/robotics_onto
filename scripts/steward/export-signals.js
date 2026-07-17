@@ -31,6 +31,9 @@
 
 const fs = require("fs");
 const path = require("path");
+const {
+  loadCompetencySkillResolver,
+} = require("../lib/competency-skill-resolver-loader");
 
 // ---- 5개 평가 라벨 중 스튜어드가 추적하는 3종 (app/lib/evaluation-constants.ts와 일치) ----
 // 현장필수·교육필요는 품질 신호이지 온톨로지 변경감이 아니므로 추적하지 않는다.
@@ -255,35 +258,32 @@ function collectPendingOverrideReviews() {
 }
 
 // ----------------------------------------------------------------------------
-// 역량↔스킬 매핑 상태 — 파일이 아직 없으면(미머지 단계) 우아하게 건너뛴다.
-// 플랜 A-1 은 이 소스를 명시하지만, competency-skill-map.json 은
-// COMPETENCY_SKILL_LINK_PLAN 단계 산출물이라 리포에 아직 없을 수 있다.
+// 역량↔스킬 매핑 상태 — 리졸버 로더로 커버리지·unknownMinors 를 계산한다.
+// 맵/역량평가가 아직 없으면(미머지 단계) 우아하게 available:false 로 건너뛴다.
+// unknownMinors 는 B-2(/triage-competency-map)가 소비하는 핵심 시그널이다.
 // ----------------------------------------------------------------------------
-function collectCompetencyMap() {
-  const mapPath = path.join(PUBLIC_DATA, "competency-skill-map.json");
-  const map = readJsonObject(mapPath);
-  if (!map) {
+function collectCompetencyMap(thresholds) {
+  const ctx = loadCompetencySkillResolver();
+  if (!ctx.available) {
     // 소스 부재를 침묵으로 감추지 않는다 — 명시적으로 unavailable 로 보고.
     return {
       available: false,
-      note: "competency-skill-map.json 미존재 — 역량 매핑 시그널은 해당 단계 머지 후 활성화됩니다.",
+      note: "competency-skill-map.json / 역량평가 미존재 — 역량 매핑 시그널 비활성.",
       unknownMinors: [],
       coverage: null,
     };
   }
-  const mappings = Array.isArray(map.mappings) ? map.mappings : [];
-  const outOfScope = Array.isArray(map.outOfScope) ? map.outOfScope : [];
+  // unknown 소분류는 즉시 처리 대상(임계값 unknownMinorImmediate, 기본 1).
+  const threshold = thresholds.unknownMinorImmediate ?? 1;
+  const unknownMinors = ctx.unknownMinors.map((u) => ({
+    ...u,
+    actionable: u.employeeCount >= threshold,
+    threshold,
+  }));
   return {
     available: true,
-    // unknownMinors 는 역량평가 임포트 시 리졸버가 산출하는 값이라
-    // 이 결정적 스크립트만으로는 알 수 없다. 리졸버 로더가 리포에 들어오면
-    // 여기서 연결한다(Phase B-2 선행 조건). 지금은 빈 배열로 정직하게 둔다.
-    unknownMinors: [],
-    coverage: {
-      total: mappings.length + outOfScope.length,
-      mapped: mappings.length,
-      outOfScope: outOfScope.length,
-    },
+    unknownMinors,
+    coverage: ctx.coverage,
   };
 }
 
@@ -330,7 +330,12 @@ async function main() {
   const evalAgg = aggregateEvaluationFlags(sources.evaluations, thresholds);
 
   // --- 3. 역량 매핑 상태 ---
-  const competencyMap = collectCompetencyMap();
+  const competencyMap = collectCompetencyMap(thresholds);
+  const unknownActionable = competencyMap.unknownMinors.filter(
+    (u) => u.actionable,
+  ).length;
+  const unknownWatching =
+    competencyMap.unknownMinors.length - unknownActionable;
 
   // --- 4. 조직 미매핑 ---
   const organizationUnmapped = collectOrganizationUnmapped();
@@ -347,14 +352,16 @@ async function main() {
   // --- summary 산정 ---
   // actionable: 즉시 [B] 스킬로 처리할 임계값 도달 시그널의 "건수"
   const actionable =
-    (changeRequestsActionable ? pending.length : 0) + evalAgg.actionableCount;
+    (changeRequestsActionable ? pending.length : 0) +
+    evalAgg.actionableCount +
+    unknownActionable;
   // watching: 임계값 미달 + 거버넌스 대기열(관찰만)
   const watching =
     (changeRequestsActionable ? 0 : pending.length) +
     evalAgg.watchingCount +
     pendingOverrideReviews.length +
     organizationUnmapped.length +
-    competencyMap.unknownMinors.length;
+    unknownWatching;
 
   const signals = {
     generatedAt: new Date().toISOString(),

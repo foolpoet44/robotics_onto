@@ -1,0 +1,361 @@
+{
+  "version": "1.0.0",
+  "note": "직원 역량평가(employee-competency-assessments.json)의 minorCategory 44종을 로봇 스킬 온톨로지에 100% 매핑(mapped/outOfScope)한 단일 출처. 신규 minor는 mapped 또는 outOfScope로 반드시 분류(unknown 금지). 수정은 이 파일에서만.",
+  "$meta": {
+    "source": "employee-competency-assessments.json (273명, 직무역량평가_2026)",
+    "coverageRule": "assessments 의 모든 distinct minorCategory 는 mappings 또는 outOfScope 에 정확히 1회 등장",
+    "relation": {
+      "direct": "minor 가 스킬 역량과 직접 대응",
+      "adjacent": "인접·부분 대응(참고 매핑)"
+    },
+    "counts": {
+      "total": 44,
+      "mapped": 30,
+      "outOfScope": 14
+    }
+  },
+  "mappings": [
+    {
+      "minorCategory": "생산운영시스템설계 (IT)",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-AAM-003",
+      "skillLabelKo": "MES 및 제조 실행 프로세스",
+      "relation": "direct",
+      "note": "MES·제조 실행 프로세스 역량과 직접 대응"
+    },
+    {
+      "minorCategory": "기구설계",
+      "majorCategory": "기계설계",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-001",
+      "skillLabelKo": "로봇 구조 및 운동학",
+      "relation": "adjacent",
+      "note": "로봇 구조·운동학 기반 기계 설계 인접"
+    },
+    {
+      "minorCategory": "응용SW프로그래밍",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-IRC-007",
+      "skillLabelKo": "로봇 프로그래밍",
+      "relation": "adjacent",
+      "note": "로봇/설비 응용 프로그래밍 역량 인접"
+    },
+    {
+      "minorCategory": "AI비젼 (Vision)",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-MVS-004",
+      "skillLabelKo": "컴퓨터 비전 알고리즘",
+      "relation": "direct",
+      "note": "컴퓨터 비전 알고리즘과 직접 대응"
+    },
+    {
+      "minorCategory": "생산방식설계",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-AAM-005",
+      "skillLabelKo": "생산계획 및 스케줄링 이론",
+      "relation": "adjacent",
+      "note": "생산계획·스케줄링 이론 인접"
+    },
+    {
+      "minorCategory": "데이터처리(시계열)",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-DTS-005",
+      "skillLabelKo": "실시간 데이터 파이프라인",
+      "relation": "adjacent",
+      "note": "실시간 데이터 파이프라인(시계열) 인접"
+    },
+    {
+      "minorCategory": "PLC제어",
+      "majorCategory": "기계설계",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-023",
+      "skillLabelKo": "PLC·설비 제어 연동",
+      "relation": "direct",
+      "note": "PLC·설비 제어 연동과 직접 대응"
+    },
+    {
+      "minorCategory": "레이아웃설계",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "digital-twin",
+      "skillId": "RSF-DTS-008",
+      "skillLabelKo": "생산 라인 레이아웃 검증",
+      "relation": "direct",
+      "note": "생산 라인 레이아웃 검증과 직접 대응"
+    },
+    {
+      "minorCategory": "시뮬레이션",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "digital-twin",
+      "skillId": "RSF-DTS-004",
+      "skillLabelKo": "로봇 시뮬레이션 소프트웨어",
+      "relation": "direct",
+      "note": "로봇 시뮬레이션 소프트웨어와 직접 대응"
+    },
+    {
+      "minorCategory": "로봇통합제어",
+      "majorCategory": "기계설계",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-002",
+      "skillLabelKo": "로봇 제어 이론",
+      "relation": "direct",
+      "note": "로봇 제어 이론과 직접 대응"
+    },
+    {
+      "minorCategory": "생산계획/스케쥴링",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-AAM-005",
+      "skillLabelKo": "생산계획 및 스케줄링 이론",
+      "relation": "direct",
+      "note": "생산계획·스케줄링 이론과 직접 대응"
+    },
+    {
+      "minorCategory": "Lean생산방식 (TPS)",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-AAM-005",
+      "skillLabelKo": "생산계획 및 스케줄링 이론",
+      "relation": "adjacent",
+      "note": "생산 방식·계획 이론 인접(Lean/TPS)"
+    },
+    {
+      "minorCategory": "진동/음향",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-RMD-006",
+      "skillLabelKo": "로봇 상태 모니터링",
+      "relation": "adjacent",
+      "note": "로봇 상태 모니터링(진동 진단) 인접"
+    },
+    {
+      "minorCategory": "데이터 프로세싱/분석(신호처리)",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-MVS-003",
+      "skillLabelKo": "센서 신호 처리",
+      "relation": "direct",
+      "note": "센서 신호 처리와 직접 대응"
+    },
+    {
+      "minorCategory": "생산데이터구조설계",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-AAM-027",
+      "skillLabelKo": "Data Fabric·기간계 시스템 연계",
+      "relation": "direct",
+      "note": "Data Fabric·기간계 연계와 직접 대응"
+    },
+    {
+      "minorCategory": "수리최적화/휴리스틱",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-DTS-013",
+      "skillLabelKo": "최적화 시뮬레이션",
+      "relation": "adjacent",
+      "note": "최적화 시뮬레이션 인접(수리최적화)"
+    },
+    {
+      "minorCategory": "제어알고리즘",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-IRC-002",
+      "skillLabelKo": "로봇 제어 이론",
+      "relation": "direct",
+      "note": "로봇 제어 이론(제어 알고리즘)과 직접 대응"
+    },
+    {
+      "minorCategory": "로보틱스",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-001",
+      "skillLabelKo": "로봇 구조 및 운동학",
+      "relation": "direct",
+      "note": "로봇 구조·운동학(로보틱스 일반)과 직접 대응"
+    },
+    {
+      "minorCategory": "로봇설계",
+      "majorCategory": "기계설계",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-001",
+      "skillLabelKo": "로봇 구조 및 운동학",
+      "relation": "direct",
+      "note": "로봇 구조·운동학과 직접 대응"
+    },
+    {
+      "minorCategory": "PC제어",
+      "majorCategory": "기계설계",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-023",
+      "skillLabelKo": "PLC·설비 제어 연동",
+      "relation": "adjacent",
+      "note": "PLC·설비 제어 연동 인접(PC 기반 제어)"
+    },
+    {
+      "minorCategory": "시스템프로그래밍",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-IRC-007",
+      "skillLabelKo": "로봇 프로그래밍",
+      "relation": "adjacent",
+      "note": "로봇 프로그래밍 역량 인접(시스템 SW)"
+    },
+    {
+      "minorCategory": "고속신호전송설계",
+      "majorCategory": "전기전자 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-MVS-003",
+      "skillLabelKo": "센서 신호 처리",
+      "relation": "adjacent",
+      "note": "센서 신호 처리 인접(고속 신호 전송)"
+    },
+    {
+      "minorCategory": "센서회로설계",
+      "majorCategory": "전기전자 응용",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-MVS-005",
+      "skillLabelKo": "센서 캘리브레이션 이론",
+      "relation": "adjacent",
+      "note": "센서 캘리브레이션 이론 인접(센서 회로)"
+    },
+    {
+      "minorCategory": "아키텍쳐 설계",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "data-intelligence",
+      "skillId": "RSF-DTS-001",
+      "skillLabelKo": "디지털트윈 아키텍처",
+      "relation": "adjacent",
+      "note": "디지털트윈 아키텍처 인접(시스템 설계)"
+    },
+    {
+      "minorCategory": "공급사슬설계",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-AAM-025",
+      "skillLabelKo": "In-Factory 물류·SCM 실행 통합",
+      "relation": "direct",
+      "note": "In-Factory 물류·SCM 실행 통합과 직접 대응"
+    },
+    {
+      "minorCategory": "공장운영시나리오",
+      "majorCategory": "생산시스템",
+      "assessmentCollegeId": "digital-twin",
+      "skillId": "RSF-DTS-017",
+      "skillLabelKo": "운영 시나리오 시뮬레이션",
+      "relation": "direct",
+      "note": "운영 시나리오 시뮬레이션과 직접 대응"
+    },
+    {
+      "minorCategory": "광기구설계",
+      "majorCategory": "광학",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-MVS-002",
+      "skillLabelKo": "머신비전 카메라 및 광학",
+      "relation": "adjacent",
+      "note": "머신비전 카메라·광학 인접(광기구)"
+    },
+    {
+      "minorCategory": "소음/진동해석",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "digital-twin",
+      "skillId": "RSF-DTS-002",
+      "skillLabelKo": "물리 시뮬레이션 엔진",
+      "relation": "adjacent",
+      "note": "물리 시뮬레이션 엔진 인접(소음·진동 해석)"
+    },
+    {
+      "minorCategory": "시스템 모델링",
+      "majorCategory": "SW 응용",
+      "assessmentCollegeId": "agentic-ai",
+      "skillId": "RSF-DTS-001",
+      "skillLabelKo": "디지털트윈 아키텍처",
+      "relation": "adjacent",
+      "note": "디지털트윈 아키텍처·모델링 인접"
+    },
+    {
+      "minorCategory": "전력제어",
+      "majorCategory": "전기전자 응용",
+      "assessmentCollegeId": "physical-ai",
+      "skillId": "RSF-IRC-023",
+      "skillLabelKo": "PLC·설비 제어 연동",
+      "relation": "adjacent",
+      "note": "설비 제어 연동 인접(전력 제어)"
+    }
+  ],
+  "outOfScope": [
+    {
+      "minorCategory": "Vertical Sales",
+      "majorCategory": "Sales",
+      "reason": "영업(Sales) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "B2B Pipeline",
+      "majorCategory": "Sales",
+      "reason": "영업(Sales) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "B2B 거래선 관리",
+      "majorCategory": "Sales",
+      "reason": "영업(Sales) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "Creative 개발",
+      "majorCategory": "Marketing",
+      "reason": "마케팅(Marketing) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "Digital Design",
+      "majorCategory": "디자인",
+      "reason": "디자인 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "경영정보시스템",
+      "majorCategory": "경영기획/관리",
+      "reason": "경영기획/관리 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "사업/이동계획",
+      "majorCategory": "경영기획/관리",
+      "reason": "경영기획/관리 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "수익성관리",
+      "majorCategory": "경영기획/관리",
+      "reason": "경영기획/관리 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "시장/사업기회발굴",
+      "majorCategory": "상품기획",
+      "reason": "상품기획 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "연마",
+      "majorCategory": "공정 / 가공",
+      "reason": "가공 공정(공정/가공) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "이커머스",
+      "majorCategory": "Marketing",
+      "reason": "마케팅(Marketing) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "장비영업",
+      "majorCategory": "Sales",
+      "reason": "영업(Sales) 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "전략기획/추진",
+      "majorCategory": "경영전략",
+      "reason": "경영전략 역량 — 로봇 스킬 온톨로지 범위 밖"
+    },
+    {
+      "minorCategory": "포트폴리오전략",
+      "majorCategory": "상품기획",
+      "reason": "상품기획 역량 — 로봇 스킬 온톨로지 범위 밖"
+    }
+  ]
+}
