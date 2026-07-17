@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17 23:13 UTC",
+  "generatedAt": "2026-07-17 23:18 UTC",
   "verdict": {
     "badge": "🟡",
     "label": "관찰"
@@ -64,9 +64,15 @@
   },
   "prs": {
     "available": true,
-    "mergedCount": 9,
-    "createdCount": 11,
+    "mergedCount": 10,
+    "createdCount": 12,
     "stewardCreated": [
+      {
+        "number": 20,
+        "title": "feat(steward): 일일 작업 로그 자동 아카이빙",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/20",
+        "steward": true
+      },
       {
         "number": 19,
         "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
@@ -131,6 +137,12 @@
     "openStewardCount": 0,
     "merged": [
       {
+        "number": 20,
+        "title": "feat(steward): 일일 작업 로그 자동 아카이빙",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/20",
+        "steward": true
+      },
+      {
         "number": 19,
         "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
         "url": "https://github.com/foolpoet44/robotics_onto/pull/19",
@@ -186,6 +198,12 @@
       }
     ],
     "created": [
+      {
+        "number": 20,
+        "title": "feat(steward): 일일 작업 로그 자동 아카이빙",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/20",
+        "steward": true
+      },
       {
         "number": 19,
         "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
@@ -257,6 +275,10 @@
   "commits": {
     "commits": [
       {
+        "sha": "b444704",
+        "subject": "feat(steward): 일일 작업 로그 자동 아카이빙"
+      },
+      {
         "sha": "4523a5e",
         "subject": "feat(steward): cron schedule 활성화 — 드라이런 3회 성공 후 상시화"
       },
@@ -306,6 +328,10 @@
       }
     ],
     "merges": [
+      {
+        "sha": "89742ec",
+        "subject": "Merge pull request #20 from foolpoet44/steward/daily-log-20260718"
+      },
       {
         "sha": "083b262",
         "subject": "Merge pull request #19 from foolpoet44/steward/enable-cron-20260718"
