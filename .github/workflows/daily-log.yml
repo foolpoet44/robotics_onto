@@ -5,11 +5,10 @@
 name: Daily Log
 
 on:
-  # 롤아웃 게이팅: workflow_dispatch 드라이런으로 CI 생성·커밋을 확인한 뒤
-  # 아래 schedule 주석을 해제해 상시화한다(steward 롤아웃과 동일 규율).
-  # schedule:
-  #   # 매일 KST 03:40 = UTC 18:40 — steward 런(UTC 18:23) 직후에 그날 결과를 갈무리.
-  #   - cron: "40 18 * * *"
+  # 롤아웃 완료: dispatch 드라이런(run 29620300616)이 생성·커밋·푸시 성공 → 상시화.
+  schedule:
+    # 매일 KST 03:40 = UTC 18:40 — steward 런(UTC 18:23) 직후에 그날 결과를 갈무리.
+    - cron: "40 18 * * *"
   workflow_dispatch: {}
 
 concurrency:
