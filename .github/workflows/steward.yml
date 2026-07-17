@@ -11,11 +11,11 @@
 name: Knowledge Steward
 
 on:
-  # 롤아웃 게이팅(플랜 §8): secrets 등록 + workflow_dispatch 드라이런 3회 성공
-  # 전까지 schedule 을 비활성화한다. 검증 완료 후 아래 주석을 해제해 cron 활성화.
-  # schedule:
-  #   # 평일(월~금) KST 새벽 3:23 = UTC 18:23 (정각 회피). KST는 UTC+9.
-  #   - cron: "23 18 * * 1-5"
+  # 롤아웃 게이팅 완료(플랜 §8): secrets 등록 + 드라이런 3회 성공(run 29617965053·
+  # 29618055281·29618141016, 2026-07-18) 확인 후 schedule 활성화.
+  schedule:
+    # 평일(월~금) KST 새벽 3:23 = UTC 18:23 (정각 회피). KST는 UTC+9.
+    - cron: "23 18 * * 1-5"
   workflow_dispatch: {}
 
 # 동시 실행 방지 — 앞 실행이 끝나기 전 겹치지 않게.
