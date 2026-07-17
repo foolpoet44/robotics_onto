@@ -29,6 +29,7 @@ jobs:
     permissions:
       contents: write # 브랜치 푸시
       pull-requests: write # 드래프트 PR 생성
+      id-token: write # claude-code-action OIDC 토큰(필수)
 
     steps:
       - name: Checkout
