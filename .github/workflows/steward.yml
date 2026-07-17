@@ -1,0 +1,86 @@
+# 지식 스튜어드 — 야간 cron 헤드리스 실행 (Phase C-2)
+#
+# 무엇을 하나
+#   평일 새벽, 시그널을 수집(steward:signals)하고 /steward 오케스트레이터를
+#   헤드리스로 돌려 actionable 시그널을 드래프트 PR로 만든다. 머지는 인간.
+#
+# 활성화 전 체크리스트 (docs/STEWARD_AGENT_DEV_PLAN.md §8)
+#   - Actions secrets 등록: ANTHROPIC_API_KEY, POSTGRES_URL
+#   - 처음엔 schedule 을 끄고 workflow_dispatch 로 3회 이상 드라이런
+#   - claude-code-action 의 정확한 버전·인자는 활성화 시점 공식 문서로 확인
+name: Knowledge Steward
+
+on:
+  schedule:
+    # 평일(월~금) KST 새벽 3:23 = UTC 18:23 (정각 회피). KST는 UTC+9.
+    - cron: "23 18 * * 1-5"
+  workflow_dispatch: {}
+
+# 동시 실행 방지 — 앞 실행이 끝나기 전 겹치지 않게.
+concurrency:
+  group: knowledge-steward
+  cancel-in-progress: false
+
+jobs:
+  steward:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 브랜치 푸시
+      pull-requests: write # 드래프트 PR 생성
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 브랜치 비교·중복 PR 감지용 전체 이력
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 결정적 수집기를 먼저 돌려 시그널 스냅샷을 남긴다(LLM 없이).
+      # /steward 도 내부에서 다시 돌리지만, 여기서 로그에 요약을 남겨 둔다.
+      - name: Collect signals
+        env:
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+        run: npm run steward:signals
+
+      - name: Run steward loop (headless)
+        # 정확한 액션 버전·인자는 활성화 시점 공식 문서로 확인해 맞춘다.
+        # 핵심 계약: secrets 로 API키·DB URL 주입 · /steward 헤드리스 실행 · PR 생성.
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "/steward"
+          claude_args: "--max-turns 60"
+        env:
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 실행 로그의 다이제스트를 workflow summary 에 남긴다(사람 리뷰용).
+      - name: Publish digest to summary
+        if: always()
+        run: |
+          echo "## 🤖 Knowledge Steward — $(date -u +%Y-%m-%dT%H:%MZ)" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f .data/steward/signals.json ]; then
+            node -e '
+              const s = require("./.data/steward/signals.json");
+              const o = [];
+              o.push(`- store: **${s.source.store}**`);
+              o.push(`- actionable: **${s.summary.actionable}** / watching: **${s.summary.watching}**`);
+              o.push(`- 검수 미완 오버라이드: ${s.pendingOverrideReviews.length}건`);
+              o.push(`- 조직 역량 미매핑: ${s.organizationUnmapped.length}건`);
+              for (const [flag, arr] of Object.entries(s.evaluationFlags)) {
+                const act = arr.filter((e) => e.actionable).length;
+                if (arr.length) o.push(`- ${flag}: ${arr.length}건 (actionable ${act})`);
+              }
+              process.stdout.write(o.join("\n") + "\n");
+            ' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_signals.json 없음 — 수집 단계 로그 확인_" >> "$GITHUB_STEP_SUMMARY"
+          fi
