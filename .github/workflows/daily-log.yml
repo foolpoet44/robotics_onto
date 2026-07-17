@@ -1,0 +1,61 @@
+# 일일 작업 로그 자동 아카이빙 (설계: docs/DAILY_LOG_PLAN.md)
+#
+# 매일 스튜어드 신호 수집 + 하루치 결과물(런·PR·신호·커밋)을 한 장의 md 로 렌더해
+# governance/daily-log/ 에 직접 커밋한다. 로그는 감사 기록물이라 PR 없이 [skip ci].
+name: Daily Log
+
+on:
+  # 롤아웃 게이팅: workflow_dispatch 드라이런으로 CI 생성·커밋을 확인한 뒤
+  # 아래 schedule 주석을 해제해 상시화한다(steward 롤아웃과 동일 규율).
+  # schedule:
+  #   # 매일 KST 03:40 = UTC 18:40 — steward 런(UTC 18:23) 직후에 그날 결과를 갈무리.
+  #   - cron: "40 18 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: daily-log
+  cancel-in-progress: false
+
+jobs:
+  daily-log:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 로그 직접 커밋
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 당일 커밋 집계
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 신호를 먼저 수집해 daily-log 가 그날 스냅샷을 포함하게 한다.
+      - name: Collect signals
+        env:
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+        run: npm run steward:signals
+
+      - name: Generate daily log
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # gh run/pr 조회용
+        run: npm run daily-log
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add governance/daily-log
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            DATE=$(date -u +%Y-%m-%d)
+            git commit -m "docs(log): 일일 작업 로그 ${DATE} [skip ci]"
+            git push
+          fi

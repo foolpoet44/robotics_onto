@@ -1,0 +1,376 @@
+{
+  "date": "2026-07-17",
+  "generatedAt": "2026-07-17 23:13 UTC",
+  "verdict": {
+    "badge": "🟡",
+    "label": "관찰"
+  },
+  "runs": {
+    "available": true,
+    "total": 8,
+    "success": 4,
+    "failure": 4,
+    "scheduleFailure": true,
+    "items": [
+      {
+        "time": "22:59",
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29619433919"
+      },
+      {
+        "time": "22:31",
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29618141016"
+      },
+      {
+        "time": "22:29",
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29618055281"
+      },
+      {
+        "time": "22:28",
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29617965053"
+      },
+      {
+        "time": "22:19",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29617526938"
+      },
+      {
+        "time": "22:16",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29617394912"
+      },
+      {
+        "time": "22:14",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29617290223"
+      },
+      {
+        "time": "19:37",
+        "event": "schedule",
+        "conclusion": "failure",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29608207829"
+      }
+    ]
+  },
+  "prs": {
+    "available": true,
+    "mergedCount": 9,
+    "createdCount": 11,
+    "stewardCreated": [
+      {
+        "number": 19,
+        "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/19",
+        "steward": true
+      },
+      {
+        "number": 18,
+        "title": "chore(steward): 자격증명 preflight 진단 단계",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/18",
+        "steward": true
+      },
+      {
+        "number": 17,
+        "title": "fix(steward): OIDC용 id-token: write 권한 추가",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/17",
+        "steward": true
+      },
+      {
+        "number": 16,
+        "title": "chore(steward): 드라이런 성공 전까지 cron schedule 게이팅",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/16",
+        "steward": true
+      },
+      {
+        "number": 15,
+        "title": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬 (#11 대체)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/15",
+        "steward": true
+      },
+      {
+        "number": 14,
+        "title": "feat(steward): Phase D — 심화 백로그 4종 스킬 + deprecated 스키마 제안",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/14",
+        "steward": true
+      },
+      {
+        "number": 13,
+        "title": "feat(steward): B-2 선행 — 역량↔스킬 매핑 서브시스템 + /triage-competency-map",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/13",
+        "steward": true
+      },
+      {
+        "number": 12,
+        "title": "feat(steward): Phase B-3 + C — 갭스킬·오케스트레이터·cron·발행물 (루프 완결)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/12",
+        "steward": true
+      },
+      {
+        "number": 11,
+        "title": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/11",
+        "steward": true
+      },
+      {
+        "number": 10,
+        "title": "feat(steward): Phase A — 지식 스튜어드 감각(SENSE) 계층",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/10",
+        "steward": true
+      }
+    ],
+    "openStewardCount": 0,
+    "merged": [
+      {
+        "number": 19,
+        "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/19",
+        "steward": true
+      },
+      {
+        "number": 18,
+        "title": "chore(steward): 자격증명 preflight 진단 단계",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/18",
+        "steward": true
+      },
+      {
+        "number": 17,
+        "title": "fix(steward): OIDC용 id-token: write 권한 추가",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/17",
+        "steward": true
+      },
+      {
+        "number": 16,
+        "title": "chore(steward): 드라이런 성공 전까지 cron schedule 게이팅",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/16",
+        "steward": true
+      },
+      {
+        "number": 15,
+        "title": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬 (#11 대체)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/15",
+        "steward": true
+      },
+      {
+        "number": 14,
+        "title": "feat(steward): Phase D — 심화 백로그 4종 스킬 + deprecated 스키마 제안",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/14",
+        "steward": true
+      },
+      {
+        "number": 13,
+        "title": "feat(steward): B-2 선행 — 역량↔스킬 매핑 서브시스템 + /triage-competency-map",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/13",
+        "steward": true
+      },
+      {
+        "number": 12,
+        "title": "feat(steward): Phase B-3 + C — 갭스킬·오케스트레이터·cron·발행물 (루프 완결)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/12",
+        "steward": true
+      },
+      {
+        "number": 10,
+        "title": "feat(steward): Phase A — 지식 스튜어드 감각(SENSE) 계층",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/10",
+        "steward": true
+      }
+    ],
+    "created": [
+      {
+        "number": 19,
+        "title": "feat(steward): cron schedule 활성화 (드라이런 3회 성공 후)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/19",
+        "steward": true
+      },
+      {
+        "number": 18,
+        "title": "chore(steward): 자격증명 preflight 진단 단계",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/18",
+        "steward": true
+      },
+      {
+        "number": 17,
+        "title": "fix(steward): OIDC용 id-token: write 권한 추가",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/17",
+        "steward": true
+      },
+      {
+        "number": 16,
+        "title": "chore(steward): 드라이런 성공 전까지 cron schedule 게이팅",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/16",
+        "steward": true
+      },
+      {
+        "number": 15,
+        "title": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬 (#11 대체)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/15",
+        "steward": true
+      },
+      {
+        "number": 14,
+        "title": "feat(steward): Phase D — 심화 백로그 4종 스킬 + deprecated 스키마 제안",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/14",
+        "steward": true
+      },
+      {
+        "number": 13,
+        "title": "feat(steward): B-2 선행 — 역량↔스킬 매핑 서브시스템 + /triage-competency-map",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/13",
+        "steward": true
+      },
+      {
+        "number": 12,
+        "title": "feat(steward): Phase B-3 + C — 갭스킬·오케스트레이터·cron·발행물 (루프 완결)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/12",
+        "steward": true
+      },
+      {
+        "number": 11,
+        "title": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/11",
+        "steward": true
+      },
+      {
+        "number": 10,
+        "title": "feat(steward): Phase A — 지식 스튜어드 감각(SENSE) 계층",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/10",
+        "steward": true
+      },
+      {
+        "number": 9,
+        "title": "역량↔스킬 매핑 정식 데이터화 + 리졸버·검증 (Phase 0·1) + 스튜어드 에이전트 개발 명세",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/9",
+        "steward": false
+      }
+    ]
+  },
+  "commits": {
+    "commits": [
+      {
+        "sha": "4523a5e",
+        "subject": "feat(steward): cron schedule 활성화 — 드라이런 3회 성공 후 상시화"
+      },
+      {
+        "sha": "ab7a3e0",
+        "subject": "chore(steward): 자격증명 preflight 단계(값 미노출, 길이만 확인)"
+      },
+      {
+        "sha": "de9eece",
+        "subject": "fix(steward): claude-code-action OIDC용 id-token: write 권한 추가"
+      },
+      {
+        "sha": "edffb6d",
+        "subject": "chore(steward): 드라이런 성공 전까지 cron schedule 게이팅"
+      },
+      {
+        "sha": "3260d6b",
+        "subject": "feat(steward): Phase D — 심화 백로그 4종 스킬 + deprecated 스키마 제안"
+      },
+      {
+        "sha": "a0b5bde",
+        "subject": "feat(steward): B-2 선행 — 역량↔스킬 매핑 서브시스템 + /triage-competency-map"
+      },
+      {
+        "sha": "692d685",
+        "subject": "feat(steward): Phase C-3 — /refresh-publications 발행물 재발행 스킬"
+      },
+      {
+        "sha": "7c2e4fd",
+        "subject": "feat(steward): Phase C-2 — 야간 cron 헤드리스 워크플로"
+      },
+      {
+        "sha": "41252f5",
+        "subject": "feat(steward): Phase C-1 — /steward 오케스트레이터 스킬"
+      },
+      {
+        "sha": "0561440",
+        "subject": "feat(steward): Phase B-3 — /propose-gap-skills 갭스킬 증설 스킬"
+      },
+      {
+        "sha": "a4aefbf",
+        "subject": "feat(steward): Phase B-1 — /triage-change-requests 오버라이드 검수 스킬"
+      },
+      {
+        "sha": "3933a05",
+        "subject": "feat(steward): Phase A — 지식 스튜어드 감각(SENSE) 계층"
+      }
+    ],
+    "merges": [
+      {
+        "sha": "083b262",
+        "subject": "Merge pull request #19 from foolpoet44/steward/enable-cron-20260718"
+      },
+      {
+        "sha": "6787f92",
+        "subject": "Merge pull request #18 from foolpoet44/steward/preflight-cred-20260718"
+      },
+      {
+        "sha": "726e264",
+        "subject": "Merge pull request #17 from foolpoet44/steward/fix-oidc-perm-20260718"
+      },
+      {
+        "sha": "f3e5bd3",
+        "subject": "Merge pull request #16 from foolpoet44/steward/gate-schedule-20260718"
+      },
+      {
+        "sha": "bd21a6e",
+        "subject": "Merge pull request #14 from foolpoet44/steward/phase-d-backlog-20260717"
+      },
+      {
+        "sha": "efec2ff",
+        "subject": "Merge pull request #13 from foolpoet44/steward/competency-map-b2-20260717"
+      },
+      {
+        "sha": "1bb01c0",
+        "subject": "Merge pull request #12 from foolpoet44/steward/phase-c-loop-20260717"
+      },
+      {
+        "sha": "31a938f",
+        "subject": "Merge pull request #15 from foolpoet44/steward/triage-change-requests-20260717"
+      },
+      {
+        "sha": "cafaa9c",
+        "subject": "Merge pull request #10 from foolpoet44/steward/phase-a-sense-20260717"
+      }
+    ]
+  },
+  "signals": {
+    "available": true,
+    "store": "file",
+    "actionable": 0,
+    "watching": 53,
+    "overrides": 39,
+    "unmapped": 14,
+    "coverage": {
+      "total": 44,
+      "mapped": 30,
+      "outOfScope": 14,
+      "assessmentMinors": 44,
+      "unknown": 0
+    },
+    "flags": {
+      "중복의심": {
+        "total": 0,
+        "actionable": 0
+      },
+      "신규제안": {
+        "total": 0,
+        "actionable": 0
+      },
+      "재정의대상": {
+        "total": 0,
+        "actionable": 0
+      }
+    }
+  }
+}

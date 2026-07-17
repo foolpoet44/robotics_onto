@@ -99,3 +99,13 @@ test:employee-competency test:data test:steward` (개별 스크립트는 package
 
 D-1 실제 폐기는 `docs/DEPRECATED_FLAG_SCHEMA_PROPOSAL.md`(스키마 확장) 선행 필요.
 자동화: `.github/workflows/steward.yml`(야간 cron, `/steward` 헤드리스).
+
+### 일일 작업 로그 (감사 기록)
+
+하루치 결과물(런·신호·PR·커밋)을 `governance/daily-log/<날짜>.md`(상단 요약·하단
+상세)로 자동 축적한다. 생성: `npm run daily-log` · 테스트: `npm run test:daily-log` ·
+자동화: `.github/workflows/daily-log.yml`(매일 KST 03:40). 설계: `docs/DAILY_LOG_PLAN.md`.
+
+**거버넌스 예외(불변원칙 5)**: 일일 로그는 SSOT·온톨로지·발행물이 아니라 감사
+기록물이므로 **`governance/daily-log/` 경로에 한해 PR 없이 직접 커밋**한다
+(`[skip ci]`). 이 예외는 로그 경로에만 적용되며, 다른 모든 변경은 여전히 PR 경유.
