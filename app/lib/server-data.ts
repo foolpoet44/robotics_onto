@@ -14,6 +14,7 @@ import { EmployeeCompetencyDataset } from "./employee-competency-data";
 import { RobotSkill } from "./robotics-data";
 import { ReviewQueue } from "./review-data";
 import { CollegeMappingData, CollegeSubcategoryData } from "./college-types";
+import { CompetencySkillMapData } from "./competency-skill-types";
 
 async function readJsonFile<T>(relativePath: string): Promise<T> {
   const filePath = path.join(process.cwd(), "public", "data", relativePath);
@@ -48,6 +49,10 @@ export async function getEmployeeCompetencyDataset(): Promise<EmployeeCompetency
   return readJsonFile<EmployeeCompetencyDataset>(
     "employee-competency-assessments.json",
   );
+}
+
+export async function getCompetencySkillMap(): Promise<CompetencySkillMapData> {
+  return readJsonFile<CompetencySkillMapData>("competency-skill-map.json");
 }
 
 export function getDevelopmentTrackIds(): string[] {
