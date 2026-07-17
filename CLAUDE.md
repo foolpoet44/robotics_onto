@@ -75,11 +75,27 @@ npm run build           # Next.js 빌드
 test:review-decisions test:skill-detail test:development test:college-override
 test:employee-competency test:data test:steward` (개별 스크립트는 package.json 참조).
 
-## 스튜어드 관련 명령
+## 스튜어드 관련 명령·스킬
 
 - 시그널 수집(결정적): `npm run steward:signals` → `.data/steward/signals.json`
-- 읽기전용 다이제스트: `/steward-digest` 스킬
-- 수집기 테스트: `npm run test:steward`
+- 수집기 테스트: `npm run test:steward` · 역량 커버리지: `npm run test:competency-skill`
+- 임계값 설정: `scripts/steward/signal-thresholds.json`
+  (변경요청 1건·중복의심 3인·신규제안 2인·재정의 2인·unknown 소분류 1건).
 
-임계값 설정: `scripts/steward/signal-thresholds.json`
-(변경요청 1건·중복의심 3인·신규제안 2인·재정의 2인·unknown 소분류 1건).
+스킬(`.claude/skills/`):
+
+| 스킬 | Phase | 역할 |
+| --- | --- | --- |
+| `steward-digest` | A | 읽기전용 다이제스트(수정 0건) |
+| `steward` | C-1 | 전체 루프 오케스트레이터(actionable→위임) |
+| `triage-change-requests` | B-1 | 칼리지 오버라이드 검수 결정 초안 |
+| `triage-competency-map` | B-2 | unknown 소분류 → 역량 매핑 초안 |
+| `propose-gap-skills` | B-3 | 신규제안·재정의 → 갭스킬 증설 초안 |
+| `refresh-publications` | C-3 | 발행물 재발행(날짜 드리프트 필터) |
+| `triage-organization-map` | D-4 | 조직 역량 미매핑 → 매핑 초안 |
+| `dedup-suspects` | D-1 | 중복의심 통합/구분 판단 문서 |
+| `augment-relations` | D-2 | 관계망 보강(test:ontology 게이트) |
+| `competency-gap-curriculum` | D-3 | 역량 갭 → 학습 경로 추천(읽기전용) |
+
+D-1 실제 폐기는 `docs/DEPRECATED_FLAG_SCHEMA_PROPOSAL.md`(스키마 확장) 선행 필요.
+자동화: `.github/workflows/steward.yml`(야간 cron, `/steward` 헤드리스).
