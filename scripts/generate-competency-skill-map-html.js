@@ -41,248 +41,13 @@ const collegeToRobotDomains = {
   ],
 };
 
-const directRules = {
-  "생산운영시스템설계 (IT)": {
-    skillIds: [
-      "RSF-DTS-005",
-      "RSF-DTS-011",
-      "RSF-DTS-020",
-      "RSF-DTS-021",
-      "RSF-RMD-007",
-    ],
-    note: "생산운영 IT는 데이터 파이프라인, 운영 데이터 수집, 설계-운영 연동에 가까움",
-  },
-  기구설계: {
-    skillIds: ["RSF-IRC-001", "RSF-DTS-003", "RSF-DTS-006", "RSF-RMD-001"],
-    note: "기구 구조 이해와 3D/CAD 기반 모델링 스킬로 연결",
-  },
-  응용SW프로그래밍: {
-    skillIds: [
-      "RSF-IRC-007",
-      "RSF-CRO-008",
-      "RSF-DTS-005",
-      "RSF-RMD-011",
-      "RSF-AMR-005",
-    ],
-    note: "로봇/협동로봇 프로그래밍 및 시스템 소프트웨어 운용 스킬로 연결",
-  },
-  "AI비젼 (Vision)": {
-    skillIds: [
-      "RSF-MVS-001",
-      "RSF-MVS-004",
-      "RSF-MVS-007",
-      "RSF-MVS-013",
-      "RSF-MVS-015",
-    ],
-    note: "머신비전 이미지 처리, 결함 검출, 제조 비전 시스템 구축과 직접 연결",
-  },
-  생산방식설계: {
-    skillIds: [
-      "RSF-IRC-020",
-      "RSF-DTS-008",
-      "RSF-DTS-015",
-      "RSF-DTS-021",
-      "RSF-CRO-021",
-    ],
-    note: "라인 밸런싱, 레이아웃 검증, 신규 라인 설계 시뮬레이션과 연결",
-  },
-  "데이터처리(시계열)": {
-    skillIds: [
-      "RSF-DTS-005",
-      "RSF-DTS-011",
-      "RSF-DTS-014",
-      "RSF-MVS-003",
-      "RSF-RMD-007",
-    ],
-    note: "시계열 데이터는 수집, 분석, 시각화, 상태 트렌드 분석으로 연결",
-  },
-  PLC제어: {
-    skillIds: ["RSF-IRC-002", "RSF-IRC-013", "RSF-IRC-014", "RSF-AMR-014"],
-    note: "전용 PLC 스킬은 없지만 로봇 제어, I/O, 통신 설정과 인접",
-  },
-  레이아웃설계: {
-    skillIds: ["RSF-DTS-008", "RSF-DTS-015", "RSF-CRO-021", "RSF-IRC-020"],
-    note: "생산 라인 레이아웃 검증과 로봇/협동로봇 배치 최적화로 연결",
-  },
-  시뮬레이션: {
-    skillIds: [
-      "RSF-DTS-002",
-      "RSF-DTS-004",
-      "RSF-DTS-007",
-      "RSF-DTS-009",
-      "RSF-DTS-012",
-    ],
-    note: "디지털트윈/로봇 시뮬레이션 도메인과 직접 연결",
-  },
-  "생산계획/스케쥴링": {
-    skillIds: [
-      "RSF-AMR-005",
-      "RSF-AMR-009",
-      "RSF-AMR-020",
-      "RSF-DTS-013",
-      "RSF-DTS-021",
-    ],
-    note: "함대 운영, 교통 관제, 최적화 시뮬레이션과 연결",
-  },
-  로봇통합제어: {
-    skillIds: [
-      "RSF-IRC-002",
-      "RSF-IRC-009",
-      "RSF-IRC-013",
-      "RSF-IRC-014",
-      "RSF-MVS-009",
-    ],
-    note: "로봇 제어, 다축 동기 제어, 센서-로봇 동기화와 직접 연결",
-  },
-  "Lean생산방식 (TPS)": {
-    skillIds: [
-      "RSF-IRC-020",
-      "RSF-IRC-022",
-      "RSF-DTS-018",
-      "RSF-DTS-021",
-      "RSF-RMD-020",
-    ],
-    note: "생산성 향상, 사이클 타임, 라인 밸런싱 중심의 개선 스킬로 연결",
-  },
-  "진동/음향": {
-    skillIds: [
-      "RSF-RMD-006",
-      "RSF-RMD-007",
-      "RSF-RMD-012",
-      "RSF-RMD-017",
-      "RSF-DTS-014",
-    ],
-    note: "직접 스킬은 약하지만 상태 모니터링, 트렌드 분석, 성능 데이터 해석과 인접",
-    confidence: "medium",
-  },
-  "데이터 프로세싱/분석(신호처리)": {
-    skillIds: [
-      "RSF-MVS-003",
-      "RSF-MVS-008",
-      "RSF-MVS-019",
-      "RSF-DTS-005",
-      "RSF-DTS-014",
-    ],
-    note: "센서 신호 처리, 데이터 로깅, 결과 분석과 연결",
-  },
-  생산데이터구조설계: {
-    skillIds: [
-      "RSF-DTS-001",
-      "RSF-DTS-005",
-      "RSF-DTS-011",
-      "RSF-DTS-020",
-      "RSF-RMD-007",
-    ],
-    note: "디지털트윈 아키텍처와 실시간 데이터 구조 설계로 연결",
-  },
-  제어알고리즘: {
-    skillIds: [
-      "RSF-IRC-002",
-      "RSF-IRC-005",
-      "RSF-IRC-009",
-      "RSF-IRC-010",
-      "RSF-AMR-002",
-    ],
-    note: "모션 제어, 경로 계획, 파라미터 조정으로 연결",
-  },
-  "수리최적화/휴리스틱": {
-    skillIds: [
-      "RSF-IRC-010",
-      "RSF-DTS-013",
-      "RSF-DTS-018",
-      "RSF-AMR-002",
-      "RSF-AMR-009",
-    ],
-    note: "경로 최적화, 시뮬레이션 최적화, 멀티로봇 교통 관제로 연결",
-  },
-  로봇설계: {
-    skillIds: ["RSF-IRC-001", "RSF-DTS-003", "RSF-DTS-006", "RSF-RMD-001"],
-    note: "로봇 구조, 3D 모델링, 부품 구조 이해와 연결",
-  },
-  로보틱스: {
-    skillIds: [
-      "RSF-IRC-001",
-      "RSF-IRC-002",
-      "RSF-IRC-005",
-      "RSF-IRC-007",
-      "RSF-CRO-004",
-    ],
-    note: "로봇 기초, 제어, 프로그래밍, 산업 응용으로 연결",
-  },
-  시스템프로그래밍: {
-    skillIds: ["RSF-DTS-005", "RSF-RMD-011", "RSF-AMR-005", "RSF-IRC-007"],
-    note: "실시간 데이터 파이프라인, 소프트웨어 업그레이드, 로봇 프로그래밍과 인접",
-  },
-  PC제어: {
-    skillIds: ["RSF-IRC-002", "RSF-IRC-013", "RSF-IRC-014", "RSF-AMR-014"],
-    note: "PC 기반 장비 제어는 로봇 제어/I-O/통신 설정과 인접",
-  },
-  "아키텍쳐 설계": {
-    skillIds: ["RSF-DTS-001", "RSF-DTS-005", "RSF-DTS-020", "RSF-DTS-021"],
-    note: "디지털트윈 아키텍처와 설계-운영 연동 스킬로 연결",
-  },
-  고속신호전송설계: {
-    skillIds: ["RSF-MVS-003", "RSF-MVS-008", "RSF-MVS-014", "RSF-MVS-019"],
-    note: "직접 회로 스킬은 없지만 센서 신호 처리와 데이터 로깅에 인접",
-    confidence: "medium",
-  },
-  센서회로설계: {
-    skillIds: ["RSF-MVS-003", "RSF-MVS-008", "RSF-MVS-014", "RSF-MVS-021"],
-    note: "센서 신호 수집, 필터링, 멀티 센서 융합으로 연결",
-  },
-  공장운영시나리오: {
-    skillIds: ["RSF-DTS-012", "RSF-DTS-017", "RSF-DTS-021", "RSF-DTS-020"],
-    note: "운영 시나리오 시뮬레이션과 의사결정 지원으로 직접 연결",
-  },
-  광기구설계: {
-    skillIds: ["RSF-MVS-002", "RSF-MVS-006", "RSF-MVS-011", "RSF-MVS-015"],
-    note: "카메라/광학, 조광, 캘리브레이션으로 연결",
-  },
-  공급사슬설계: {
-    skillIds: ["RSF-AMR-005", "RSF-AMR-021", "RSF-DTS-021"],
-    note: "직접 공급망 스킬은 없고 AMR 함대/확장성 계획과 의사결정 지원에 인접",
-    confidence: "low",
-  },
-  "시스템 모델링": {
-    skillIds: ["RSF-DTS-001", "RSF-DTS-002", "RSF-DTS-012", "RSF-DTS-014"],
-    note: "디지털트윈 아키텍처, 물리 시뮬레이션, 결과 분석과 연결",
-  },
-  전력제어: {
-    skillIds: ["RSF-IRC-002", "RSF-AMR-003", "RSF-RMD-012"],
-    note: "전용 전력제어 스킬은 없고 제어/차량 동역학/성능 테스트와 인접",
-    confidence: "low",
-  },
-  "소음/진동해석": {
-    skillIds: ["RSF-DTS-002", "RSF-DTS-014", "RSF-RMD-007", "RSF-RMD-012"],
-    note: "물리 시뮬레이션과 상태/성능 데이터 분석으로 연결",
-    confidence: "medium",
-  },
-};
+const competencySkillMap = require("../public/data/competency-skill-map.json");
 
-const weakBusinessRules = [
-  "Vertical Sales",
-  "B2B Pipeline",
-  "B2B 거래선 관리",
-  "이커머스",
-  "Creative 개발",
-  "장비영업",
-  "전략기획/추진",
-  "포트폴리오전략",
-  "사업/이동계획",
-  "시장/사업기회발굴",
-  "경영정보시스템",
-  "수익성관리",
-  "Digital Design",
-  "연마",
-];
-
-for (const name of weakBusinessRules) {
-  directRules[name] = {
-    skillIds: ["RSF-DTS-021", "RSF-IRC-021", "RSF-RMD-021"],
-    note: "현재 로보틱스 스킬맵에는 직접 대응 스킬이 없어 사업/운영 의사결정 및 기술지원 스킬에 낮은 신뢰도로 연결",
-    confidence: "low",
-  };
-}
+// 역량 소분류 → 스킬 매핑의 단일 출처는 public/data/competency-skill-map.json 이다.
+// (과거 이 파일에 인라인으로 있던 directRules 30건 + 업무역량 억지매핑 14건을
+//  정식 데이터로 승격했다. 14건은 제조 스킬 온톨로지 범위 밖으로 outOfScope 처리.)
+const directRules = competencySkillMap.mappings;
+const outOfScopeRules = competencySkillMap.outOfScope;
 
 function normalize(text) {
   return String(text ?? "")
@@ -372,6 +137,16 @@ function confidenceFrom(rule, candidateCount) {
 }
 
 function mapCompetency(row) {
+  const outOfScope = outOfScopeRules[row.minor];
+  if (outOfScope) {
+    return {
+      ...row,
+      confidence: "out-of-scope",
+      note: outOfScope.reason,
+      skills: [],
+    };
+  }
+
   const rule = directRules[row.minor];
   const skillIds = (rule?.skillIds ?? fallbackSkills(row)).filter(
     (id) => skillById[id],

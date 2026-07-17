@@ -442,6 +442,93 @@ class RobotDataValidator {
     return metrics;
   }
 
+  // 12. strict 모드: 역량↔스킬 매핑 검증
+  validateCompetencySkillMap() {
+    header("1️⃣2️⃣ 역량↔스킬 매핑 검증 (strict)");
+    const mapPath = path.join(
+      __dirname,
+      "../public/data/competency-skill-map.json",
+    );
+    const competencyPath = path.join(
+      __dirname,
+      "../public/data/employee-competency-assessments.json",
+    );
+    const map = JSON.parse(fs.readFileSync(mapPath, "utf-8"));
+    const competency = JSON.parse(fs.readFileSync(competencyPath, "utf-8"));
+
+    const errors = [];
+    const knownSkillIds = new Set(this.data.map((skill) => skill.skill_id));
+    const mappings = map.mappings ?? {};
+    const outOfScope = map.outOfScope ?? {};
+
+    // 역량평가 데이터에 실제 존재하는 소분류 전체
+    const actualMinors = new Set();
+    competency.employees.forEach((employee) => {
+      employee.competencies.forEach((item) => {
+        actualMinors.add(item.minorCategory);
+      });
+    });
+
+    // (a) 매핑이 가리키는 스킬ID가 온톨로지에 실재해야 한다
+    Object.entries(mappings).forEach(([minor, rule]) => {
+      (rule.skillIds ?? []).forEach((skillId) => {
+        if (!knownSkillIds.has(skillId)) {
+          errors.push(`매핑 '${minor}': 존재하지 않는 스킬ID '${skillId}'`);
+        }
+      });
+      if (!rule.skillIds || rule.skillIds.length === 0) {
+        errors.push(`매핑 '${minor}': skillIds가 비어 있습니다.`);
+      }
+      if (rule.relation !== "direct" && rule.relation !== "adjacent") {
+        errors.push(
+          `매핑 '${minor}': relation은 direct|adjacent 여야 합니다('${rule.relation}').`,
+        );
+      }
+    });
+
+    // (b) 매핑/범위외 키가 실제 소분류여야 한다(유령 키 차단)
+    [...Object.keys(mappings), ...Object.keys(outOfScope)].forEach((minor) => {
+      if (!actualMinors.has(minor)) {
+        errors.push(`'${minor}': 역량평가에 존재하지 않는 소분류입니다.`);
+      }
+    });
+
+    // (c) 같은 소분류가 매핑과 범위외에 동시에 있으면 안 된다
+    Object.keys(mappings).forEach((minor) => {
+      if (outOfScope[minor]) {
+        errors.push(`'${minor}': mappings와 outOfScope에 중복 정의되었습니다.`);
+      }
+    });
+
+    // (d) 모든 소분류가 매핑 또는 범위외로 100% 결정돼야 한다
+    const uncovered = [...actualMinors].filter(
+      (minor) => !mappings[minor] && !outOfScope[minor],
+    );
+    uncovered.forEach((minor) => {
+      errors.push(`'${minor}': 매핑도 범위외도 아닌 미결 소분류입니다.`);
+    });
+
+    const metrics = {
+      전체소분류: actualMinors.size,
+      매핑: Object.keys(mappings).length,
+      범위외: Object.keys(outOfScope).length,
+      미결: uncovered.length,
+    };
+    console.table(metrics);
+
+    errors.forEach((error) =>
+      this.errors.push(`competency-skill-map: ${error}`),
+    );
+    if (errors.length === 0) {
+      log("✅ 역량↔스킬 매핑 검증 통과", "green");
+    } else {
+      log(`❌ 역량↔스킬 매핑 오류: ${errors.length}개`, "red");
+      errors.forEach((error) => log(`   - ${error}`, "red"));
+    }
+
+    return metrics;
+  }
+
   // 7. 추가 통계: proficiency_level 분포
   validateProficiencyDistribution() {
     header("7️⃣ 숙련도 레벨 분포 검증");
@@ -559,6 +646,9 @@ class RobotDataValidator {
       ? this.validateOrganizationMappings()
       : null;
     const collegeMetrics = this.strict ? this.validateCollegeMappings() : null;
+    const competencySkillMetrics = this.strict
+      ? this.validateCompetencySkillMap()
+      : null;
 
     // 최종 요약 테이블
     header("📊 최종 요약");
@@ -587,6 +677,13 @@ class RobotDataValidator {
         ? [
             { Metric: "칼리지 스킬 오버라이드", Value: collegeMetrics.overrides },
             { Metric: "오버라이드 검수 완료", Value: collegeMetrics.reviewed },
+          ]
+        : []),
+      ...(competencySkillMetrics
+        ? [
+            { Metric: "역량 소분류", Value: competencySkillMetrics.전체소분류 },
+            { Metric: "역량↔스킬 매핑", Value: competencySkillMetrics.매핑 },
+            { Metric: "역량 범위외", Value: competencySkillMetrics.범위외 },
           ]
         : []),
     ];

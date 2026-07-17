@@ -34,6 +34,7 @@
     "test:college-level": "node scripts/test-college-level.js",
     "test:college-override": "node scripts/test-college-override-decision.js",
     "test:employee-competency": "node scripts/test-employee-competency-data.js",
+    "test:competency-skill": "node scripts/test-competency-skill.js",
     "test:data": "node scripts/test-robot-smartfactory.js"
   },
   "dependencies": {
