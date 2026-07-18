@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-18",
+  "generatedAt": "2026-07-18 19:47 UTC",
+  "verdict": {
+    "badge": "🟢",
+    "label": "정상"
+  },
+  "runs": {
+    "available": true,
+    "total": 0,
+    "success": 0,
+    "failure": 0,
+    "scheduleFailure": false,
+    "items": []
+  },
+  "prs": {
+    "available": true,
+    "mergedCount": 0,
+    "createdCount": 0,
+    "stewardCreated": [],
+    "openStewardCount": 0,
+    "merged": [],
+    "created": []
+  },
+  "commits": {
+    "commits": [],
+    "merges": []
+  },
+  "signals": {
+    "available": true,
+    "store": "file",
+    "actionable": 0,
+    "watching": 53,
+    "overrides": 39,
+    "unmapped": 14,
+    "coverage": {
+      "total": 44,
+      "mapped": 30,
+      "outOfScope": 14,
+      "assessmentMinors": 44,
+      "unknown": 0
+    },
+    "flags": {
+      "중복의심": {
+        "total": 0,
+        "actionable": 0
+      },
+      "신규제안": {
+        "total": 0,
+        "actionable": 0
+      },
+      "재정의대상": {
+        "total": 0,
+        "actionable": 0
+      }
+    }
+  }
+}
