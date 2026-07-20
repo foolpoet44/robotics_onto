@@ -93,8 +93,10 @@ export default async function CollegeDetailPage({
           {collegeClusters.length > 0 && (
             <p className={styles.workflowNote}>
               검증 편의를 위해 {clusteredSkillIds.size}개 세부 스킬을{" "}
-              {collegeClusters.length}개 검증 클러스터로 묶어 표시합니다.
-              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다.
+              {collegeClusters.length}개 클러스터로 묶어 표시합니다.
+              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다. 지정
+              평가자는 <Link href="/evaluation/skills">스킬평가</Link>에서
+              스킬별 중요도·라벨 평가를 진행할 수 있습니다.
             </p>
           )}
         </div>
@@ -236,22 +238,9 @@ function ClusterCard({
         : `Lv${Math.min(...levels)}–${Math.max(...levels)}`
       : "";
   return (
-    <details
-      className={
-        cluster.priority === "core"
-          ? `${styles.cluster} ${styles.clusterCore}`
-          : styles.cluster
-      }
-    >
+    <details className={styles.cluster}>
       <summary className={styles.clusterSummary}>
-        <span className={styles.skillLabel}>
-          {cluster.name}
-          <span
-            className={`${styles.priority} ${styles[`priority_${cluster.priority}`]}`}
-          >
-            {PRIORITY_LABELS[cluster.priority]}
-          </span>
-        </span>
+        <span className={styles.skillLabel}>{cluster.name}</span>
         <span className={styles.skillMeta}>
           {cluster.summary}
           {levelRange ? ` · ${levelRange}` : ""} · 세부 스킬{" "}

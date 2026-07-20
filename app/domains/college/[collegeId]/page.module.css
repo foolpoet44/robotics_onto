@@ -180,11 +180,6 @@
   border-radius: 0.7rem;
 }
 
-.clusterCore {
-  border-color: var(--color-primary-dark);
-  border-width: 2px;
-}
-
 .clusterSummary {
   display: flex;
   flex-direction: column;
