@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-DTS-023",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "internal_uri": "urn:rsf:skill:dts-0023",
+  "esco_uri": null,
+  "preferred_label_ko": "데이터 인터페이스 개발",
+  "preferred_label_en": "Data Interface Development",
+  "description_ko": "현장 데이터와 시뮬레이션 환경을 연결하는 데이터 인터페이스 설계·개발",
+  "description_en": "Design and develop data interfaces that connect field data to the simulation environment",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-DTS-022",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-024",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 데이터 인터페이스 개발"
+}

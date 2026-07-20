@@ -421,6 +421,61 @@ class RobotDataValidator {
       }
     });
 
+    // 표시 필드(skillOrder/skillPriority/workflowLinks) 무결성 검증.
+    const ALLOWED_PRIORITIES = new Set(["core", "foundation", "review"]);
+    Object.keys(subcategoryData.skillOrder ?? {}).forEach((skillId) => {
+      if (!knownSkillIds.has(skillId)) {
+        errors.push(`skillOrder ${skillId}: 존재하지 않는 스킬입니다.`);
+      }
+    });
+    Object.entries(subcategoryData.skillPriority ?? {}).forEach(
+      ([skillId, priority]) => {
+        if (!knownSkillIds.has(skillId)) {
+          errors.push(`skillPriority ${skillId}: 존재하지 않는 스킬입니다.`);
+        }
+        if (!ALLOWED_PRIORITIES.has(priority)) {
+          errors.push(
+            `skillPriority ${skillId}: 허용되지 않은 값 '${priority}'`,
+          );
+        }
+      },
+    );
+    Object.entries(subcategoryData.workflowLinks ?? {}).forEach(
+      ([subId, links]) => {
+        if (!subcategoriesById.has(subId)) {
+          errors.push(`workflowLinks ${subId}: 존재하지 않는 중간분류입니다.`);
+        }
+        if (!Array.isArray(links)) {
+          errors.push(`workflowLinks ${subId}: 올바른 배열 형식이 아닙니다.`);
+          return;
+        }
+        links.forEach((link) => {
+          if (
+            !link ||
+            typeof link !== "object" ||
+            typeof link.skillId !== "string"
+          ) {
+            errors.push(
+              `workflowLinks ${subId}: 올바르지 않은 연계 스킬 형식입니다.`,
+            );
+            return;
+          }
+          if (!knownSkillIds.has(link.skillId)) {
+            errors.push(
+              `workflowLinks ${subId}: 존재하지 않는 연계 스킬 '${link.skillId}'`,
+            );
+          }
+        });
+      },
+    );
+    (subcategoryData.workflowColleges ?? []).forEach((collegeId) => {
+      if (!collegeIds.has(collegeId)) {
+        errors.push(
+          `workflowColleges: 존재하지 않는 칼리지 '${collegeId}'`,
+        );
+      }
+    });
+
     const overrides = Object.entries(mappingData.skillOverrides ?? {});
     const metrics = {
       domains: mappedDomains.size,

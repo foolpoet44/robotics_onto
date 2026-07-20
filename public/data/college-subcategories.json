@@ -1,6 +1,6 @@
 {
   "version": "2026-07-07",
-  "note": "4대 도메인 내 중간분류 체계. 스킬은 자신이 배정된 칼리지의 중간분류 1개에 속한다. 배정 변경은 이 파일을 수정하고 npm run validate:data 로 확인한다.",
+  "note": "4대 도메인 내 중간분류 체계. 스킬은 자신이 배정된 칼리지의 중간분류 1개에 속한다. skillOrder/skillPriority는 표시 순서와 우선순위(core/foundation/review), workflowLinks는 타 칼리지 연계 스킬, workflowColleges는 업무흐름 표시 대상. 변경 후 npm run validate:data 로 확인한다.",
   "subcategories": [
     {
       "id": "pa-industrial",
@@ -87,30 +87,6 @@
       "order": 4
     },
     {
-      "id": "dt-modeling",
-      "collegeId": "digital-twin",
-      "name": "모델링·환경 구축",
-      "order": 1
-    },
-    {
-      "id": "dt-validation",
-      "collegeId": "digital-twin",
-      "name": "가상 검증·시뮬레이션",
-      "order": 2
-    },
-    {
-      "id": "dt-operation",
-      "collegeId": "digital-twin",
-      "name": "트윈 운영·동기화",
-      "order": 3
-    },
-    {
-      "id": "dt-optimization",
-      "collegeId": "digital-twin",
-      "name": "최적화·설계 지원",
-      "order": 4
-    },
-    {
       "id": "aa-equipment",
       "collegeId": "agentic-ai",
       "name": "자율 정비 실행 (설비 Agent)",
@@ -127,6 +103,48 @@
       "collegeId": "data-intelligence",
       "name": "지식그래프·Data Fabric",
       "order": 5
+    },
+    {
+      "id": "dt-modeling",
+      "collegeId": "digital-twin",
+      "name": "① 모델링·환경 구축",
+      "order": 1
+    },
+    {
+      "id": "dt-scenario",
+      "collegeId": "digital-twin",
+      "name": "② 대상 정의·시나리오 설계",
+      "order": 2
+    },
+    {
+      "id": "dt-design-verify",
+      "collegeId": "digital-twin",
+      "name": "③ 설계·설계 검증",
+      "order": 3
+    },
+    {
+      "id": "dt-vc",
+      "collegeId": "digital-twin",
+      "name": "④ 에뮬레이션·가상 커미셔닝",
+      "order": 4
+    },
+    {
+      "id": "dt-data-sync",
+      "collegeId": "digital-twin",
+      "name": "⑤ 실데이터 연동·동기화",
+      "order": 5
+    },
+    {
+      "id": "dt-realtime",
+      "collegeId": "digital-twin",
+      "name": "⑥ 실시간·운영 시뮬레이션",
+      "order": 6
+    },
+    {
+      "id": "dt-optimize",
+      "collegeId": "digital-twin",
+      "name": "⑦ 최적화·의사결정 지원",
+      "order": 7
     }
   ],
   "skillSubcategories": {
@@ -190,7 +208,7 @@
     "RSF-CRO-009": "pa-cobot",
     "RSF-CRO-010": "pa-cobot",
     "RSF-CRO-011": "pa-cobot",
-    "RSF-CRO-012": "dt-validation",
+    "RSF-CRO-012": "dt-vc",
     "RSF-CRO-013": "pa-cobot",
     "RSF-CRO-014": "pa-cobot",
     "RSF-CRO-015": "pa-cobot",
@@ -199,7 +217,7 @@
     "RSF-CRO-018": "pa-cobot",
     "RSF-CRO-019": "pa-cobot",
     "RSF-CRO-020": "pa-cobot",
-    "RSF-CRO-021": "dt-optimization",
+    "RSF-CRO-021": "dt-optimize",
     "RSF-CRO-022": "pa-cobot",
     "RSF-DTS-001": "dt-modeling",
     "RSF-DTS-002": "dt-modeling",
@@ -208,21 +226,24 @@
     "RSF-DTS-005": "di-pipeline",
     "RSF-DTS-006": "dt-modeling",
     "RSF-DTS-007": "dt-modeling",
-    "RSF-DTS-008": "dt-validation",
-    "RSF-DTS-009": "dt-validation",
-    "RSF-DTS-010": "dt-operation",
+    "RSF-DTS-008": "dt-design-verify",
+    "RSF-DTS-009": "dt-design-verify",
+    "RSF-DTS-010": "dt-data-sync",
     "RSF-DTS-011": "di-pipeline",
-    "RSF-DTS-012": "dt-validation",
-    "RSF-DTS-013": "dt-optimization",
+    "RSF-DTS-012": "dt-scenario",
+    "RSF-DTS-013": "dt-optimize",
     "RSF-DTS-014": "di-analytics",
-    "RSF-DTS-015": "dt-validation",
-    "RSF-DTS-016": "dt-validation",
-    "RSF-DTS-017": "dt-validation",
-    "RSF-DTS-018": "dt-optimization",
-    "RSF-DTS-019": "dt-operation",
-    "RSF-DTS-020": "dt-operation",
+    "RSF-DTS-015": "dt-design-verify",
+    "RSF-DTS-016": "dt-design-verify",
+    "RSF-DTS-017": "dt-scenario",
+    "RSF-DTS-018": "dt-optimize",
+    "RSF-DTS-019": "dt-realtime",
+    "RSF-DTS-020": "dt-data-sync",
     "RSF-DTS-021": "aa-autonomous-ops",
-    "RSF-DTS-022": "dt-validation",
+    "RSF-DTS-022": "dt-vc",
+    "RSF-DTS-023": "dt-data-sync",
+    "RSF-DTS-024": "dt-data-sync",
+    "RSF-DTS-025": "dt-realtime",
     "RSF-IRC-001": "pa-industrial",
     "RSF-IRC-002": "pa-industrial",
     "RSF-IRC-003": "pa-industrial",
@@ -234,7 +255,7 @@
     "RSF-IRC-009": "pa-industrial",
     "RSF-IRC-010": "pa-industrial",
     "RSF-IRC-011": "pa-industrial",
-    "RSF-IRC-012": "dt-validation",
+    "RSF-IRC-012": "dt-vc",
     "RSF-IRC-013": "pa-industrial",
     "RSF-IRC-014": "pa-industrial",
     "RSF-IRC-015": "di-analytics",
@@ -246,6 +267,8 @@
     "RSF-IRC-021": "pa-industrial",
     "RSF-IRC-022": "aa-mes-planning",
     "RSF-IRC-023": "pa-industrial",
+    "RSF-IRC-024": "pa-industrial",
+    "RSF-IRC-025": "pa-industrial",
     "RSF-MVS-001": "di-signal",
     "RSF-MVS-002": "pa-vision-hw",
     "RSF-MVS-003": "di-signal",
@@ -255,7 +278,7 @@
     "RSF-MVS-007": "aa-quality",
     "RSF-MVS-008": "di-pipeline",
     "RSF-MVS-009": "pa-vision-hw",
-    "RSF-MVS-010": "dt-validation",
+    "RSF-MVS-010": "dt-vc",
     "RSF-MVS-011": "pa-vision-hw",
     "RSF-MVS-012": "di-signal",
     "RSF-MVS-013": "di-signal",
@@ -289,5 +312,56 @@
     "RSF-RMD-019": "pa-maintenance",
     "RSF-RMD-020": "di-analytics",
     "RSF-RMD-021": "pa-maintenance"
-  }
+  },
+  "skillOrder": {
+    "RSF-CRO-012": 3,
+    "RSF-CRO-021": 3,
+    "RSF-DTS-001": 6,
+    "RSF-DTS-002": 3,
+    "RSF-DTS-003": 1,
+    "RSF-DTS-004": 4,
+    "RSF-DTS-006": 2,
+    "RSF-DTS-007": 5,
+    "RSF-DTS-008": 2,
+    "RSF-DTS-009": 4,
+    "RSF-DTS-010": 3,
+    "RSF-DTS-012": 2,
+    "RSF-DTS-013": 1,
+    "RSF-DTS-015": 1,
+    "RSF-DTS-016": 3,
+    "RSF-DTS-017": 1,
+    "RSF-DTS-018": 2,
+    "RSF-DTS-019": 2,
+    "RSF-DTS-020": 4,
+    "RSF-DTS-022": 1,
+    "RSF-DTS-023": 1,
+    "RSF-DTS-024": 2,
+    "RSF-DTS-025": 1,
+    "RSF-IRC-012": 2,
+    "RSF-MVS-010": 4
+  },
+  "skillPriority": {
+    "RSF-CRO-012": "foundation",
+    "RSF-DTS-012": "review",
+    "RSF-DTS-022": "core",
+    "RSF-IRC-012": "foundation",
+    "RSF-MVS-010": "foundation"
+  },
+  "workflowLinks": {
+    "dt-realtime": [
+      {
+        "skillId": "RSF-DTS-005",
+        "note": "수집은 Data Intelligence, DT는 실시간 시뮬레이션에 활용"
+      }
+    ],
+    "dt-optimize": [
+      {
+        "skillId": "RSF-DTS-021",
+        "note": "의사결정 지원은 Agentic AI 소관, DT 최적화 결과와 연계"
+      }
+    ]
+  },
+  "workflowColleges": [
+    "digital-twin"
+  ]
 }

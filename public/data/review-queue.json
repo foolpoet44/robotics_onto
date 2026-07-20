@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total": 260,
+    "total": 265,
     "organizationMappings": 10,
-    "ontologyRelations": 250,
+    "ontologyRelations": 255,
     "statuses": {
-      "pending": 260,
+      "pending": 265,
       "approved": 0,
       "held": 0,
       "rejected": 0
@@ -1535,7 +1535,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-022",
+      "id": "ontology_relation:co_required:RSF-DTS-001:RSF-DTS-025",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1546,8 +1546,8 @@
         "domain": "digital-twin-simulation"
       },
       "target_skill": {
-        "skill_id": "RSF-DTS-022",
-        "label_ko": "에뮬레이션·가상 커미셔닝",
+        "skill_id": "RSF-DTS-025",
+        "label_ko": "실시간 데이터 기반 시뮬레이션",
         "domain": "digital-twin-simulation"
       }
     },
@@ -1892,6 +1892,57 @@
       }
     },
     {
+      "id": "ontology_relation:co_required:RSF-DTS-022:RSF-DTS-023",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-022",
+        "label_ko": "에뮬레이션·가상 커미셔닝",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-023",
+        "label_ko": "데이터 인터페이스 개발",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-023:RSF-DTS-024",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-023",
+        "label_ko": "데이터 인터페이스 개발",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-024",
+        "label_ko": "시뮬레이션-실데이터 정합성 검증",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-DTS-024:RSF-DTS-025",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-DTS-024",
+        "label_ko": "시뮬레이션-실데이터 정합성 검증",
+        "domain": "digital-twin-simulation"
+      },
+      "target_skill": {
+        "skill_id": "RSF-DTS-025",
+        "label_ko": "실시간 데이터 기반 시뮬레이션",
+        "domain": "digital-twin-simulation"
+      }
+    },
+    {
       "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-002",
       "kind": "ontology_relation",
       "priority": "normal",
@@ -1909,7 +1960,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-023",
+      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-025",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1920,8 +1971,8 @@
         "domain": "industrial-robot-control"
       },
       "target_skill": {
-        "skill_id": "RSF-IRC-023",
-        "label_ko": "PLC·설비 제어 연동",
+        "skill_id": "RSF-IRC-025",
+        "label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
         "domain": "industrial-robot-control"
       }
     },
@@ -2279,6 +2330,40 @@
       "target_skill": {
         "skill_id": "RSF-IRC-023",
         "label_ko": "PLC·설비 제어 연동",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-023:RSF-IRC-024",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-023",
+        "label_ko": "PLC·설비 제어 연동",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-024",
+        "label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-024:RSF-IRC-025",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-024",
+        "label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-025",
+        "label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
         "domain": "industrial-robot-control"
       }
     },

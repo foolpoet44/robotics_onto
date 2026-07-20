@@ -47,7 +47,7 @@ const BANDS = [
 // 발행 시점 기준의 대표 국제표준·교재·공개 강좌. 사내 교보재 확정 시 대체한다.
 
 const REFS_BY_SUBCATEGORY = {
-  "pa-industrial": ["ISO 10218-1/-2 (산업용 로봇 안전)", "J. Craig, 『Introduction to Robotics: Mechanics and Control』"],
+  "pa-industrial": ["ISO 10218-1/-2 (산업용 로봇 안전)", "J. Craig, 『Introduction to Robotics: Mechanics and Control』", "VLA/로봇 파운데이션 모델 공개 문헌(RT-2, π0 등)·Hugging Face LeRobot 튜토리얼"],
   "pa-cobot": ["ISO/TS 15066 (협동로봇 안전)", "협동로봇 제조사 공인 교육과정 (예: UR Academy)"],
   "pa-maintenance": ["ISO 13374/13381 (상태감시·예지진단)", "『Maintenance Engineering Handbook』 (Mobley)"],
   "pa-amr": ["S. Thrun 외, 『Probabilistic Robotics』", "ROS 2 Nav2 공식 문서, VDA 5050 (AGV 인터페이스)"],
@@ -65,9 +65,12 @@ const REFS_BY_SUBCATEGORY = {
   "di-network": ["IEC 62541 (OPC UA)", "MQTT/Sparkplug B 사양, TSN 개요"],
   "di-knowledge": ["W3C RDF/OWL/SPARQL 표준", "Hogan 외, 『Knowledge Graphs』, LLM 파인튜닝·평가 공개 강좌"],
   "dt-modeling": ["ISO 23247 (제조 디지털트윈 프레임워크)", "URDF/OpenUSD 문서"],
-  "dt-validation": ["J. Banks 외, 『Discrete-Event System Simulation』"],
-  "dt-operation": ["ISO 23247, Asset Administration Shell (IDTA) 사양"],
-  "dt-optimization": ["Hillier & Lieberman, 『Introduction to Operations Research』"],
+  "dt-scenario": ["J. Banks 외, 『Discrete-Event System Simulation』 (시나리오 설계)"],
+  "dt-design-verify": ["ISO 23247", "생산 라인 설계 검증·레이아웃 사례"],
+  "dt-vc": ["IEC 61131-3 (PLC 언어)", "가상 커미셔닝(Virtual Commissioning) 실무 사례"],
+  "dt-data-sync": ["IEC 62541 (OPC UA)", "Asset Administration Shell (IDTA) 사양"],
+  "dt-realtime": ["실시간 데이터 스트리밍·디지털트윈 운영 문헌"],
+  "dt-optimize": ["Hillier & Lieberman, 『Introduction to Operations Research』"],
 };
 
 // ==================== 공통 과목 (교양·공통필수) ====================

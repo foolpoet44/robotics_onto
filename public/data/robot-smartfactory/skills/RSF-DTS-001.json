@@ -23,7 +23,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-DTS-022",
+      "target": "RSF-DTS-025",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"
