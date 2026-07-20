@@ -50,11 +50,22 @@ export interface CollegeSubcategory {
   order: number;
 }
 
+export type SkillPriority = "core" | "foundation" | "review";
+
+export interface WorkflowLink {
+  skillId: string;
+  note?: string;
+}
+
 export interface CollegeSubcategoryData {
   version: string;
   note?: string;
   subcategories: CollegeSubcategory[];
   skillSubcategories: Record<string, string>;
+  skillOrder?: Record<string, number>;
+  skillPriority?: Record<string, SkillPriority>;
+  workflowLinks?: Record<string, WorkflowLink[]>;
+  workflowColleges?: string[];
 }
 
 export interface EnablerCollegeMeta {

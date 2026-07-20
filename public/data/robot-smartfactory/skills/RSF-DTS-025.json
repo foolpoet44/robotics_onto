@@ -1,0 +1,33 @@
+{
+  "skill_id": "RSF-DTS-025",
+  "domain": "digital-twin-simulation",
+  "domain_en": "Digital Twin & Simulation",
+  "internal_uri": "urn:rsf:skill:dts-0025",
+  "esco_uri": null,
+  "preferred_label_ko": "실시간 데이터 기반 시뮬레이션",
+  "preferred_label_en": "Real-Time Data-Driven Simulation",
+  "description_ko": "실시간 현장 데이터로 디지털트윈이 운영 단계에서 계속 동작하도록 유지",
+  "description_en": "Keep the digital twin running in operation with real-time field data",
+  "skill_type": "competence",
+  "proficiency_level": 4,
+  "role_mapping": [
+    "engineer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-DTS-024",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-DTS-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 실시간 데이터 기반 시뮬레이션"
+}

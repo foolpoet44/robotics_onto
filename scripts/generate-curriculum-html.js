@@ -65,9 +65,12 @@ const REFS_BY_SUBCATEGORY = {
   "di-network": ["IEC 62541 (OPC UA)", "MQTT/Sparkplug B 사양, TSN 개요"],
   "di-knowledge": ["W3C RDF/OWL/SPARQL 표준", "Hogan 외, 『Knowledge Graphs』, LLM 파인튜닝·평가 공개 강좌"],
   "dt-modeling": ["ISO 23247 (제조 디지털트윈 프레임워크)", "URDF/OpenUSD 문서"],
-  "dt-validation": ["J. Banks 외, 『Discrete-Event System Simulation』"],
-  "dt-operation": ["ISO 23247, Asset Administration Shell (IDTA) 사양"],
-  "dt-optimization": ["Hillier & Lieberman, 『Introduction to Operations Research』"],
+  "dt-scenario": ["J. Banks 외, 『Discrete-Event System Simulation』 (시나리오 설계)"],
+  "dt-design-verify": ["ISO 23247", "생산 라인 설계 검증·레이아웃 사례"],
+  "dt-vc": ["IEC 61131-3 (PLC 언어)", "가상 커미셔닝(Virtual Commissioning) 실무 사례"],
+  "dt-data-sync": ["IEC 62541 (OPC UA)", "Asset Administration Shell (IDTA) 사양"],
+  "dt-realtime": ["실시간 데이터 스트리밍·디지털트윈 운영 문헌"],
+  "dt-optimize": ["Hillier & Lieberman, 『Introduction to Operations Research』"],
 };
 
 // ==================== 공통 과목 (교양·공통필수) ====================

@@ -543,6 +543,33 @@ EXTENSION_SKILLS = {
             "proficiency": 3,
             "roles": ["engineer", "developer"],
         },
+        {
+            "type": "skill",
+            "label_ko": "데이터 인터페이스 개발",
+            "label_en": "Data Interface Development",
+            "description_ko": "현장 데이터와 시뮬레이션 환경을 연결하는 데이터 인터페이스 설계·개발",
+            "description_en": "Design and develop data interfaces that connect field data to the simulation environment",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "시뮬레이션-실데이터 정합성 검증",
+            "label_en": "Simulation-Field Data Consistency Verification",
+            "description_ko": "시뮬레이션 결과와 실제 현장 데이터의 정합성을 비교·검증",
+            "description_en": "Compare and verify consistency between simulation results and actual field data",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "competence",
+            "label_ko": "실시간 데이터 기반 시뮬레이션",
+            "label_en": "Real-Time Data-Driven Simulation",
+            "description_ko": "실시간 현장 데이터로 디지털트윈이 운영 단계에서 계속 동작하도록 유지",
+            "description_en": "Keep the digital twin running in operation with real-time field data",
+            "proficiency": 4,
+            "roles": ["engineer"],
+        },
     ],
     "agentic-ai-manufacturing": [
         {

@@ -3820,7 +3820,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-DTS-022",
+        "target": "RSF-DTS-025",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -4555,7 +4555,7 @@
         "source": "heuristic"
       },
       {
-        "target": "RSF-DTS-001",
+        "target": "RSF-DTS-023",
         "type": "co_required",
         "weight": 0.7,
         "source": "heuristic"
@@ -4563,6 +4563,99 @@
     ],
     "esco_broader": null,
     "smartfactory_context": "AI Factory 정렬 증설: 에뮬레이션·가상 커미셔닝"
+  },
+  {
+    "skill_id": "RSF-DTS-023",
+    "domain": "digital-twin-simulation",
+    "domain_en": "Digital Twin & Simulation",
+    "internal_uri": "urn:rsf:skill:dts-0023",
+    "esco_uri": null,
+    "preferred_label_ko": "데이터 인터페이스 개발",
+    "preferred_label_en": "Data Interface Development",
+    "description_ko": "현장 데이터와 시뮬레이션 환경을 연결하는 데이터 인터페이스 설계·개발",
+    "description_en": "Design and develop data interfaces that connect field data to the simulation environment",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-DTS-022",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-024",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 데이터 인터페이스 개발"
+  },
+  {
+    "skill_id": "RSF-DTS-024",
+    "domain": "digital-twin-simulation",
+    "domain_en": "Digital Twin & Simulation",
+    "internal_uri": "urn:rsf:skill:dts-0024",
+    "esco_uri": null,
+    "preferred_label_ko": "시뮬레이션-실데이터 정합성 검증",
+    "preferred_label_en": "Simulation-Field Data Consistency Verification",
+    "description_ko": "시뮬레이션 결과와 실제 현장 데이터의 정합성을 비교·검증",
+    "description_en": "Compare and verify consistency between simulation results and actual field data",
+    "skill_type": "skill",
+    "proficiency_level": 3,
+    "role_mapping": ["engineer", "developer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-DTS-023",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-025",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 시뮬레이션-실데이터 정합성 검증"
+  },
+  {
+    "skill_id": "RSF-DTS-025",
+    "domain": "digital-twin-simulation",
+    "domain_en": "Digital Twin & Simulation",
+    "internal_uri": "urn:rsf:skill:dts-0025",
+    "esco_uri": null,
+    "preferred_label_ko": "실시간 데이터 기반 시뮬레이션",
+    "preferred_label_en": "Real-Time Data-Driven Simulation",
+    "description_ko": "실시간 현장 데이터로 디지털트윈이 운영 단계에서 계속 동작하도록 유지",
+    "description_en": "Keep the digital twin running in operation with real-time field data",
+    "skill_type": "competence",
+    "proficiency_level": 4,
+    "role_mapping": ["engineer"],
+    "parent_skill_id": null,
+    "related_skills": [
+      {
+        "target": "RSF-DTS-024",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      },
+      {
+        "target": "RSF-DTS-001",
+        "type": "co_required",
+        "weight": 0.7,
+        "source": "heuristic"
+      }
+    ],
+    "esco_broader": null,
+    "smartfactory_context": "AI Factory 정렬 증설: 실시간 데이터 기반 시뮬레이션"
   },
   {
     "skill_id": "RSF-AAM-001",
