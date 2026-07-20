@@ -47,7 +47,7 @@ const BANDS = [
 // 발행 시점 기준의 대표 국제표준·교재·공개 강좌. 사내 교보재 확정 시 대체한다.
 
 const REFS_BY_SUBCATEGORY = {
-  "pa-industrial": ["ISO 10218-1/-2 (산업용 로봇 안전)", "J. Craig, 『Introduction to Robotics: Mechanics and Control』"],
+  "pa-industrial": ["ISO 10218-1/-2 (산업용 로봇 안전)", "J. Craig, 『Introduction to Robotics: Mechanics and Control』", "VLA/로봇 파운데이션 모델 공개 문헌(RT-2, π0 등)·Hugging Face LeRobot 튜토리얼"],
   "pa-cobot": ["ISO/TS 15066 (협동로봇 안전)", "협동로봇 제조사 공인 교육과정 (예: UR Academy)"],
   "pa-maintenance": ["ISO 13374/13381 (상태감시·예지진단)", "『Maintenance Engineering Handbook』 (Mobley)"],
   "pa-amr": ["S. Thrun 외, 『Probabilistic Robotics』", "ROS 2 Nav2 공식 문서, VDA 5050 (AGV 인터페이스)"],

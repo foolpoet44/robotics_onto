@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-IRC-025",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "internal_uri": "urn:rsf:skill:irc-0025",
+  "esco_uri": null,
+  "preferred_label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
+  "preferred_label_en": "Applied Learning-Based Robot Control (VLA Policy Operation)",
+  "description_ko": "시연 데이터 수집(텔레오퍼레이션), VLA·모방학습 정책의 파인튜닝·배포와 안전 평가",
+  "description_en": "Collect demonstration data (teleoperation), fine-tune and deploy VLA/imitation policies, and evaluate safety",
+  "skill_type": "skill",
+  "proficiency_level": 3,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-IRC-024",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-001",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 학습기반 로봇 제어 적용(VLA 정책 운용)"
+}

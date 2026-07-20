@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total": 263,
+    "total": 265,
     "organizationMappings": 10,
-    "ontologyRelations": 253,
+    "ontologyRelations": 255,
     "statuses": {
-      "pending": 263,
+      "pending": 265,
       "approved": 0,
       "held": 0,
       "rejected": 0
@@ -1960,7 +1960,7 @@
       }
     },
     {
-      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-023",
+      "id": "ontology_relation:co_required:RSF-IRC-001:RSF-IRC-025",
       "kind": "ontology_relation",
       "priority": "normal",
       "status": "pending",
@@ -1971,8 +1971,8 @@
         "domain": "industrial-robot-control"
       },
       "target_skill": {
-        "skill_id": "RSF-IRC-023",
-        "label_ko": "PLC·설비 제어 연동",
+        "skill_id": "RSF-IRC-025",
+        "label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
         "domain": "industrial-robot-control"
       }
     },
@@ -2330,6 +2330,40 @@
       "target_skill": {
         "skill_id": "RSF-IRC-023",
         "label_ko": "PLC·설비 제어 연동",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-023:RSF-IRC-024",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-023",
+        "label_ko": "PLC·설비 제어 연동",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-024",
+        "label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+        "domain": "industrial-robot-control"
+      }
+    },
+    {
+      "id": "ontology_relation:co_required:RSF-IRC-024:RSF-IRC-025",
+      "kind": "ontology_relation",
+      "priority": "normal",
+      "status": "pending",
+      "relation_type": "co_required",
+      "source_skill": {
+        "skill_id": "RSF-IRC-024",
+        "label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+        "domain": "industrial-robot-control"
+      },
+      "target_skill": {
+        "skill_id": "RSF-IRC-025",
+        "label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
         "domain": "industrial-robot-control"
       }
     },

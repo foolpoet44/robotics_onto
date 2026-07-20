@@ -23,7 +23,7 @@
       "source": "heuristic"
     },
     {
-      "target": "RSF-IRC-023",
+      "target": "RSF-IRC-025",
       "type": "co_required",
       "weight": 0.7,
       "source": "heuristic"

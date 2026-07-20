@@ -1,0 +1,34 @@
+{
+  "skill_id": "RSF-IRC-024",
+  "domain": "industrial-robot-control",
+  "domain_en": "Industrial Robot Control",
+  "internal_uri": "urn:rsf:skill:irc-0024",
+  "esco_uri": null,
+  "preferred_label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+  "preferred_label_en": "Learning-Based Robot Control Concepts (RFM/VLA)",
+  "description_ko": "로봇 파운데이션 모델(RFM), Vision-Language-Action(VLA) 정책, 모방학습·강화학습 기반 제어의 기본 개념",
+  "description_en": "Fundamentals of robot foundation models (RFM), vision-language-action (VLA) policies, and imitation/reinforcement-learning-based control",
+  "skill_type": "knowledge",
+  "proficiency_level": 2,
+  "role_mapping": [
+    "engineer",
+    "developer"
+  ],
+  "parent_skill_id": null,
+  "related_skills": [
+    {
+      "target": "RSF-IRC-023",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    },
+    {
+      "target": "RSF-IRC-025",
+      "type": "co_required",
+      "weight": 0.7,
+      "source": "heuristic"
+    }
+  ],
+  "esco_broader": null,
+  "smartfactory_context": "AI Factory 정렬 증설: 학습기반 로봇 제어 개념(RFM·VLA)"
+}

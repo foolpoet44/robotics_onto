@@ -510,6 +510,24 @@ EXTENSION_SKILLS = {
             "proficiency": 2,
             "roles": ["operator", "engineer"],
         },
+        {
+            "type": "knowledge",
+            "label_ko": "학습기반 로봇 제어 개념(RFM·VLA)",
+            "label_en": "Learning-Based Robot Control Concepts (RFM/VLA)",
+            "description_ko": "로봇 파운데이션 모델(RFM), Vision-Language-Action(VLA) 정책, 모방학습·강화학습 기반 제어의 기본 개념",
+            "description_en": "Fundamentals of robot foundation models (RFM), vision-language-action (VLA) policies, and imitation/reinforcement-learning-based control",
+            "proficiency": 2,
+            "roles": ["engineer", "developer"],
+        },
+        {
+            "type": "skill",
+            "label_ko": "학습기반 로봇 제어 적용(VLA 정책 운용)",
+            "label_en": "Applied Learning-Based Robot Control (VLA Policy Operation)",
+            "description_ko": "시연 데이터 수집(텔레오퍼레이션), VLA·모방학습 정책의 파인튜닝·배포와 안전 평가",
+            "description_en": "Collect demonstration data (teleoperation), fine-tune and deploy VLA/imitation policies, and evaluate safety",
+            "proficiency": 3,
+            "roles": ["engineer", "developer"],
+        },
     ],
     "machine-vision-sensor": [
         {
