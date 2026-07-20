@@ -94,7 +94,10 @@ export default async function CollegeDetailPage({
             <p className={styles.workflowNote}>
               검증 편의를 위해 {clusteredSkillIds.size}개 세부 스킬을{" "}
               {collegeClusters.length}개 검증 클러스터로 묶어 표시합니다.
-              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다.
+              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다. 지정
+              평가자는{" "}
+              <Link href="/evaluation/clusters">클러스터 평가 화면</Link>에서
+              묶음의 적절성을 판정할 수 있습니다.
             </p>
           )}
         </div>

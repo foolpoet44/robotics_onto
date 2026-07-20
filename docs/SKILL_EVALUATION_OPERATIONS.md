@@ -210,6 +210,21 @@ EVAL_SESSION_SECRET=test npm run start
 4. 스킬 선택 → 중요도/라벨/근거 입력 → 저장 시 다음 미평가 스킬로 자동 이동.
 5. 로그아웃 후 평가 API가 401을 반환하는지 확인.
 
+## 검증 클러스터 평가 (`/evaluation/clusters`)
+
+Physical AI 간소화안(검증 클러스터 35개)의 적절성을 판정하는 화면입니다.
+스킬 평가와 동일한 세션 인증을 사용하며, 장부는 분리되어 있습니다.
+
+- 판정: `merge_ok`(통합 적절) / `keep_split`(분리 유지) / `restructure`(재구성 필요) + 의견.
+- 저장: `cluster_review_labels` 테이블(DB) 또는 `.data/cluster-reviews.json`(폴백).
+  `skill_evaluation_labels`와 분리된 append-only 장부라 스튜어드 시그널을
+  오염시키지 않으며, 집계 시 (평가자, 클러스터)별 최신 판정만 취합니다.
+- 집계: `npm run report:cluster-review` → 콘솔 테이블 + 이의 판정 목록 +
+  `.data/steward/cluster-review-summary.json`. 이 결과가 온톨로지 실제 통합
+  (D-1, DEPRECATED 스키마 확장 경유)의 근거 시그널이 됩니다.
+- 프리뷰 배포에서 평가를 저장하려면 Vercel **Preview 환경에도 `POSTGRES_URL`**
+  이 설정되어야 합니다(서버리스 파일 폴백은 휘발됨).
+
 ## 운영 전환 체크리스트
 
 - [ ] `EVAL_SESSION_SECRET`를 강력한 임의 값으로 설정

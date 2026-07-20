@@ -1,0 +1,240 @@
+.workbench {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.progressCard {
+  padding: 1.1rem 1.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.progressHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  color: var(--text-primary);
+}
+
+.progressHead span {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.progressBar {
+  margin-top: 0.6rem;
+  height: 8px;
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-primary-dark);
+  border-radius: 999px;
+  transition: width 200ms ease;
+}
+
+.progressHint {
+  margin: 0.6rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.error {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: 0.7rem;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.subcategory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.subcategory h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0.4rem 0 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.subcategory h2 span {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.clusterCard {
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+}
+
+.clusterHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.clusterHead h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+}
+
+.clusterHead p {
+  margin: 0.25rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.priorityBadge {
+  font-size: 0.64rem;
+  font-weight: 800;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(67, 56, 202, 0.14);
+  color: var(--color-primary-dark);
+}
+
+.savedBadge {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.14);
+  color: #0d9488;
+}
+
+.memberList {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.35rem;
+}
+
+.memberList li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.6rem;
+  background: var(--bg-secondary, rgba(148, 163, 184, 0.08));
+  border: 1px dashed var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.memberList a {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.memberList a:hover {
+  text-decoration: underline;
+}
+
+.memberList span {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.verdictRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.verdictButton {
+  padding: 0.45rem 0.9rem;
+  background: var(--bg-secondary, rgba(148, 163, 184, 0.08));
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 120ms ease;
+}
+
+.verdictButton:hover {
+  border-color: var(--color-primary-dark);
+}
+
+.verdictActive {
+  color: #fff;
+  border-color: transparent;
+}
+
+.verdict_merge_ok {
+  background: #0d9488;
+}
+
+.verdict_keep_split {
+  background: #c2540a;
+}
+
+.verdict_restructure {
+  background: #b91c1c;
+}
+
+.notesRow {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+  align-items: stretch;
+}
+
+.notesRow textarea {
+  flex: 1;
+  padding: 0.55rem 0.7rem;
+  background: var(--bg-secondary, rgba(148, 163, 184, 0.06));
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.saveButton {
+  flex-shrink: 0;
+  padding: 0 1.1rem;
+  background: var(--color-primary-dark);
+  border: none;
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.saveButton:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
