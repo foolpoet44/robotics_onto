@@ -145,9 +145,11 @@ export default async function CollegeDetailPage({
                       collegeMapping.skillOverrides,
                     )?.primary
                   : null;
-                const linkedCollegeName = collegeMapping.colleges.find(
-                  (item) => item.id === linkedCollege,
-                )?.name;
+                const linkedCollegeName = linkedCollege
+                  ? collegeMapping.colleges.find(
+                      (item) => item.id === linkedCollege,
+                    )?.name
+                  : undefined;
                 return (
                   <li key={link.skillId}>
                     <Link

@@ -445,7 +445,21 @@ class RobotDataValidator {
         if (!subcategoriesById.has(subId)) {
           errors.push(`workflowLinks ${subId}: 존재하지 않는 중간분류입니다.`);
         }
+        if (!Array.isArray(links)) {
+          errors.push(`workflowLinks ${subId}: 올바른 배열 형식이 아닙니다.`);
+          return;
+        }
         links.forEach((link) => {
+          if (
+            !link ||
+            typeof link !== "object" ||
+            typeof link.skillId !== "string"
+          ) {
+            errors.push(
+              `workflowLinks ${subId}: 올바르지 않은 연계 스킬 형식입니다.`,
+            );
+            return;
+          }
           if (!knownSkillIds.has(link.skillId)) {
             errors.push(
               `workflowLinks ${subId}: 존재하지 않는 연계 스킬 '${link.skillId}'`,
