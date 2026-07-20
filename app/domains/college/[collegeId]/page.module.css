@@ -72,19 +72,6 @@
   font-size: 1.15rem;
 }
 
-.stepBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-
 .workflowNote {
   margin: 0.5rem 0 0;
   color: var(--text-secondary);

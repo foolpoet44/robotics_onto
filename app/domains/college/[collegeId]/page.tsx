@@ -86,7 +86,7 @@ export default async function CollegeDetailPage({
         </div>
       </header>
 
-      {subcategories.map((subcategory, index) => {
+      {subcategories.map((subcategory) => {
         const subcategorySkills = collegeSkills
           .filter(
             (skill) =>
@@ -102,17 +102,7 @@ export default async function CollegeDetailPage({
         return (
           <section className={styles.subcategorySection} key={subcategory.id}>
             <div className={styles.subcategoryHead}>
-              <h2>
-                {isWorkflow && (
-                  <span
-                    className={styles.stepBadge}
-                    style={{ background: collegeColor(collegeId) }}
-                  >
-                    {index + 1}
-                  </span>
-                )}
-                {subcategory.name}
-              </h2>
+              <h2>{subcategory.name}</h2>
               <span>{subcategorySkills.length}개 스킬</span>
             </div>
             <ul className={styles.skillList}>
