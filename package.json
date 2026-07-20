@@ -8,7 +8,6 @@
     "start": "next start",
     "type-check": "tsc --noEmit",
     "steward:signals": "node scripts/steward/export-signals.js",
-    "report:cluster-review": "node scripts/report-cluster-review.js",
     "daily-log": "node scripts/steward/daily-log.js",
     "test:steward": "node scripts/steward/test-export-signals.js",
     "test:competency-skill": "node scripts/test-competency-skill-map.js",
