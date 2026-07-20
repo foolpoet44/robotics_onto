@@ -1,0 +1,107 @@
+{
+  "date": "2026-07-20",
+  "generatedAt": "2026-07-20 20:10 UTC",
+  "verdict": {
+    "badge": "🟢",
+    "label": "정상"
+  },
+  "runs": {
+    "available": true,
+    "total": 1,
+    "success": 1,
+    "failure": 0,
+    "scheduleFailure": false,
+    "items": [
+      {
+        "time": "20:01",
+        "event": "schedule",
+        "conclusion": "success",
+        "url": "https://github.com/foolpoet44/robotics_onto/actions/runs/29774389327"
+      }
+    ]
+  },
+  "prs": {
+    "available": true,
+    "mergedCount": 1,
+    "createdCount": 2,
+    "stewardCreated": [],
+    "openStewardCount": 0,
+    "merged": [
+      {
+        "number": 22,
+        "title": "DT 워크플로우 재편 + RFM/VLA 스킬 (PR #7 미머지분 복구)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/22",
+        "steward": false
+      }
+    ],
+    "created": [
+      {
+        "number": 23,
+        "title": "PA 검증 클러스터(79→35 간소화 표시) + 클러스터 평가 기능 (평가: 박석우 책임)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/23",
+        "steward": false
+      },
+      {
+        "number": 22,
+        "title": "DT 워크플로우 재편 + RFM/VLA 스킬 (PR #7 미머지분 복구)",
+        "url": "https://github.com/foolpoet44/robotics_onto/pull/22",
+        "steward": false
+      }
+    ]
+  },
+  "commits": {
+    "commits": [
+      {
+        "sha": "60885cc",
+        "subject": "리뷰 반영: 연계 칼리지 null 가드 및 workflowLinks 형식 방어 검증"
+      },
+      {
+        "sha": "498c580",
+        "subject": "PA 영역에 학습기반 로봇 제어(RFM/VLA) 스킬 반영"
+      },
+      {
+        "sha": "8c0a71c",
+        "subject": "DT 페이지 단계 번호 이중 표기 제거 (원형 배지 삭제)"
+      },
+      {
+        "sha": "1c5a0c3",
+        "subject": "DT 도메인을 업무 흐름 워크플로우 순서로 재편 (고민석 리더 회의 반영)"
+      }
+    ],
+    "merges": [
+      {
+        "sha": "dd417df",
+        "subject": "DT 워크플로우 재편 + RFM/VLA 스킬 (PR #7 미머지분 복구) (#22)"
+      }
+    ]
+  },
+  "signals": {
+    "available": true,
+    "store": "file",
+    "actionable": 0,
+    "watching": 53,
+    "overrides": 39,
+    "unmapped": 14,
+    "coverage": {
+      "total": 44,
+      "mapped": 30,
+      "outOfScope": 14,
+      "assessmentMinors": 44,
+      "unknown": 0
+    },
+    "flags": {
+      "중복의심": {
+        "total": 0,
+        "actionable": 0
+      },
+      "신규제안": {
+        "total": 0,
+        "actionable": 0
+      },
+      "재정의대상": {
+        "total": 0,
+        "actionable": 0
+      }
+    }
+  }
+}
