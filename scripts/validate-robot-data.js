@@ -476,6 +476,97 @@ class RobotDataValidator {
       }
     });
 
+    // skillClusters 무결성: 클러스터 도입 칼리지의 스킬은 정확히 1개 클러스터에 속한다.
+    const clusters = subcategoryData.skillClusters ?? [];
+    if (!Array.isArray(clusters)) {
+      errors.push("skillClusters: 올바른 배열 형식이 아닙니다.");
+    } else if (clusters.length > 0) {
+      const clusterIds = new Set();
+      const clusteredSkills = new Map();
+      const clusteredColleges = new Set();
+      clusters.forEach((cluster) => {
+        if (
+          !cluster ||
+          typeof cluster !== "object" ||
+          typeof cluster.id !== "string" ||
+          typeof cluster.name !== "string" ||
+          !Array.isArray(cluster.skillIds)
+        ) {
+          errors.push("skillClusters: 올바르지 않은 클러스터 형식입니다.");
+          return;
+        }
+        if (clusterIds.has(cluster.id)) {
+          errors.push(`skillClusters ${cluster.id}: 중복된 클러스터 id`);
+        }
+        clusterIds.add(cluster.id);
+        if (!collegeIds.has(cluster.collegeId)) {
+          errors.push(
+            `skillClusters ${cluster.id}: 존재하지 않는 칼리지 '${cluster.collegeId}'`,
+          );
+          return;
+        }
+        clusteredColleges.add(cluster.collegeId);
+        if (!ALLOWED_PRIORITIES.has(cluster.priority)) {
+          errors.push(
+            `skillClusters ${cluster.id}: 허용되지 않은 우선순위 '${cluster.priority}'`,
+          );
+        }
+        const subcategory = subcategoriesById.get(cluster.subcategoryId);
+        if (!subcategory) {
+          errors.push(
+            `skillClusters ${cluster.id}: 존재하지 않는 중간분류 '${cluster.subcategoryId}'`,
+          );
+          return;
+        }
+        if (subcategory.collegeId !== cluster.collegeId) {
+          errors.push(
+            `skillClusters ${cluster.id}: 중간분류 '${cluster.subcategoryId}'는 ` +
+              `'${subcategory.collegeId}' 소속 (클러스터: '${cluster.collegeId}')`,
+          );
+        }
+        cluster.skillIds.forEach((skillId) => {
+          if (!knownSkillIds.has(skillId)) {
+            errors.push(
+              `skillClusters ${cluster.id}: 존재하지 않는 스킬 '${skillId}'`,
+            );
+            return;
+          }
+          if (clusteredSkills.has(skillId)) {
+            errors.push(
+              `skillClusters ${cluster.id}: '${skillId}'가 ` +
+                `'${clusteredSkills.get(skillId)}'와 중복 배정되었습니다.`,
+            );
+          }
+          clusteredSkills.set(skillId, cluster.id);
+          if (
+            subcategoryData.skillSubcategories[skillId] !==
+            cluster.subcategoryId
+          ) {
+            errors.push(
+              `skillClusters ${cluster.id}: '${skillId}'는 중간분류 ` +
+                `'${subcategoryData.skillSubcategories[skillId]}' 소속입니다.`,
+            );
+          }
+        });
+      });
+      // 커버리지: 클러스터 도입 칼리지의 중간분류 스킬은 빠짐없이 클러스터에 속해야 한다.
+      Object.entries(subcategoryData.skillSubcategories).forEach(
+        ([skillId, subcategoryId]) => {
+          const subcategory = subcategoriesById.get(subcategoryId);
+          if (
+            subcategory &&
+            clusteredColleges.has(subcategory.collegeId) &&
+            !clusteredSkills.has(skillId)
+          ) {
+            errors.push(
+              `skillClusters: '${skillId}'(${subcategory.collegeId})가 ` +
+                `어떤 클러스터에도 속하지 않습니다.`,
+            );
+          }
+        },
+      );
+    }
+
     const overrides = Object.entries(mappingData.skillOverrides ?? {});
     const metrics = {
       domains: mappedDomains.size,
