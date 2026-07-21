@@ -52,6 +52,7 @@
   td.id { white-space:nowrap; color:var(--ink-2); font-size:12px; }
   td.lv { white-space:nowrap; }
   .badge { font-size:10px; font-weight:800; padding:1px 6px; border-radius:999px; background:#fff7ed; color:#9a3412; margin-left:6px; }
+  .desc { color:var(--ink-2); font-size:11px; font-weight:400; line-height:1.45; }
   footer { margin-top:48px; color:var(--ink-2); font-size:12px; text-align:center; }
   @media (max-width:720px){ .treemap { height:560px; } }
   @media print { body{background:#fff} .wrap{padding:0} .treemap{height:340px}
@@ -64,7 +65,7 @@
     <p class="eyebrow">AI FACTORY SKILL FAB · DOMAIN MAP</p>
     <h1>4대 도메인 스킬 맵</h1>
     <p>AI Factory 운영 체계의 4대 도메인 → 중간분류 → 스킬 164개 전체 체계.
-      면적은 스킬 수에 비례합니다. 발행일 2026-07-20 · 스킬 온톨로지에서 자동 생성.</p>
+      면적은 스킬 수에 비례합니다. 발행일 2026-07-21 · 스킬 온톨로지에서 자동 생성.</p>
   </header>
 
   <div class="treemap" aria-label="4대 도메인별 스킬 분포 트리맵 (클릭하면 세부 스킬 표시)">
@@ -84,25 +85,29 @@
           style="flex-grow:10;border-left:4px solid #4f46e5;background:color-mix(in srgb, #4f46e5 14%, #fff)">
           <b>비전·센서 하드웨어</b><i>10</i></button>
       </div>
-    </div><div class="tcol" style="flex-grow:34">
+    </div><div class="tcol" style="flex-grow:60">
       <button class="thead" data-college="agentic-ai" style="background:#0d9488" type="button">
-        <span>Agentic AI Manufacturing</span><span>34</span></button>
+        <span>Agentic AI Manufacturing</span><span>60</span></button>
       <div class="tstack">
-        <button class="tile" data-college="agentic-ai" data-sub="aa-agent-design" type="button"
-          style="flex-grow:6;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>에이전트 설계·오케스트레이션 (Orchestration AI)</b><i>6</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-mes-planning" type="button"
+        <button class="tile" data-college="agentic-ai" data-sub="aa-flow-1" type="button"
+          style="flex-grow:2;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>① 문제 정의·업무 플로우 분석</b><i>2</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-2" type="button"
+          style="flex-grow:2;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>② 에이전트·파이프라인 설계</b><i>2</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-3" type="button"
+          style="flex-grow:7;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>③ 데이터 확보·연동</b><i>7</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-4" type="button"
           style="flex-grow:9;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>MES·생산계획 자율화 (생산 Agent)</b><i>9</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-quality" type="button"
-          style="flex-grow:5;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>품질 자동 판정 (품질 Agent)</b><i>5</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-autonomous-ops" type="button"
-          style="flex-grow:6;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>자율 관제·물류 (물류 Agent)</b><i>6</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-governance" type="button"
-          style="flex-grow:6;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>안전·거버넌스 (안전환경 Agent)</b><i>6</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-equipment" type="button"
+          <b>④ 툴·모델 개발 (LLM·비전·분석)</b><i>9</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-5" type="button"
+          style="flex-grow:7;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>⑤ 구현·검증</b><i>7</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-6" type="button"
+          style="flex-grow:7;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>⑥ 운영·모니터링</b><i>7</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-flow-7" type="button"
+          style="flex-grow:3;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>⑦ 고도화·확산</b><i>3</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-multi" type="button"
           style="flex-grow:1;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>자율 정비 실행 (설비 Agent)</b><i>1</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-dev-agent" type="button"
-          style="flex-grow:1;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
-          <b>공정 검증·배포 (개발 Agent)</b><i>1</i></button>
+          <b>⑧ 멀티 에이전트</b><i>1</i></button><button class="tile" data-college="agentic-ai" data-sub="aa-adv" type="button"
+          style="flex-grow:22;border-left:4px solid #0d9488;background:color-mix(in srgb, #0d9488 14%, #fff)">
+          <b>심화 : 도메인 에이전트 설계 및 운영</b><i>22</i></button>
       </div>
     </div><div class="tcol" style="flex-grow:25">
       <button class="thead" data-college="digital-twin" style="background:#9333ea" type="button">
@@ -124,27 +129,11 @@
           style="flex-grow:3;border-left:4px solid #9333ea;background:color-mix(in srgb, #9333ea 14%, #fff)">
           <b>⑦ 최적화·의사결정 지원</b><i>3</i></button>
       </div>
-    </div><div class="tcol" style="flex-grow:26">
-      <button class="thead" data-college="data-intelligence" style="background:#0891b2" type="button">
-        <span>Data Intelligence</span><span>26</span></button>
-      <div class="tstack">
-        <button class="tile" data-college="data-intelligence" data-sub="di-signal" type="button"
-          style="flex-grow:6;border-left:4px solid #0891b2;background:color-mix(in srgb, #0891b2 14%, #fff)">
-          <b>신호·이미지 처리</b><i>6</i></button><button class="tile" data-college="data-intelligence" data-sub="di-pipeline" type="button"
-          style="flex-grow:4;border-left:4px solid #0891b2;background:color-mix(in srgb, #0891b2 14%, #fff)">
-          <b>데이터 파이프라인·로깅</b><i>4</i></button><button class="tile" data-college="data-intelligence" data-sub="di-analytics" type="button"
-          style="flex-grow:11;border-left:4px solid #0891b2;background:color-mix(in srgb, #0891b2 14%, #fff)">
-          <b>분석·예측 인텔리전스</b><i>11</i></button><button class="tile" data-college="data-intelligence" data-sub="di-network" type="button"
-          style="flex-grow:2;border-left:4px solid #0891b2;background:color-mix(in srgb, #0891b2 14%, #fff)">
-          <b>OT 네트워크·통신</b><i>2</i></button><button class="tile" data-college="data-intelligence" data-sub="di-knowledge" type="button"
-          style="flex-grow:3;border-left:4px solid #0891b2;background:color-mix(in srgb, #0891b2 14%, #fff)">
-          <b>지식그래프·Data Fabric</b><i>3</i></button>
-      </div>
     </div>
   </div>
 
   <div class="tabs">
-    <button class="tab" data-college="physical-ai" data-color="#4f46e5" type="button">Physical AI &amp; Robotics · 79</button><button class="tab" data-college="agentic-ai" data-color="#0d9488" type="button">Agentic AI Manufacturing · 34</button><button class="tab" data-college="digital-twin" data-color="#9333ea" type="button">Digital Twin &amp; Simulation · 25</button><button class="tab" data-college="data-intelligence" data-color="#0891b2" type="button">Data Intelligence · 26</button>
+    <button class="tab" data-college="physical-ai" data-color="#4f46e5" type="button">Physical AI &amp; Robotics · 79</button><button class="tab" data-college="agentic-ai" data-color="#0d9488" type="button">Agentic AI Manufacturing · 60</button><button class="tab" data-college="digital-twin" data-color="#9333ea" type="button">Digital Twin &amp; Simulation · 25</button>
   </div>
   <p class="hint">도메인(탭 또는 트리맵)을 클릭하면 세부 스킬이 표시되고, 중간분류 타일을 클릭하면 해당 분류가 바로 펼쳐집니다.</p>
 
@@ -159,127 +148,127 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>로봇 구조 및 운동학</strong></td>
+          <td><strong>로봇 구조 및 운동학</strong><br><span class="desc">로봇의 물리적 구조, 조인트 운동, 역운동학을 이해하는 기초 지식</span></td>
           <td class="id">RSF-IRC-001</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>산업용 로봇 안전 기준</strong></td>
+          <td><strong>산업용 로봇 안전 기준</strong><br><span class="desc">ISO 10218, ANSI/NFPA 79 등 산업용 로봇 안전 표준 및 규제</span></td>
           <td class="id">RSF-IRC-003</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 티칭 방법론</strong></td>
+          <td><strong>로봇 티칭 방법론</strong><br><span class="desc">온라인 티칭, 오프라인 프로그래밍, 매뉴얼 가이딩 등 다양한 티칭 방식</span></td>
           <td class="id">RSF-IRC-004</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 제어 이론</strong></td>
+          <td><strong>로봇 제어 이론</strong><br><span class="desc">PID 제어, 궤적 계획, 모션 제어의 이론적 기초</span></td>
           <td class="id">RSF-IRC-002</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>모션 플래닝 기초</strong></td>
+          <td><strong>모션 플래닝 기초</strong><br><span class="desc">경로 계획, 충돌 회피, 움직임 최적화의 기초 개념</span></td>
           <td class="id">RSF-IRC-005</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 매뉴얼 티칭</strong></td>
+          <td><strong>로봇 매뉴얼 티칭</strong><br><span class="desc">손으로 로봇 팔을 조작하여 작업 경로를 기록</span></td>
           <td class="id">RSF-IRC-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 프로그래밍</strong></td>
+          <td><strong>로봇 프로그래밍</strong><br><span class="desc">로봇 고유 언어(RAPID, KRL 등)로 프로그래밍</span></td>
           <td class="id">RSF-IRC-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>좌표계 설정 및 보정</strong></td>
+          <td><strong>좌표계 설정 및 보정</strong><br><span class="desc">로봇의 기준점을 설정하고 정확성 검증</span></td>
           <td class="id">RSF-IRC-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>다축 동기 제어</strong></td>
+          <td><strong>다축 동기 제어</strong><br><span class="desc">여러 로봇의 협력 동작 제어</span></td>
           <td class="id">RSF-IRC-013</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>센서 입출력 처리</strong></td>
+          <td><strong>센서 입출력 처리</strong><br><span class="desc">센서 신호를 로봇 동작에 반영</span></td>
           <td class="id">RSF-IRC-014</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>PLC·설비 제어 연동</strong></td>
+          <td><strong>PLC·설비 제어 연동</strong><br><span class="desc">PLC 로직 이해와 로봇-설비 간 제어 신호 연동 구성</span></td>
           <td class="id">RSF-IRC-023</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>학습기반 로봇 제어 개념(RFM·VLA)</strong></td>
+          <td><strong>학습기반 로봇 제어 개념(RFM·VLA)</strong><br><span class="desc">로봇 파운데이션 모델(RFM), Vision-Language-Action(VLA) 정책, 모방학습·강화학습 기반 제어의 기본 개념</span></td>
           <td class="id">RSF-IRC-024</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>모션 제어 파라미터 조정</strong></td>
+          <td><strong>모션 제어 파라미터 조정</strong><br><span class="desc">속도, 가속도, 감속도 등 파라미터 최적화</span></td>
           <td class="id">RSF-IRC-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>경로 최적화</strong></td>
+          <td><strong>경로 최적화</strong><br><span class="desc">충돌 회피하면서 이동 거리 최소화</span></td>
           <td class="id">RSF-IRC-010</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 안전 설정</strong></td>
+          <td><strong>로봇 안전 설정</strong><br><span class="desc">안전 펜스, 속도 제한 등 안전 기능 설정</span></td>
           <td class="id">RSF-IRC-011</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>생산 라인 로봇 운용</strong></td>
+          <td><strong>생산 라인 로봇 운용</strong><br><span class="desc">실제 제조 환경에서 로봇 운용</span></td>
           <td class="id">RSF-IRC-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>사이클 타임 달성</strong></td>
+          <td><strong>사이클 타임 달성</strong><br><span class="desc">정해진 시간 내에 작업 완료</span></td>
           <td class="id">RSF-IRC-017</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>로봇 고장 대응</strong></td>
+          <td><strong>로봇 고장 대응</strong><br><span class="desc">로봇 오류 발생 시 신속한 진단 및 복구</span></td>
           <td class="id">RSF-IRC-018</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>작업 문서화</strong></td>
+          <td><strong>작업 문서화</strong><br><span class="desc">프로그램 및 설정 내용 상세히 기록</span></td>
           <td class="id">RSF-IRC-019</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>학습기반 로봇 제어 적용(VLA 정책 운용)</strong></td>
+          <td><strong>학습기반 로봇 제어 적용(VLA 정책 운용)</strong><br><span class="desc">시연 데이터 수집(텔레오퍼레이션), VLA·모방학습 정책의 파인튜닝·배포와 안전 평가</span></td>
           <td class="id">RSF-IRC-025</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>협력업체 기술 지원</strong></td>
+          <td><strong>협력업체 기술 지원</strong><br><span class="desc">외부 인력에게 로봇 운용 방법 교육</span></td>
           <td class="id">RSF-IRC-021</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -294,115 +283,115 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>협동로봇 안전 개념</strong></td>
+          <td><strong>협동로봇 안전 개념</strong><br><span class="desc">ISO/TS 15066, 힘 제한, 속도 제한의 안전 원칙</span></td>
           <td class="id">RSF-CRO-001</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>사용자 친화적 프로그래밍</strong></td>
+          <td><strong>사용자 친화적 프로그래밍</strong><br><span class="desc">드래그-앤-드롭, 그래픽 프로그래밍, 음성 인터페이스</span></td>
           <td class="id">RSF-CRO-003</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>힘/토크 모니터링 원리</strong></td>
+          <td><strong>힘/토크 모니터링 원리</strong><br><span class="desc">육축 센서, 임피던스 제어, 힘 피드백 제어</span></td>
           <td class="id">RSF-CRO-002</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>협동로봇 산업 응용</strong></td>
+          <td><strong>협동로봇 산업 응용</strong><br><span class="desc">조립, 검사, 포장 등 협동 로봇의 주요 응용 사례</span></td>
           <td class="id">RSF-CRO-004</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>인간공학 및 인적 요소</strong></td>
+          <td><strong>인간공학 및 인적 요소</strong><br><span class="desc">작업 설계, 사용자 편의성, 피로도 관리</span></td>
           <td class="id">RSF-CRO-005</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>협동로봇 안전 설정</strong></td>
+          <td><strong>협동로봇 안전 설정</strong><br><span class="desc">속도 제한, 힘 제한, 안전 영역 설정</span></td>
           <td class="id">RSF-CRO-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>드래그-앤-드롭 티칭</strong></td>
+          <td><strong>드래그-앤-드롭 티칭</strong><br><span class="desc">GUI를 통한 간편 티칭</span></td>
           <td class="id">RSF-CRO-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>협동로봇 프로그래밍</strong></td>
+          <td><strong>협동로봇 프로그래밍</strong><br><span class="desc">URScript, Python 등으로 협동로봇 프로그래밍</span></td>
           <td class="id">RSF-CRO-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>사용자 안전 교육</strong></td>
+          <td><strong>사용자 안전 교육</strong><br><span class="desc">협동로봇 사용자에게 안전 교육</span></td>
           <td class="id">RSF-CRO-013</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>힘 제어 파라미터 튜닝</strong></td>
+          <td><strong>힘 제어 파라미터 튜닝</strong><br><span class="desc">힘 제어의 감도 및 응답성 조정</span></td>
           <td class="id">RSF-CRO-014</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>휴머노이드 로봇 운용 기초</strong></td>
+          <td><strong>휴머노이드 로봇 운용 기초</strong><br><span class="desc">휴머노이드 로봇의 안전 운용, 작업 지시, 인간 공존 환경 관리 기초</span></td>
           <td class="id">RSF-CRO-022</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>인간-로봇 상호작용 설계</strong></td>
+          <td><strong>인간-로봇 상호작용 설계</strong><br><span class="desc">안전한 협동 작업 시나리오 설계</span></td>
           <td class="id">RSF-CRO-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>협동 작업 태스크 분석</strong></td>
+          <td><strong>협동 작업 태스크 분석</strong><br><span class="desc">인간과 로봇의 작업 분담 계획</span></td>
           <td class="id">RSF-CRO-010</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>터치 감지 및 안전 반응</strong></td>
+          <td><strong>터치 감지 및 안전 반응</strong><br><span class="desc">접촉 감지 시 로봇의 안전한 반응 설정</span></td>
           <td class="id">RSF-CRO-011</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>협동 워크셀 안전성 검증</strong></td>
+          <td><strong>협동 워크셀 안전성 검증</strong><br><span class="desc">실제 환경에서 협동 작업의 안전성 확인</span></td>
           <td class="id">RSF-CRO-015</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>사용자 가이드 작성</strong></td>
+          <td><strong>사용자 가이드 작성</strong><br><span class="desc">협동로봇 사용자를 위한 상세 매뉴얼 작성</span></td>
           <td class="id">RSF-CRO-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>안전성 평가 보고서</strong></td>
+          <td><strong>안전성 평가 보고서</strong><br><span class="desc">협동 작업의 안전성 평가 결과 보고</span></td>
           <td class="id">RSF-CRO-018</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>작업 개선 제안</strong></td>
+          <td><strong>작업 개선 제안</strong><br><span class="desc">협동 작업 효율 개선 방안 제안</span></td>
           <td class="id">RSF-CRO-019</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>인간공학 평가</strong></td>
+          <td><strong>인간공학 평가</strong><br><span class="desc">작업자의 피로도 및 편의성 평가</span></td>
           <td class="id">RSF-CRO-020</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -417,91 +406,91 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>윤활유 및 냉각액 관리</strong></td>
+          <td><strong>윤활유 및 냉각액 관리</strong><br><span class="desc">윤활유 종류, 냉각 시스템, 품질 관리</span></td>
           <td class="id">RSF-RMD-005</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>로봇 부품 분류 및 수명 관리</strong></td>
+          <td><strong>로봇 부품 분류 및 수명 관리</strong><br><span class="desc">BOM(자재명세서), MTBF, 부품 수명 예측</span></td>
           <td class="id">RSF-RMD-001</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>신뢰성 공학</strong></td>
+          <td><strong>신뢰성 공학</strong><br><span class="desc">MTBF, MTTF, 가용성, 신뢰도 분석</span></td>
           <td class="id">RSF-RMD-002</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>예방적 유지보수 전략</strong></td>
+          <td><strong>예방적 유지보수 전략</strong><br><span class="desc">예방적 유지보수(PM), 예측적 유지보수(PdM), 상태 기반 유지보수</span></td>
           <td class="id">RSF-RMD-003</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>로봇 진단 도구 및 로깅</strong></td>
+          <td><strong>로봇 진단 도구 및 로깅</strong><br><span class="desc">고장 코드, 센서 로깅, 성능 지표</span></td>
           <td class="id">RSF-RMD-004</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>고장 코드 해석</strong></td>
+          <td><strong>고장 코드 해석</strong><br><span class="desc">로봇 진단 코드의 의미 파악</span></td>
           <td class="id">RSF-RMD-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>부품 청소 및 검사</strong></td>
+          <td><strong>부품 청소 및 검사</strong><br><span class="desc">부품의 먼지, 이물질 제거 및 상태 확인</span></td>
           <td class="id">RSF-RMD-013</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>윤활유 교체</strong></td>
+          <td><strong>윤활유 교체</strong><br><span class="desc">로봇 관절 및 기어의 윤활유 교체</span></td>
           <td class="id">RSF-RMD-014</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>베어링 검사 및 교체</strong></td>
+          <td><strong>베어링 검사 및 교체</strong><br><span class="desc">베어링 마모 상태 확인 및 교체</span></td>
           <td class="id">RSF-RMD-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>기어 및 모터 검사</strong></td>
+          <td><strong>기어 및 모터 검사</strong><br><span class="desc">기어 손상, 모터 성능 검사</span></td>
           <td class="id">RSF-RMD-010</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>소프트웨어 업그레이드</strong></td>
+          <td><strong>소프트웨어 업그레이드</strong><br><span class="desc">로봇 펌웨어 및 소프트웨어 업데이트</span></td>
           <td class="id">RSF-RMD-011</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>예방적 유지보수 계획 수립</strong></td>
+          <td><strong>예방적 유지보수 계획 수립</strong><br><span class="desc">장기 유지보수 일정 개발 및 실행</span></td>
           <td class="id">RSF-RMD-015</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>긴급 고장 대응</strong></td>
+          <td><strong>긴급 고장 대응</strong><br><span class="desc">생산 중단 상황에서 신속한 복구</span></td>
           <td class="id">RSF-RMD-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>유지보수 보고서 작성</strong></td>
+          <td><strong>유지보수 보고서 작성</strong><br><span class="desc">유지보수 활동 상세 기록 및 보고</span></td>
           <td class="id">RSF-RMD-019</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
           <td>로봇 유지보수 &amp; 진단</td>
         </tr><tr>
-          <td><strong>부품 공급업체 관리</strong></td>
+          <td><strong>부품 공급업체 관리</strong><br><span class="desc">부품 공급업체와의 협력 및 품질 관리</span></td>
           <td class="id">RSF-RMD-021</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -516,85 +505,85 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>차량 동역학 및 제어</strong></td>
+          <td><strong>차량 동역학 및 제어</strong><br><span class="desc">휠 기구학, 속도 제어, 조향 제어</span></td>
           <td class="id">RSF-AMR-003</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>환경 맵 작성</strong></td>
+          <td><strong>환경 맵 작성</strong><br><span class="desc">LiDAR, 카메라를 이용한 환경 맵 생성</span></td>
           <td class="id">RSF-AMR-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>경로 계획 매개변수 조정</strong></td>
+          <td><strong>경로 계획 매개변수 조정</strong><br><span class="desc">목표점까지의 경로 계획 최적화</span></td>
           <td class="id">RSF-AMR-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>충돌 회피 설정</strong></td>
+          <td><strong>충돌 회피 설정</strong><br><span class="desc">장애물 감지 및 회피 설정</span></td>
           <td class="id">RSF-AMR-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>스테이션 도킹 설정</strong></td>
+          <td><strong>스테이션 도킹 설정</strong><br><span class="desc">충전소 및 화물 거래소 자동 도킹 설정</span></td>
           <td class="id">RSF-AMR-013</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>SLAM 개념</strong></td>
+          <td><strong>SLAM 개념</strong><br><span class="desc">동시 위치 파악 및 맵 작성의 기초 이론</span></td>
           <td class="id">RSF-AMR-001</td>
           <td class="lv">Lv3</td>
           <td>지식</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>경로 계획 알고리즘</strong></td>
+          <td><strong>경로 계획 알고리즘</strong><br><span class="desc">Dijkstra, A*, RRT 등 주요 경로 계획 알고리즘</span></td>
           <td class="id">RSF-AMR-002</td>
           <td class="lv">Lv3</td>
           <td>지식</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>GPS 및 GNSS 활용</strong></td>
+          <td><strong>GPS 및 GNSS 활용</strong><br><span class="desc">글로벌 위치 정보를 이용한 네비게이션</span></td>
           <td class="id">RSF-AMR-011</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>수동 조종 모드</strong></td>
+          <td><strong>수동 조종 모드</strong><br><span class="desc">필요시 원격으로 AMR 제어</span></td>
           <td class="id">RSF-AMR-012</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>제조 환경 맵 생성</strong></td>
+          <td><strong>제조 환경 맵 생성</strong><br><span class="desc">실제 제조 현장의 정확한 맵 생성</span></td>
           <td class="id">RSF-AMR-015</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>맵 정확도 검증</strong></td>
+          <td><strong>맵 정확도 검증</strong><br><span class="desc">생성된 맵의 정확성 확인 및 개선</span></td>
           <td class="id">RSF-AMR-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>자율 주행 운영</strong></td>
+          <td><strong>자율 주행 운영</strong><br><span class="desc">정해진 경로 내에서 자율 주행 실현</span></td>
           <td class="id">RSF-AMR-017</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>충돌 발생 시 분석</strong></td>
+          <td><strong>충돌 발생 시 분석</strong><br><span class="desc">충돌 발생 원인 파악 및 개선</span></td>
           <td class="id">RSF-AMR-018</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>운영 매뉴얼 작성</strong></td>
+          <td><strong>운영 매뉴얼 작성</strong><br><span class="desc">AMR 운영자를 위한 상세 매뉴얼 작성</span></td>
           <td class="id">RSF-AMR-019</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -609,61 +598,61 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>머신비전 카메라 및 광학</strong></td>
+          <td><strong>머신비전 카메라 및 광학</strong><br><span class="desc">카메라 센서 종류, 렌즈 특성, 조광 원리</span></td>
           <td class="id">RSF-MVS-002</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>센서 캘리브레이션 이론</strong></td>
+          <td><strong>센서 캘리브레이션 이론</strong><br><span class="desc">카메라 캘리브레이션, 좌표 변환, 정확도 평가</span></td>
           <td class="id">RSF-MVS-005</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>카메라 설정 및 조광</strong></td>
+          <td><strong>카메라 설정 및 조광</strong><br><span class="desc">카메라 해상도, 노출, 포커스 조정</span></td>
           <td class="id">RSF-MVS-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>IoT 센서·엣지 통합</strong></td>
+          <td><strong>IoT 센서·엣지 통합</strong><br><span class="desc">IoT 센서 네트워크 구성과 엣지 디바이스 데이터 수집 통합</span></td>
           <td class="id">RSF-MVS-022</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>센서-로봇 동기화</strong></td>
+          <td><strong>센서-로봇 동기화</strong><br><span class="desc">센서 신호를 로봇 동작과 동기화</span></td>
           <td class="id">RSF-MVS-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>카메라 캘리브레이션</strong></td>
+          <td><strong>카메라 캘리브레이션</strong><br><span class="desc">카메라의 왜곡 보정 및 좌표 변환</span></td>
           <td class="id">RSF-MVS-011</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>제조 환경 비전 시스템 구축</strong></td>
+          <td><strong>제조 환경 비전 시스템 구축</strong><br><span class="desc">실제 제조 라인에 비전 시스템 설치 및 검증</span></td>
           <td class="id">RSF-MVS-015</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>센서 고장 진단</strong></td>
+          <td><strong>센서 고장 진단</strong><br><span class="desc">센서 고장을 정확히 식별하고 원인 파악</span></td>
           <td class="id">RSF-MVS-017</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>대체 센서 제안</strong></td>
+          <td><strong>대체 센서 제안</strong><br><span class="desc">고장난 센서 대신 다른 센서 제안 및 적용</span></td>
           <td class="id">RSF-MVS-018</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>카메라 교체 작업</strong></td>
+          <td><strong>카메라 교체 작업</strong><br><span class="desc">고장난 카메라를 신제품으로 교체</span></td>
           <td class="id">RSF-MVS-021</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -675,45 +664,300 @@
   </section>
   <section class="dsec" id="sec-agentic-ai">
     <h2 style="border-color:#0d9488">Agentic AI Manufacturing
-      <small>자율 판단 · 34개 스킬 · 중간분류 7개</small></h2>
+      <small>자율 판단 · 60개 스킬 · 중간분류 9개</small></h2>
     
-    <details class="sub" id="sub-aa-agent-design">
-      <summary>에이전트 설계·오케스트레이션 (Orchestration AI) <small>6개 스킬</small></summary>
+    <details class="sub" id="sub-aa-flow-1">
+      <summary>① 문제 정의·업무 플로우 분석 <small>2개 스킬</small></summary>
       <table>
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>AI 에이전트 기초 개념</strong></td>
+          <td><strong>AI 에이전트 기초 개념</strong><br><span class="desc">목표 지향 에이전트, 계획-실행-관찰 루프, 도구 호출의 기본 개념</span></td>
           <td class="id">RSF-AAM-001</td>
           <td class="lv">Lv1</td>
           <td>지식</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>LLM 및 프롬프트 엔지니어링 기초</strong></td>
-          <td class="id">RSF-AAM-002</td>
-          <td class="lv">Lv2</td>
+          <td><strong>MES 및 제조 실행 프로세스</strong><br><span class="desc">작업지시, 실적 집계, 품질 이력 등 제조 실행 시스템의 핵심 프로세스</span></td>
+          <td class="id">RSF-AAM-003</td>
+          <td class="lv">Lv1</td>
           <td>지식</td>
           <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>공정 에이전트 설계</strong></td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-2">
+      <summary>② 에이전트·파이프라인 설계 <small>2개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>공정 에이전트 설계</strong><br><span class="desc">공정 목표와 제약을 반영한 AI 에이전트 역할·행동 설계</span></td>
           <td class="id">RSF-AAM-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>에이전트 도구 연동</strong></td>
+          <td><strong>실시간 데이터 파이프라인</strong><span class="badge">재분류 확정</span><br><span class="desc">센서 데이터 수집, 스트리밍, 클라우드 연결</span></td>
+          <td class="id">RSF-DTS-005</td>
+          <td class="lv">Lv3</td>
+          <td>지식</td>
+          <td>디지털트윈 &amp; 시뮬레이션</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-3">
+      <summary>③ 데이터 확보·연동 <small>7개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>에이전트 도구 연동</strong><br><span class="desc">MES, 설비, 데이터 API를 에이전트 도구로 연결</span></td>
           <td class="id">RSF-AAM-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>프롬프트 설계 및 평가</strong></td>
+          <td><strong>무선 네트워크 및 통신</strong><span class="badge">재분류 확정</span><br><span class="desc">WiFi, 5G, ROS 통신, 지연 및 안정성</span></td>
+          <td class="id">RSF-AMR-004</td>
+          <td class="lv">Lv2</td>
+          <td>지식</td>
+          <td>자율이동로봇</td>
+        </tr><tr>
+          <td><strong>네트워크 통신 설정</strong><span class="badge">재분류 확정</span><br><span class="desc">중앙 제어 시스템과 통신 설정</span></td>
+          <td class="id">RSF-AMR-014</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>자율이동로봇</td>
+        </tr><tr>
+          <td><strong>센서 신호 수집 및 필터링</strong><span class="badge">재분류 확정</span><br><span class="desc">여러 센서에서 신호 수집 및 노이즈 제거</span></td>
+          <td class="id">RSF-MVS-008</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>제조 지식그래프·온톨로지 구축</strong><span class="badge">재분류 확정</span><br><span class="desc">작업지도서·설비 매뉴얼 등 제조 지식을 그래프 DB 온톨로지로 구축·운영</span></td>
+          <td class="id">RSF-AAM-026</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>Data Fabric·기간계 시스템 연계</strong><span class="badge">재분류 확정</span><br><span class="desc">PLM·ERP·MES·QMS·EMS·EHS 등 기간계를 Data Fabric으로 연계·정합</span></td>
+          <td class="id">RSF-AAM-027</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>센서 데이터 로깅</strong><span class="badge">재분류 확정</span><br><span class="desc">센서 데이터를 자동으로 기록하고 분석</span></td>
+          <td class="id">RSF-MVS-019</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-4">
+      <summary>④ 툴·모델 개발 (LLM·비전·분석) <small>9개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>LLM 및 프롬프트 엔지니어링 기초</strong><br><span class="desc">대규모 언어 모델의 동작 특성, 프롬프트 설계 원칙, 한계와 실패 유형</span></td>
+          <td class="id">RSF-AAM-002</td>
+          <td class="lv">Lv2</td>
+          <td>지식</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>프롬프트 설계 및 평가</strong><br><span class="desc">제조 업무용 프롬프트 작성과 응답 품질 평가</span></td>
           <td class="id">RSF-AAM-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>멀티 에이전트 오케스트레이션</strong></td>
+          <td><strong>디지털 이미지 처리</strong><span class="badge">재분류 확정</span><br><span class="desc">필터링, 엣지 검출, 화소 조작 등 이미지 처리 기초</span></td>
+          <td class="id">RSF-MVS-001</td>
+          <td class="lv">Lv2</td>
+          <td>지식</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>센서 신호 처리</strong><span class="badge">재분류 확정</span><br><span class="desc">아날로그-디지털 변환, 필터링, 노이즈 제거 기초</span></td>
+          <td class="id">RSF-MVS-003</td>
+          <td class="lv">Lv2</td>
+          <td>지식</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>실시간 이미지 처리</strong><span class="badge">재분류 확정</span><br><span class="desc">고속으로 이미지를 처리하고 결과 전달</span></td>
+          <td class="id">RSF-MVS-013</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>멀티 센서 융합</strong><span class="badge">재분류 확정</span><br><span class="desc">여러 센서의 정보를 통합하여 의사결정</span></td>
+          <td class="id">RSF-MVS-014</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>제조 특화 LLM 데이터·평가</strong><span class="badge">재분류 확정</span><br><span class="desc">제조 특화 sLLM 학습·평가용 데이터 구축과 응답 품질 검증</span></td>
+          <td class="id">RSF-AAM-028</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>컴퓨터 비전 알고리즘</strong><span class="badge">재분류 확정</span><br><span class="desc">CNN, 특징 추출, 물체 인식 기초</span></td>
+          <td class="id">RSF-MVS-004</td>
+          <td class="lv">Lv3</td>
+          <td>지식</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>특징 추출 및 매칭</strong><span class="badge">재분류 확정</span><br><span class="desc">이미지에서 특징 찾기 및 매칭</span></td>
+          <td class="id">RSF-MVS-012</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-5">
+      <summary>⑤ 구현·검증 <small>7개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>휴먼-인-더-루프 승인 흐름 설계</strong><br><span class="desc">자동 판단에 사람 승인 단계를 배치하는 흐름 설계</span></td>
+          <td class="id">RSF-AAM-013</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>에이전트 가드레일 구성</strong><br><span class="desc">행동 범위 제한, 금지 규칙, 이상 행동 차단 설정</span></td>
+          <td class="id">RSF-AAM-014</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>결과 분석 및 시각화</strong><span class="badge">재분류 확정</span><br><span class="desc">시뮬레이션 결과를 그래프, 표로 표현</span></td>
+          <td class="id">RSF-DTS-014</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>디지털트윈 &amp; 시뮬레이션</td>
+        </tr><tr>
+          <td><strong>공정 시나리오 가상 검증·배포 에이전트</strong><br><span class="desc">신규 공정 시나리오를 가상 검증하고 현장 배포하는 개발 에이전트 구성</span></td>
+          <td class="id">RSF-AAM-023</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>성능 데이터 수집</strong><span class="badge">재분류 확정</span><br><span class="desc">시뮬레이션에서 성능 지표 추출</span></td>
+          <td class="id">RSF-DTS-011</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>디지털트윈 &amp; 시뮬레이션</td>
+        </tr><tr>
+          <td><strong>성능 벤치마크 테스트</strong><span class="badge">재분류 확정</span><br><span class="desc">정해진 기준으로 로봇 성능 측정</span></td>
+          <td class="id">RSF-RMD-012</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr><tr>
+          <td><strong>에이전트 안전성 검증</strong><br><span class="desc">배포 전 에이전트 행동의 안전성·규정 준수 검증 완료</span></td>
+          <td class="id">RSF-AAM-019</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-6">
+      <summary>⑥ 운영·모니터링 <small>7개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>에러 로그 분석</strong><span class="badge">재분류 확정</span><br><span class="desc">로봇 에러 코드 해석 및 해결 방법 찾기</span></td>
+          <td class="id">RSF-IRC-015</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>산업용 로봇 제어</td>
+        </tr><tr>
+          <td><strong>트렌드 분석</strong><span class="badge">재분류 확정</span><br><span class="desc">시간에 따른 성능 변화 추적 및 분석</span></td>
+          <td class="id">RSF-RMD-007</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr><tr>
+          <td><strong>자율 운영 예외 대응</strong><br><span class="desc">에이전트 자율 운영 중 예외 상황을 안전하게 수습</span></td>
+          <td class="id">RSF-AAM-015</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>에이전트 성과 평가</strong><br><span class="desc">자동화율, 개입률, 오판정률 등 에이전트 성과 측정</span></td>
+          <td class="id">RSF-AAM-018</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>협동 작업 사이클 타임 측정</strong><span class="badge">재분류 확정</span><br><span class="desc">인간-로봇 협력 작업의 소요 시간 측정</span></td>
+          <td class="id">RSF-CRO-017</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>협동로봇 운용</td>
+        </tr><tr>
+          <td><strong>에이전트 감사 추적 운영</strong><br><span class="desc">에이전트 판단·행동 이력의 기록과 추적 체계 운영</span></td>
+          <td class="id">RSF-AAM-020</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>성능 보고서 작성</strong><span class="badge">재분류 확정</span><br><span class="desc">비전 시스템 성능 지표 정리 및 보고</span></td>
+          <td class="id">RSF-MVS-020</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-flow-7">
+      <summary>⑦ 고도화·확산 <small>3개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>자율화 확산 계획</strong><br><span class="desc">검증된 자율화를 타 공정으로 확산하는 로드맵 수립</span></td>
+          <td class="id">RSF-AAM-021</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>의사결정 지원</strong><span class="badge">재분류 제안</span><br><span class="desc">시뮬레이션 기반 운영 개선 방안 제시</span></td>
+          <td class="id">RSF-DTS-021</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>디지털트윈 &amp; 시뮬레이션</td>
+        </tr><tr>
+          <td><strong>성능 지표 개선</strong><span class="badge">재분류 확정</span><br><span class="desc">가동률, 신뢰도 등 개선</span></td>
+          <td class="id">RSF-RMD-020</td>
+          <td class="lv">Lv4</td>
+          <td>역량</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="sub" id="sub-aa-multi">
+      <summary>⑧ 멀티 에이전트 <small>1개 스킬</small></summary>
+      <table>
+        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>멀티 에이전트 오케스트레이션</strong><br><span class="desc">여러 에이전트의 역할 분담과 협업 흐름 구성</span></td>
           <td class="id">RSF-AAM-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
@@ -722,224 +966,143 @@
         </tbody>
       </table>
     </details>
-    <details class="sub" id="sub-aa-mes-planning">
-      <summary>MES·생산계획 자율화 (생산 Agent) <small>9개 스킬</small></summary>
+    <details class="sub" id="sub-aa-adv">
+      <summary>심화 : 도메인 에이전트 설계 및 운영 <small>22개 스킬</small></summary>
       <table>
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>MES 및 제조 실행 프로세스</strong></td>
-          <td class="id">RSF-AAM-003</td>
-          <td class="lv">Lv1</td>
-          <td>지식</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>생산계획 및 스케줄링 이론</strong></td>
-          <td class="id">RSF-AAM-005</td>
-          <td class="lv">Lv2</td>
-          <td>지식</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>MES 워크플로 자동화</strong></td>
-          <td class="id">RSF-AAM-010</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>작업지시 자동 생성</strong></td>
-          <td class="id">RSF-AAM-011</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>생산계획 자동 수립 운영</strong></td>
-          <td class="id">RSF-AAM-017</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>재고 관리</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-018</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr><tr>
-          <td><strong>확장성 계획</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AMR-021</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>자율이동로봇</td>
-        </tr><tr>
-          <td><strong>라인 밸런싱</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-IRC-020</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>산업용 로봇 제어</td>
-        </tr><tr>
-          <td><strong>생산성 향상 제안</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-IRC-022</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>산업용 로봇 제어</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-aa-quality">
-      <summary>품질 자동 판정 (품질 Agent) <small>5개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>통계적 공정 관리(SPC)</strong></td>
+          <td><strong>통계적 공정 관리(SPC)</strong><br><span class="desc">관리도, 공정능력지수, 이상 패턴 판정 등 품질관리 통계 기법</span></td>
           <td class="id">RSF-AAM-004</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>이미지 기반 결함 검출</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>생산계획 및 스케줄링 이론</strong><br><span class="desc">APS, 유한 능력 스케줄링, 제약 기반 계획 수립의 이론적 기초</span></td>
+          <td class="id">RSF-AAM-005</td>
+          <td class="lv">Lv2</td>
+          <td>지식</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>이미지 기반 결함 검출</strong><span class="badge">재분류 제안</span><br><span class="desc">비전 소프트웨어를 이용한 결함 검출 설정</span></td>
           <td class="id">RSF-MVS-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>머신비전 &amp; 센서 통합</td>
         </tr><tr>
-          <td><strong>품질 이상 자동 판정</strong></td>
+          <td><strong>로봇 상태 모니터링</strong><span class="badge">재분류 확정</span><br><span class="desc">센서 데이터를 통한 로봇 상태 실시간 모니터링</span></td>
+          <td class="id">RSF-RMD-006</td>
+          <td class="lv">Lv2</td>
+          <td>기술</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr><tr>
+          <td><strong>MES 워크플로 자동화</strong><br><span class="desc">반복적인 MES 업무 흐름을 에이전트로 자동화</span></td>
+          <td class="id">RSF-AAM-010</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>작업지시 자동 생성</strong><br><span class="desc">생산 상황을 반영한 작업지시 자동 작성</span></td>
+          <td class="id">RSF-AAM-011</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>품질 이상 자동 판정</strong><br><span class="desc">검사 데이터 기반 불량 판정 및 원인 후보 제시</span></td>
           <td class="id">RSF-AAM-012</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>품질 이상 자동 격리 운영</strong></td>
+          <td><strong>품질 이상 자동 격리 운영</strong><br><span class="desc">불량 판정품의 자동 격리 프로세스 운영 및 검증</span></td>
           <td class="id">RSF-AAM-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>검출율 목표 달성</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-016</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-aa-autonomous-ops">
-      <summary>자율 관제·물류 (물류 Agent) <small>6개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>자율 운영 예외 대응</strong></td>
-          <td class="id">RSF-AAM-015</td>
+          <td><strong>생산계획 자동 수립 운영</strong><br><span class="desc">APS 기반 자동 계획 수립을 운영하고 결과 검증</span></td>
+          <td class="id">RSF-AAM-017</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>자재·협력사 연동 자율화</strong></td>
+          <td><strong>자율 정비 실행 에이전트 운영</strong><br><span class="desc">고장 예측과 연계해 자율 정비를 실행하는 설비 에이전트 운영·검증</span></td>
+          <td class="id">RSF-AAM-022</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>Agentic AI 제조</td>
+        </tr><tr>
+          <td><strong>자재·협력사 연동 자율화</strong><br><span class="desc">자재 부족·지연 예측과 협력사 연동 기반의 자재투입 자율 운영</span></td>
           <td class="id">RSF-AAM-024</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>함대 관리 시스템</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>함대 관리 시스템</strong><span class="badge">재분류 제안</span><br><span class="desc">멀티-로봇 조율, 중앙 제어, 교통 관제</span></td>
           <td class="id">RSF-AMR-005</td>
           <td class="lv">Lv3</td>
           <td>지식</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>멀티-로봇 교통 관제</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>멀티-로봇 교통 관제</strong><span class="badge">재분류 제안</span><br><span class="desc">여러 AMR의 움직임을 조율하여 충돌 방지</span></td>
           <td class="id">RSF-AMR-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>In-Factory 물류·SCM 실행 통합</strong></td>
+          <td><strong>함대 성능 모니터링</strong><span class="badge">재분류 확정</span><br><span class="desc">전체 함대의 운영 현황 모니터링</span></td>
+          <td class="id">RSF-AMR-010</td>
+          <td class="lv">Lv3</td>
+          <td>기술</td>
+          <td>자율이동로봇</td>
+        </tr><tr>
+          <td><strong>검출율 목표 달성</strong><span class="badge">재분류 제안</span><br><span class="desc">정해진 검출율(95% 이상) 달성</span></td>
+          <td class="id">RSF-MVS-016</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>머신비전 &amp; 센서 통합</td>
+        </tr><tr>
+          <td><strong>부품 수명 예측</strong><span class="badge">재분류 확정</span><br><span class="desc">부품 교체 시기 미리 예측</span></td>
+          <td class="id">RSF-RMD-017</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr><tr>
+          <td><strong>재고 관리</strong><span class="badge">재분류 제안</span><br><span class="desc">필요한 예비 부품 보유 및 관리</span></td>
+          <td class="id">RSF-RMD-018</td>
+          <td class="lv">Lv3</td>
+          <td>역량</td>
+          <td>로봇 유지보수 &amp; 진단</td>
+        </tr><tr>
+          <td><strong>In-Factory 물류·SCM 실행 통합</strong><br><span class="desc">완제품 자율 이송·창고 자동화와 SCM 실행 데이터를 통합 운영</span></td>
           <td class="id">RSF-AAM-025</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
           <td>Agentic AI 제조</td>
         </tr><tr>
-          <td><strong>의사결정 지원</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-DTS-021</td>
+          <td><strong>성능 지표 분석</strong><span class="badge">재분류 확정</span><br><span class="desc">주행 거리, 배터리 소모, 업타임 등 분석</span></td>
+          <td class="id">RSF-AMR-020</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
-          <td>디지털트윈 &amp; 시뮬레이션</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-aa-governance">
-      <summary>안전·거버넌스 (안전환경 Agent) <small>6개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>휴먼-인-더-루프 승인 흐름 설계</strong></td>
-          <td class="id">RSF-AAM-013</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
+          <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>에이전트 가드레일 구성</strong></td>
-          <td class="id">RSF-AAM-014</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>에이전트 성과 평가</strong></td>
-          <td class="id">RSF-AAM-018</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>에이전트 안전성 검증</strong></td>
-          <td class="id">RSF-AAM-019</td>
+          <td><strong>확장성 계획</strong><span class="badge">재분류 제안</span><br><span class="desc">로봇 수 증가 시 시스템 확장 방안</span></td>
+          <td class="id">RSF-AMR-021</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
-          <td>Agentic AI 제조</td>
+          <td>자율이동로봇</td>
         </tr><tr>
-          <td><strong>에이전트 감사 추적 운영</strong></td>
-          <td class="id">RSF-AAM-020</td>
+          <td><strong>라인 밸런싱</strong><span class="badge">재분류 제안</span><br><span class="desc">여러 로봇의 작업 시간을 균등하게 배분</span></td>
+          <td class="id">RSF-IRC-020</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
-          <td>Agentic AI 제조</td>
+          <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>자율화 확산 계획</strong></td>
-          <td class="id">RSF-AAM-021</td>
+          <td><strong>생산성 향상 제안</strong><span class="badge">재분류 제안</span><br><span class="desc">로봇 운용 효율성 개선 방안 제시</span></td>
+          <td class="id">RSF-IRC-022</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
-          <td>Agentic AI 제조</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-aa-equipment">
-      <summary>자율 정비 실행 (설비 Agent) <small>1개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>자율 정비 실행 에이전트 운영</strong></td>
-          <td class="id">RSF-AAM-022</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>Agentic AI 제조</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-aa-dev-agent">
-      <summary>공정 검증·배포 (개발 Agent) <small>1개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>공정 시나리오 가상 검증·배포 에이전트</strong></td>
-          <td class="id">RSF-AAM-023</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
+          <td>산업용 로봇 제어</td>
         </tr>
         </tbody>
       </table>
@@ -955,37 +1118,37 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>물리 시뮬레이션 엔진</strong></td>
+          <td><strong>물리 시뮬레이션 엔진</strong><br><span class="desc">Gazebo, CoppeliaSim, Isaac Sim 등 시뮬레이션 플랫폼</span></td>
           <td class="id">RSF-DTS-002</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>3D 모델링 및 메시 생성</strong></td>
+          <td><strong>3D 모델링 및 메시 생성</strong><br><span class="desc">CAD, STL, URDF, 메시 최적화</span></td>
           <td class="id">RSF-DTS-003</td>
           <td class="lv">Lv2</td>
           <td>지식</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>3D 모델 CAD 임포트</strong></td>
+          <td><strong>3D 모델 CAD 임포트</strong><br><span class="desc">CAD 파일을 시뮬레이션 환경으로 가져오기</span></td>
           <td class="id">RSF-DTS-006</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>로봇 시뮬레이션 환경 구성</strong></td>
+          <td><strong>로봇 시뮬레이션 환경 구성</strong><br><span class="desc">Gazebo, CoppeliaSim 등에서 로봇 환경 설정</span></td>
           <td class="id">RSF-DTS-007</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>디지털트윈 아키텍처</strong></td>
+          <td><strong>디지털트윈 아키텍처</strong><br><span class="desc">물리 시스템과 디지털 복제본의 동기화 아키텍처</span></td>
           <td class="id">RSF-DTS-001</td>
           <td class="lv">Lv3</td>
           <td>지식</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>로봇 시뮬레이션 소프트웨어</strong></td>
+          <td><strong>로봇 시뮬레이션 소프트웨어</strong><br><span class="desc">ROS, MoveIt, URSim 등 로봇 시뮬레이션 플랫폼</span></td>
           <td class="id">RSF-DTS-004</td>
           <td class="lv">Lv3</td>
           <td>지식</td>
@@ -1000,13 +1163,13 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>시나리오 시뮬레이션</strong></td>
+          <td><strong>시나리오 시뮬레이션</strong><br><span class="desc">고장, 병목 상황 시뮬레이션</span></td>
           <td class="id">RSF-DTS-012</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>운영 시나리오 시뮬레이션</strong></td>
+          <td><strong>운영 시나리오 시뮬레이션</strong><br><span class="desc">고장, 지연 등 운영 상황 사전 검토</span></td>
           <td class="id">RSF-DTS-017</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
@@ -1021,25 +1184,25 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>생산 라인 레이아웃 검증</strong></td>
+          <td><strong>생산 라인 레이아웃 검증</strong><br><span class="desc">장비 배치의 충돌 여부 확인</span></td>
           <td class="id">RSF-DTS-008</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>사이클 타임 시뮬레이션</strong></td>
+          <td><strong>사이클 타임 시뮬레이션</strong><br><span class="desc">프로그램 실행 시간 측정</span></td>
           <td class="id">RSF-DTS-009</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>신규 라인 설계 시뮬레이션</strong></td>
+          <td><strong>신규 라인 설계 시뮬레이션</strong><br><span class="desc">신규 제조 라인 설계 시 시뮬레이션 검증 완료</span></td>
           <td class="id">RSF-DTS-015</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>설계 리스크 식별</strong></td>
+          <td><strong>설계 리스크 식별</strong><br><span class="desc">시뮬레이션 기반 설계 문제 사전 발견</span></td>
           <td class="id">RSF-DTS-016</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
@@ -1054,25 +1217,25 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>협동 작업 시뮬레이션</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>협동 작업 시뮬레이션</strong><span class="badge">재분류 제안</span><br><span class="desc">시뮬레이션에서 인간-로봇 협력 검증</span></td>
           <td class="id">RSF-CRO-012</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>협동로봇 운용</td>
         </tr><tr>
-          <td><strong>에뮬레이션·가상 커미셔닝</strong></td>
+          <td><strong>에뮬레이션·가상 커미셔닝</strong><br><span class="desc">제어 로직을 에뮬레이터로 검증해 설비 도입 전 가상 커미셔닝 수행</span></td>
           <td class="id">RSF-DTS-022</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>시뮬레이션 기반 프로그래밍</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>시뮬레이션 기반 프로그래밍</strong><span class="badge">재분류 제안</span><br><span class="desc">시뮬레이션 환경에서 프로그램 테스트</span></td>
           <td class="id">RSF-IRC-012</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>산업용 로봇 제어</td>
         </tr><tr>
-          <td><strong>시뮬레이션 비전 파이프라인</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>시뮬레이션 비전 파이프라인</strong><span class="badge">재분류 제안</span><br><span class="desc">시뮬레이션 환경에서 비전 시스템 구성</span></td>
           <td class="id">RSF-MVS-010</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
@@ -1087,25 +1250,25 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>실제 로봇 동기화</strong></td>
+          <td><strong>실제 로봇 동기화</strong><br><span class="desc">시뮬레이션과 실제 로봇 동기화</span></td>
           <td class="id">RSF-DTS-010</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>데이터 인터페이스 개발</strong></td>
+          <td><strong>데이터 인터페이스 개발</strong><br><span class="desc">현장 데이터와 시뮬레이션 환경을 연결하는 데이터 인터페이스 설계·개발</span></td>
           <td class="id">RSF-DTS-023</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>시뮬레이션-실데이터 정합성 검증</strong></td>
+          <td><strong>시뮬레이션-실데이터 정합성 검증</strong><br><span class="desc">시뮬레이션 결과와 실제 현장 데이터의 정합성을 비교·검증</span></td>
           <td class="id">RSF-DTS-024</td>
           <td class="lv">Lv3</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>설계-운영 연동</strong></td>
+          <td><strong>설계-운영 연동</strong><br><span class="desc">설계 변경 사항을 빠르게 운영에 반영</span></td>
           <td class="id">RSF-DTS-020</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -1120,13 +1283,13 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>디지털트윈 유지보수</strong></td>
+          <td><strong>디지털트윈 유지보수</strong><br><span class="desc">시뮬레이션 모델을 최신 상태로 유지</span></td>
           <td class="id">RSF-DTS-019</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>실시간 데이터 기반 시뮬레이션</strong></td>
+          <td><strong>실시간 데이터 기반 시뮬레이션</strong><br><span class="desc">실시간 현장 데이터로 디지털트윈이 운영 단계에서 계속 동작하도록 유지</span></td>
           <td class="id">RSF-DTS-025</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
@@ -1141,229 +1304,23 @@
         <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
         <tbody>
         <tr>
-          <td><strong>최적화 시뮬레이션</strong></td>
+          <td><strong>최적화 시뮬레이션</strong><br><span class="desc">최적의 파라미터 찾기 위한 시뮬레이션</span></td>
           <td class="id">RSF-DTS-013</td>
           <td class="lv">Lv2</td>
           <td>기술</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>최적화된 사이클 타임 달성</strong></td>
+          <td><strong>최적화된 사이클 타임 달성</strong><br><span class="desc">시뮬레이션으로 검증된 최적 사이클 타임 달성</span></td>
           <td class="id">RSF-DTS-018</td>
           <td class="lv">Lv3</td>
           <td>역량</td>
           <td>디지털트윈 &amp; 시뮬레이션</td>
         </tr><tr>
-          <td><strong>협동 로봇 배치 최적화</strong><span class="badge">재분류 제안</span></td>
+          <td><strong>협동 로봇 배치 최적화</strong><span class="badge">재분류 제안</span><br><span class="desc">작업 공간 내 협동로봇의 최적 위치 결정</span></td>
           <td class="id">RSF-CRO-021</td>
           <td class="lv">Lv4</td>
           <td>역량</td>
           <td>협동로봇 운용</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-  </section>
-  <section class="dsec" id="sec-data-intelligence">
-    <h2 style="border-color:#0891b2">Data Intelligence
-      <small>데이터 허브 · 26개 스킬 · 중간분류 5개</small></h2>
-    
-    <details class="sub" id="sub-di-signal">
-      <summary>신호·이미지 처리 <small>6개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>디지털 이미지 처리</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-001</td>
-          <td class="lv">Lv2</td>
-          <td>지식</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>센서 신호 처리</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-003</td>
-          <td class="lv">Lv2</td>
-          <td>지식</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>실시간 이미지 처리</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-013</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>멀티 센서 융합</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-014</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>컴퓨터 비전 알고리즘</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-004</td>
-          <td class="lv">Lv3</td>
-          <td>지식</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>특징 추출 및 매칭</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-012</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-di-pipeline">
-      <summary>데이터 파이프라인·로깅 <small>4개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>센서 신호 수집 및 필터링</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-008</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>실시간 데이터 파이프라인</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-DTS-005</td>
-          <td class="lv">Lv3</td>
-          <td>지식</td>
-          <td>디지털트윈 &amp; 시뮬레이션</td>
-        </tr><tr>
-          <td><strong>성능 데이터 수집</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-DTS-011</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>디지털트윈 &amp; 시뮬레이션</td>
-        </tr><tr>
-          <td><strong>센서 데이터 로깅</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-019</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-di-analytics">
-      <summary>분석·예측 인텔리전스 <small>11개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>결과 분석 및 시각화</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-DTS-014</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>디지털트윈 &amp; 시뮬레이션</td>
-        </tr><tr>
-          <td><strong>에러 로그 분석</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-IRC-015</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>산업용 로봇 제어</td>
-        </tr><tr>
-          <td><strong>로봇 상태 모니터링</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-006</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr><tr>
-          <td><strong>트렌드 분석</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-007</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr><tr>
-          <td><strong>함대 성능 모니터링</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AMR-010</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>자율이동로봇</td>
-        </tr><tr>
-          <td><strong>협동 작업 사이클 타임 측정</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-CRO-017</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>협동로봇 운용</td>
-        </tr><tr>
-          <td><strong>성능 벤치마크 테스트</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-012</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr><tr>
-          <td><strong>부품 수명 예측</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-017</td>
-          <td class="lv">Lv3</td>
-          <td>역량</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr><tr>
-          <td><strong>성능 지표 분석</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AMR-020</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>자율이동로봇</td>
-        </tr><tr>
-          <td><strong>성능 보고서 작성</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-MVS-020</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>머신비전 &amp; 센서 통합</td>
-        </tr><tr>
-          <td><strong>성능 지표 개선</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-RMD-020</td>
-          <td class="lv">Lv4</td>
-          <td>역량</td>
-          <td>로봇 유지보수 &amp; 진단</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-di-network">
-      <summary>OT 네트워크·통신 <small>2개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>무선 네트워크 및 통신</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AMR-004</td>
-          <td class="lv">Lv2</td>
-          <td>지식</td>
-          <td>자율이동로봇</td>
-        </tr><tr>
-          <td><strong>네트워크 통신 설정</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AMR-014</td>
-          <td class="lv">Lv2</td>
-          <td>기술</td>
-          <td>자율이동로봇</td>
-        </tr>
-        </tbody>
-      </table>
-    </details>
-    <details class="sub" id="sub-di-knowledge">
-      <summary>지식그래프·Data Fabric <small>3개 스킬</small></summary>
-      <table>
-        <thead><tr><th>스킬</th><th>ID</th><th>레벨</th><th>유형</th><th>기능 도메인(참고)</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>제조 지식그래프·온톨로지 구축</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AAM-026</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>Data Fabric·기간계 시스템 연계</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AAM-027</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
-        </tr><tr>
-          <td><strong>제조 특화 LLM 데이터·평가</strong><span class="badge">재분류 제안</span></td>
-          <td class="id">RSF-AAM-028</td>
-          <td class="lv">Lv3</td>
-          <td>기술</td>
-          <td>Agentic AI 제조</td>
         </tr>
         </tbody>
       </table>
@@ -1409,7 +1366,7 @@
     })();
   </script>
 
-  <footer>AI Factory Skill Fab · 4대 도메인 스킬 맵 정적 발행본 (2026-07-20) —
+  <footer>AI Factory Skill Fab · 4대 도메인 스킬 맵 정적 발행본 (2026-07-21) —
     온톨로지 변경 시 <code>npm run generate:domains-html</code> 로 재발행하십시오.</footer>
 </div>
 </body>

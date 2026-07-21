@@ -23,6 +23,14 @@ for (const file of [
   fs.copyFileSync(path.join(sourceDataDir, file), path.join(tempDir, file));
 }
 
+// 운영 장부에 이미 기록된 결정과 무관하게 검증하도록 임시 장부는 비운다.
+{
+  const ledgerPath = path.join(tempDir, "college-override-decisions.json");
+  const ledger = JSON.parse(fs.readFileSync(ledgerPath, "utf-8"));
+  ledger.decisions = [];
+  fs.writeFileSync(ledgerPath, `${JSON.stringify(ledger, null, 2)}\n`);
+}
+
 function run(args) {
   return execFileSync(
     process.execPath,
@@ -116,7 +124,7 @@ const rejected = readLedger().decisions.find(
 assert.strictEqual(rejected.status, "rejected");
 assert.strictEqual(
   rejected.override_snapshot.primary,
-  "data-intelligence",
+  "agentic-ai",
   "반려 결정에도 원래 제안 내용이 스냅샷으로 남아야 합니다.",
 );
 

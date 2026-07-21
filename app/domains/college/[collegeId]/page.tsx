@@ -86,17 +86,17 @@ export default async function CollegeDetailPage({
           </p>
           {isWorkflow && (
             <p className={styles.workflowNote}>
-              현장 업무 흐름 순서(①→⑦)로 배열했습니다. 스킬은 단계 내
-              우선순위 순이며, ★핵심·기초 역량·재정의 검토를 표시합니다.
+              현장 업무 흐름 순서(①→⑦)로 배열했습니다. 스킬은 단계 내 우선순위
+              순이며, ★핵심·기초 역량·재정의 검토를 표시합니다.
             </p>
           )}
           {collegeClusters.length > 0 && (
             <p className={styles.workflowNote}>
               검증 편의를 위해 {clusteredSkillIds.size}개 세부 스킬을{" "}
-              {collegeClusters.length}개 클러스터로 묶어 표시합니다.
-              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다. 지정
-              평가자는 <Link href="/evaluation/skills">스킬평가</Link>에서
-              스킬별 중요도·라벨 평가를 진행할 수 있습니다.
+              {collegeClusters.length}개 클러스터로 묶어 표시합니다. 클러스터를
+              펼치면 포함된 세부 스킬을 볼 수 있습니다. 지정 평가자는{" "}
+              <Link href="/evaluation/skills">스킬평가</Link>에서 스킬별
+              중요도·라벨 평가를 진행할 수 있습니다.
             </p>
           )}
         </div>
@@ -169,6 +169,11 @@ export default async function CollegeDetailPage({
                         {skill.skill_id} · Lv{skill.proficiency_level} ·{" "}
                         {getDomainName(skill.domain)}
                       </span>
+                      {skill.description_ko && (
+                        <span className={styles.skillDesc}>
+                          {skill.description_ko}
+                        </span>
+                      )}
                     </Link>
                   </li>
                 );
@@ -212,9 +217,9 @@ export default async function CollegeDetailPage({
       })}
 
       <p className={styles.footNote}>
-        기능 도메인 표기는 세부 기준(참고 분류)입니다. 분류·순서가 어색한
-        스킬은 <Link href="/evaluation">평가 페이지</Link>에서 도메인
-        변경요청으로 접수해 주세요.
+        기능 도메인 표기는 세부 기준(참고 분류)입니다. 분류·순서가 어색한 스킬은{" "}
+        <Link href="/evaluation">평가 페이지</Link>에서 도메인 변경요청으로
+        접수해 주세요.
       </p>
     </main>
   );
@@ -261,6 +266,9 @@ function ClusterCard({
                 {skill.skill_id} · Lv{skill.proficiency_level} ·{" "}
                 {getDomainName(skill.domain)}
               </span>
+              {skill.description_ko && (
+                <span className={styles.skillDesc}>{skill.description_ko}</span>
+              )}
             </Link>
           </li>
         ))}

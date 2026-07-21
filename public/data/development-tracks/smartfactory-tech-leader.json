@@ -21,9 +21,18 @@
     {
       "id": "agentic-ai",
       "name": "Agentic AI Manufacturing",
-      "description": "AI 에이전트, MES 자율화, 품질관리 의사결정을 제조 운영에 연결합니다.",
-      "domain_keys": ["industrial-robot-control", "machine-vision-sensor"],
-      "core_skill_ids": ["RSF-IRC-009", "RSF-MVS-011", "RSF-CRO-006"],
+      "description": "AI 에이전트, MES 자율화, 품질관리 의사결정을 제조 운영에 연결합니다. 데이터 파이프라인·제조 인텔리전스 기반을 포함합니다.",
+      "domain_keys": [
+        "industrial-robot-control",
+        "machine-vision-sensor",
+        "robot-maintenance-diagnostics"
+      ],
+      "core_skill_ids": [
+        "RSF-IRC-009",
+        "RSF-MVS-011",
+        "RSF-CRO-006",
+        "RSF-MVS-001"
+      ],
       "target_proficiency_level": 3
     },
     {
@@ -35,14 +44,6 @@
         "robot-maintenance-diagnostics"
       ],
       "core_skill_ids": ["RSF-DTS-001", "RSF-DTS-002", "RSF-RMD-019"],
-      "target_proficiency_level": 3
-    },
-    {
-      "id": "data-intelligence",
-      "name": "Data Intelligence",
-      "description": "데이터 파이프라인, 제조 인텔리전스, OT 보안으로 모든 영역을 잇는 공통 허브를 구축합니다.",
-      "domain_keys": ["machine-vision-sensor", "robot-maintenance-diagnostics"],
-      "core_skill_ids": ["RSF-MVS-001", "RSF-MVS-016", "RSF-RMD-002"],
       "target_proficiency_level": 3
     }
   ],

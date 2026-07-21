@@ -9,14 +9,6 @@
       "order": 1
     },
     {
-      "id": "data-intelligence",
-      "name": "Data Intelligence",
-      "nameKo": "데이터 인텔리전스 칼리지",
-      "role": "데이터 허브",
-      "isHub": true,
-      "order": 4
-    },
-    {
       "id": "agentic-ai",
       "name": "Agentic AI Manufacturing",
       "nameKo": "제조 Agentic AI 칼리지",
@@ -48,7 +40,7 @@
       "tier": 2,
       "name": "AX Practitioner",
       "certification": "로봇 실무 자격",
-      "prerequisites": ["physical-ai-lv1", "data-intelligence-lv1"]
+      "prerequisites": ["physical-ai-lv1", "agentic-ai-lv1"]
     },
     {
       "id": "physical-ai-lv3",
@@ -56,7 +48,7 @@
       "tier": 3,
       "name": "AX Specialist",
       "certification": "로봇 전문가 자격",
-      "prerequisites": ["physical-ai-lv2", "data-intelligence-lv2"]
+      "prerequisites": ["physical-ai-lv2", "agentic-ai-lv2"]
     },
     {
       "id": "physical-ai-lv4",
@@ -64,39 +56,7 @@
       "tier": 4,
       "name": "AX Expert",
       "certification": "Cross-College Capstone",
-      "prerequisites": ["physical-ai-lv3", "data-intelligence-lv3"]
-    },
-    {
-      "id": "data-intelligence-lv1",
-      "collegeId": "data-intelligence",
-      "tier": 1,
-      "name": "AX Starter",
-      "certification": "IIoT 운용 자격",
-      "prerequisites": []
-    },
-    {
-      "id": "data-intelligence-lv2",
-      "collegeId": "data-intelligence",
-      "tier": 2,
-      "name": "AX Practitioner",
-      "certification": "데이터 실무 자격",
-      "prerequisites": ["data-intelligence-lv1"]
-    },
-    {
-      "id": "data-intelligence-lv3",
-      "collegeId": "data-intelligence",
-      "tier": 3,
-      "name": "AX Specialist",
-      "certification": "인텔리전스 자격",
-      "prerequisites": ["data-intelligence-lv2"]
-    },
-    {
-      "id": "data-intelligence-lv4",
-      "collegeId": "data-intelligence",
-      "tier": 4,
-      "name": "AX Expert",
-      "certification": "Cross-College Capstone",
-      "prerequisites": ["data-intelligence-lv3"]
+      "prerequisites": ["physical-ai-lv3", "agentic-ai-lv3"]
     },
     {
       "id": "agentic-ai-lv1",
@@ -112,7 +72,7 @@
       "tier": 2,
       "name": "AX Practitioner",
       "certification": "에이전트 자격",
-      "prerequisites": ["agentic-ai-lv1", "data-intelligence-lv1"]
+      "prerequisites": ["agentic-ai-lv1"]
     },
     {
       "id": "agentic-ai-lv3",
@@ -120,7 +80,7 @@
       "tier": 3,
       "name": "AX Specialist",
       "certification": "Agentic 전문 자격",
-      "prerequisites": ["agentic-ai-lv2", "data-intelligence-lv2"]
+      "prerequisites": ["agentic-ai-lv2"]
     },
     {
       "id": "agentic-ai-lv4",
@@ -128,7 +88,7 @@
       "tier": 4,
       "name": "AX Expert",
       "certification": "Cross-College Capstone",
-      "prerequisites": ["agentic-ai-lv3", "data-intelligence-lv3"]
+      "prerequisites": ["agentic-ai-lv3"]
     },
     {
       "id": "digital-twin-lv1",
@@ -144,7 +104,7 @@
       "tier": 2,
       "name": "AX Practitioner",
       "certification": "시뮬레이션 자격",
-      "prerequisites": ["digital-twin-lv1", "data-intelligence-lv1"]
+      "prerequisites": ["digital-twin-lv1", "agentic-ai-lv1"]
     },
     {
       "id": "digital-twin-lv3",
@@ -152,7 +112,7 @@
       "tier": 3,
       "name": "AX Specialist",
       "certification": "DT 전문가 자격",
-      "prerequisites": ["digital-twin-lv2", "data-intelligence-lv2"]
+      "prerequisites": ["digital-twin-lv2", "agentic-ai-lv2"]
     },
     {
       "id": "digital-twin-lv4",
@@ -160,7 +120,7 @@
       "tier": 4,
       "name": "AX Expert",
       "certification": "Cross-College Capstone",
-      "prerequisites": ["digital-twin-lv3", "data-intelligence-lv3"]
+      "prerequisites": ["digital-twin-lv3", "agentic-ai-lv3"]
     }
   ],
   "domainMapping": {
@@ -171,55 +131,55 @@
     },
     "machine-vision-sensor": {
       "primary": "physical-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": ["agentic-ai"],
       "defaultLevelTier": 2
     },
     "collaborative-robot": {
       "primary": "physical-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": ["agentic-ai"],
       "defaultLevelTier": 2
     },
     "autonomous-mobile-robot": {
       "primary": "physical-ai",
-      "secondary": ["agentic-ai", "data-intelligence"],
+      "secondary": ["agentic-ai"],
       "defaultLevelTier": 3
     },
     "robot-maintenance-diagnostics": {
       "primary": "physical-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": ["agentic-ai"],
       "defaultLevelTier": 2
     },
     "digital-twin-simulation": {
       "primary": "digital-twin",
-      "secondary": ["data-intelligence"],
+      "secondary": ["agentic-ai"],
       "defaultLevelTier": 2
     },
     "agentic-ai-manufacturing": {
       "primary": "agentic-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": [],
       "defaultLevelTier": 2
     }
   },
   "skillOverrides": {
     "RSF-AAM-026": {
-      "primary": "data-intelligence",
-      "secondary": ["agentic-ai"],
-      "source": "proposed"
+      "primary": "agentic-ai",
+      "secondary": [],
+      "source": "reviewed"
     },
     "RSF-AAM-027": {
-      "primary": "data-intelligence",
-      "secondary": ["agentic-ai"],
-      "source": "proposed"
+      "primary": "agentic-ai",
+      "secondary": [],
+      "source": "reviewed"
     },
     "RSF-AAM-028": {
-      "primary": "data-intelligence",
-      "secondary": ["agentic-ai"],
-      "source": "proposed"
+      "primary": "agentic-ai",
+      "secondary": [],
+      "source": "reviewed"
     },
     "RSF-AMR-004": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-AMR-005": {
       "primary": "agentic-ai",
@@ -232,19 +192,19 @@
       "source": "proposed"
     },
     "RSF-AMR-010": {
-      "primary": "data-intelligence",
-      "secondary": ["agentic-ai"],
-      "source": "proposed"
+      "primary": "agentic-ai",
+      "secondary": [],
+      "source": "reviewed"
     },
     "RSF-AMR-014": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-AMR-020": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-AMR-021": {
       "primary": "agentic-ai",
@@ -257,9 +217,9 @@
       "source": "proposed"
     },
     "RSF-CRO-017": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-CRO-021": {
       "primary": "digital-twin",
@@ -267,19 +227,19 @@
       "source": "proposed"
     },
     "RSF-DTS-005": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["digital-twin"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-DTS-011": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["digital-twin"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-DTS-014": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["digital-twin"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-DTS-021": {
       "primary": "agentic-ai",
@@ -292,9 +252,9 @@
       "source": "proposed"
     },
     "RSF-IRC-015": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-IRC-020": {
       "primary": "agentic-ai",
@@ -303,98 +263,98 @@
     },
     "RSF-IRC-022": {
       "primary": "agentic-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": [],
       "source": "proposed"
     },
     "RSF-MVS-001": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-003": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-004": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-007": {
       "primary": "agentic-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": [],
       "source": "proposed"
     },
     "RSF-MVS-008": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-010": {
       "primary": "digital-twin",
-      "secondary": ["data-intelligence"],
+      "secondary": ["agentic-ai"],
       "source": "proposed"
     },
     "RSF-MVS-012": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-013": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-014": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-016": {
       "primary": "agentic-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": [],
       "source": "proposed"
     },
     "RSF-MVS-019": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-MVS-020": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-RMD-006": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-RMD-007": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": [],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-RMD-012": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-RMD-017": {
-      "primary": "data-intelligence",
+      "primary": "agentic-ai",
       "secondary": ["physical-ai"],
-      "source": "proposed"
+      "source": "reviewed"
     },
     "RSF-RMD-018": {
       "primary": "agentic-ai",
-      "secondary": ["data-intelligence"],
+      "secondary": [],
       "source": "proposed"
     },
     "RSF-RMD-020": {
-      "primary": "data-intelligence",
-      "secondary": ["agentic-ai"],
-      "source": "proposed"
+      "primary": "agentic-ai",
+      "secondary": [],
+      "source": "reviewed"
     }
   }
 }

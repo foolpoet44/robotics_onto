@@ -47,30 +47,85 @@ const BANDS = [
 // 발행 시점 기준의 대표 국제표준·교재·공개 강좌. 사내 교보재 확정 시 대체한다.
 
 const REFS_BY_SUBCATEGORY = {
-  "pa-industrial": ["ISO 10218-1/-2 (산업용 로봇 안전)", "J. Craig, 『Introduction to Robotics: Mechanics and Control』", "VLA/로봇 파운데이션 모델 공개 문헌(RT-2, π0 등)·Hugging Face LeRobot 튜토리얼"],
-  "pa-cobot": ["ISO/TS 15066 (협동로봇 안전)", "협동로봇 제조사 공인 교육과정 (예: UR Academy)"],
-  "pa-maintenance": ["ISO 13374/13381 (상태감시·예지진단)", "『Maintenance Engineering Handbook』 (Mobley)"],
-  "pa-amr": ["S. Thrun 외, 『Probabilistic Robotics』", "ROS 2 Nav2 공식 문서, VDA 5050 (AGV 인터페이스)"],
-  "pa-vision-hw": ["R. Szeliski, 『Computer Vision: Algorithms and Applications』", "GenICam/GigE Vision 표준"],
-  "aa-agent-design": ["UC Berkeley LLM Agents 공개 강좌", "Anthropic/OpenAI 에이전트 설계 가이드, ReAct 논문"],
-  "aa-mes-planning": ["IEC 62264 (ISA-95, 기업-제어 통합)", "Hopp & Spearman, 『Factory Physics』"],
-  "aa-quality": ["D. Montgomery, 『Introduction to Statistical Quality Control』", "AIAG SPC 매뉴얼"],
-  "aa-autonomous-ops": ["VDA 5050", "Bartholdi & Hackman, 『Warehouse & Distribution Science』"],
-  "aa-governance": ["NIST AI Risk Management Framework", "ISO/IEC 42001 (AI 경영시스템)"],
-  "aa-equipment": ["ISO 13381-1 (예지진단 프로세스)", "PHM Society 튜토리얼 자료"],
-  "aa-dev-agent": ["MLOps/CI·CD 실무 문헌 (예: 『Reliable Machine Learning』)", "이산사건 시뮬레이션 기반 공정 검증 사례"],
-  "di-signal": ["Gonzalez & Woods, 『Digital Image Processing』", "Oppenheim, 『Signals and Systems』"],
-  "di-pipeline": ["M. Kleppmann, 『Designing Data-Intensive Applications』"],
-  "di-analytics": ["『An Introduction to Statistical Learning』 (James 외)", "시계열 분석 개론 (Hyndman, 『Forecasting: Principles and Practice』)"],
-  "di-network": ["IEC 62541 (OPC UA)", "MQTT/Sparkplug B 사양, TSN 개요"],
-  "di-knowledge": ["W3C RDF/OWL/SPARQL 표준", "Hogan 외, 『Knowledge Graphs』, LLM 파인튜닝·평가 공개 강좌"],
-  "dt-modeling": ["ISO 23247 (제조 디지털트윈 프레임워크)", "URDF/OpenUSD 문서"],
-  "dt-scenario": ["J. Banks 외, 『Discrete-Event System Simulation』 (시나리오 설계)"],
+  "pa-industrial": [
+    "ISO 10218-1/-2 (산업용 로봇 안전)",
+    "J. Craig, 『Introduction to Robotics: Mechanics and Control』",
+    "VLA/로봇 파운데이션 모델 공개 문헌(RT-2, π0 등)·Hugging Face LeRobot 튜토리얼",
+  ],
+  "pa-cobot": [
+    "ISO/TS 15066 (협동로봇 안전)",
+    "협동로봇 제조사 공인 교육과정 (예: UR Academy)",
+  ],
+  "pa-maintenance": [
+    "ISO 13374/13381 (상태감시·예지진단)",
+    "『Maintenance Engineering Handbook』 (Mobley)",
+  ],
+  "pa-amr": [
+    "S. Thrun 외, 『Probabilistic Robotics』",
+    "ROS 2 Nav2 공식 문서, VDA 5050 (AGV 인터페이스)",
+  ],
+  "pa-vision-hw": [
+    "R. Szeliski, 『Computer Vision: Algorithms and Applications』",
+    "GenICam/GigE Vision 표준",
+  ],
+  "aa-flow-1": [
+    "UC Berkeley LLM Agents 공개 강좌",
+    "IEC 62264 (ISA-95, 기업-제어 통합)",
+  ],
+  "aa-flow-2": [
+    "Anthropic/OpenAI 에이전트 설계 가이드, ReAct 논문",
+    "M. Kleppmann, 『Designing Data-Intensive Applications』",
+  ],
+  "aa-flow-3": [
+    "IEC 62541 (OPC UA), MQTT/Sparkplug B 사양",
+    "W3C RDF/OWL/SPARQL 표준, Hogan 외 『Knowledge Graphs』",
+  ],
+  "aa-flow-4": [
+    "Gonzalez & Woods, 『Digital Image Processing』",
+    "LLM 파인튜닝·평가 공개 강좌, 『An Introduction to Statistical Learning』",
+  ],
+  "aa-flow-5": [
+    "NIST AI Risk Management Framework, ISO/IEC 42001",
+    "MLOps/CI·CD 실무 문헌 (예: 『Reliable Machine Learning』)",
+  ],
+  "aa-flow-6": [
+    "시계열 분석 (Hyndman, 『Forecasting: Principles and Practice』)",
+    "에이전트 관측성(Observability)·감사 추적 실무 문헌",
+  ],
+  "aa-flow-7": [
+    "Hopp & Spearman, 『Factory Physics』",
+    "지속 개선(카이젠)·확산 전략 사례 연구",
+  ],
+  "aa-multi": [
+    "멀티 에이전트 오케스트레이션 프레임워크 문서 (AutoGen·LangGraph)",
+    "UC Berkeley LLM Agents 공개 강좌 (멀티 에이전트 편)",
+  ],
+  "aa-adv": [
+    "IEC 62264 (ISA-95) · Hopp & Spearman, 『Factory Physics』 (생산)",
+    "D. Montgomery, 『Statistical Quality Control』 · AIAG SPC 매뉴얼 (품질)",
+    "VDA 5050 · Bartholdi & Hackman, 『Warehouse & Distribution Science』 (물류)",
+    "ISO 13381-1 · PHM Society 튜토리얼 (설비)",
+  ],
+  "dt-modeling": [
+    "ISO 23247 (제조 디지털트윈 프레임워크)",
+    "URDF/OpenUSD 문서",
+  ],
+  "dt-scenario": [
+    "J. Banks 외, 『Discrete-Event System Simulation』 (시나리오 설계)",
+  ],
   "dt-design-verify": ["ISO 23247", "생산 라인 설계 검증·레이아웃 사례"],
-  "dt-vc": ["IEC 61131-3 (PLC 언어)", "가상 커미셔닝(Virtual Commissioning) 실무 사례"],
-  "dt-data-sync": ["IEC 62541 (OPC UA)", "Asset Administration Shell (IDTA) 사양"],
+  "dt-vc": [
+    "IEC 61131-3 (PLC 언어)",
+    "가상 커미셔닝(Virtual Commissioning) 실무 사례",
+  ],
+  "dt-data-sync": [
+    "IEC 62541 (OPC UA)",
+    "Asset Administration Shell (IDTA) 사양",
+  ],
   "dt-realtime": ["실시간 데이터 스트리밍·디지털트윈 운영 문헌"],
-  "dt-optimize": ["Hillier & Lieberman, 『Introduction to Operations Research』"],
+  "dt-optimize": [
+    "Hillier & Lieberman, 『Introduction to Operations Research』",
+  ],
 };
 
 // ==================== 공통 과목 (교양·공통필수) ====================
@@ -80,8 +135,18 @@ const COMMON_COURSES = [
     code: "CC201",
     name: "데이터·AI 리터러시",
     goal: "전 도메인 공통의 데이터 처리·AI 에이전트 기초 체계 확립",
-    refs: ["Python 데이터 분석 입문 (McKinney, 『Python for Data Analysis』)", "Anthropic/OpenAI 에이전트 개요 자료"],
-    skillIds: ["RSF-AAM-001", "RSF-AAM-002", "RSF-MVS-003", "RSF-MVS-008", "RSF-MVS-019", "RSF-RMD-007"],
+    refs: [
+      "Python 데이터 분석 입문 (McKinney, 『Python for Data Analysis』)",
+      "Anthropic/OpenAI 에이전트 개요 자료",
+    ],
+    skillIds: [
+      "RSF-AAM-001",
+      "RSF-AAM-002",
+      "RSF-MVS-003",
+      "RSF-MVS-008",
+      "RSF-MVS-019",
+      "RSF-RMD-007",
+    ],
   },
   {
     code: "CC202",
@@ -106,41 +171,84 @@ const SPECIALIZATION_TRACKS = [
     code: "TR301",
     name: "예지보전·자율 정비",
     goal: "상태 데이터 → 고장 예측 → 자율 정비 실행의 설비 Agent 체계 구축",
-    capstone: "담당 설비 1종의 예지보전 파이프라인 구축과 자율 정비 시나리오 검증 (1人1案 연계)",
+    capstone:
+      "담당 설비 1종의 예지보전 파이프라인 구축과 자율 정비 시나리오 검증 (1人1案 연계)",
     refs: ["ISO 13381-1", "PHM Society 자료"],
-    skillIds: ["RSF-RMD-006", "RSF-RMD-007", "RSF-RMD-017", "RSF-RMD-015", "RSF-RMD-016", "RSF-AAM-022", "RSF-DTS-012"],
+    skillIds: [
+      "RSF-RMD-006",
+      "RSF-RMD-007",
+      "RSF-RMD-017",
+      "RSF-RMD-015",
+      "RSF-RMD-016",
+      "RSF-AAM-022",
+      "RSF-DTS-012",
+    ],
   },
   {
     code: "TR302",
     name: "가상 커미셔닝·공정 검증",
     goal: "신규 공정 시나리오의 에뮬레이터 가상 검증과 현장 배포 연결",
-    capstone: "신규/개조 공정 1건의 가상 커미셔닝과 개발 Agent 배포 파이프라인 시연",
+    capstone:
+      "신규/개조 공정 1건의 가상 커미셔닝과 개발 Agent 배포 파이프라인 시연",
     refs: ["ISO 23247", "IEC 61131-3 (PLC 언어)"],
-    skillIds: ["RSF-IRC-012", "RSF-IRC-023", "RSF-DTS-022", "RSF-DTS-008", "RSF-DTS-015", "RSF-DTS-016", "RSF-AAM-023"],
+    skillIds: [
+      "RSF-IRC-012",
+      "RSF-IRC-023",
+      "RSF-DTS-022",
+      "RSF-DTS-008",
+      "RSF-DTS-015",
+      "RSF-DTS-016",
+      "RSF-AAM-023",
+    ],
   },
   {
     code: "TR303",
     name: "품질 지능화",
     goal: "비전 검사·SPC 기반 품질 판정 자동화와 자동 격리 운영",
-    capstone: "담당 공정 검사 항목의 자동 판정 모델 구축과 오판정률 목표 달성 리포트",
+    capstone:
+      "담당 공정 검사 항목의 자동 판정 모델 구축과 오판정률 목표 달성 리포트",
     refs: ["Montgomery, 『Statistical Quality Control』", "AIAG SPC 매뉴얼"],
-    skillIds: ["RSF-MVS-004", "RSF-MVS-007", "RSF-MVS-013", "RSF-MVS-016", "RSF-AAM-004", "RSF-AAM-012", "RSF-AAM-016"],
+    skillIds: [
+      "RSF-MVS-004",
+      "RSF-MVS-007",
+      "RSF-MVS-013",
+      "RSF-MVS-016",
+      "RSF-AAM-004",
+      "RSF-AAM-012",
+      "RSF-AAM-016",
+    ],
   },
   {
     code: "TR304",
     name: "자율 물류·SCM 통합",
     goal: "AMR 함대 관제·자재/협력사 연동·물류-SCM 실행 통합 설계",
-    capstone: "물류 구간 1개의 함대 운영 KPI 개선안과 SCM 실행 데이터 연계 설계",
+    capstone:
+      "물류 구간 1개의 함대 운영 KPI 개선안과 SCM 실행 데이터 연계 설계",
     refs: ["VDA 5050", "『Warehouse & Distribution Science』"],
-    skillIds: ["RSF-AMR-005", "RSF-AMR-009", "RSF-AMR-010", "RSF-AMR-020", "RSF-AAM-024", "RSF-AAM-025"],
+    skillIds: [
+      "RSF-AMR-005",
+      "RSF-AMR-009",
+      "RSF-AMR-010",
+      "RSF-AMR-020",
+      "RSF-AAM-024",
+      "RSF-AAM-025",
+    ],
   },
   {
     code: "TR305",
     name: "제조 지식그래프·특화 LLM",
     goal: "제조 문서의 지식그래프 구조화와 제조 특화 sLLM 데이터·평가 체계 구축",
-    capstone: "담당 공정 문서군의 온톨로지 구축과 sLLM 질의응답 품질 평가 리포트",
+    capstone:
+      "담당 공정 문서군의 온톨로지 구축과 sLLM 질의응답 품질 평가 리포트",
     refs: ["W3C RDF/OWL", "『Knowledge Graphs』 (Hogan 외)"],
-    skillIds: ["RSF-AAM-026", "RSF-AAM-027", "RSF-AAM-028", "RSF-DTS-005", "RSF-DTS-011", "RSF-MVS-014"],
+    skillIds: [
+      "RSF-AAM-026",
+      "RSF-AAM-027",
+      "RSF-AAM-028",
+      "RSF-DTS-005",
+      "RSF-DTS-011",
+      "RSF-MVS-014",
+    ],
   },
 ];
 
@@ -174,7 +282,9 @@ const sumHours = (skillIds) =>
   skillIds.reduce((sum, skillId) => sum + hoursOf(skillById.get(skillId)), 0);
 
 const colleges = [...collegeMapping.colleges].sort((a, b) => a.order - b.order);
-const collegeNameById = new Map(colleges.map((college) => [college.id, college.name]));
+const collegeNameById = new Map(
+  colleges.map((college) => [college.id, college.name]),
+);
 
 // 중간분류 × 레벨 밴드 → 과목 자동 생성
 const coursesByBand = { P: [], S: [], E: [] };
@@ -200,18 +310,26 @@ colleges.forEach((college) => {
         const code = `${COLLEGE_PREFIX[college.id]}${band.digit}${String(
           seqByCollegeBand[seqKey],
         ).padStart(2, "0")}`;
-        const hours = bandSkills.reduce((sum, skill) => sum + hoursOf(skill), 0);
+        const hours = bandSkills.reduce(
+          (sum, skill) => sum + hoursOf(skill),
+          0,
+        );
         const course = {
           code,
           collegeId: college.id,
           name: `${subcategory.name} ${band.suffix}`,
-          type: band.key === "P" ? "전공필수" : band.key === "S" ? "전공심화" : "전공전문",
+          type:
+            band.key === "P"
+              ? "전공필수"
+              : band.key === "S"
+                ? "전공심화"
+                : "전공전문",
           hours,
           credits: creditsOf(hours),
           prereq:
             band.key === "P"
               ? "CC201~CC203"
-              : previousCourseCode ?? "소속 도메인 핵심 과목",
+              : (previousCourseCode ?? "소속 도메인 핵심 과목"),
           refs: REFS_BY_SUBCATEGORY[subcategory.id] ?? [],
           skills: bandSkills,
         };

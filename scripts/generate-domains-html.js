@@ -135,6 +135,7 @@ const html = `<!doctype html>
   td.id { white-space:nowrap; color:var(--ink-2); font-size:12px; }
   td.lv { white-space:nowrap; }
   .badge { font-size:10px; font-weight:800; padding:1px 6px; border-radius:999px; background:#fff7ed; color:#9a3412; margin-left:6px; }
+  .desc { color:var(--ink-2); font-size:11px; font-weight:400; line-height:1.45; }
   footer { margin-top:48px; color:var(--ink-2); font-size:12px; text-align:center; }
   @media (max-width:720px){ .treemap { height:560px; } }
   @media print { body{background:#fff} .wrap{padding:0} .treemap{height:340px}
@@ -160,7 +161,9 @@ const html = `<!doctype html>
       <div class="tstack">
         ${subs
           .map(
-            (sub) => `<button class="tile" data-college="${college.id}" data-sub="${sub.id}" type="button"
+            (
+              sub,
+            ) => `<button class="tile" data-college="${college.id}" data-sub="${sub.id}" type="button"
           style="flex-grow:${sub.skills.length};border-left:4px solid ${color};background:color-mix(in srgb, ${color} 14%, #fff)">
           <b>${esc(sub.name)}</b><i>${sub.skills.length}</i></button>`,
           )
@@ -202,7 +205,7 @@ const html = `<!doctype html>
               ? `<span class="badge">${override.source === "reviewed" ? "재분류 확정" : "재분류 제안"}</span>`
               : "";
             return `<tr>
-          <td><strong>${esc(skill.preferred_label_ko)}</strong>${badge}</td>
+          <td><strong>${esc(skill.preferred_label_ko)}</strong>${badge}<br><span class="desc">${esc(skill.description_ko ?? "")}</span></td>
           <td class="id">${esc(skill.skill_id)}</td>
           <td class="lv">Lv${skill.proficiency_level}</td>
           <td>${TYPE_LABELS[skill.skill_type] ?? skill.skill_type}</td>

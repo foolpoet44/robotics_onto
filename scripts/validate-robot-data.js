@@ -362,7 +362,9 @@ class RobotDataValidator {
     const mappedDomains = new Set(Object.keys(mappingData.domainMapping));
     this.data.forEach((skill) => {
       if (!mappedDomains.has(skill.domain)) {
-        errors.push(`${skill.skill_id}: 칼리지 매핑 없는 도메인 '${skill.domain}'`);
+        errors.push(
+          `${skill.skill_id}: 칼리지 매핑 없는 도메인 '${skill.domain}'`,
+        );
       }
     });
 
@@ -470,9 +472,7 @@ class RobotDataValidator {
     );
     (subcategoryData.workflowColleges ?? []).forEach((collegeId) => {
       if (!collegeIds.has(collegeId)) {
-        errors.push(
-          `workflowColleges: 존재하지 않는 칼리지 '${collegeId}'`,
-        );
+        errors.push(`workflowColleges: 존재하지 않는 칼리지 '${collegeId}'`);
       }
     });
 
@@ -549,17 +549,19 @@ class RobotDataValidator {
           }
         });
       });
-      // 커버리지: 클러스터 도입 칼리지의 중간분류 스킬은 빠짐없이 클러스터에 속해야 한다.
+      // 커버리지: 클러스터가 있는 중간분류의 스킬은 빠짐없이 클러스터에 속해야
+      // 한다(분류 단위 — 칼리지 내 일부 분류만 클러스터를 쓸 수 있다).
+      const clusteredSubcategories = new Set(
+        clusters.map((cluster) => cluster.subcategoryId),
+      );
       Object.entries(subcategoryData.skillSubcategories).forEach(
         ([skillId, subcategoryId]) => {
-          const subcategory = subcategoriesById.get(subcategoryId);
           if (
-            subcategory &&
-            clusteredColleges.has(subcategory.collegeId) &&
+            clusteredSubcategories.has(subcategoryId) &&
             !clusteredSkills.has(skillId)
           ) {
             errors.push(
-              `skillClusters: '${skillId}'(${subcategory.collegeId})가 ` +
+              `skillClusters: '${skillId}'(${subcategoryId})가 ` +
                 `어떤 클러스터에도 속하지 않습니다.`,
             );
           }
@@ -731,7 +733,10 @@ class RobotDataValidator {
         : []),
       ...(collegeMetrics
         ? [
-            { Metric: "칼리지 스킬 오버라이드", Value: collegeMetrics.overrides },
+            {
+              Metric: "칼리지 스킬 오버라이드",
+              Value: collegeMetrics.overrides,
+            },
             { Metric: "오버라이드 검수 완료", Value: collegeMetrics.reviewed },
           ]
         : []),
