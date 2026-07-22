@@ -5,7 +5,7 @@ import { resolveSkillCollege } from "../../../lib/college-resolver";
 import { collegeColor, collegeIcon } from "../../../lib/college-ui";
 import { getDomainName } from "../../../lib/robotics-data";
 import type { RobotSkill } from "../../../lib/robotics-data";
-import type { SkillPriority, SkillCluster } from "../../../lib/college-types";
+import type { SkillCluster } from "../../../lib/college-types";
 import {
   getAllRobotSkills,
   getCollegeMappingData,
@@ -13,12 +13,6 @@ import {
 } from "../../../lib/server-data";
 
 export const dynamic = "force-dynamic";
-
-const PRIORITY_LABELS: Record<SkillPriority, string> = {
-  core: "★ 핵심",
-  foundation: "기초 역량",
-  review: "재정의 검토",
-};
 
 export default async function CollegeDetailPage({
   params,
@@ -50,7 +44,6 @@ export default async function CollegeDetailPage({
     .sort((a, b) => a.order - b.order);
 
   const skillOrder = subcategoryData.skillOrder ?? {};
-  const skillPriority = subcategoryData.skillPriority ?? {};
   const workflowLinks = subcategoryData.workflowLinks ?? {};
   const isWorkflow = (subcategoryData.workflowColleges ?? []).includes(
     collegeId,
@@ -86,8 +79,8 @@ export default async function CollegeDetailPage({
           </p>
           {isWorkflow && (
             <p className={styles.workflowNote}>
-              현장 업무 흐름 순서(①→⑦)로 배열했습니다. 스킬은 단계 내 우선순위
-              순이며, ★핵심·기초 역량·재정의 검토를 표시합니다.
+              현장 업무 흐름 순서(①→⑦)로 배열했습니다. 스킬은 단계 내 순서대로
+              표시합니다.
             </p>
           )}
           {collegeClusters.length > 0 && (
@@ -144,26 +137,14 @@ export default async function CollegeDetailPage({
             )}
             <ul className={styles.skillList}>
               {unclusteredSkills.map((skill) => {
-                const priority = skillPriority[skill.skill_id];
                 return (
                   <li key={skill.skill_id}>
                     <Link
-                      className={
-                        priority === "core"
-                          ? `${styles.skillRow} ${styles.skillRowCore}`
-                          : styles.skillRow
-                      }
+                      className={styles.skillRow}
                       href={`/skills/${skill.skill_id}`}
                     >
                       <span className={styles.skillLabel}>
                         {skill.preferred_label_ko}
-                        {priority && (
-                          <span
-                            className={`${styles.priority} ${styles[`priority_${priority}`]}`}
-                          >
-                            {PRIORITY_LABELS[priority]}
-                          </span>
-                        )}
                       </span>
                       <span className={styles.skillMeta}>
                         {skill.skill_id} · Lv{skill.proficiency_level} ·{" "}
