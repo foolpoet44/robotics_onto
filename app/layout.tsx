@@ -13,10 +13,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // 평가 전용 모드(CLUSTER_EVAL_ONLY=1)에서는 상단 네비게이션을 숨겨
+  // 평가자가 다른 페이지로 이동할 링크 자체를 제거한다(경로 차단은 middleware).
+  const clusterEvalOnly = process.env.CLUSTER_EVAL_ONLY === "1";
   return (
     <html lang="ko">
       <body>
-        <Navigation />
+        {!clusterEvalOnly && <Navigation />}
         {children}
       </body>
     </html>
