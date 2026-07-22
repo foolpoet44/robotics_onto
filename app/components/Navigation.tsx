@@ -13,6 +13,7 @@ const items = [
   { href: "/reviews", label: "검수", icon: "✓" },
   { href: "/evaluation", label: "평가", icon: "◎" },
   { href: "/evaluation/skills", label: "스킬평가", icon: "✍" },
+  { href: "/evaluation/clusters", label: "클러스터평가", icon: "◫" },
 ];
 
 export default function Navigation() {
