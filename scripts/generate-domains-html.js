@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 4대 도메인 스킬 맵 정적 발행 스크립트.
+// 3대 도메인 스킬 맵 정적 발행 스크립트.
 //
 // /domains(허브)와 칼리지 상세(중간분류별 스킬)를 자기완결 HTML 한 장으로
 // 발행한다. 로그인·DB 의존이 없어 사내 포털·별도 정적 호스팅 등 어디에나
@@ -86,7 +86,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>4대 도메인 스킬 맵 — AI Factory Skill Fab</title>
+<title>3대 도메인 스킬 맵 — AI Factory Skill Fab</title>
 <style>
   :root { --ink:#1e293b; --ink-2:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --accent:#4338ca; }
   * { box-sizing:border-box; }
@@ -146,12 +146,12 @@ const html = `<!doctype html>
 <div class="wrap">
   <header class="hero">
     <p class="eyebrow">AI FACTORY SKILL FAB · DOMAIN MAP</p>
-    <h1>4대 도메인 스킬 맵</h1>
-    <p>AI Factory 운영 체계의 4대 도메인 → 중간분류 → 스킬 ${totalSkills}개 전체 체계.
+    <h1>3대 도메인 스킬 맵</h1>
+    <p>AI Factory 운영 체계의 3대 도메인 → 중간분류 → 스킬 ${totalSkills}개 전체 체계.
       면적은 스킬 수에 비례합니다. 발행일 ${generatedAt} · 스킬 온톨로지에서 자동 생성.</p>
   </header>
 
-  <div class="treemap" aria-label="4대 도메인별 스킬 분포 트리맵 (클릭하면 세부 스킬 표시)">
+  <div class="treemap" aria-label="3대 도메인별 스킬 분포 트리맵 (클릭하면 세부 스킬 표시)">
     ${blocks
       .map(({ college, subs, skillCount }) => {
         const color = COLLEGE_COLORS[college.id];
@@ -261,7 +261,7 @@ const html = `<!doctype html>
     })();
   </script>
 
-  <footer>AI Factory Skill Fab · 4대 도메인 스킬 맵 정적 발행본 (${generatedAt}) —
+  <footer>AI Factory Skill Fab · 3대 도메인 스킬 맵 정적 발행본 (${generatedAt}) —
     온톨로지 변경 시 <code>npm run generate:domains-html</code> 로 재발행하십시오.</footer>
 </div>
 </body>

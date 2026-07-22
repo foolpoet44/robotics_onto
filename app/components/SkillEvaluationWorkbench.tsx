@@ -371,7 +371,7 @@ export default function SkillEvaluationWorkbench({
         <>
           <div className={styles.toolbar}>
             <label>
-              4대 도메인
+              3대 도메인
               <select
                 onChange={(event) => setCollegeFilter(event.target.value)}
                 value={collegeFilter}

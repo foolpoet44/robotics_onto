@@ -77,7 +77,7 @@ export default async function EvaluationPage() {
         <p className={styles.eyebrow}>EVALUATION ONLY</p>
         <h1>도메인 분류 평가 페이지</h1>
         <p>
-          현장 운영 체계의 4대 도메인이 기준 축입니다. 트리맵으로 스킬 체계를
+          현장 운영 체계의 3대 도메인이 기준 축입니다. 트리맵으로 스킬 체계를
           한눈에 파악하고, 중간분류 단위로 하위 스킬을 조회하며 스킬별 도메인
           변경요청을 접수할 수 있습니다.
         </p>
@@ -88,7 +88,7 @@ export default async function EvaluationPage() {
           <p className={styles.eyebrow}>DOMAIN SCOPE</p>
           <h2 id="domain-only-title">스킬 체계 한눈에 보기</h2>
           <p>
-            4대 도메인 → 중간분류 → 스킬의 3단 체계입니다. 변경요청 접수는
+            3대 도메인 → 중간분류 → 스킬의 3단 체계입니다. 변경요청 접수는
             평가자 로그인이 필요합니다(조회는 자유).
           </p>
         </div>
@@ -111,7 +111,7 @@ export default async function EvaluationPage() {
 
       <p className={styles.subLinks}>
         <Link href="/evaluation/functional">기능 도메인(세부 기준) 평가 →</Link>
-        <Link href="/domains">전체 4대 도메인 탐색 화면으로 이동 →</Link>
+        <Link href="/domains">전체 3대 도메인 탐색 화면으로 이동 →</Link>
       </p>
     </main>
   );

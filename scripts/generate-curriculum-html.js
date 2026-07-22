@@ -469,7 +469,7 @@ const html = `<!doctype html>
     <p class="eyebrow">FACTORY ROBOTICS · TRAINING CURRICULUM</p>
     <h1>R&amp;D 연구원 육성 커리큘럼</h1>
     <p>대상: 경력 3년 이상 10년 미만 R&amp;D 연구원 · 학부 커리큘럼 형식(과목·학점제) ·
-      기준: 4대 도메인 온톨로지 ${robotSkills.length}개 스킬 · 15h = 1학점 · 발행일 ${generatedAt}</p>
+      기준: 3대 도메인 온톨로지 ${robotSkills.length}개 스킬 · 15h = 1학점 · 발행일 ${generatedAt}</p>
     <div class="legend">
       ${colleges
         .map(

@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { CollegeId } from "./college-types";
 
-// 평가 축: 4대 도메인(메인, 칼리지) 또는 기능 도메인(서브)
+// 평가 축: 3대 도메인(메인, 칼리지) 또는 기능 도메인(서브)
 export type DomainRatingAxis = "college" | "functional";
 
 export interface DomainImportanceRecord {

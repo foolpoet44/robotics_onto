@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { CollegeId } from "./college-types";
 
-// 변경 대상 축: 기능 도메인(스킬의 domain) 또는 4대 도메인(칼리지 배정)
+// 변경 대상 축: 기능 도메인(스킬의 domain) 또는 3대 도메인(칼리지 배정)
 export type DomainChangeAxis = "functional" | "college";
 
 export interface DomainChangeRequest {

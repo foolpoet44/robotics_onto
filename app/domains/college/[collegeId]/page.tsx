@@ -65,7 +65,7 @@ export default async function CollegeDetailPage({
   return (
     <main className={styles.pageShell}>
       <Link href="/domains" className={styles.backLink}>
-        ← 4대 도메인
+        ← 3대 도메인
       </Link>
 
       <header
@@ -76,7 +76,7 @@ export default async function CollegeDetailPage({
           {collegeIcon(collegeId)}
         </span>
         <div>
-          <p className={styles.eyebrow}>4대 도메인</p>
+          <p className={styles.eyebrow}>3대 도메인</p>
           <h1>{college.name}</h1>
           <p className={styles.role}>
             {college.role}

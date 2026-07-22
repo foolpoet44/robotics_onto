@@ -345,7 +345,7 @@ class RobotDataValidator {
     return metrics;
   }
 
-  // 11. strict 모드: 칼리지 매핑(4대 도메인) 검증
+  // 11. strict 모드: 칼리지 매핑(3대 도메인) 검증
   validateCollegeMappings() {
     header("1️⃣1️⃣ 칼리지 매핑 검증 (strict)");
     const mappingPath = path.join(

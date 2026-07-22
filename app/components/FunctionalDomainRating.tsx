@@ -103,8 +103,8 @@ export default function FunctionalDomainRating({
           <p className={styles.eyebrow}>SUB — 세부 기준</p>
           <h2 id="functional-rating-title">기능 도메인 중요도 평가</h2>
           <span>
-            4대 도메인 판단의 세부 근거가 되는 참고 분류입니다. 이 평가의
-            스킬 수 가중 평균이 <Link href="/evaluation">4대 도메인 평가</Link>
+            3대 도메인 판단의 세부 근거가 되는 참고 분류입니다. 이 평가의
+            스킬 수 가중 평균이 <Link href="/evaluation">3대 도메인 평가</Link>
             의 &quot;서브 롤업&quot;으로 집계됩니다.
           </span>
         </div>

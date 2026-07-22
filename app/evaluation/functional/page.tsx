@@ -25,7 +25,7 @@ export default async function FunctionalEvaluationPage() {
         <h1>기능 도메인 중요도 평가</h1>
         <p>
           스킬 내용을 기준으로 한 기능 도메인 평가 화면입니다. 현장 운영의
-          기준 축은 <Link href="/evaluation">4대 도메인 평가</Link>이며, 이
+          기준 축은 <Link href="/evaluation">3대 도메인 평가</Link>이며, 이
           평가는 그 세부 근거(서브 롤업)로 활용됩니다.
         </p>
       </header>
@@ -45,7 +45,7 @@ export default async function FunctionalEvaluationPage() {
       />
 
       <Link href="/evaluation" className={styles.referenceLink}>
-        ← 4대 도메인 평가로 돌아가기
+        ← 3대 도메인 평가로 돌아가기
       </Link>
     </main>
   );
