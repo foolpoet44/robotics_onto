@@ -1,5 +1,292 @@
 {
   "version": "2026-07-06",
   "note": "칼리지 스킬 오버라이드 검수 결정 장부. npm run record:college-override 로 기록합니다. approved는 오버라이드를 reviewed로 승격, rejected는 오버라이드를 제거(도메인 기본 매핑 복귀), held는 proposed 유지.",
-  "decisions": []
+  "decisions": [
+    {
+      "skill_id": "RSF-AAM-026",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AAM-027",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AAM-028",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AMR-004",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AMR-010",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AMR-014",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-AMR-020",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-CRO-017",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-DTS-005",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["digital-twin"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-DTS-011",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["digital-twin"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-DTS-014",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["digital-twin"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-IRC-015",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-001",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-003",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-004",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-008",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-012",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-013",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-014",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-019",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-MVS-020",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-RMD-006",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-RMD-007",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-RMD-012",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-RMD-017",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": ["physical-ai"]
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    },
+    {
+      "skill_id": "RSF-RMD-020",
+      "status": "approved",
+      "reviewer": "전문가 검토 회의(변재민 위원) · 운영 오너 확정",
+      "reviewed_at": "2026-07-20T23:59:07.459Z",
+      "override_snapshot": {
+        "primary": "agentic-ai",
+        "secondary": []
+      },
+      "notes": "DI 칼리지를 Agentic AI 워크플로우로 편입 — docs/EXPERT_MEETING_2026-07_AGENTIC_DI_PA.md"
+    }
+  ]
 }

@@ -44,11 +44,11 @@ export async function POST(request: Request) {
   const axis = body.axis as DomainRatingAxis;
   const targetKey = typeof body.targetKey === "string" ? body.targetKey : "";
 
-  // 4대 도메인 직접 평가는 종료되었다. 스킬 체계는 트리맵으로 조망하고,
+  // 3대 도메인 직접 평가는 종료되었다. 스킬 체계는 트리맵으로 조망하고,
   // 중요도 평가는 기능 도메인(세부 기준) 축만 수집한다.
   if (axis === "college") {
     return NextResponse.json(
-      { error: "4대 도메인 중요도 평가 기능은 종료되었습니다." },
+      { error: "3대 도메인 중요도 평가 기능은 종료되었습니다." },
       { status: 400 },
     );
   }

@@ -1,3 +1,5 @@
+// "data-intelligence"는 2026-07 Agentic AI 편입으로 현행 칼리지 목록에서
+// 제외됐지만, 과거 평가·역량 기록이 참조하므로 타입 값으로는 유지한다.
 export type CollegeId =
   | "physical-ai"
   | "data-intelligence"
@@ -57,6 +59,16 @@ export interface WorkflowLink {
   note?: string;
 }
 
+export interface SkillCluster {
+  id: string;
+  collegeId: CollegeId;
+  subcategoryId: string;
+  name: string;
+  summary: string;
+  priority: SkillPriority;
+  skillIds: string[];
+}
+
 export interface CollegeSubcategoryData {
   version: string;
   note?: string;
@@ -66,6 +78,7 @@ export interface CollegeSubcategoryData {
   skillPriority?: Record<string, SkillPriority>;
   workflowLinks?: Record<string, WorkflowLink[]>;
   workflowColleges?: string[];
+  skillClusters?: SkillCluster[];
 }
 
 export interface EnablerCollegeMeta {

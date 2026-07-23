@@ -19,7 +19,7 @@ export default async function FunctionalDomainsPage() {
         <h1>기능 도메인</h1>
         <p>
           스킬 내용을 기준으로 정리한 기능 도메인입니다. 현장 운영의 기준
-          축은 <Link href="/domains">4대 도메인</Link>이며, 기능 도메인은 세부
+          축은 <Link href="/domains">3대 도메인</Link>이며, 기능 도메인은 세부
           탐색과 평가 근거를 위한 참고 분류로 유지됩니다.
         </p>
       </header>
@@ -46,7 +46,7 @@ export default async function FunctionalDomainsPage() {
       </div>
 
       <p className={styles.subPageLink}>
-        <Link href="/domains">← 4대 도메인으로 돌아가기</Link>
+        <Link href="/domains">← 3대 도메인으로 돌아가기</Link>
       </p>
     </main>
   );

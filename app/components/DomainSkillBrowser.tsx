@@ -40,7 +40,7 @@ interface DomainSkillBrowserProps {
 
 const AXIS_LABELS: Record<"functional" | "college", string> = {
   functional: "기능 도메인",
-  college: "4대 도메인",
+  college: "3대 도메인",
 };
 
 export default function DomainSkillBrowser({

@@ -120,14 +120,11 @@ export default function DevelopmentTrackDashboard({
       </section>
 
       <section className={styles.areaSection}>
-        <h2>4개 기술 영역</h2>
+        <h2>{track.expert_area_profiles.length}개 기술 영역</h2>
         <div className={styles.areaGrid}>
           {track.expert_area_profiles.map((area, index) => (
             <article key={area.id}>
-              <small>
-                DOMAIN {String(index + 1).padStart(2, "0")}
-                {area.id === "data-intelligence" ? " · HUB" : ""}
-              </small>
+              <small>DOMAIN {String(index + 1).padStart(2, "0")}</small>
               <strong>{area.name}</strong>
               <p>{area.description}</p>
               <span>

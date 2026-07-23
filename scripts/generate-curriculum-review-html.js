@@ -59,7 +59,7 @@ robotSkills.forEach((skill) => {
 // ==================== 질문 큐레이션 ====================
 
 const COMMON_QUESTIONS = [
-  "4대 도메인 → 중간분류 → 스킬의 3단 체계가 현장 직무 구조와 일치합니까? 누락되었거나 과잉인 분류는 무엇입니까?",
+  "3대 도메인 → 중간분류 → 스킬의 3단 체계가 현장 직무 구조와 일치합니까? 누락되었거나 과잉인 분류는 무엇입니까?",
   "과목의 레벨 배치(2xx 핵심 / 3xx 심화 / 4xx 전문)가 경력 3~10년차 눈높이에 맞습니까? 레벨이 과대/과소 산정된 스킬을 지목해 주십시오.",
   "학습시간 규칙(지식 4h·기술 8h·역량 16h)이 현실적입니까? 크게 보정해야 할 과목은 무엇입니까?",
   "공통필수 3과목(데이터·AI 리터러시 / 시스템·데이터 기반 / 안전·HITL)의 구성이 전 도메인 공통으로 타당합니까? 추가·제외할 스킬은?",
@@ -177,7 +177,7 @@ const html = `<!doctype html>
   <header class="hero">
     <p class="eyebrow">AI FACTORY SKILL FAB · EXPERT REVIEW</p>
     <h1>육성 커리큘럼 전문가 검증 미팅 가이드</h1>
-    <p>대상 자료: R&amp;D 연구원 육성 커리큘럼(/curriculum-rnd.html) · 4대 도메인 스킬 맵(/domains-map.html)
+    <p>대상 자료: R&amp;D 연구원 육성 커리큘럼(/curriculum-rnd.html) · 3대 도메인 스킬 맵(/domains-map.html)
       · 검증 기준: 스킬 ${robotSkills.length}개 / 중간분류 ${subcategoryData.subcategories.length}개 / 특화 트랙 5개 · 발행일 ${generatedAt}</p>
   </header>
 

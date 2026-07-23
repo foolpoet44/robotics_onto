@@ -48,7 +48,6 @@ const EXPERT_DOMAIN_ORDER: CollegeId[] = [
   "physical-ai",
   "agentic-ai",
   "digital-twin",
-  "data-intelligence",
 ];
 
 const EXPERT_DOMAINS = EXPERT_DOMAIN_ORDER.map((collegeId) =>

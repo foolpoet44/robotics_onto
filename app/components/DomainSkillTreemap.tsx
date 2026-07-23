@@ -63,7 +63,7 @@ export default function DomainSkillTreemap({
           <p className={styles.eyebrow}>SKILL TREEMAP</p>
           <h2 id="skill-treemap-title">도메인별 스킬 트리맵</h2>
           <span>
-            면적은 스킬 수에 비례합니다. 4대 도메인 → 중간분류 → 스킬의 3단
+            면적은 스킬 수에 비례합니다. 3대 도메인 → 중간분류 → 스킬의 3단
             체계이며, 중간분류 타일을 클릭하면 소속 스킬을 바로 확인하고
             도메인 변경요청을 접수할 수 있습니다.
           </span>
@@ -73,7 +73,7 @@ export default function DomainSkillTreemap({
 
       <div className={styles.scrollArea}>
         <div
-          aria-label="4대 도메인별 스킬 분포 트리맵"
+          aria-label="3대 도메인별 스킬 분포 트리맵"
           className={styles.treemap}
           role="group"
         >

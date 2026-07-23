@@ -104,7 +104,7 @@ export async function POST(request: Request) {
       !collegeMapping.colleges.some((college) => college.id === requestedValue)
     ) {
       return NextResponse.json(
-        { error: "존재하지 않는 4대 도메인입니다." },
+        { error: "존재하지 않는 3대 도메인입니다." },
         { status: 400 },
       );
     }

@@ -345,7 +345,7 @@ class RobotDataValidator {
     return metrics;
   }
 
-  // 11. strict 모드: 칼리지 매핑(4대 도메인) 검증
+  // 11. strict 모드: 칼리지 매핑(3대 도메인) 검증
   validateCollegeMappings() {
     header("1️⃣1️⃣ 칼리지 매핑 검증 (strict)");
     const mappingPath = path.join(
@@ -362,7 +362,9 @@ class RobotDataValidator {
     const mappedDomains = new Set(Object.keys(mappingData.domainMapping));
     this.data.forEach((skill) => {
       if (!mappedDomains.has(skill.domain)) {
-        errors.push(`${skill.skill_id}: 칼리지 매핑 없는 도메인 '${skill.domain}'`);
+        errors.push(
+          `${skill.skill_id}: 칼리지 매핑 없는 도메인 '${skill.domain}'`,
+        );
       }
     });
 
@@ -470,11 +472,102 @@ class RobotDataValidator {
     );
     (subcategoryData.workflowColleges ?? []).forEach((collegeId) => {
       if (!collegeIds.has(collegeId)) {
-        errors.push(
-          `workflowColleges: 존재하지 않는 칼리지 '${collegeId}'`,
-        );
+        errors.push(`workflowColleges: 존재하지 않는 칼리지 '${collegeId}'`);
       }
     });
+
+    // skillClusters 무결성: 클러스터 도입 칼리지의 스킬은 정확히 1개 클러스터에 속한다.
+    const clusters = subcategoryData.skillClusters ?? [];
+    if (!Array.isArray(clusters)) {
+      errors.push("skillClusters: 올바른 배열 형식이 아닙니다.");
+    } else if (clusters.length > 0) {
+      const clusterIds = new Set();
+      const clusteredSkills = new Map();
+      const clusteredColleges = new Set();
+      clusters.forEach((cluster) => {
+        if (
+          !cluster ||
+          typeof cluster !== "object" ||
+          typeof cluster.id !== "string" ||
+          typeof cluster.name !== "string" ||
+          !Array.isArray(cluster.skillIds)
+        ) {
+          errors.push("skillClusters: 올바르지 않은 클러스터 형식입니다.");
+          return;
+        }
+        if (clusterIds.has(cluster.id)) {
+          errors.push(`skillClusters ${cluster.id}: 중복된 클러스터 id`);
+        }
+        clusterIds.add(cluster.id);
+        if (!collegeIds.has(cluster.collegeId)) {
+          errors.push(
+            `skillClusters ${cluster.id}: 존재하지 않는 칼리지 '${cluster.collegeId}'`,
+          );
+          return;
+        }
+        clusteredColleges.add(cluster.collegeId);
+        if (!ALLOWED_PRIORITIES.has(cluster.priority)) {
+          errors.push(
+            `skillClusters ${cluster.id}: 허용되지 않은 우선순위 '${cluster.priority}'`,
+          );
+        }
+        const subcategory = subcategoriesById.get(cluster.subcategoryId);
+        if (!subcategory) {
+          errors.push(
+            `skillClusters ${cluster.id}: 존재하지 않는 중간분류 '${cluster.subcategoryId}'`,
+          );
+          return;
+        }
+        if (subcategory.collegeId !== cluster.collegeId) {
+          errors.push(
+            `skillClusters ${cluster.id}: 중간분류 '${cluster.subcategoryId}'는 ` +
+              `'${subcategory.collegeId}' 소속 (클러스터: '${cluster.collegeId}')`,
+          );
+        }
+        cluster.skillIds.forEach((skillId) => {
+          if (!knownSkillIds.has(skillId)) {
+            errors.push(
+              `skillClusters ${cluster.id}: 존재하지 않는 스킬 '${skillId}'`,
+            );
+            return;
+          }
+          if (clusteredSkills.has(skillId)) {
+            errors.push(
+              `skillClusters ${cluster.id}: '${skillId}'가 ` +
+                `'${clusteredSkills.get(skillId)}'와 중복 배정되었습니다.`,
+            );
+          }
+          clusteredSkills.set(skillId, cluster.id);
+          if (
+            subcategoryData.skillSubcategories[skillId] !==
+            cluster.subcategoryId
+          ) {
+            errors.push(
+              `skillClusters ${cluster.id}: '${skillId}'는 중간분류 ` +
+                `'${subcategoryData.skillSubcategories[skillId]}' 소속입니다.`,
+            );
+          }
+        });
+      });
+      // 커버리지: 클러스터가 있는 중간분류의 스킬은 빠짐없이 클러스터에 속해야
+      // 한다(분류 단위 — 칼리지 내 일부 분류만 클러스터를 쓸 수 있다).
+      const clusteredSubcategories = new Set(
+        clusters.map((cluster) => cluster.subcategoryId),
+      );
+      Object.entries(subcategoryData.skillSubcategories).forEach(
+        ([skillId, subcategoryId]) => {
+          if (
+            clusteredSubcategories.has(subcategoryId) &&
+            !clusteredSkills.has(skillId)
+          ) {
+            errors.push(
+              `skillClusters: '${skillId}'(${subcategoryId})가 ` +
+                `어떤 클러스터에도 속하지 않습니다.`,
+            );
+          }
+        },
+      );
+    }
 
     const overrides = Object.entries(mappingData.skillOverrides ?? {});
     const metrics = {
@@ -640,7 +733,10 @@ class RobotDataValidator {
         : []),
       ...(collegeMetrics
         ? [
-            { Metric: "칼리지 스킬 오버라이드", Value: collegeMetrics.overrides },
+            {
+              Metric: "칼리지 스킬 오버라이드",
+              Value: collegeMetrics.overrides,
+            },
             { Metric: "오버라이드 검수 완료", Value: collegeMetrics.reviewed },
           ]
         : []),

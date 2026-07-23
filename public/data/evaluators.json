@@ -30,7 +30,7 @@
       "id": "EVAL-004",
       "name": "최데이터",
       "department": "데이터분석팀",
-      "collegeId": "data-intelligence",
+      "collegeId": "agentic-ai",
       "active": true,
       "codeHash": "eb2b01a01824ec242032b34456dc2f79f86bbdfc43962f7d080feeca053015a0"
     },
@@ -70,7 +70,7 @@
       "id": "EVAL-105",
       "name": "서우진",
       "department": "내부전문가 · Data Intelligence 도메인 팀장",
-      "collegeId": "data-intelligence",
+      "collegeId": "agentic-ai",
       "active": true,
       "codeHash": "a08ae91a82aca864cca006d3662bbb5c4020765c60a343ea714b5e5a89890017"
     }

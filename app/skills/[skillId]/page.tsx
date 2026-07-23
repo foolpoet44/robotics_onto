@@ -128,7 +128,7 @@ export default async function SkillDetailPage({
           </div>
           {collegeResolution && (
             <div>
-              <dt>4대 도메인(칼리지)</dt>
+              <dt>3대 도메인(칼리지)</dt>
               <dd>
                 {collegeNameById.get(collegeResolution.primary) ??
                   collegeResolution.primary}

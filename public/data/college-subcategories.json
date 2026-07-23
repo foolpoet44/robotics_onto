@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-07",
-  "note": "4대 도메인 내 중간분류 체계. 스킬은 자신이 배정된 칼리지의 중간분류 1개에 속한다. skillOrder/skillPriority는 표시 순서와 우선순위(core/foundation/review), workflowLinks는 타 칼리지 연계 스킬, workflowColleges는 업무흐름 표시 대상. 변경 후 npm run validate:data 로 확인한다.",
+  "version": "2026-07-21",
+  "note": "4대 도메인 내 중간분류 체계. 스킬은 자신이 배정된 칼리지의 중간분류 1개에 속한다. skillOrder/skillPriority는 표시 순서와 우선순위(core/foundation/review), workflowLinks는 타 칼리지 연계 스킬, workflowColleges는 업무흐름 표시 대상. 변경 후 npm run validate:data 로 확인한다. skillClusters는 검증·표시용 스킬 묶음(온톨로지 무변경) — 해당 칼리지 스킬은 정확히 1개 클러스터에 속한다. Agentic AI는 8단계 워크플로우(①~⑧)+심화 단일 분류이며, 심화의 도메인 에이전트 그룹은 skillClusters로 표현한다(분류 단위 커버리지).",
   "subcategories": [
     {
       "id": "pa-industrial",
@@ -30,78 +30,6 @@
       "id": "pa-vision-hw",
       "collegeId": "physical-ai",
       "name": "비전·센서 하드웨어",
-      "order": 5
-    },
-    {
-      "id": "aa-agent-design",
-      "collegeId": "agentic-ai",
-      "name": "에이전트 설계·오케스트레이션 (Orchestration AI)",
-      "order": 1
-    },
-    {
-      "id": "aa-mes-planning",
-      "collegeId": "agentic-ai",
-      "name": "MES·생산계획 자율화 (생산 Agent)",
-      "order": 2
-    },
-    {
-      "id": "aa-quality",
-      "collegeId": "agentic-ai",
-      "name": "품질 자동 판정 (품질 Agent)",
-      "order": 3
-    },
-    {
-      "id": "aa-autonomous-ops",
-      "collegeId": "agentic-ai",
-      "name": "자율 관제·물류 (물류 Agent)",
-      "order": 4
-    },
-    {
-      "id": "aa-governance",
-      "collegeId": "agentic-ai",
-      "name": "안전·거버넌스 (안전환경 Agent)",
-      "order": 5
-    },
-    {
-      "id": "di-signal",
-      "collegeId": "data-intelligence",
-      "name": "신호·이미지 처리",
-      "order": 1
-    },
-    {
-      "id": "di-pipeline",
-      "collegeId": "data-intelligence",
-      "name": "데이터 파이프라인·로깅",
-      "order": 2
-    },
-    {
-      "id": "di-analytics",
-      "collegeId": "data-intelligence",
-      "name": "분석·예측 인텔리전스",
-      "order": 3
-    },
-    {
-      "id": "di-network",
-      "collegeId": "data-intelligence",
-      "name": "OT 네트워크·통신",
-      "order": 4
-    },
-    {
-      "id": "aa-equipment",
-      "collegeId": "agentic-ai",
-      "name": "자율 정비 실행 (설비 Agent)",
-      "order": 6
-    },
-    {
-      "id": "aa-dev-agent",
-      "collegeId": "agentic-ai",
-      "name": "공정 검증·배포 (개발 Agent)",
-      "order": 7
-    },
-    {
-      "id": "di-knowledge",
-      "collegeId": "data-intelligence",
-      "name": "지식그래프·Data Fabric",
       "order": 5
     },
     {
@@ -145,58 +73,112 @@
       "collegeId": "digital-twin",
       "name": "⑦ 최적화·의사결정 지원",
       "order": 7
+    },
+    {
+      "id": "aa-flow-1",
+      "collegeId": "agentic-ai",
+      "name": "① 문제 정의·업무 플로우 분석",
+      "order": 1
+    },
+    {
+      "id": "aa-flow-2",
+      "collegeId": "agentic-ai",
+      "name": "② 에이전트·파이프라인 설계",
+      "order": 2
+    },
+    {
+      "id": "aa-flow-3",
+      "collegeId": "agentic-ai",
+      "name": "③ 데이터 확보·연동",
+      "order": 3
+    },
+    {
+      "id": "aa-flow-4",
+      "collegeId": "agentic-ai",
+      "name": "④ 툴·모델 개발 (LLM·비전·분석)",
+      "order": 4
+    },
+    {
+      "id": "aa-flow-5",
+      "collegeId": "agentic-ai",
+      "name": "⑤ 구현·검증",
+      "order": 5
+    },
+    {
+      "id": "aa-flow-6",
+      "collegeId": "agentic-ai",
+      "name": "⑥ 운영·모니터링",
+      "order": 6
+    },
+    {
+      "id": "aa-flow-7",
+      "collegeId": "agentic-ai",
+      "name": "⑦ 고도화·확산",
+      "order": 7
+    },
+    {
+      "id": "aa-multi",
+      "collegeId": "agentic-ai",
+      "name": "⑧ 멀티 에이전트",
+      "order": 8
+    },
+    {
+      "id": "aa-adv",
+      "collegeId": "agentic-ai",
+      "name": "심화 : 도메인 에이전트 설계 및 운영",
+      "order": 9
     }
   ],
   "skillSubcategories": {
-    "RSF-AAM-001": "aa-agent-design",
-    "RSF-AAM-002": "aa-agent-design",
-    "RSF-AAM-003": "aa-mes-planning",
-    "RSF-AAM-004": "aa-quality",
-    "RSF-AAM-005": "aa-mes-planning",
-    "RSF-AAM-006": "aa-agent-design",
-    "RSF-AAM-007": "aa-agent-design",
-    "RSF-AAM-008": "aa-agent-design",
-    "RSF-AAM-009": "aa-agent-design",
-    "RSF-AAM-010": "aa-mes-planning",
-    "RSF-AAM-011": "aa-mes-planning",
-    "RSF-AAM-012": "aa-quality",
-    "RSF-AAM-013": "aa-governance",
-    "RSF-AAM-014": "aa-governance",
-    "RSF-AAM-015": "aa-autonomous-ops",
-    "RSF-AAM-016": "aa-quality",
-    "RSF-AAM-017": "aa-mes-planning",
-    "RSF-AAM-018": "aa-governance",
-    "RSF-AAM-019": "aa-governance",
-    "RSF-AAM-020": "aa-governance",
-    "RSF-AAM-021": "aa-governance",
-    "RSF-AAM-022": "aa-equipment",
-    "RSF-AAM-023": "aa-dev-agent",
-    "RSF-AAM-024": "aa-autonomous-ops",
-    "RSF-AAM-025": "aa-autonomous-ops",
-    "RSF-AAM-026": "di-knowledge",
-    "RSF-AAM-027": "di-knowledge",
-    "RSF-AAM-028": "di-knowledge",
+    "RSF-AAM-001": "aa-flow-1",
+    "RSF-AAM-002": "aa-flow-4",
+    "RSF-AAM-003": "aa-flow-1",
+    "RSF-AAM-004": "aa-adv",
+    "RSF-AAM-005": "aa-adv",
+    "RSF-AAM-006": "aa-flow-2",
+    "RSF-AAM-007": "aa-flow-3",
+    "RSF-AAM-008": "aa-flow-4",
+    "RSF-AAM-009": "aa-multi",
+    "RSF-AAM-010": "aa-adv",
+    "RSF-AAM-011": "aa-adv",
+    "RSF-AAM-012": "aa-adv",
+    "RSF-AAM-013": "aa-flow-5",
+    "RSF-AAM-014": "aa-flow-5",
+    "RSF-AAM-015": "aa-flow-6",
+    "RSF-AAM-016": "aa-adv",
+    "RSF-AAM-017": "aa-adv",
+    "RSF-AAM-018": "aa-flow-6",
+    "RSF-AAM-019": "aa-flow-5",
+    "RSF-AAM-020": "aa-flow-6",
+    "RSF-AAM-021": "aa-flow-7",
+    "RSF-AAM-022": "aa-adv",
+    "RSF-AAM-023": "aa-flow-5",
+    "RSF-AAM-024": "aa-adv",
+    "RSF-AAM-025": "aa-adv",
+    "RSF-AAM-026": "aa-flow-3",
+    "RSF-AAM-027": "aa-flow-3",
+    "RSF-AAM-028": "aa-flow-4",
     "RSF-AMR-001": "pa-amr",
     "RSF-AMR-002": "pa-amr",
     "RSF-AMR-003": "pa-amr",
-    "RSF-AMR-004": "di-network",
-    "RSF-AMR-005": "aa-autonomous-ops",
+    "RSF-AMR-004": "aa-flow-3",
+    "RSF-AMR-005": "aa-adv",
     "RSF-AMR-006": "pa-amr",
     "RSF-AMR-007": "pa-amr",
     "RSF-AMR-008": "pa-amr",
-    "RSF-AMR-009": "aa-autonomous-ops",
-    "RSF-AMR-010": "di-analytics",
+    "RSF-AMR-009": "aa-adv",
+    "RSF-AMR-010": "aa-adv",
     "RSF-AMR-011": "pa-amr",
     "RSF-AMR-012": "pa-amr",
     "RSF-AMR-013": "pa-amr",
-    "RSF-AMR-014": "di-network",
+    "RSF-AMR-014": "aa-flow-3",
     "RSF-AMR-015": "pa-amr",
     "RSF-AMR-016": "pa-amr",
     "RSF-AMR-017": "pa-amr",
     "RSF-AMR-018": "pa-amr",
     "RSF-AMR-019": "pa-amr",
-    "RSF-AMR-020": "di-analytics",
-    "RSF-AMR-021": "aa-mes-planning",
+    "RSF-AMR-020": "aa-adv",
+    "RSF-AMR-021": "aa-adv",
     "RSF-CRO-001": "pa-cobot",
     "RSF-CRO-002": "pa-cobot",
     "RSF-CRO-003": "pa-cobot",
@@ -213,7 +195,7 @@
     "RSF-CRO-014": "pa-cobot",
     "RSF-CRO-015": "pa-cobot",
     "RSF-CRO-016": "pa-cobot",
-    "RSF-CRO-017": "di-analytics",
+    "RSF-CRO-017": "aa-flow-6",
     "RSF-CRO-018": "pa-cobot",
     "RSF-CRO-019": "pa-cobot",
     "RSF-CRO-020": "pa-cobot",
@@ -223,23 +205,23 @@
     "RSF-DTS-002": "dt-modeling",
     "RSF-DTS-003": "dt-modeling",
     "RSF-DTS-004": "dt-modeling",
-    "RSF-DTS-005": "di-pipeline",
+    "RSF-DTS-005": "aa-flow-2",
     "RSF-DTS-006": "dt-modeling",
     "RSF-DTS-007": "dt-modeling",
     "RSF-DTS-008": "dt-design-verify",
     "RSF-DTS-009": "dt-design-verify",
     "RSF-DTS-010": "dt-data-sync",
-    "RSF-DTS-011": "di-pipeline",
+    "RSF-DTS-011": "aa-flow-5",
     "RSF-DTS-012": "dt-scenario",
     "RSF-DTS-013": "dt-optimize",
-    "RSF-DTS-014": "di-analytics",
+    "RSF-DTS-014": "aa-flow-5",
     "RSF-DTS-015": "dt-design-verify",
     "RSF-DTS-016": "dt-design-verify",
     "RSF-DTS-017": "dt-scenario",
     "RSF-DTS-018": "dt-optimize",
     "RSF-DTS-019": "dt-realtime",
     "RSF-DTS-020": "dt-data-sync",
-    "RSF-DTS-021": "aa-autonomous-ops",
+    "RSF-DTS-021": "aa-flow-7",
     "RSF-DTS-022": "dt-vc",
     "RSF-DTS-023": "dt-data-sync",
     "RSF-DTS-024": "dt-data-sync",
@@ -258,37 +240,37 @@
     "RSF-IRC-012": "dt-vc",
     "RSF-IRC-013": "pa-industrial",
     "RSF-IRC-014": "pa-industrial",
-    "RSF-IRC-015": "di-analytics",
+    "RSF-IRC-015": "aa-flow-6",
     "RSF-IRC-016": "pa-industrial",
     "RSF-IRC-017": "pa-industrial",
     "RSF-IRC-018": "pa-industrial",
     "RSF-IRC-019": "pa-industrial",
-    "RSF-IRC-020": "aa-mes-planning",
+    "RSF-IRC-020": "aa-adv",
     "RSF-IRC-021": "pa-industrial",
-    "RSF-IRC-022": "aa-mes-planning",
+    "RSF-IRC-022": "aa-adv",
     "RSF-IRC-023": "pa-industrial",
     "RSF-IRC-024": "pa-industrial",
     "RSF-IRC-025": "pa-industrial",
-    "RSF-MVS-001": "di-signal",
+    "RSF-MVS-001": "aa-flow-4",
     "RSF-MVS-002": "pa-vision-hw",
-    "RSF-MVS-003": "di-signal",
-    "RSF-MVS-004": "di-signal",
+    "RSF-MVS-003": "aa-flow-4",
+    "RSF-MVS-004": "aa-flow-4",
     "RSF-MVS-005": "pa-vision-hw",
     "RSF-MVS-006": "pa-vision-hw",
-    "RSF-MVS-007": "aa-quality",
-    "RSF-MVS-008": "di-pipeline",
+    "RSF-MVS-007": "aa-adv",
+    "RSF-MVS-008": "aa-flow-3",
     "RSF-MVS-009": "pa-vision-hw",
     "RSF-MVS-010": "dt-vc",
     "RSF-MVS-011": "pa-vision-hw",
-    "RSF-MVS-012": "di-signal",
-    "RSF-MVS-013": "di-signal",
-    "RSF-MVS-014": "di-signal",
+    "RSF-MVS-012": "aa-flow-4",
+    "RSF-MVS-013": "aa-flow-4",
+    "RSF-MVS-014": "aa-flow-4",
     "RSF-MVS-015": "pa-vision-hw",
-    "RSF-MVS-016": "aa-quality",
+    "RSF-MVS-016": "aa-adv",
     "RSF-MVS-017": "pa-vision-hw",
     "RSF-MVS-018": "pa-vision-hw",
-    "RSF-MVS-019": "di-pipeline",
-    "RSF-MVS-020": "di-analytics",
+    "RSF-MVS-019": "aa-flow-3",
+    "RSF-MVS-020": "aa-flow-6",
     "RSF-MVS-021": "pa-vision-hw",
     "RSF-MVS-022": "pa-vision-hw",
     "RSF-RMD-001": "pa-maintenance",
@@ -296,21 +278,21 @@
     "RSF-RMD-003": "pa-maintenance",
     "RSF-RMD-004": "pa-maintenance",
     "RSF-RMD-005": "pa-maintenance",
-    "RSF-RMD-006": "di-analytics",
-    "RSF-RMD-007": "di-analytics",
+    "RSF-RMD-006": "aa-adv",
+    "RSF-RMD-007": "aa-flow-6",
     "RSF-RMD-008": "pa-maintenance",
     "RSF-RMD-009": "pa-maintenance",
     "RSF-RMD-010": "pa-maintenance",
     "RSF-RMD-011": "pa-maintenance",
-    "RSF-RMD-012": "di-analytics",
+    "RSF-RMD-012": "aa-flow-5",
     "RSF-RMD-013": "pa-maintenance",
     "RSF-RMD-014": "pa-maintenance",
     "RSF-RMD-015": "pa-maintenance",
     "RSF-RMD-016": "pa-maintenance",
-    "RSF-RMD-017": "di-analytics",
-    "RSF-RMD-018": "aa-mes-planning",
+    "RSF-RMD-017": "aa-adv",
+    "RSF-RMD-018": "aa-adv",
     "RSF-RMD-019": "pa-maintenance",
-    "RSF-RMD-020": "di-analytics",
+    "RSF-RMD-020": "aa-flow-7",
     "RSF-RMD-021": "pa-maintenance"
   },
   "skillOrder": {
@@ -361,7 +343,380 @@
       }
     ]
   },
-  "workflowColleges": [
-    "digital-twin"
+  "workflowColleges": ["digital-twin"],
+  "skillClusters": [
+    {
+      "id": "pa-ind-theory",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "로봇 구조·제어 이론",
+      "summary": "로봇 구조·운동학, PID·궤적 제어 이론, 모션 플래닝 기초 지식",
+      "priority": "foundation",
+      "skillIds": ["RSF-IRC-001", "RSF-IRC-002", "RSF-IRC-005"]
+    },
+    {
+      "id": "pa-ind-teaching",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "로봇 티칭·프로그래밍",
+      "summary": "티칭 방법론과 매뉴얼 티칭, 로봇 언어(RAPID·KRL) 프로그래밍, 좌표계 설정·보정",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-004", "RSF-IRC-006", "RSF-IRC-007", "RSF-IRC-008"]
+    },
+    {
+      "id": "pa-ind-motion",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "모션 파라미터·경로 최적화",
+      "summary": "속도·가속도 파라미터 조정과 충돌 회피 경로 최적화",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-009", "RSF-IRC-010"]
+    },
+    {
+      "id": "pa-ind-safety",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "산업로봇 안전 기준·설정",
+      "summary": "ISO 10218 등 안전 표준 지식과 펜스·속도 제한 등 안전 기능 설정",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-003", "RSF-IRC-011"]
+    },
+    {
+      "id": "pa-ind-integration",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "설비·PLC 연동 제어",
+      "summary": "다축 동기 제어, 센서 입출력 처리, PLC-로봇 제어 신호 연동",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-013", "RSF-IRC-014", "RSF-IRC-023"]
+    },
+    {
+      "id": "pa-ind-operation",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "생산 라인 운용·고장 대응",
+      "summary": "생산 라인 로봇 운용, 사이클 타임 달성, 고장 진단·복구",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-016", "RSF-IRC-017", "RSF-IRC-018"]
+    },
+    {
+      "id": "pa-ind-docs",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "작업 문서화·기술 지원",
+      "summary": "프로그램·설정 문서화와 협력업체 기술 지원·교육",
+      "priority": "foundation",
+      "skillIds": ["RSF-IRC-019", "RSF-IRC-021"]
+    },
+    {
+      "id": "pa-ind-learning-concept",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "학습기반 로봇 제어 개념(RFM·VLA)",
+      "summary": "로봇 파운데이션 모델, VLA 정책, 모방·강화학습 제어의 기본 개념",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-024"]
+    },
+    {
+      "id": "pa-ind-learning-apply",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-industrial",
+      "name": "학습기반 로봇 제어 적용(VLA 정책 운용)",
+      "summary": "시연 데이터 수집, VLA·모방학습 정책 파인튜닝·배포·안전 평가",
+      "priority": "core",
+      "skillIds": ["RSF-IRC-025"]
+    },
+    {
+      "id": "pa-cob-principle",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "협동로봇 안전 원리",
+      "summary": "ISO/TS 15066 안전 개념과 힘/토크 모니터링·임피던스 제어 원리",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-001", "RSF-CRO-002"]
+    },
+    {
+      "id": "pa-cob-knowledge",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "협동로봇 응용·인간공학 지식",
+      "summary": "조립·검사·포장 등 응용 사례와 작업 설계·피로도 관리 지식",
+      "priority": "foundation",
+      "skillIds": ["RSF-CRO-004", "RSF-CRO-005"]
+    },
+    {
+      "id": "pa-cob-programming",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "협동로봇 프로그래밍·티칭",
+      "summary": "그래픽 프로그래밍 개념, 드래그-앤-드롭 티칭, URScript·Python 프로그래밍",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-003", "RSF-CRO-007", "RSF-CRO-008"]
+    },
+    {
+      "id": "pa-cob-safety-config",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "안전 파라미터 설정·튜닝",
+      "summary": "속도·힘 제한과 안전 영역 설정, 접촉 감지 반응, 힘 제어 감도 튜닝",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-006", "RSF-CRO-011", "RSF-CRO-014"]
+    },
+    {
+      "id": "pa-cob-design",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "인간-로봇 협동 작업 설계",
+      "summary": "안전한 협동 시나리오 설계와 인간-로봇 작업 분담 분석",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-009", "RSF-CRO-010"]
+    },
+    {
+      "id": "pa-cob-verification",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "협동 안전성 검증·평가",
+      "summary": "워크셀 안전성 검증, 안전성 평가 보고, 인간공학 평가",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-015", "RSF-CRO-018", "RSF-CRO-020"]
+    },
+    {
+      "id": "pa-cob-enablement",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "사용자 교육·가이드·개선",
+      "summary": "사용자 안전 교육, 매뉴얼 작성, 협동 작업 개선 제안",
+      "priority": "foundation",
+      "skillIds": ["RSF-CRO-013", "RSF-CRO-016", "RSF-CRO-019"]
+    },
+    {
+      "id": "pa-cob-humanoid",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-cobot",
+      "name": "휴머노이드 로봇 운용 기초",
+      "summary": "휴머노이드 안전 운용, 작업 지시, 인간 공존 환경 관리",
+      "priority": "core",
+      "skillIds": ["RSF-CRO-022"]
+    },
+    {
+      "id": "pa-mnt-strategy",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "신뢰성·유지보수 전략",
+      "summary": "부품 수명(BOM·MTBF) 관리, 신뢰성 공학, 예방·예측 유지보수 전략",
+      "priority": "foundation",
+      "skillIds": ["RSF-RMD-001", "RSF-RMD-002", "RSF-RMD-003"]
+    },
+    {
+      "id": "pa-mnt-diagnosis",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "로봇 진단·고장코드 해석",
+      "summary": "진단 도구·센서 로깅 활용과 고장 코드 해석",
+      "priority": "core",
+      "skillIds": ["RSF-RMD-004", "RSF-RMD-008"]
+    },
+    {
+      "id": "pa-mnt-mechanical",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "구동부 검사·교체",
+      "summary": "베어링·기어·모터 검사와 부품 청소·교체 실무",
+      "priority": "core",
+      "skillIds": ["RSF-RMD-009", "RSF-RMD-010", "RSF-RMD-013"]
+    },
+    {
+      "id": "pa-mnt-lubrication",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "윤활·냉각 관리",
+      "summary": "윤활유·냉각액 지식과 관절·기어 윤활유 교체",
+      "priority": "foundation",
+      "skillIds": ["RSF-RMD-005", "RSF-RMD-014"]
+    },
+    {
+      "id": "pa-mnt-planning",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "유지보수 계획·긴급 대응",
+      "summary": "장기 예방 유지보수 계획 수립과 생산 중단 시 긴급 복구",
+      "priority": "core",
+      "skillIds": ["RSF-RMD-015", "RSF-RMD-016"]
+    },
+    {
+      "id": "pa-mnt-software",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "로봇 소프트웨어 업그레이드",
+      "summary": "로봇 펌웨어·소프트웨어 업데이트 수행",
+      "priority": "foundation",
+      "skillIds": ["RSF-RMD-011"]
+    },
+    {
+      "id": "pa-mnt-reporting",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-maintenance",
+      "name": "유지보수 보고·공급업체 관리",
+      "summary": "유지보수 활동 기록·보고와 부품 공급업체 협력 관리",
+      "priority": "foundation",
+      "skillIds": ["RSF-RMD-019", "RSF-RMD-021"]
+    },
+    {
+      "id": "pa-amr-theory",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "자율주행 이론(SLAM·경로계획·동역학)",
+      "summary": "SLAM, Dijkstra·A*·RRT 경로계획 알고리즘, 차량 동역학·제어 이론",
+      "priority": "foundation",
+      "skillIds": ["RSF-AMR-001", "RSF-AMR-002", "RSF-AMR-003"]
+    },
+    {
+      "id": "pa-amr-mapping",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "환경 맵 생성·검증",
+      "summary": "LiDAR·카메라 환경 맵 작성과 제조 현장 맵 생성·정확도 검증",
+      "priority": "core",
+      "skillIds": ["RSF-AMR-006", "RSF-AMR-015", "RSF-AMR-016"]
+    },
+    {
+      "id": "pa-amr-navigation",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "경로계획·충돌회피 설정",
+      "summary": "경로 계획 매개변수 조정과 장애물 감지·회피 설정",
+      "priority": "core",
+      "skillIds": ["RSF-AMR-007", "RSF-AMR-008"]
+    },
+    {
+      "id": "pa-amr-operation",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "내비게이션·도킹 운용",
+      "summary": "GPS/GNSS 내비게이션, 원격 수동 조종, 충전·화물 스테이션 도킹",
+      "priority": "core",
+      "skillIds": ["RSF-AMR-011", "RSF-AMR-012", "RSF-AMR-013"]
+    },
+    {
+      "id": "pa-amr-incident",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "자율주행 운영·사고 분석",
+      "summary": "경로 내 자율 주행 운영과 충돌 원인 분석·개선",
+      "priority": "core",
+      "skillIds": ["RSF-AMR-017", "RSF-AMR-018"]
+    },
+    {
+      "id": "pa-amr-docs",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-amr",
+      "name": "AMR 운영 매뉴얼 작성",
+      "summary": "AMR 운영자를 위한 상세 매뉴얼 작성",
+      "priority": "foundation",
+      "skillIds": ["RSF-AMR-019"]
+    },
+    {
+      "id": "pa-vis-camera",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-vision-hw",
+      "name": "카메라·광학 설정",
+      "summary": "카메라 센서·렌즈·조광 지식과 해상도·노출·포커스 설정",
+      "priority": "core",
+      "skillIds": ["RSF-MVS-002", "RSF-MVS-006"]
+    },
+    {
+      "id": "pa-vis-calibration",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-vision-hw",
+      "name": "센서 캘리브레이션",
+      "summary": "캘리브레이션 이론과 카메라 왜곡 보정·좌표 변환 실무",
+      "priority": "core",
+      "skillIds": ["RSF-MVS-005", "RSF-MVS-011"]
+    },
+    {
+      "id": "pa-vis-integration",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-vision-hw",
+      "name": "센서-로봇·엣지 통합",
+      "summary": "센서-로봇 동기화와 IoT 센서·엣지 디바이스 데이터 통합",
+      "priority": "core",
+      "skillIds": ["RSF-MVS-009", "RSF-MVS-022"]
+    },
+    {
+      "id": "pa-vis-deployment",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-vision-hw",
+      "name": "제조 비전 시스템 구축",
+      "summary": "실제 제조 라인 비전 시스템 설치·검증",
+      "priority": "core",
+      "skillIds": ["RSF-MVS-015"]
+    },
+    {
+      "id": "pa-vis-maintenance",
+      "collegeId": "physical-ai",
+      "subcategoryId": "pa-vision-hw",
+      "name": "센서 유지보수·교체",
+      "summary": "센서 고장 진단, 대체 센서 제안, 카메라 교체 작업",
+      "priority": "foundation",
+      "skillIds": ["RSF-MVS-017", "RSF-MVS-018", "RSF-MVS-021"]
+    },
+    {
+      "id": "aa-adv-production",
+      "collegeId": "agentic-ai",
+      "subcategoryId": "aa-adv",
+      "name": "생산계획 에이전트",
+      "summary": "MES 자동화·작업지시·APS 계획 수립과 라인 운영 효율화",
+      "priority": "core",
+      "skillIds": [
+        "RSF-AAM-005",
+        "RSF-AAM-010",
+        "RSF-AAM-011",
+        "RSF-AAM-017",
+        "RSF-IRC-020",
+        "RSF-IRC-022",
+        "RSF-AMR-021"
+      ]
+    },
+    {
+      "id": "aa-adv-quality",
+      "collegeId": "agentic-ai",
+      "subcategoryId": "aa-adv",
+      "name": "품질 에이전트",
+      "summary": "SPC·결함 검출·이상 자동 판정과 격리 프로세스 운영",
+      "priority": "core",
+      "skillIds": [
+        "RSF-AAM-004",
+        "RSF-AAM-012",
+        "RSF-AAM-016",
+        "RSF-MVS-007",
+        "RSF-MVS-016"
+      ]
+    },
+    {
+      "id": "aa-adv-logistics",
+      "collegeId": "agentic-ai",
+      "subcategoryId": "aa-adv",
+      "name": "물류·자재 에이전트",
+      "summary": "함대 관리·교통 관제·자재 연동과 In-Factory 물류·SCM 통합",
+      "priority": "core",
+      "skillIds": [
+        "RSF-AAM-024",
+        "RSF-AAM-025",
+        "RSF-AMR-005",
+        "RSF-AMR-009",
+        "RSF-RMD-018",
+        "RSF-AMR-010",
+        "RSF-AMR-020"
+      ]
+    },
+    {
+      "id": "aa-adv-equipment",
+      "collegeId": "agentic-ai",
+      "subcategoryId": "aa-adv",
+      "name": "설비 에이전트",
+      "summary": "상태 모니터링·수명 예측과 연계한 자율 정비 실행",
+      "priority": "core",
+      "skillIds": ["RSF-AAM-022", "RSF-RMD-006", "RSF-RMD-017"]
+    }
   ]
 }

@@ -44,9 +44,9 @@ export default async function DomainsPage() {
     <main className={styles.pageShell}>
       <header className={styles.pageHeading}>
         <p className={styles.eyebrow}>ROBOTICS ONTOLOGY</p>
-        <h1>4대 도메인</h1>
+        <h1>3대 도메인</h1>
         <p>
-          현장 운영 체계의 4대 도메인입니다. 모든 스킬은 4대 도메인과 그 아래
+          현장 운영 체계의 3대 도메인입니다. 모든 스킬은 3대 도메인과 그 아래
           중간분류에 배정됩니다.
         </p>
       </header>
