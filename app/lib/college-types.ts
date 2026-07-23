@@ -57,6 +57,16 @@ export interface WorkflowLink {
   note?: string;
 }
 
+export interface SkillCluster {
+  id: string;
+  collegeId: CollegeId;
+  subcategoryId: string;
+  name: string;
+  summary: string;
+  priority: SkillPriority;
+  skillIds: string[];
+}
+
 export interface CollegeSubcategoryData {
   version: string;
   note?: string;
@@ -66,6 +76,7 @@ export interface CollegeSubcategoryData {
   skillPriority?: Record<string, SkillPriority>;
   workflowLinks?: Record<string, WorkflowLink[]>;
   workflowColleges?: string[];
+  skillClusters?: SkillCluster[];
 }
 
 export interface EnablerCollegeMeta {

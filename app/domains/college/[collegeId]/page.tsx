@@ -4,7 +4,8 @@ import styles from "./page.module.css";
 import { resolveSkillCollege } from "../../../lib/college-resolver";
 import { collegeColor, collegeIcon } from "../../../lib/college-ui";
 import { getDomainName } from "../../../lib/robotics-data";
-import type { SkillPriority } from "../../../lib/college-types";
+import type { RobotSkill } from "../../../lib/robotics-data";
+import type { SkillPriority, SkillCluster } from "../../../lib/college-types";
 import {
   getAllRobotSkills,
   getCollegeMappingData,
@@ -54,6 +55,12 @@ export default async function CollegeDetailPage({
   const isWorkflow = (subcategoryData.workflowColleges ?? []).includes(
     collegeId,
   );
+  const collegeClusters = (subcategoryData.skillClusters ?? []).filter(
+    (cluster) => cluster.collegeId === collegeId,
+  );
+  const clusteredSkillIds = new Set(
+    collegeClusters.flatMap((cluster) => cluster.skillIds),
+  );
 
   return (
     <main className={styles.pageShell}>
@@ -83,6 +90,15 @@ export default async function CollegeDetailPage({
               우선순위 순이며, ★핵심·기초 역량·재정의 검토를 표시합니다.
             </p>
           )}
+          {collegeClusters.length > 0 && (
+            <p className={styles.workflowNote}>
+              검증 편의를 위해 {clusteredSkillIds.size}개 세부 스킬을{" "}
+              {collegeClusters.length}개 클러스터로 묶어 표시합니다.
+              클러스터를 펼치면 포함된 세부 스킬을 볼 수 있습니다. 지정
+              평가자는 <Link href="/evaluation/skills">스킬평가</Link>에서
+              스킬별 중요도·라벨 평가를 진행할 수 있습니다.
+            </p>
+          )}
         </div>
       </header>
 
@@ -99,14 +115,35 @@ export default async function CollegeDetailPage({
               a.skill_id.localeCompare(b.skill_id),
           );
         const links = workflowLinks[subcategory.id] ?? [];
+        const subcategoryClusters = collegeClusters.filter(
+          (cluster) => cluster.subcategoryId === subcategory.id,
+        );
+        const unclusteredSkills = subcategorySkills.filter(
+          (skill) => !clusteredSkillIds.has(skill.skill_id),
+        );
         return (
           <section className={styles.subcategorySection} key={subcategory.id}>
             <div className={styles.subcategoryHead}>
               <h2>{subcategory.name}</h2>
-              <span>{subcategorySkills.length}개 스킬</span>
+              <span>
+                {subcategoryClusters.length > 0
+                  ? `클러스터 ${subcategoryClusters.length}개 · 세부 스킬 ${subcategorySkills.length}개`
+                  : `${subcategorySkills.length}개 스킬`}
+              </span>
             </div>
+            {subcategoryClusters.length > 0 && (
+              <div className={styles.clusterList}>
+                {subcategoryClusters.map((cluster) => (
+                  <ClusterCard
+                    key={cluster.id}
+                    cluster={cluster}
+                    skillById={skillById}
+                  />
+                ))}
+              </div>
+            )}
             <ul className={styles.skillList}>
-              {subcategorySkills.map((skill) => {
+              {unclusteredSkills.map((skill) => {
                 const priority = skillPriority[skill.skill_id];
                 return (
                   <li key={skill.skill_id}>
@@ -180,5 +217,54 @@ export default async function CollegeDetailPage({
         변경요청으로 접수해 주세요.
       </p>
     </main>
+  );
+}
+
+function ClusterCard({
+  cluster,
+  skillById,
+}: {
+  cluster: SkillCluster;
+  skillById: Map<string, RobotSkill>;
+}) {
+  const memberSkills = cluster.skillIds
+    .map((skillId) => skillById.get(skillId))
+    .filter((skill): skill is RobotSkill => Boolean(skill));
+  const levels = memberSkills.map((skill) => skill.proficiency_level);
+  const levelRange =
+    levels.length > 0
+      ? Math.min(...levels) === Math.max(...levels)
+        ? `Lv${Math.min(...levels)}`
+        : `Lv${Math.min(...levels)}–${Math.max(...levels)}`
+      : "";
+  return (
+    <details className={styles.cluster}>
+      <summary className={styles.clusterSummary}>
+        <span className={styles.skillLabel}>{cluster.name}</span>
+        <span className={styles.skillMeta}>
+          {cluster.summary}
+          {levelRange ? ` · ${levelRange}` : ""} · 세부 스킬{" "}
+          {cluster.skillIds.length}개
+        </span>
+      </summary>
+      <ul className={styles.clusterMembers}>
+        {memberSkills.map((skill) => (
+          <li key={skill.skill_id}>
+            <Link
+              className={styles.clusterMemberRow}
+              href={`/skills/${skill.skill_id}`}
+            >
+              <span className={styles.clusterMemberLabel}>
+                {skill.preferred_label_ko}
+              </span>
+              <span className={styles.skillMeta}>
+                {skill.skill_id} · Lv{skill.proficiency_level} ·{" "}
+                {getDomainName(skill.domain)}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
